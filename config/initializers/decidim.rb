@@ -6,13 +6,13 @@ Decidim.configure do |config|
 
   # Change these lines to set your preferred locales
   config.default_locale = :sv
-  config.available_locales = [:sv, :en]
+  config.available_locales = %i[sv en]
 
   # Geocoder configuration
   config.geocoder = {
-   static_map_url: "https://image.maps.cit.api.here.com/mia/1.6/mapview",
-   here_app_id: Rails.application.secrets.geocoder[:here_app_id],
-   here_app_code: Rails.application.secrets.geocoder[:here_app_code]
+    static_map_url: 'https://image.maps.cit.api.here.com/mia/1.6/mapview',
+    here_app_id: Rails.application.secrets.geocoder[:here_app_id],
+    here_app_code: Rails.application.secrets.geocoder[:here_app_code]
   }
 
   # Custom resource reference generator method
@@ -22,7 +22,7 @@ Decidim.configure do |config|
   # end
 
   # Currency unit
-  config.currency_unit = "kr"
+  config.currency_unit = 'kr'
 
   # The number of reports which an object can receive before hiding it
   # config.max_reports_before_hiding = 3
@@ -76,6 +76,8 @@ Decidim.configure do |config|
   #   api_version: Rails.application.secrets.etherpad[:api_version]
   # }
 end
+
+Decidim::Initiatives.do_not_require_authorization = true
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
 Rails.application.config.i18n.default_locale = Decidim.default_locale
