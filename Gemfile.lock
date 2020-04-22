@@ -15,6 +15,13 @@ GIT
       decidim-core (>= 0.20.0)
 
 GIT
+  remote: https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler
+  revision: 482ddf5f1286cdbb32d81c56fb91fd083b9a229a
+  specs:
+    decidim-socio_demographic_authorization_handler (0.18.0)
+      decidim-core (>= 0.18.0)
+
+GIT
   remote: https://github.com/digidemlab/decidim-module-term_customizer
   revision: 7749a70b9225fc01e8fb48f3bd12437ee7de1f3a
   specs:
@@ -801,6 +808,7 @@ DEPENDENCIES
   decidim-antivirus!
   decidim-dev (= 0.21.0)
   decidim-navbar_links!
+  decidim-socio_demographic_authorization_handler!
   decidim-term_customizer!
   faker (~> 1.9)
   figaro
