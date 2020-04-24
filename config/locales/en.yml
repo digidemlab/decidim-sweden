@@ -42,3 +42,7 @@ en:
             - An admin will review the request
             - Admin will either approve or reject the access request
             - The user will get notified that their access request has been either approved or rejected
+  layouts:
+    decidim:
+      footer:
+        made_with_open_source: Website made by <a target="_blank" href="https://digidemlab.org">Digidem Lab</a> with the free software <a target="_blank" href="https://github.com/decidim/decidim">Decidim</a>.
