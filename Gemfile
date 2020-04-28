@@ -6,7 +6,7 @@ ruby RUBY_VERSION
 
 DECIDIM_VERSION = "0.21.0"
 
-gem "decidim", DECIDIM_VERSION
+gem "decidim", git: "https://github.com/digidemlab/decidim", branch: 'l10n_release/0.21.0'
 
 #gem "decidim-initiatives", DECIDIM_VERSION
 

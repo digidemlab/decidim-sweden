@@ -2,4 +2,4 @@ sv:
   layouts:
     decidim:
       footer:
-        made_with_open_source: Webbplats gjord av <a target="_blank" href="https://digidemlab.org">Digidem Lab</a> med fri mjukvara <a target="_blank" href="https://github.com/decidim/decidim">Decidim</a>.
+        made_with_open_source: Webbplats gjord av <a target="_blank" href="https://digidemlab.org">Digidem Lab</a> med den fria mjukvaran <a target="_blank" href="https://github.com/decidim/decidim">Decidim</a>.
