@@ -6,7 +6,7 @@ ruby RUBY_VERSION
 
 DECIDIM_VERSION = "0.21.0"
 
-gem "decidim", git: "https://github.com/decidim/decidim", branch: '0.21-stable'
+gem "decidim", git: "https://github.com/decidim/decidim", ref: '0.21-stable'
 
 #gem "decidim-initiatives", DECIDIM_VERSION
 
@@ -31,7 +31,7 @@ gem "sentry-raven"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  gem "decidim-dev", git: "https://github.com/decidim/decidim", branch: '0.21-stable'
+  gem "decidim-dev", git: "https://github.com/decidim/decidim", ref: '0.21-stable'
 end
 
 group :development do
