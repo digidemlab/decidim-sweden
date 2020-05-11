@@ -45,6 +45,7 @@ end
 group :production do
   gem "passenger"
   gem "sidekiq"
+  gem "sidekiq-scheduler"
   gem "sinatra"
   gem "decidim-antivirus", git: "https://github.com/digidemlab/decidim-module-antivirus"
 end

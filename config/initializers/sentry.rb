@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 if Rails.application.secrets.dig(:sentry, :enabled)
   Rails.application.config.rails_activesupport_breadcrumbs = true
 
