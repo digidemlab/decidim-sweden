@@ -215,7 +215,8 @@ GIT
 
 GIT
   remote: https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler
-  revision: 482ddf5f1286cdbb32d81c56fb91fd083b9a229a
+  revision: b95655f1074e3cf881427f98483c357c3db1562e
+  branch: just-age-and-gender
   specs:
     decidim-socio_demographic_authorization_handler (0.18.0)
       decidim-core (>= 0.18.0)

@@ -13,7 +13,7 @@ gem "decidim", git: "https://github.com/decidim/decidim", ref: '0.21-stable'
 gem "decidim-term_customizer", git: "https://github.com/digidemlab/decidim-module-term_customizer"
 #gem "decidim-access_requests", git: "https://github.com/mainio/decidim-module-access_requests"
 gem "decidim-navbar_links", git: "https://github.com/digidemlab/decidim-module-navbar_links"
-gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler"
+gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: 'just-age-and-gender'
 
 gem "bootsnap", "~> 1.3"
 
