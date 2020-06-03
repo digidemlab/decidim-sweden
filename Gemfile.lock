@@ -61,6 +61,10 @@ GIT
       decidim-core (= 0.21.0)
       jquery-rails (~> 4.3)
       redcarpet (~> 3.4)
+    decidim-consultations (0.21.0)
+      decidim-admin (= 0.21.0)
+      decidim-comments (= 0.21.0)
+      decidim-core (= 0.21.0)
     decidim-core (0.21.0)
       active_link_to (~> 1.0)
       anchored (>= 1.1.0)
@@ -830,6 +834,7 @@ DEPENDENCIES
   byebug (~> 11.0)
   decidim!
   decidim-antivirus!
+  decidim-consultations (= 0.21.0)
   decidim-dev!
   decidim-navbar_links!
   decidim-socio_demographic_authorization_handler!

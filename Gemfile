@@ -8,7 +8,7 @@ DECIDIM_VERSION = "0.21.0"
 
 gem "decidim", git: "https://github.com/decidim/decidim", ref: '0.21-stable'
 
-#gem "decidim-initiatives", DECIDIM_VERSION
+gem "decidim-consultations", DECIDIM_VERSION
 
 gem "decidim-term_customizer", git: "https://github.com/digidemlab/decidim-module-term_customizer"
 #gem "decidim-access_requests", git: "https://github.com/mainio/decidim-module-access_requests"
