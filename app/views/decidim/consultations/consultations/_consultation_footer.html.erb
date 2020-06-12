@@ -1,0 +1,10 @@
+<% if consultation.introductory_video_url.blank? %>
+  <div class="card--full__image consultations-card__image introductory-image"
+        style="background-image: url(<%= consultation.introductory_image_url %>);">
+  </div>
+<% else %>
+  <div class="embed-container">
+    <iframe src="<%= consultation.introductory_video_url %>" frameborder=0 allowfullscreen>
+    </iframe>
+  </div>
+<% end %>
