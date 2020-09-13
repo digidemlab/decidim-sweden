@@ -104,6 +104,10 @@ h6, .h6 {
     background-color: $primary-dark;
 }
 
+.main-nav ul > li:nth-child(2) {
+  display: none;
+}
+
 .topbar__search input, .topbar__search input:focus {
     background-color: $primary-dark;
 }
