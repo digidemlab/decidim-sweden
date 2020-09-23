@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 Decidim.configure do |config|
-  config.application_name = Rails.application.secrets.geocoder[:application_name]
-  config.mailer_sender = Rails.application.secrets.geocoder[:mailer_sender]
+  config.application_name = Rails.application.secrets.application_name
+  config.mailer_sender = Rails.application.secrets.mailer_sender
 
   # Change these lines to set your preferred locales
   config.default_locale = :sv
@@ -11,8 +11,7 @@ Decidim.configure do |config|
   # Geocoder configuration
   config.geocoder = {
     static_map_url: 'https://image.maps.cit.api.here.com/mia/1.6/mapview',
-    here_app_id: Rails.application.secrets.geocoder[:here_app_id],
-    here_app_code: Rails.application.secrets.geocoder[:here_app_code]
+    here_api_key: Rails.application.secrets.geocoder[:here_api_key]
   }
 
   # Custom resource reference generator method

@@ -4,17 +4,24 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "0.20.0"
+DECIDIM_VERSION = "0.21.0"
 
-gem "decidim", DECIDIM_VERSION
+gem "decidim", git: "https://github.com/decidim/decidim", ref: '0.21-stable'
 
 gem 'decidim-initiatives', DECIDIM_VERSION
+gem "decidim-consultations", DECIDIM_VERSION
+
+gem "decidim-term_customizer", git: "https://github.com/digidemlab/decidim-module-term_customizer"
+#gem "decidim-access_requests", git: "https://github.com/mainio/decidim-module-access_requests"
+gem "decidim-navbar_links", git: "https://github.com/digidemlab/decidim-module-navbar_links"
+gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: 'just-age-and-gender'
+#gem "decidim-jitsi_meetings", git: "https://github.com/digidemlab/decidim-module-online-meetings"
 
 gem "bootsnap", "~> 1.3"
 
 gem "wicked_pdf"
 
-gem "puma", "~> 3.0"
+gem "puma", "~> 4.3"
 gem "uglifier", "~> 4.1"
 
 gem "faker", "~> 1.9"
@@ -26,7 +33,7 @@ gem "sentry-raven"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  gem "decidim-dev", DECIDIM_VERSION
+  gem "decidim-dev", git: "https://github.com/decidim/decidim", ref: '0.21-stable'
 end
 
 group :development do
@@ -40,6 +47,7 @@ end
 group :production do
   gem "passenger"
   gem "sidekiq"
+  gem "sidekiq-scheduler"
   gem "sinatra"
-  #gem "decidim-antivirus"
+  gem "decidim-antivirus", git: "https://github.com/digidemlab/decidim-module-antivirus"
 end
