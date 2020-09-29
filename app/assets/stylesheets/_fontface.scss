@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600&subset=latin');
+
+// Import Stockholm font files here. For licencing reasons font files are not publicly shared.
+@font-face{
+  font-family: 'Stockholm Type';
+    src: url('StockholmType-Bold.eot');
+    src: url('StockholmType-Bold.eot?#iefix') format('embedded-opentype'),
+         url('StockholmType-Bold.woff') format('woff'),
+         url('StockholmType-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face{
+  font-family: 'Stockholm Type';
+    src: url('StockholmType-Regular.eot');
+    src: url('StockholmType-Regular.eot?#iefix') format('embedded-opentype'),
+         url('StockholmType-Regular.woff') format('woff'),
+         url('StockholmType-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
