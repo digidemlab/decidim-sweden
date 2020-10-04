@@ -135,6 +135,10 @@ h6, .h6 {
   }
 }
 
+.main-nav ul > li:nth-child(2) {
+   display: none;
+ }
+
 .navbar {
     background-color: $primary;
 }
