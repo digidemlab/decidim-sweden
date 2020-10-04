@@ -194,6 +194,24 @@ h6, .h6 {
   display: flex;
 }
 
+.hero {
+  &::after {
+    background-color: rgba($black, .2);
+  }
+}
+
+.highligted-content-banner {
+  &::after {
+    background-color: rgba($black, .2);
+  }
+}
+
+.process-header__main {
+  &::after {
+    background-color: rgba($black, .2);
+  }
+}
+
 .mini-footer .row {
   display: flex;
   align-items: center;
