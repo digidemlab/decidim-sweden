@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-decidim_awesome
-  revision: f1a8970c59cab681ce800940512168f89f5a8561
+  revision: 62962fb17246eb86f3ba20bd2328e81d46795bfa
   specs:
     decidim-decidim_awesome (0.4)
       decidim-admin (>= 0.21.0)
@@ -254,26 +254,6 @@ GIT
       decidim-admin (~> 0.22.0)
       decidim-core (~> 0.22.0)
       decidim-participatory_processes (~> 0.22.0)
-
-GIT
-  remote: https://github.com/mainio/decidim-module-favorites
-  revision: 294672f0dbe92ab5d478a1c71bbd0d7fef4654da
-  ref: 294672f0dbe92ab5d478a1c71bbd0d7fef4654da
-  specs:
-    decidim-favorites (0.22.0)
-      decidim-core (~> 0.22.0)
-
-GIT
-  remote: https://github.com/mainio/decidim-module-plans
-  revision: 61d88f345d328202de5a9866cb60f28e3830f9c4
-  branch: master
-  specs:
-    decidim-plans (0.22.0)
-      decidim-core (~> 0.22.0)
-      decidim-favorites (~> 0.22.0)
-      decidim-proposals (~> 0.22.0)
-      graphql (~> 1.9.19)
-      paper_trail-association_tracking (~> 2.0)
 
 GIT
   remote: https://github.com/mainio/decidim-module-term_customizer
@@ -626,7 +606,6 @@ GEM
     paper_trail (10.3.1)
       activerecord (>= 4.2)
       request_store (~> 1.1)
-    paper_trail-association_tracking (2.1.0)
     parallel (1.19.2)
     parser (2.7.2.0)
       ast (~> 2.4.1)
@@ -900,9 +879,7 @@ DEPENDENCIES
   decidim-consultations (= 0.22)
   decidim-decidim_awesome!
   decidim-dev!
-  decidim-favorites!
   decidim-navbar_links!
-  decidim-plans!
   decidim-socio_demographic_authorization_handler!
   decidim-term_customizer!
   faker (~> 1.9)
