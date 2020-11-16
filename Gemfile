@@ -20,8 +20,8 @@ gem "decidim-decidim_awesome", git: "https://github.com/Platoniq/decidim-module-
 #gem "decidim-ideas", git: "https://github.com/mainio/decidim-module-ideas", branch: "master"
 #gem "decidim-favorites", git: "https://github.com/mainio/decidim-module-favorites", ref: "294672f0dbe92ab5d478a1c71bbd0d7fef4654da"
 #gem "decidim-feedback", git: "https://github.com/mainio/decidim-module-feedback", branch: "master"
-gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "master"
-gem "decidim-budgets_enhanced", git: "https://github.com/OpenSourcePolitics/decidim-module-budgets_enhanced", ref: "0.22-dev"
+#gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "master"
+gem "decidim-budgets_enhanced", git: "https://github.com/digidemlab/decidim-module-budgets_enhanced", ref: "0.22-dev"
 
 gem "bootsnap", "~> 1.3"
 
