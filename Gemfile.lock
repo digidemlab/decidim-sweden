@@ -229,7 +229,7 @@ GIT
 
 GIT
   remote: https://github.com/digidemlab/decidim-module-budgets_enhanced
-  revision: c644c3178f9ac77acd23982d0ba4d1f967350700
+  revision: 011dc1c5016403fcc814cc967612d13699b2bd42
   ref: 0.22-dev
   specs:
     decidim-budgets_enhanced (0.22.0)
