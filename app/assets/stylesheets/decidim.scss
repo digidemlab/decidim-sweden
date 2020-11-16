@@ -108,6 +108,10 @@ h6, .h6 {
     text-decoration: underline;
 }
 
+.main-nav ul > li:nth-child(2) {
+  display: none;
+}
+
 .topbar__search input, .topbar__search input:focus {
     background-color: $primary
 }
