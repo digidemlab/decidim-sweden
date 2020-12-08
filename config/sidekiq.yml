@@ -1,9 +1,11 @@
 :concurrency: 5
 :queues:
 - default
+- metrics
 - mailers
 - newsletter
 - events
+- scheduled
 
 :schedule:
   CalculateAllMetrics:

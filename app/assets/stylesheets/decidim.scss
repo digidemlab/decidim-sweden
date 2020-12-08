@@ -243,3 +243,11 @@ h6, .h6 {
   cursor: auto;
   display: flex;
 }
+
+.phase-date, .timeline__date {
+  display: none;
+}
+
+.main-nav ul > li:nth-child(2), .main-nav ul > li:nth-child(3) {
+   display: none;
+}
