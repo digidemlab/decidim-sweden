@@ -23,6 +23,8 @@ gem "decidim-decidim_awesome", git: "https://github.com/Platoniq/decidim-module-
 gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "master"
 gem "decidim-budgets_enhanced", git: "https://github.com/OpenSourcePolitics/decidim-module-budgets_enhanced", ref: "0.22-dev"
 
+gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
+
 gem "bootsnap", "~> 1.3"
 
 gem "wicked_pdf"
