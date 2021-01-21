@@ -46,3 +46,141 @@
     }
   }
 }
+
+.card--idea {
+  .card__state {
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @include modifiers(
+      color,
+      (
+        muted: $muted,
+      )
+    );
+  }
+
+  .card__category__name {
+    display: inline-block;
+    border: 1px solid #e8e8e8;
+    padding: 0 .5rem;
+    font-size: 90%;
+  }
+
+  .card__info {
+      padding: 0.5rem 1.5rem;
+  }
+
+  .card__category, .card__content {
+      padding: 0.5rem 1.5rem;
+  }
+
+  .card__content{
+    .card__content{
+      &:not(:only-child){
+        padding-top: $card-padding-small / 2;
+      }
+
+      @include breakpoint(medium){
+        &:not(:only-child){
+          padding-top: $card-padding / 2;
+        }
+      }
+    }
+  }
+
+  .card__category{
+    background: $white;
+  }
+
+  .card__button{
+    font-size: .7rem;
+  }
+
+  .card__text{
+    margin-top: .75rem;
+  }
+
+  .card__footer,
+  .card__top{
+    background: transparent;
+    border-top: 0;
+  }
+
+  .card__info {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .card__info__item {
+    font-weight: bold;
+    flex: 1 1 0;
+  }
+
+  .card__footer, .card__top {
+    background: #f4f4f4;
+    border-top: 1px solid #e8e8e8;
+    border-radius: 0 0 4px 4px;
+    clear: both;
+  }
+}
+
+.card__support{
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: $card-padding-small;
+
+  @include breakpoint(medium){
+    padding: $card-padding;
+  }
+
+  > *:only-child{
+    margin-left: auto;
+  }
+
+  .card__button{
+    font-size: $small-font-size;
+  }
+}
+
+$favorite-color: $alert;
+
+.favorite-button{
+  position: relative;
+  top: 4px;
+
+  &.button{
+    padding: 0;
+  }
+
+  .icon-wrap{
+    position: relative;
+    border-right: 0px;
+
+    .heart-icon{
+      color: $favorite-color;
+
+      svg{
+        fill: currentColor;
+      }
+    }
+  }
+
+  .indicator-wrap{
+    position: absolute;
+    bottom: 0;
+    right: -8px;
+    width: 30px;
+    height: 30px;
+    border: 3px solid $favorite-color;
+    line-height: 24px;
+    border-radius: 50%;
+    font-size: 2rem;
+    background: $white;
+    color: $favorite-color;
+  }
+}
