@@ -1281,10 +1281,8 @@ ActiveRecord::Schema.define(version: 2020_12_19_131586) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "update_token"
-    t.datetime "closed_at"
     t.integer "comments_count", default: 0, null: false
     t.index ["answered_at"], name: "index_decidim_plans_plans_on_answered_at"
-    t.index ["closed_at"], name: "index_decidim_plans_plans_on_closed_at"
     t.index ["decidim_category_id"], name: "index_decidim_plans_plans_on_decidim_category_id"
     t.index ["decidim_component_id"], name: "index_decidim_plans_plans_on_decidim_component_id"
     t.index ["decidim_scope_id"], name: "index_decidim_plans_plans_on_decidim_scope_id"
@@ -1302,8 +1300,6 @@ ActiveRecord::Schema.define(version: 2020_12_19_131586) do
     t.boolean "mandatory"
     t.string "section_type"
     t.jsonb "settings", default: {}
-    t.jsonb "information_label"
-    t.jsonb "information"
     t.boolean "visible_form", default: true, null: false
     t.boolean "visible_view", default: true, null: false
     t.boolean "visible_api", default: true, null: false
