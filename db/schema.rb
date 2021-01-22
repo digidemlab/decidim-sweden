@@ -1300,6 +1300,8 @@ ActiveRecord::Schema.define(version: 2020_12_19_131586) do
     t.boolean "mandatory"
     t.string "section_type"
     t.jsonb "settings", default: {}
+    t.jsonb "information_label"
+    t.jsonb "information"
     t.boolean "visible_form", default: true, null: false
     t.boolean "visible_view", default: true, null: false
     t.boolean "visible_api", default: true, null: false
