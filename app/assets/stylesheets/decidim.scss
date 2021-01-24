@@ -1,19 +1,74 @@
-// // Variables
-//
-// $primary: #ef604d;
-// $secondary: #599aa6;
-// $success: #57d685;
-// $warning: #ffae00;
-// $alert: #ec5840;
-//
-// $proposals: #238ff7;
-// $actions: #57d685;
-// $debates: #fa6c96;
-// $meetings: #fabc6c;
-//
-// $twitter: #55acee;
-// $facebook: #3b5998;
-// $google: #dd4b39;
+$bb-light-blue: #003dac;
+$bb-light-blue-rgb:rgb(0, 61, 172);
+$bb-blue: #063FA6;
+$bb-blue-rgb: rgb(6, 63, 166);
+$bb-night-quarter-blue: #00285a;
+$bb-night-quarter-blue-rgb:rgb(0, 40, 90);
+$bb-playroom-red: #e3420f;
+$bb-playroom-red-rgb: rgb(227, 66, 15);
+$bb-daggturkos: #92d5ac;
+$bb-daggturkos-rgb: rgb(146, 213, 172);
+$bb-mermaid-purple: #622066;
+$bb-mermaid-purple-rgb:rgb(98, 32, 102);
+$bb-garden-green: #026937;
+$bb-garden-green-rgb: rgb(2, 105, 55);
+$bb-neighbour-yellow: #ffdf00;
+$bb-neighbour-yellow-rgb: rgb(255, 223, 0);
+$bb-sandbox-beige: #ebe6d6;
+$bb-sandbox-beige-rgb: rgb(235, 230, 214);
+$bb-sandbox-beige-light: #F5F2EB;
+$bb-sandbox-beige-light-rgb: rgb(245, 242, 235);
+
+$bb-orange-light: #FEEFE7;
+$bb-orange-light-rgb: rgb(254, 239, 231);
+$bb-green-marker: #99A734;
+$bb-green-marker-rgb: rgb(153, 167, 52);
+
+// Variables
+
+$primary: $bb-light-blue !default;
+$primary-rgb: $bb-light-blue-rgb !default;
+$secondary: $bb-mermaid-purple !default;
+$secondary-rgb: $bb-mermaid-purple-rgb !default;
+$success: $bb-garden-green !default;
+$success-rgb: $bb-garden-green-rgb !default;
+$warning: $bb-neighbour-yellow !default;
+$warning-rgb: $bb-neighbour-yellow-rgb !default;
+$alert: $bb-playroom-red !default;
+$alert-rgb: $bb-playroom-red-rgb !default;
+
+//$proposals: $sthlm-purple !default;
+//$actions: $sthlm-green !default;
+//$debates: $sthlm-pink !default;
+//$meetings: $sthlm-orange !default;
+
+$twitter: #55acee !default;
+$facebook: #3b5998 !default;
+$google: #dd4b39 !default;
+
+:root{
+  --primary: #{$primary};
+  --primary-rgb: #{$primary-rgb};
+  --secondary: #{$secondary};
+  --secondary-rgb: #{$secondary-rgb};
+  --success: #{$success};
+  --success-rgb: #{$success-rgb};
+  --warning: #{$warning};
+  --warning-rgb: #{$warning-rgb};
+  --alert: #{$alert};
+  --alert-rgb: #{$alert-rgb};
+  //--proposals: #{$proposals};
+  //--actions: #{$actions};
+  //--debates: #{$debates};
+  //--meetings: #{$meetings};
+  --twitter: #{$twitter};
+  --facebook: #{$facebook};
+  --google: #{$google};
+}
+
+$light-gray: $bb-sandbox-beige;
+
+@import "fontface";
 
 @import "decidim/application";
 
@@ -45,4 +100,88 @@
       }
     }
   }
+}
+
+$bb-type: "quasimoda", sans-serif !important;
+
+body {
+    font-family: $bb-type;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $bb-type;
+}
+
+/*Navbar color when nav is white*/
+.title-bar
+{
+    background-color: $white;
+    border-top-color: $white;
+}
+/*Color for the org title that displays when there is no logo*/
+.logo-wrapper  span
+{
+    color: $primary !important;
+}
+
+/*color for navbar notification bell*/
+.topbar__notifications .icon
+{
+    fill: $primary;
+}
+
+/*color of hamburger menu (displays when screen is small)*/
+.topbar__menu button
+{
+    color: $primary;
+}
+
+/*color of user menu*/
+.topbar__user__login a
+{
+    color: $primary;
+}
+
+/*color of dropdown user menu*/
+.topbar__dropmenu .dropdown>li>a
+{
+    color: $primary;
+}
+
+/*color of triangle toggle that displays dropdown menu on mouse hover*/
+.topbar__dropmenu>ul>li>a:after
+{
+    border-top-color: $primary !important;
+}
+/*------END OF PRIMARY NAV BAR------*/
+
+.navbar {
+    background-color: $primary;
+}
+
+.main-nav__link a {
+    font-weight: bold;
+    color: $white;
+}
+
+.main-nav__link--active a {
+    background-color: $bb-blue;
+}
+
+.main-nav__link a:hover, .main-nav__link a:focus {
+    background-color: $bb-blue;
+    transition: transform .3s ease;
+}
+
+.topbar__search input, .topbar__search input:focus {
+    background-color: $primary
+}
+
+.phase-date, .timeline__date {
+  display: none;
 }
