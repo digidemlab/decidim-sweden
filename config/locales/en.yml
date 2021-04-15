@@ -42,6 +42,11 @@ en:
             - An admin will review the request
             - Admin will either approve or reject the access request
             - The user will get notified that their access request has been either approved or rejected
+        budgets:
+          projects:
+            orders:
+              alphabetic: A to Z
+
   layouts:
     decidim:
       footer:
