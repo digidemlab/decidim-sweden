@@ -4,23 +4,25 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/digidemlab/decidim", branch: "0.23-with-map-improvement-from-OSP" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.24-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 
-gem "decidim-term_customizer", git: "https://github.com/tremend-cofe/decidim-module-term_customizer", branch: "0.24-dev"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "master"
 #gem "decidim-access_requests", git: "https://github.com/mainio/decidim-module-access_requests"
-gem "decidim-navbar_links", git: "https://github.com/OpenSourcePolitics/decidim-module-navbar_links", ref: "master"
+gem "decidim-navbar_links", git: "https://github.com/digidemlab/decidim-module-navbar_links", ref: "master"
 gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "just-age-and-gender"
 #gem "decidim-jitsi_meetings", git: "https://github.com/digidemlab/decidim-module-online-meetings"
-gem "decidim-decidim_awesome", git: "https://github.com/digidemlab/decidim-module-decidim_awesome"
-#gem "decidim-plans", git: "https://github.com/mainio/decidim-module-plans", branch: "develop"
+gem "decidim-decidim_awesome", git: "https://github.com/Platoniq/decidim-module-decidim_awesome", branch: "master"
+#gem "decidim-plans", git: "https://github.com/digidemlab/decidim-module-plans", branch: "develop"
 #gem "decidim-ideas", git: "https://github.com/mainio/decidim-module-ideas", branch: "master"
 #gem "decidim-favorites", git: "https://github.com/mainio/decidim-module-favorites", branch: "master"
 #gem "decidim-feedback", git: "https://github.com/mainio/decidim-module-feedback", branch: "master"
 #gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
 #gem "decidim-budgets_enhanced", git: "https://github.com/OpenSourcePolitics/decidim-module-budgets_enhanced", ref: "0.22-dev"
+
+# gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal"
 
 gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
 
@@ -28,10 +30,10 @@ gem "bootsnap", "~> 1.3"
 
 gem "wicked_pdf"
 
-gem "puma", "~> 4.3"
+gem "puma", ">= 5.0.0"
 gem "uglifier", "~> 4.1"
 
-gem "faker", "~> 1.9"
+gem "faker", "~> 2.14"
 
 gem "figaro"
 
