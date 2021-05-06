@@ -255,6 +255,17 @@ GIT
       decidim-core (>= 0.18.0)
 
 GIT
+  remote: https://github.com/mainio/decidim-module-accountability_simple
+  revision: 73d444b208ad37c5b412d2cf9bd086b97bff54d3
+  branch: develop
+  specs:
+    decidim-accountability_simple (0.24.0)
+      decidim-accountability (~> 0.24.0)
+      decidim-admin (~> 0.24.0)
+      decidim-core (~> 0.24.0)
+      decidim-participatory_processes (~> 0.24.0)
+
+GIT
   remote: https://github.com/mainio/decidim-module-term_customizer
   revision: c9f127e78bd52b29ee02bc62f252db2634f9a1f0
   branch: master
@@ -935,6 +946,7 @@ DEPENDENCIES
   bootsnap (~> 1.3)
   byebug (~> 11.0)
   decidim!
+  decidim-accountability_simple!
   decidim-analytics!
   decidim-antivirus!
   decidim-consultations!
