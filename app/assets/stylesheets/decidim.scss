@@ -52,8 +52,8 @@ $sthlm-warning-rgb:      255,198,30;
 
 // Variables
 
-$primary: $sthlm-blue !default;
-$primary-rgb: $sthlm-blue-rgb !default;
+$primary: $sthlm-pink !default;
+$primary-rgb: $sthlm-pink-rgb !default;
 $secondary: $sthlm-green !default;
 $secondary-rgb: $sthlm-green-rgb !default;
 $success: $sthlm-success !default;
@@ -197,11 +197,11 @@ h6, .h6 {
 }
 
 .main-nav__link--active a {
-    background-color: $sthlm-dark-blue;
+    background-color: $sthlm-dark-pink;
 }
 
 .main-nav__link a:hover, .main-nav__link a:focus {
-    background-color: $sthlm-dark-blue;
+    background-color: $sthlm-dark-pink;
     transition: transform .3s ease;
 }
 
