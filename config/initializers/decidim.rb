@@ -5,8 +5,8 @@ Decidim.configure do |config|
   config.mailer_sender = Rails.application.secrets.mailer_sender
 
   # Change these lines to set your preferred locales
-  config.default_locale = :sv
-  config.available_locales = %i[sv en]
+  config.default_locale = :fr
+  config.available_locales = %i[fr en]
 
   # Geocoder configuration
   config.geocoder = {
@@ -21,7 +21,7 @@ Decidim.configure do |config|
   # end
 
   # Currency unit
-  config.currency_unit = 'kr'
+  config.currency_unit = 'fr'
 
   # The number of reports which an object can receive before hiding it
   # config.max_reports_before_hiding = 3
