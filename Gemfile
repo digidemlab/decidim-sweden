@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/digidemlab/decidim", ref: "565f52c96a873e49a4331c747a5cb99f645ed3b2" }
+DECIDIM_VERSION = { git: "https://github.com/digidemlab/decidim", ref: "f5009c2a8e9942392d09c9f7522116c40f98f861" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
