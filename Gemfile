@@ -40,6 +40,8 @@ gem "figaro"
 gem "sentry-rails"
 gem "sentry-sidekiq"
 
+gem "i18n", "1.8.11"
+
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 

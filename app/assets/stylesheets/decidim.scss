@@ -15,6 +15,27 @@
 // $facebook: #3b5998;
 // $google: #dd4b39;
 
+$hgf-red-1: #FF0037;
+$hgf-red-2: #FF4D56;
+$hgf-red-3: #F97D7D;
+$hgf-red-4: #FFEBF7;
+
+$hgf-blue-1: #06007E;
+$hgf-blue-2: #231FD8;
+$hgf-blue-3: #3145FF;
+$hgf-blue-4: #D8E8FF;
+
+$hgf-black: #231F20;
+$hgf-warning: #FFE988;
+$hgf-success: #25D287;
+
+$primary: $hgf-blue-2;
+$primary-dark: $hgf-blue-1;
+$secondary: $hgf-red-2;
+$success: $hgf-success;
+$warning: $hgf-warning;
+$alert: $hgf-red-1;
+
 @import "decidim/application";
 
 .mini-footer .row {
@@ -44,5 +65,156 @@
         color: white;
       }
     }
+  }
+}
+
+@import "fontface";
+
+$hyra-sans: "HyraSans", sans-serif;
+$hyra-sans-display: "HyraSansDisplay", sans-serif;
+
+body {
+    font-family: $hyra-sans;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $hyra-sans-display;
+}
+
+/*Navbar color when nav is white*/
+.title-bar
+{
+    background-color: $white;
+    border-top-color: $white;
+}
+/*Color for the org title that displays when there is no logo*/
+.logo-wrapper  span
+{
+    color: $primary !important;
+}
+
+/*color for navbar notification bell*/
+.topbar__notifications .icon
+{
+    fill: $primary;
+}
+
+/*color of hamburger menu (displays when screen is small)*/
+.topbar__menu button
+{
+    color: $primary;
+}
+
+/*color of user menu*/
+.topbar__user__login a
+{
+    color: $primary;
+}
+
+/*color of dropdown user menu*/
+.topbar__dropmenu .dropdown>li>a
+{
+    color: $primary;
+}
+
+/*color of triangle toggle that displays dropdown menu on mouse hover*/
+.topbar__dropmenu>ul>li>a:after
+{
+    border-top-color: $primary !important;
+}
+/*------END OF PRIMARY NAV BAR------*/
+.topbar__admin__link{
+  a{
+    color: $primary;
+
+    &:hover{
+      color: $secondary;
+    }
+  }
+}
+
+.navbar {
+    background-color: $primary;
+}
+
+.main-nav__link a {
+    font-weight: bold;
+    color: $white;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.main-nav__link--active a {
+    background-color: $white;
+    color: $primary;
+}
+
+.main-nav__link a:hover, .main-nav__link a:focus {
+    background-color: $primary-dark;
+    color: $white;
+}
+
+.topbar__search input, .topbar__search input:focus {
+    background-color: $primary-dark;
+}
+
+.logotype {
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: auto;
+  display: flex;
+}
+
+.city-logo {
+  border-right-color: rgba(0, 0, 0, 0.0980392);
+  border-right-style: solid;
+  border-right-width: 1px;
+
+  padding-right: 48px;
+  margin-right: 8px;
+}
+
+.logotype_title {
+  font-family: $hyra-sans;
+  font-size: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: auto;
+  display: flex;
+}
+
+.hero {
+  &::after {
+    background-color: rgba($black, .2);
+  }
+}
+
+.hero-heading {
+  text-shadow: none;
+}
+
+.button {
+  border-radius: 2em;
+}
+
+.highligted-content-banner {
+  &::after {
+    background-color: rgba($black, .2);
+  }
+}
+
+.process-header__main {
+  &::after {
+    background-color: rgba($black, .2);
   }
 }
