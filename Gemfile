@@ -4,23 +4,15 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.24-stable" }
+DECIDIM_VERSION = { git: "https://github.com/digidemlab/decidim", ref: "565f52c96a873e49a4331c747a5cb99f645ed3b2" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "develop"
-#gem "decidim-access_requests", git: "https://github.com/mainio/decidim-module-access_requests"
-gem "decidim-navbar_links", git: "https://github.com/digidemlab/decidim-module-navbar_links", ref: "master"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "0.24-stable"
 gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "just-age-and-gender"
-#gem "decidim-jitsi_meetings", git: "https://github.com/digidemlab/decidim-module-online-meetings"
-gem "decidim-decidim_awesome", git: "https://github.com/Platoniq/decidim-module-decidim_awesome", branch: "master"
-#gem "decidim-plans", git: "https://github.com/digidemlab/decidim-module-plans", branch: "develop"
-#gem "decidim-ideas", git: "https://github.com/mainio/decidim-module-ideas", branch: "master"
-#gem "decidim-favorites", git: "https://github.com/mainio/decidim-module-favorites", branch: "master"
-#gem "decidim-feedback", git: "https://github.com/mainio/decidim-module-feedback", branch: "master"
+gem "decidim-decidim_awesome", git: "https://github.com/Platoniq/decidim-module-decidim_awesome", branch: "main"
 #gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
-#gem "decidim-budgets_enhanced", git: "https://github.com/OpenSourcePolitics/decidim-module-budgets_enhanced", ref: "0.22-dev"
 
 gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
 
@@ -35,6 +27,7 @@ gem "faker", "~> 2.14"
 
 gem "figaro"
 
+gem "sentry-ruby"
 gem "sentry-rails"
 gem "sentry-sidekiq"
 
@@ -57,5 +50,5 @@ group :production do
   gem "sidekiq"
   gem "sidekiq-scheduler"
   gem "sinatra"
-  gem "decidim-antivirus", git: "https://github.com/digidemlab/decidim-module-antivirus", branch: "master"
+  gem "decidim-antivirus", git: "https://github.com/mainio/decidim-module-antivirus", branch: "release/0.24-stable"
 end
