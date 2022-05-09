@@ -1,78 +1,78 @@
-$sthlm-pink:             #c40064;
-$sthlm-pink-rgb:         196,0,100;
-$sthlm-light-pink:       #fdbbd9;
-$sthlm-light-pink-rgb:   253,187,217;
-$sthlm-purple:           #5d237d;
-$sthlm-purple-rgb:       93/35/125;
-$sthlm-light-purple:     #ebd6f2;
+$sthlm-pink: #c40064;
+$sthlm-pink-rgb: 196, 0, 100;
+$sthlm-light-pink: #fdbbd9;
+$sthlm-light-pink-rgb: 253, 187, 217;
+$sthlm-purple: #5d237d;
+$sthlm-purple-rgb: 93/35/125;
+$sthlm-light-purple: #ebd6f2;
 $sthlm-light-purple-rgb: 235/214/242;
-$sthlm-green:            #00837c;
-$sthlm-green-rgb:        0/131/125;
-$sthlm-light-green:      #c2eee7;
-$sthlm-light-green-rgb:  195/238/231;
-$sthlm-blue:             #006ebf;
-$sthlm-blue-rgb:         0/110/191;
-$sthlm-light-blue:       #cae5ff;
-$sthlm-light-blue-rgb:   202/229/255;
-$sthlm-orange:           #c9472d;
-$sthlm-orange-rgb:       201/71/45;
-$sthlm-light-orange:     #ffc89f;
+$sthlm-green: #00837c;
+$sthlm-green-rgb: 0/131/125;
+$sthlm-light-green: #c2eee7;
+$sthlm-light-green-rgb: 195/238/231;
+$sthlm-blue: #006ebf;
+$sthlm-blue-rgb: 0/110/191;
+$sthlm-light-blue: #cae5ff;
+$sthlm-light-blue-rgb: 202/229/255;
+$sthlm-orange: #c9472d;
+$sthlm-orange-rgb: 201/71/45;
+$sthlm-light-orange: #ffc89f;
 $sthlm-light-orange-rgb: 255/200/159;
 
-$sthlm-yellow:           #fcbf0a;
-$sthlm-yellow-rgb:       252/191/10;
+$sthlm-yellow: #fcbf0a;
+$sthlm-yellow-rgb: 252/191/10;
 
-$sthlm-white:            #ffffff;
-$sthlm-white-rgb:        255/255/255;
-$sthlm-grey:             #f5f3ee;
-$sthlm-grey-rgb:         245/243/238;
-$sthlm-black:            #333333;
-$sthlm-black-rgb:        51/51/51;
+$sthlm-white: #ffffff;
+$sthlm-white-rgb: 255/255/255;
+$sthlm-grey: #f5f3ee;
+$sthlm-grey-rgb: 245/243/238;
+$sthlm-black: #333333;
+$sthlm-black-rgb: 51/51/51;
 
-$sthlm-link-blue:        #0664aa;
-$sthlm-link-blue-rgb:    6,100,170;
-$sthlm-separators:       #c9c6c0;
-$sthlm-separators-rgb:   201,198,192;
-$sthlm-error:            #dd1f26;
-$sthlm-error-rgb:        221,31,38;
+$sthlm-link-blue: #0664aa;
+$sthlm-link-blue-rgb: 6, 100, 170;
+$sthlm-separators: #c9c6c0;
+$sthlm-separators-rgb: 201, 198, 192;
+$sthlm-error: #dd1f26;
+$sthlm-error-rgb: 221, 31, 38;
 
-$sthlm-dark-pink:        #950048;
-$sthlm-dark-pink-rgb:    149,0,72;
-$sthlm-dark-blue:        #005288;
-$sthlm-dark-blue-rgb:    0,82,136;
-$sthlm-real-black:       #000000;
-$sthlm-real-black-rgb:   0,0,0;
+$sthlm-dark-pink: #950048;
+$sthlm-dark-pink-rgb: 149, 0, 72;
+$sthlm-dark-blue: #005288;
+$sthlm-dark-blue-rgb: 0, 82, 136;
+$sthlm-real-black: #000000;
+$sthlm-real-black-rgb: 0, 0, 0;
 
-$sthlm-header-grey:      #444444;
-$sthlm-header-grey-rgb:  68,68,68;
-$sthlm-success:          #009246;
-$sthlm-success-rgb:      0,146,70;
-$sthlm-warning:          #ffc61e;
-$sthlm-warning-rgb:      255,198,30;
+$sthlm-header-grey: #444444;
+$sthlm-header-grey-rgb: 68, 68, 68;
+$sthlm-success: #009246;
+$sthlm-success-rgb: 0, 146, 70;
+$sthlm-warning: #ffc61e;
+$sthlm-warning-rgb: 255, 198, 30;
 
 // Variables
 
-$primary: $sthlm-pink !default;
-$primary-rgb: $sthlm-pink-rgb !default;
-$secondary: $sthlm-green !default;
-$secondary-rgb: $sthlm-green-rgb !default;
-$success: $sthlm-success !default;
-$success-rgb: $sthlm-success-rgb !default;
-$warning: $sthlm-warning !default;
-$warning-rgb: $sthlm-warning-rgb !default;
-$alert: $sthlm-error !default;
-$alert-rgb: $sthlm-error-rgb !default;
+$primary: $sthlm-pink  !default;
+$primary-rgb: $sthlm-pink-rgb  !default;
+$secondary: $sthlm-green  !default;
+$secondary-rgb: $sthlm-green-rgb  !default;
+$success: $sthlm-success  !default;
+$success-rgb: $sthlm-success-rgb  !default;
+$warning: $sthlm-warning  !default;
+$warning-rgb: $sthlm-warning-rgb  !default;
+$alert: $sthlm-error  !default;
+$alert-rgb: $sthlm-error-rgb  !default;
 
-$proposals: $sthlm-purple !default;
-$actions: $sthlm-green !default;
-$debates: $sthlm-pink !default;
-$meetings: $sthlm-orange !default;
+$proposals: $sthlm-purple  !default;
+$actions: $sthlm-green  !default;
+$debates: $sthlm-pink  !default;
+$meetings: $sthlm-orange  !default;
 
 $twitter: #55acee !default;
 $facebook: #3b5998 !default;
 $google: #dd4b39 !default;
 
-:root{
+:root {
   --primary: #{$primary};
   --primary-rgb: #{$primary-rgb};
   --secondary: #{$secondary};
@@ -99,114 +99,117 @@ $light-gray: $sthlm-grey;
 @import "decidim/application";
 
 .mini-footer .row {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-   .decidim-logo {
-     display: flex;
-     flex-grow: 0;
-     width: auto;
-     margin: 0 .5rem;
-   }
+  .decidim-logo {
+    display: flex;
+    flex-grow: 0;
+    width: auto;
+    margin: 0 .5rem;
+  }
 
-   img {
-     height: 1rem;
-   }
+  img {
+    height: 1rem;
+  }
 
-   .mf-text {
-     font-size: 80%;
-     line-height: 1rem;
+  .mf-text {
+    font-size: 80%;
+    line-height: 1rem;
 
-     a {
-       font-weight: 600;
+    a {
+      font-weight: 600;
 
-       &:hover {
-         color: white;
-       }
-     }
-   }
- }
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
 
 $stockholm-type: "Stockholm Type", "Arial", "Helvetica", sans-serif;
 $open-sans: "Open Sans", "Arial", "Helvetica", sans-serif;
 
 body {
-    font-family: $open-sans;
+  font-family: $open-sans;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   font-family: $stockholm-type;
 }
 
 /*Navbar color when nav is white*/
-.title-bar
-{
-    background-color: $sthlm-white;
-    border-top-color: $sthlm-white;
+.title-bar {
+  background-color: $sthlm-white;
+  border-top-color: $sthlm-white;
 }
+
 /*Color for the org title that displays when there is no logo*/
-.logo-wrapper  span
-{
-    color: $primary !important;
+.logo-wrapper span {
+  color: $primary  !important;
 }
 
 /*color for navbar notification bell*/
-.topbar__notifications .icon
-{
-    fill: $primary;
+.topbar__notifications .icon {
+  fill: $primary;
 }
 
 /*color of hamburger menu (displays when screen is small)*/
-.topbar__menu button
-{
-    color: $primary;
+.topbar__menu button {
+  color: $primary;
 }
 
 /*color of user menu*/
-.topbar__user__login a
-{
-    color: $primary;
+.topbar__user__login a {
+  color: $primary;
 }
 
 /*color of dropdown user menu*/
-.topbar__dropmenu .dropdown>li>a
-{
-    color: $primary;
+.topbar__dropmenu .dropdown>li>a {
+  color: $primary;
 }
 
 /*color of triangle toggle that displays dropdown menu on mouse hover*/
-.topbar__dropmenu>ul>li>a:after
-{
-    border-top-color: $primary !important;
+.topbar__dropmenu>ul>li>a:after {
+  border-top-color: $primary  !important;
 }
+
 /*------END OF PRIMARY NAV BAR------*/
 
 .navbar {
-    background-color: $primary;
+  background-color: $primary;
 }
 
 .main-nav__link a {
-    font-weight: bold;
-    color: $sthlm-white;
+  font-weight: bold;
+  color: $sthlm-white;
 }
 
 .main-nav__link--active a {
-    background-color: $sthlm-dark-pink;
+  background-color: $sthlm-dark-pink;
 }
 
-.main-nav__link a:hover, .main-nav__link a:focus {
-    background-color: $sthlm-dark-pink;
-    transition: transform .3s ease;
+.main-nav__link a:hover,
+.main-nav__link a:focus {
+  background-color: $sthlm-dark-pink;
+  transition: transform .3s ease;
 }
 
-.topbar__search input, .topbar__search input:focus {
-    background-color: $primary
+.topbar__search input,
+.topbar__search input:focus {
+  background-color: $primary
 }
 
 .logotype {
@@ -228,7 +231,7 @@ h6, .h6 {
 }
 
 .logo-wrapper span {
-  color: $sthlm-black !important;
+  color: $sthlm-black  !important;
 }
 
 .logotype_title {
@@ -242,12 +245,4 @@ h6, .h6 {
   box-sizing: border-box;
   cursor: auto;
   display: flex;
-}
-
-.phase-date, .timeline__date {
-  display: none;
-}
-
-.main-nav ul > li:nth-child(2), .main-nav ul > li:nth-child(3) {
-   display: none;
 }
