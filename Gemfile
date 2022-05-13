@@ -4,12 +4,12 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/digidemlab/decidim", ref: "565f52c96a873e49a4331c747a5cb99f645ed3b2" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.25-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "0.24-stable"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "master"
 gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "just-age-and-gender"
 gem "decidim-decidim_awesome", git: "https://github.com/Platoniq/decidim-module-decidim_awesome", branch: "main"
 #gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
@@ -21,7 +21,6 @@ gem "bootsnap", "~> 1.3"
 gem "wicked_pdf"
 
 gem "puma", ">= 5.0.0"
-gem "uglifier", "~> 4.1"
 
 gem "faker", "~> 2.14"
 
@@ -38,7 +37,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "letter_opener_web", "~> 1.3"
+  gem "letter_opener_web", "~> 2.0"
   gem "listen", "~> 3.1"
   gem "spring", "~> 2.0"
   gem "spring-watcher-listen", "~> 2.0"
@@ -50,5 +49,5 @@ group :production do
   gem "sidekiq"
   gem "sidekiq-scheduler"
   gem "sinatra"
-  gem "decidim-antivirus", git: "https://github.com/mainio/decidim-module-antivirus", branch: "release/0.24-stable"
+  gem "decidim-antivirus", git: "https://github.com/mainio/decidim-module-antivirus", branch: "master"
 end
