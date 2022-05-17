@@ -33,7 +33,6 @@ h6,
     font-family: 'Siri', 'Source Sans Pro', Helvetica, Roboto, Arial, sans-serif;
 }
 
-
 /*Navbar color when nav is white*/
 .title-bar {
     background-color: $white;
@@ -115,44 +114,6 @@ h6,
 
 .topbar__search:not(:focus-within) button {
     background: $primary;
-}
-
-.logotype {
-    -webkit-box-align: center;
-    -webkit-box-direction: normal;
-    align-items: center;
-    box-sizing: border-box;
-    cursor: auto;
-    display: flex;
-}
-
-.city-logo {
-    border-right-color: rgba(0, 0, 0, 0.0980392);
-    border-right-style: solid;
-    border-right-width: 1px;
-
-    padding-right: 48px;
-    margin-right: 8px;
-}
-
-.logotype_title {
-    font-size: 20px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    -webkit-box-align: center;
-    -webkit-box-direction: normal;
-    align-items: center;
-    box-sizing: border-box;
-    cursor: auto;
-    display: flex;
-}
-
-.hero,
-.process-header__main,
-.highligted-content-banner {
-    &::after {
-        background-color: $light; //rgba($black, .2);
-    }
 }
 
 .hero-heading {
