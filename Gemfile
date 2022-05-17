@@ -26,6 +26,8 @@ gem "faker", "~> 2.14"
 
 gem "figaro"
 
+gem "nokogiri", "1.13.4"
+
 gem "sentry-ruby"
 gem "sentry-rails"
 gem "sentry-sidekiq"
