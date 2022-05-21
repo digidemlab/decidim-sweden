@@ -1,0 +1,14 @@
+// This is a file that can be overridden by the application in order to override
+// some of the Foundation/Decidim SCSS settings and variables after the default
+// settings have been loaded.
+//
+// To override styles use decidim_application.scss
+//
+// By default this is empty.
+
+$primary: #60003a;
+$primary-dark: #60003a;
+$secondary: #3f5564;
+$success: #00664a;
+$warning: #ffd23c;
+$alert: #ad1d24;
