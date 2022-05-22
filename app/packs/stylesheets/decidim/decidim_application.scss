@@ -1,0 +1,83 @@
+// This is a file that can be overridden by the application in order to override styles
+// Notice that this file is included at the very end of the stylesheets packs to have
+// more priority
+//
+// To override CSS variables or Foundation settings use _decidim-settings.scss
+//
+// By default this is empty.
+
+@import "modules/mini_footer";
+@import "modules/fonts_bostadsbolaget";
+
+$bb-type: "quasimoda", sans-serif !important;
+
+body {
+    font-family: $bb-type;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: $bb-type;
+}
+
+/*Navbar color when nav is white*/
+.title-bar {
+    background-color: $white;
+    border-top-color: $white;
+}
+
+/*Color for the org title that displays when there is no logo*/
+.logo-wrapper span {
+    color: var(--primary) !important;
+}
+
+/*color of triangle toggle that displays dropdown menu on mouse hover*/
+.topbar__dropmenu>ul>li>a:after {
+    border-top-color: var(--primary) !important;
+}
+
+
+.topbar__dropmenu>ul>li>a:after {
+    border-top-color: var(--primary) !important;
+}
+
+.topbar__search input {
+    background-color: var(--primary);
+}
+
+.topbar__dropmenu .dropdown>li>a,
+.topbar__menu button,
+.topbar__user__login a {
+    color: var(--primary);
+}
+
+/*------END OF PRIMARY NAV BAR------*/
+
+.navbar {
+    background-color: var(--primary);
+}
+
+.main-nav__link a {
+    font-weight: bold;
+    color: $white;
+}
+
+.main-nav__link--active a {
+    background-color: $bb-blue;
+}
+
+.main-nav__link a:hover,
+.main-nav__link a:focus {
+    background-color: $bb-blue;
+    transition: transform .3s ease;
+}

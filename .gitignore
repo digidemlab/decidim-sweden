@@ -38,3 +38,11 @@ public/uploads
 
 # Remain of Ansible install script
 create-decidim-admin.done
+
+/public/packs
+/public/decidim-packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
