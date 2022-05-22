@@ -1,0 +1,28 @@
+// This is a file that can be overridden by the application in order to override
+// some of the Foundation/Decidim SCSS settings and variables after the default
+// settings have been loaded.
+//
+// To override styles use decidim_application.scss
+//
+// By default this is empty.
+
+$sigtuna-blue: #365587;
+$sigtuna-blue-rgb: rgb(54, 85, 135);
+$sigtuna-light-blue: #4473B0;
+$sigtuna-light-blue-rgb: rgb(68, 115, 176);
+$sigtuna-purple: #AF7F95;
+$sigtuna-purple-rgb: rgb(175, 127, 149);
+
+// Variables
+
+$primary: $sigtuna-light-blue  !default;
+$primary-rgb: $sigtuna-light-blue-rgb  !default;
+$secondary: $sigtuna-blue  !default;
+$secondary-rgb: $sigtuna-blue-rgb  !default;
+
+:root {
+    --primary: #{$primary};
+    --primary-rgb: #{$primary-rgb};
+    --secondary: #{$secondary};
+    --secondary-rgb: #{$secondary-rgb};
+}
