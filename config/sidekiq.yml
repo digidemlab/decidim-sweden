@@ -1,6 +1,8 @@
 :concurrency: 5
 :queues:
 - default
+- export
+- translations
 - metrics
 - mailers
 - newsletter
