@@ -9,12 +9,14 @@ DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/
 gem "decidim", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "master"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "release/0.25-stable"
 gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "just-age-and-gender"
 gem "decidim-decidim_awesome", git: "https://github.com/Platoniq/decidim-module-decidim_awesome", branch: "main"
+gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: "release/0.25-stable"
 #gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
 
 gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
+gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.25-stable"
 
 gem "bootsnap", "~> 1.3"
 
@@ -50,6 +52,7 @@ group :production do
   gem "passenger"
   gem "sidekiq"
   gem "sidekiq-scheduler"
+  gem "sidekiq-failures"
   gem "sinatra"
-  gem "decidim-antivirus", git: "https://github.com/mainio/decidim-module-antivirus", branch: "master"
+  gem "decidim-antivirus", git: "https://github.com/mainio/decidim-module-antivirus", branch: "release/0.25-stable"
 end

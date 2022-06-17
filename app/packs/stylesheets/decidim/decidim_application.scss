@@ -7,16 +7,8 @@
 // By default this is empty.
 
 @import "modules/mini_footer";
+@import "modules/white_theme";
 @import "modules/fonts_poseidon";
-
-/**
- * Custom css for Poseidon
- */
-
-body,
-html {
-    font-family: 'Siri', 'Source Sans Pro', Helvetica, Roboto, Arial, sans-serif;
-}
 
 h1,
 .h1,
@@ -29,91 +21,10 @@ h4,
 h5,
 .h5,
 h6,
-.h6 {
+.h6,
+body,
+html {
     font-family: 'Siri', 'Source Sans Pro', Helvetica, Roboto, Arial, sans-serif;
-}
-
-/*Navbar color when nav is white*/
-.title-bar {
-    background-color: $white;
-    border-top-color: $white;
-}
-
-.off-canvas {
-    background-color: $white;
-}
-
-/*Color for the org title that displays when there is no logo*/
-.logo-wrapper span {
-    color: $primary  !important;
-}
-
-/*color for navbar notification bell*/
-.topbar__notifications .icon {
-    fill: $primary;
-}
-
-/*color of hamburger menu (displays when screen is small)*/
-.topbar__menu button {
-    color: $primary;
-}
-
-/*color of user menu*/
-.topbar__user__login a {
-    color: $secondary;
-}
-
-/*color of offcanvas menu*/
-.off-canvas .topbar__user__login {
-    background: $light;
-    border-color: $light;
-}
-
-/*color of dropdown user menu*/
-.topbar__dropmenu .dropdown>li>a {
-    color: $secondary;
-}
-
-/*color of triangle toggle that displays dropdown menu on mouse hover*/
-.topbar__dropmenu>ul>li>a:after {
-    border-top-color: $secondary  !important;
-}
-
-/*------END OF PRIMARY NAV BAR------*/
-.topbar__admin__link {
-    a {
-        color: $secondary;
-
-        &:hover {
-            color: $secondary;
-        }
-    }
-}
-
-.navbar {
-    background-color: $primary;
-}
-
-.main-nav__link {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.main-nav__link a {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.main-nav__link--active a {
-    color: $white;
-}
-
-.topbar__search input,
-.topbar__search input:focus {
-    background-color: $light;
-}
-
-.topbar__search:not(:focus-within) button {
-    background: $primary;
 }
 
 .hero-heading {
