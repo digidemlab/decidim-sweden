@@ -29,6 +29,9 @@ Decidim.configure do |config|
   # Currency unit
   config.currency_unit = 'kr'
 
+  # Allow participants to use the platform for 2 days before confirming their e-mail address
+  config.unconfirmed_access_for = 2.days
+
   # The number of reports which an object can receive before hiding it
   # config.max_reports_before_hiding = 3
 

@@ -191,10 +191,27 @@ GIT
 
 GIT
   remote: https://github.com/digidemlab/decidim-module-analytics
-  revision: 5a1e8462eb95315a1e6e2d83759ca2a96f68e5d2
+  revision: b4e44a7d2f81d9c76816b8f0233f879c2c128cdf
   specs:
     decidim-analytics (0.23.1)
       decidim-core (>= 0.20.0)
+
+GIT
+  remote: https://github.com/digidemlab/decidim-module-budgets_paper_ballots
+  revision: 992dd118685d29224bbfe490897b5924f16c6429
+  branch: release/0.25-stable
+  specs:
+    decidim-budgets_paper_ballots (0.25.0)
+      decidim-budgets (~> 0.25.0)
+      decidim-core (~> 0.25.0)
+
+GIT
+  remote: https://github.com/digidemlab/decidim-module-faceless
+  revision: ef51b2c02b19ef075eff4bc4f9b8efe922c27b72
+  branch: release/0.25-stable
+  specs:
+    decidim-faceless (0.25.0)
+      decidim-core (~> 0.25)
 
 GIT
   remote: https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler
@@ -207,7 +224,7 @@ GIT
 GIT
   remote: https://github.com/mainio/decidim-module-antivirus
   revision: 078c17463d0ce3a642f4c34858cbe5d1b574d324
-  branch: master
+  branch: release/0.25-stable
   specs:
     decidim-antivirus (0.25.0)
       decidim-core (~> 0.25.0)
@@ -215,9 +232,18 @@ GIT
       ratonvirus-clamby (~> 0.3.0)
 
 GIT
+  remote: https://github.com/mainio/decidim-module-simple_proposal
+  revision: a7aab0af3d99154459ff8e624887927122f193a1
+  branch: release/0.25-stable
+  specs:
+    decidim-simple_proposal (0.25.0)
+      decidim-core (~> 0.25.0)
+      decidim-proposals (~> 0.25.0)
+
+GIT
   remote: https://github.com/mainio/decidim-module-term_customizer
-  revision: 437042198ed04cdd5582b29d5df83b032ecc518f
-  branch: master
+  revision: 1d20451c56b7809cf0d509bbb4d0ac63d4791c8c
+  branch: release/0.25-stable
   specs:
     decidim-term_customizer (0.25.0)
       decidim-admin (~> 0.25.0)
@@ -302,7 +328,7 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     batch-loader (1.5.0)
-    bcrypt (3.1.17)
+    bcrypt (3.1.18)
     better_html (1.0.16)
       actionview (>= 4.0)
       activesupport (>= 4.0)
@@ -312,7 +338,7 @@ GEM
       parser (>= 2.4)
       smart_properties
     bindex (0.8.1)
-    bootsnap (1.11.1)
+    bootsnap (1.12.0)
       msgpack (~> 1.2)
     browser (2.7.1)
     builder (3.2.4)
@@ -389,7 +415,7 @@ GEM
       actionmailer (>= 5.0)
       devise (>= 4.6)
     diff-lcs (1.5.0)
-    diffy (3.4.0)
+    diffy (3.4.1)
     doc2text (0.4.5)
       nokogiri (>= 1.13.2, < 1.14.0)
       rubyzip (~> 2.3.0)
@@ -414,7 +440,7 @@ GEM
     erubi (1.10.0)
     et-orbi (1.2.7)
       tzinfo
-    etherpad-lite (0.3.0)
+    etherpad-lite (0.3.1)
       rest-client (>= 1.6)
     excon (0.92.3)
     execjs (2.8.1)
@@ -423,12 +449,12 @@ GEM
     factory_bot_rails (4.11.1)
       factory_bot (~> 4.11.1)
       railties (>= 3.0.0)
-    faker (2.17.0)
-      i18n (>= 1.6, < 2)
+    faker (2.21.0)
+      i18n (>= 1.8.11, < 2)
     faraday (2.3.0)
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
-    faraday-net_http (2.0.2)
+    faraday-net_http (2.0.3)
     ffi (1.15.5)
     figaro (1.2.0)
       thor (>= 0.14.0, < 2)
@@ -451,17 +477,17 @@ GEM
     fugit (1.5.3)
       et-orbi (~> 1, >= 1.2.7)
       raabro (~> 1.4)
-    geocoder (1.7.5)
+    geocoder (1.8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    graphql (1.13.12)
+    graphql (1.13.13)
     hashdiff (1.0.1)
     hashie (5.0.0)
     highline (2.0.3)
     html_tokenizer (0.0.7)
     htmlentities (4.3.4)
     http-accept (1.7.0)
-    http-cookie (1.0.4)
+    http-cookie (1.0.5)
       domain_name (~> 0.5)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
@@ -484,8 +510,8 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     invisible_captcha (0.13.0)
       rails (>= 3.2.0)
-    json (2.6.1)
-    jwt (2.3.0)
+    json (2.6.2)
+    jwt (2.4.1)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -534,13 +560,13 @@ GEM
     mini_magick (4.11.0)
     mini_mime (1.1.2)
     mini_portile2 (2.8.0)
-    minitest (5.15.0)
+    minitest (5.16.0)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.9)
       tomlrb
     mixlib-shellout (3.2.7)
       chef-utils
-    msgpack (1.5.1)
+    msgpack (1.5.2)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     mustache (1.1.1)
@@ -608,7 +634,7 @@ GEM
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.6.0)
-    rack (2.2.3)
+    rack (2.2.3.1)
     rack-attack (6.6.1)
       rack (>= 1.0, < 3)
     rack-cors (1.1.1)
@@ -641,7 +667,7 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.4.2)
+    rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
     rails-i18n (6.0.0)
       i18n (>= 0.7, < 2)
@@ -674,7 +700,7 @@ GEM
       wisper (>= 1.6.1)
     redcarpet (3.5.1)
     redis (4.6.0)
-    regexp_parser (2.4.0)
+    regexp_parser (2.5.0)
     request_store (1.5.1)
       rack (>= 1.4)
     responders (3.0.1)
@@ -726,7 +752,7 @@ GEM
       rubocop-ast (>= 0.5.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (1.17.0)
+    rubocop-ast (1.18.0)
       parser (>= 3.1.1.0)
     rubocop-rails (2.9.1)
       activesupport (>= 4.2.0)
@@ -738,7 +764,7 @@ GEM
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     ruby2_keywords (0.0.5)
-    rubyXL (3.4.23)
+    rubyXL (3.4.25)
       nokogiri (>= 1.10.8)
       rubyzip (>= 1.3.0)
     rubyzip (2.3.2)
@@ -751,22 +777,24 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
-    sentry-rails (5.2.1)
+    sentry-rails (5.3.1)
       railties (>= 5.0)
-      sentry-ruby-core (~> 5.2.1)
-    sentry-ruby (5.2.1)
+      sentry-ruby-core (~> 5.3.1)
+    sentry-ruby (5.3.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      sentry-ruby-core (= 5.2.1)
-    sentry-ruby-core (5.2.1)
+      sentry-ruby-core (= 5.3.1)
+    sentry-ruby-core (5.3.1)
       concurrent-ruby
-    sentry-sidekiq (5.2.1)
-      sentry-ruby-core (~> 5.2.1)
+    sentry-sidekiq (5.3.1)
+      sentry-ruby-core (~> 5.3.1)
       sidekiq (>= 3.0)
     seven_zip_ruby (1.3.0)
     sidekiq (6.4.2)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
+    sidekiq-failures (1.0.1)
+      sidekiq (>= 4.0.0)
     sidekiq-scheduler (4.0.0)
       redis (>= 4.2.0)
       rufus-scheduler (~> 3.2)
@@ -806,7 +834,7 @@ GEM
     thor (1.2.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    tomlrb (2.0.1)
+    tomlrb (2.0.3)
     truncato (0.7.11)
       htmlentities (~> 4.3.1)
       nokogiri (>= 1.7.0, <= 2.0)
@@ -815,7 +843,7 @@ GEM
     uber (0.1.0)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.8.1)
+    unf_ext (0.0.8.2)
     unicode-display_width (1.8.0)
     valid_email2 (2.3.1)
       activemodel (>= 3.2)
@@ -859,7 +887,7 @@ GEM
     wkhtmltopdf-binary (0.12.6.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.5.4)
+    zeitwerk (2.6.0)
 
 PLATFORMS
   ruby
@@ -870,9 +898,12 @@ DEPENDENCIES
   decidim!
   decidim-analytics!
   decidim-antivirus!
+  decidim-budgets_paper_ballots!
   decidim-consultations!
   decidim-decidim_awesome!
   decidim-dev!
+  decidim-faceless!
+  decidim-simple_proposal!
   decidim-socio_demographic_authorization_handler!
   decidim-term_customizer!
   faker (~> 2.14)
@@ -886,6 +917,7 @@ DEPENDENCIES
   sentry-ruby
   sentry-sidekiq
   sidekiq
+  sidekiq-failures
   sidekiq-scheduler
   sinatra
   spring (~> 2.0)
