@@ -1,0 +1,56 @@
+.title-bar {
+    background-color: white;
+}
+
+.logo-wrapper span {
+    color: var(--primary) !important;
+}
+
+.topbar__dropmenu>ul>li>a:after {
+    border-top-color: var(--primary) !important;
+}
+
+.topbar__search input {
+    background-color: var(--primary);
+}
+
+.topbar__dropmenu .dropdown>li>a,
+.topbar__menu button,
+.topbar__user__login a {
+    color: var(--primary);
+}
+
+.navbar {
+    background-color: var(--primary);
+}
+
+.main-nav__link a {
+    font-weight: bold;
+    color: white;
+
+    &:hover,
+    &:focus {
+        background: rgba(black, .1);
+        transition: .3s ease;
+    }
+}
+
+.main-nav__link--active a {
+    background: rgba(black, .1);
+    box-shadow: none;
+}
+
+.topbar__search input {
+    &:focus {
+        background: lightgray;
+        transition: .3s all;
+    }
+}
+
+.topbar__admin__link a {
+    color: var(--primary);
+
+    &:hover {
+        color: var(--primary);
+    }
+}

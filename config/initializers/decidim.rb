@@ -5,13 +5,19 @@ Decidim.configure do |config|
   config.mailer_sender = Rails.application.secrets.mailer_sender
 
   # Change these lines to set your preferred locales
-  config.default_locale = :sv
+  config.default_locale = :en
   config.available_locales = %i[sv en]
 
   # Geocoder configuration
-  config.geocoder = {
-    static_map_url: 'https://image.maps.cit.api.here.com/mia/1.6/mapview',
-    here_api_key: Rails.application.secrets.geocoder[:here_api_key]
+  config.maps = {
+    provider: :here,
+    api_key: Rails.application.secrets.geocoder[:here_api_key],
+    static: {
+      url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview"
+    },
+    autocomplete: {
+      address_format: ["name", %w(street houseNumber), "city"]
+    }
   }
 
   # Custom resource reference generator method
@@ -22,6 +28,9 @@ Decidim.configure do |config|
 
   # Currency unit
   config.currency_unit = 'kr'
+
+  # Allow participants to use the platform for 2 days before confirming their e-mail address
+  config.unconfirmed_access_for = 2.days
 
   # The number of reports which an object can receive before hiding it
   # config.max_reports_before_hiding = 3
@@ -74,7 +83,12 @@ Decidim.configure do |config|
   #   api_key: Rails.application.secrets.etherpad[:api_key],
   #   api_version: Rails.application.secrets.etherpad[:api_version]
   # }
+
+  config.expire_session_after = ENV.fetch("DECIDIM_SESSION_TIMEOUT", 1440).to_i.minutes
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
 Rails.application.config.i18n.default_locale = Decidim.default_locale
+
+# Inform Decidim about the assets folder
+Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
