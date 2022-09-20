@@ -206,20 +206,21 @@ GIT
       decidim-core (~> 0.25.0)
 
 GIT
+  remote: https://github.com/digidemlab/decidim-module-extra_user_fields
+  revision: 57f7f392cc5669992f7f456b96febb77fd72bafd
+  branch: install-malmo
+  specs:
+    decidim-extra_user_fields (0.25.2)
+      decidim-core (= 0.25.2)
+      deface (~> 1.5)
+
+GIT
   remote: https://github.com/digidemlab/decidim-module-faceless
   revision: ef51b2c02b19ef075eff4bc4f9b8efe922c27b72
   branch: release/0.25-stable
   specs:
     decidim-faceless (0.25.0)
       decidim-core (~> 0.25)
-
-GIT
-  remote: https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler
-  revision: 786bfb86489544ff043d00ffc3d19cf4bc556342
-  branch: just-age-and-gender
-  specs:
-    decidim-socio_demographic_authorization_handler (0.24.3)
-      decidim-core (>= 0.24.3)
 
 GIT
   remote: https://github.com/mainio/decidim-module-antivirus
@@ -401,6 +402,12 @@ GEM
     declarative-builder (0.1.0)
       declarative-option (< 0.2.0)
     declarative-option (0.1.0)
+    deface (1.9.0)
+      actionview (>= 5.2)
+      nokogiri (>= 1.6)
+      polyglot
+      railties (>= 5.2)
+      rainbow (>= 2.1.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     devise (4.8.1)
@@ -489,7 +496,7 @@ GEM
     http-accept (1.7.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
-    i18n (1.10.0)
+    i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     i18n-tasks (0.9.37)
       activesupport (>= 4.0.2)
@@ -622,6 +629,7 @@ GEM
     pg_search (2.3.6)
       activerecord (>= 5.2)
       activesupport (>= 5.2)
+    polyglot (0.3.5)
     premailer (1.16.0)
       addressable
       css_parser (>= 1.6.0)
@@ -902,12 +910,13 @@ DEPENDENCIES
   decidim-consultations!
   decidim-decidim_awesome!
   decidim-dev!
+  decidim-extra_user_fields!
   decidim-faceless!
   decidim-simple_proposal!
-  decidim-socio_demographic_authorization_handler!
   decidim-term_customizer!
   faker (~> 2.14)
   figaro
+  i18n (= 1.8.11)
   letter_opener_web (~> 2.0)
   listen (~> 3.1)
   nokogiri (= 1.13.4)
