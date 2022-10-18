@@ -198,7 +198,7 @@ GIT
 
 GIT
   remote: https://github.com/digidemlab/decidim-module-extra_user_fields
-  revision: 235f73fa9e7c0efb226225f86eeafd37e55763e0
+  revision: f61f05d4ad4df934c1356e1dff4a01631d510cd4
   branch: release/0.25-stable
   specs:
     decidim-extra_user_fields (0.25.2)
