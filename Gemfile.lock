@@ -207,7 +207,7 @@ GIT
 
 GIT
   remote: https://github.com/digidemlab/decidim-module-extra_user_fields
-  revision: 57f7f392cc5669992f7f456b96febb77fd72bafd
+  revision: 8dc8baf01c523eec8e9bc630eb1e793be4b704ed
   branch: install-malmo
   specs:
     decidim-extra_user_fields (0.25.2)
