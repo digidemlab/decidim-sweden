@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_10_091714) do
+ActiveRecord::Schema.define(version: 2022_09_19_112537) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -383,6 +383,14 @@ ActiveRecord::Schema.define(version: 2022_06_10_091714) do
     t.bigint "decidim_budgets_budget_id"
     t.index ["decidim_budgets_budget_id"], name: "index_decidim_budgets_orders_on_decidim_budgets_budget_id"
     t.index ["decidim_user_id"], name: "index_decidim_budgets_orders_on_decidim_user_id"
+  end
+
+  create_table "decidim_budgets_paper_ballot_results", force: :cascade do |t|
+    t.integer "votes", null: false
+    t.bigint "decidim_project_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_project_id"], name: "index_decidim_paper_ballot_on_project"
   end
 
   create_table "decidim_budgets_projects", id: :serial, force: :cascade do |t|
@@ -1793,6 +1801,7 @@ ActiveRecord::Schema.define(version: 2022_06_10_091714) do
   add_foreign_key "decidim_awesome_editor_images", "decidim_users", column: "decidim_author_id"
   add_foreign_key "decidim_budgets_budgets", "decidim_scopes"
   add_foreign_key "decidim_budgets_orders", "decidim_budgets_budgets"
+  add_foreign_key "decidim_budgets_paper_ballot_results", "decidim_budgets_projects", column: "decidim_project_id"
   add_foreign_key "decidim_budgets_projects", "decidim_budgets_budgets"
   add_foreign_key "decidim_categorizations", "decidim_categories"
   add_foreign_key "decidim_consultations_response_groups", "decidim_consultations_questions", column: "decidim_consultations_questions_id"

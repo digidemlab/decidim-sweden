@@ -18,6 +18,7 @@ gem "decidim-extra_user_fields", git: "https://github.com/digidemlab/decidim-mod
 
 gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
 gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.25-stable"
+gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "release/0.25-stable"
 
 gem "bootsnap", "~> 1.3"
 
