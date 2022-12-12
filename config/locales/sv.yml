@@ -7,6 +7,7 @@ sv:
     proposals:
       proposals:
         dynamic_map_instructions:
-          instructions: <h3>Stämmer markören på kartan? </h3><p>Du kan dra markören och flytta den exakt var du vill. Glöm inte att uppdatera positionen efteråt.</p>
+           instructions: Stämmer markören på kartan? Du kan dra och flytta den exakt var du vill.
+           description: ""
         preview:
           update_position: Uppdatera position

@@ -197,6 +197,23 @@ GIT
       decidim-core (>= 0.20.0)
 
 GIT
+  remote: https://github.com/digidemlab/decidim-module-budgets_paper_ballots
+  revision: 992dd118685d29224bbfe490897b5924f16c6429
+  branch: release/0.25-stable
+  specs:
+    decidim-budgets_paper_ballots (0.25.0)
+      decidim-budgets (~> 0.25.0)
+      decidim-core (~> 0.25.0)
+
+GIT
+  remote: https://github.com/digidemlab/decidim-module-faceless
+  revision: ef51b2c02b19ef075eff4bc4f9b8efe922c27b72
+  branch: release/0.25-stable
+  specs:
+    decidim-faceless (0.25.0)
+      decidim-core (~> 0.25)
+
+GIT
   remote: https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler
   revision: 786bfb86489544ff043d00ffc3d19cf4bc556342
   branch: just-age-and-gender
@@ -207,7 +224,7 @@ GIT
 GIT
   remote: https://github.com/mainio/decidim-module-antivirus
   revision: 078c17463d0ce3a642f4c34858cbe5d1b574d324
-  branch: master
+  branch: release/0.25-stable
   specs:
     decidim-antivirus (0.25.0)
       decidim-core (~> 0.25.0)
@@ -215,9 +232,18 @@ GIT
       ratonvirus-clamby (~> 0.3.0)
 
 GIT
+  remote: https://github.com/mainio/decidim-module-simple_proposal
+  revision: a7aab0af3d99154459ff8e624887927122f193a1
+  branch: release/0.25-stable
+  specs:
+    decidim-simple_proposal (0.25.0)
+      decidim-core (~> 0.25.0)
+      decidim-proposals (~> 0.25.0)
+
+GIT
   remote: https://github.com/mainio/decidim-module-term_customizer
-  revision: 437042198ed04cdd5582b29d5df83b032ecc518f
-  branch: master
+  revision: 1d20451c56b7809cf0d509bbb4d0ac63d4791c8c
+  branch: release/0.25-stable
   specs:
     decidim-term_customizer (0.25.0)
       decidim-admin (~> 0.25.0)
@@ -767,6 +793,8 @@ GEM
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
+    sidekiq-failures (1.0.4)
+      sidekiq (>= 4.0.0)
     sidekiq-scheduler (4.0.0)
       redis (>= 4.2.0)
       rufus-scheduler (~> 3.2)
@@ -870,9 +898,12 @@ DEPENDENCIES
   decidim!
   decidim-analytics!
   decidim-antivirus!
+  decidim-budgets_paper_ballots!
   decidim-consultations!
   decidim-decidim_awesome!
   decidim-dev!
+  decidim-faceless!
+  decidim-simple_proposal!
   decidim-socio_demographic_authorization_handler!
   decidim-term_customizer!
   faker (~> 2.14)
@@ -886,6 +917,7 @@ DEPENDENCIES
   sentry-ruby
   sentry-sidekiq
   sidekiq
+  sidekiq-failures
   sidekiq-scheduler
   sinatra
   spring (~> 2.0)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_12_192135) do
+ActiveRecord::Schema.define(version: 2022_12_12_173419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -384,6 +384,14 @@ ActiveRecord::Schema.define(version: 2022_05_12_192135) do
     t.bigint "decidim_budgets_budget_id"
     t.index ["decidim_budgets_budget_id"], name: "index_decidim_budgets_orders_on_decidim_budgets_budget_id"
     t.index ["decidim_user_id"], name: "index_decidim_budgets_orders_on_decidim_user_id"
+  end
+
+  create_table "decidim_budgets_paper_ballot_results", force: :cascade do |t|
+    t.integer "votes", null: false
+    t.bigint "decidim_project_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_project_id"], name: "index_decidim_paper_ballot_on_project"
   end
 
   create_table "decidim_budgets_projects", id: :serial, force: :cascade do |t|
@@ -1361,6 +1369,7 @@ ActiveRecord::Schema.define(version: 2022_05_12_192135) do
     t.jsonb "body"
     t.integer "comments_count", default: 0, null: false
     t.integer "follows_count", default: 0, null: false
+    t.datetime "deleted_at"
     t.index "md5((body)::text)", name: "decidim_proposals_proposal_body_search"
     t.index "md5((title)::text)", name: "decidim_proposals_proposal_title_search"
     t.index ["created_at"], name: "index_decidim_proposals_proposals_on_created_at"
@@ -1776,6 +1785,7 @@ ActiveRecord::Schema.define(version: 2022_05_12_192135) do
   add_foreign_key "decidim_awesome_editor_images", "decidim_users", column: "decidim_author_id"
   add_foreign_key "decidim_budgets_budgets", "decidim_scopes"
   add_foreign_key "decidim_budgets_orders", "decidim_budgets_budgets"
+  add_foreign_key "decidim_budgets_paper_ballot_results", "decidim_budgets_projects", column: "decidim_project_id"
   add_foreign_key "decidim_budgets_projects", "decidim_budgets_budgets"
   add_foreign_key "decidim_categorizations", "decidim_categories"
   add_foreign_key "decidim_consultations_response_groups", "decidim_consultations_questions", column: "decidim_consultations_questions_id"
