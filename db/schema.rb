@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_12_192135) do
+ActiveRecord::Schema.define(version: 2022_11_13_092560) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -246,7 +246,6 @@ ActiveRecord::Schema.define(version: 2022_05_12_192135) do
     t.date "birthday"
     t.string "birthplace"
     t.date "designation_date"
-    t.string "designation_mode"
     t.string "position"
     t.string "position_other"
     t.date "ceased_date"
@@ -384,6 +383,14 @@ ActiveRecord::Schema.define(version: 2022_05_12_192135) do
     t.bigint "decidim_budgets_budget_id"
     t.index ["decidim_budgets_budget_id"], name: "index_decidim_budgets_orders_on_decidim_budgets_budget_id"
     t.index ["decidim_user_id"], name: "index_decidim_budgets_orders_on_decidim_user_id"
+  end
+
+  create_table "decidim_budgets_paper_ballot_results", force: :cascade do |t|
+    t.integer "votes", null: false
+    t.bigint "decidim_project_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_project_id"], name: "index_decidim_paper_ballot_on_project"
   end
 
   create_table "decidim_budgets_projects", id: :serial, force: :cascade do |t|
@@ -607,6 +614,8 @@ ActiveRecord::Schema.define(version: 2022_05_12_192135) do
     t.integer "weight"
     t.jsonb "images", default: {}
     t.integer "scoped_resource_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["decidim_organization_id", "scope_name", "scoped_resource_id", "manifest_name"], name: "idx_decidim_content_blocks_org_id_scope_scope_id_manifest"
     t.index ["decidim_organization_id"], name: "index_decidim_content_blocks_on_decidim_organization_id"
     t.index ["manifest_name"], name: "index_decidim_content_blocks_on_manifest_name"
@@ -646,12 +655,22 @@ ActiveRecord::Schema.define(version: 2022_05_12_192135) do
     t.string "last_comment_by_type"
     t.bigint "decidim_scope_id"
     t.integer "follows_count", default: 0, null: false
+    t.boolean "comments_enabled", default: true
     t.index ["closed_at"], name: "index_decidim_debates_debates_on_closed_at"
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_debates_debates_on_decidim_author"
     t.index ["decidim_component_id"], name: "index_decidim_debates_debates_on_decidim_component_id"
     t.index ["decidim_scope_id"], name: "index_decidim_debates_debates_on_decidim_scope_id"
     t.index ["decidim_user_group_id"], name: "index_decidim_debates_debates_on_decidim_user_group_id"
     t.index ["endorsements_count"], name: "idx_decidim_debates_debates_on_endorsemnts_count"
+  end
+
+  create_table "decidim_editor_images", force: :cascade do |t|
+    t.bigint "decidim_author_id", null: false
+    t.bigint "decidim_organization_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["decidim_author_id"], name: "decidim_editor_images_author"
+    t.index ["decidim_organization_id"], name: "decidim_editor_images_constraint_organization"
   end
 
   create_table "decidim_endorsements", force: :cascade do |t|
@@ -919,7 +938,12 @@ ActiveRecord::Schema.define(version: 2022_05_12_192135) do
     t.string "video_url"
     t.string "audio_url"
     t.boolean "closing_visible"
-    t.boolean "show_embedded_iframe", default: false
+    t.boolean "comments_enabled", default: true
+    t.datetime "comments_start_time"
+    t.datetime "comments_end_time"
+    t.string "state"
+    t.integer "iframe_access_level", default: 0
+    t.integer "iframe_embed_type", default: 0
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_meetings_meetings_on_author"
     t.index ["decidim_author_id"], name: "index_decidim_meetings_meetings_on_decidim_author_id"
     t.index ["decidim_component_id"], name: "index_decidim_meetings_meetings_on_decidim_component_id"
@@ -1361,6 +1385,7 @@ ActiveRecord::Schema.define(version: 2022_05_12_192135) do
     t.jsonb "body"
     t.integer "comments_count", default: 0, null: false
     t.integer "follows_count", default: 0, null: false
+    t.datetime "deleted_at"
     t.index "md5((body)::text)", name: "decidim_proposals_proposal_body_search"
     t.index "md5((title)::text)", name: "decidim_proposals_proposal_title_search"
     t.index ["created_at"], name: "index_decidim_proposals_proposals_on_created_at"
@@ -1776,6 +1801,7 @@ ActiveRecord::Schema.define(version: 2022_05_12_192135) do
   add_foreign_key "decidim_awesome_editor_images", "decidim_users", column: "decidim_author_id"
   add_foreign_key "decidim_budgets_budgets", "decidim_scopes"
   add_foreign_key "decidim_budgets_orders", "decidim_budgets_budgets"
+  add_foreign_key "decidim_budgets_paper_ballot_results", "decidim_budgets_projects", column: "decidim_project_id"
   add_foreign_key "decidim_budgets_projects", "decidim_budgets_budgets"
   add_foreign_key "decidim_categorizations", "decidim_categories"
   add_foreign_key "decidim_consultations_response_groups", "decidim_consultations_questions", column: "decidim_consultations_questions_id"
@@ -1783,6 +1809,8 @@ ActiveRecord::Schema.define(version: 2022_05_12_192135) do
   add_foreign_key "decidim_consultations_responses", "decidim_consultations_response_groups"
   add_foreign_key "decidim_consultations_votes", "decidim_consultations_responses"
   add_foreign_key "decidim_debates_debates", "decidim_scopes"
+  add_foreign_key "decidim_editor_images", "decidim_organizations"
+  add_foreign_key "decidim_editor_images", "decidim_users", column: "decidim_author_id"
   add_foreign_key "decidim_identities", "decidim_organizations"
   add_foreign_key "decidim_newsletters", "decidim_users", column: "author_id"
   add_foreign_key "decidim_participatory_process_steps", "decidim_participatory_processes"
