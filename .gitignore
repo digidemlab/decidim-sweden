@@ -33,9 +33,6 @@
 # Ignore public uploads
 public/uploads
 
-# Figaro application.yml
-/config/application.yml
-
 # Remain of Ansible install script
 create-decidim-admin.done
 
@@ -46,3 +43,6 @@ create-decidim-admin.done
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Ignore application configuration
+/config/application.yml
