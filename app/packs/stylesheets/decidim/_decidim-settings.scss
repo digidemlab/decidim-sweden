@@ -5,3 +5,34 @@
 // To override styles use decidim_application.scss
 //
 // By default this is empty.
+
+// Foundation variables: https://github.com/decidim/decidim/blob/3a1eaff1c615cb281538c9774d25608dcc4c82b0/decidim-core/app/packs/stylesheets/decidim/utils/_settings.scss
+// Decidim variables: https://github.com/decidim/decidim/blob/3a1eaff1c615cb281538c9774d25608dcc4c82b0/decidim-core/app/packs/stylesheets/decidim/_variables.scss
+
+$body-font-family: "OpenSans", Helvetica, Roboto, Arial, sans-serif;
+$header-font-family: $body-font-family;
+$medium-gray: #e9e8e7;
+$light-gray: #ffffff;
+
+// Lingon #E41C04, 228, 28, 4
+// Mocca #6C6058, 108,96,88
+// Bakgrund #e9e8e7
+
+$primary: #004e3a; // Skog
+$primary-rgb: 0, 78, 58;
+$secondary: #000; // Svart
+$secondary-rgb: 0, 0, 0;
+$success: #58B030; // Ärta
+$success-rgb: 88,176,48;
+$warning: #FFD800; // Raps
+$warning-rgb: 255,174,0;
+$alert: #E41C04; // Lingon
+$alert-rgb: 228, 28, 4 ;
+$highlight: #6C6058; // Mocca
+$highlight-rgb: 108,96,88;
+$highlight-alternative: #EC6C04;
+$highlight-alternative-rgb: 236,108,4;
+
+$footer-bg: $primary;
+$header-color: $primary;
+$body-font-color: #000;

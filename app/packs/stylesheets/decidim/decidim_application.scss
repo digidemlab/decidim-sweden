@@ -6,5 +6,200 @@
 //
 // By default this is empty.
 
+// @import "fonts";
 @import "modules/mini_footer";
-//@import "modules/white_theme";
+@import "modules/white_theme";
+
+@mixin font-awesome($content){
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    content: $content;
+}
+
+
+// Buttons
+
+.button--sc,
+.process-nav__link,
+.section-heading {
+  letter-spacing: 0;
+  text-transform: inherit;
+}
+
+.button--sc {
+  font-weight: normal;
+}
+
+.button.hollow, .meeting-polls__button {
+  background-color: $primary;
+  color: #ffffff;
+  border-color: transparent;
+  text-decoration: none;
+}
+.button.hollow.hover,
+.hover.meeting-polls__button,
+.button.hollow:hover,
+.meeting-polls__button:hover,
+.button.hollow.focus,
+.focus.meeting-polls__button,
+.button.hollow:focus,
+.meeting-polls__button:focus {
+  text-decoration: underline;
+}
+
+.button--sc.large {
+  background-color: $alert; //#a51403;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.button--sc.link {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+// Card shadow
+
+.card {
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+
+  &:hover {
+    transform: scale(1.015);
+  }
+}
+
+
+// Footer
+
+.main-footer,
+.mini-footer {
+  background-color: $primary;
+
+  a {
+    color: #fff;
+  }
+}
+
+
+// hero
+.text-highlight.heading1 {
+  font-weight: 600;
+  color: $secondary;
+}
+
+.hero-heading {
+  text-shadow: none;
+}
+
+.hero::after {
+  background-color: transparent; // rgba(255,255,255, 0.3);
+}
+
+
+// Headings
+.section-heading {
+  font-size: 1.25em;
+}
+
+.section-heading::before {
+//  @include font-awesome("\f0a4");
+  display: inline-block;
+//  width: auto;
+  height: auto;
+  background-color: transparent;
+  margin-right: inherit;
+  margin-bottom: inherit;
+  vertical-align: inherit;
+}
+
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  color: $primary;
+//  small {
+//    color: $header-small-font-color;
+//  }
+}
+
+
+
+
+/*Navbar color when nav is white*/
+
+.title-bar {
+    border-top-color: $medium-gray;
+}
+
+.off-canvas {
+  background-color: #fff;
+}
+
+/*Color for the org title that displays when there is no logo*/
+.logo-wrapper  span {
+    color: $primary !important;
+}
+
+/*color for navbar notification bell*/
+.topbar__notifications .icon {
+    fill: $primary;
+}
+
+/*color of hamburger menu (displays when screen is small)*/
+.topbar__menu button {
+    color: $primary;
+}
+
+/*color of user menu*/
+.topbar__user__login a {
+    color: $secondary;
+}
+
+/*color of offcanvas menu*/
+.off-canvas .topbar__user__login {
+  background: $medium-gray;
+  border-color: $medium-gray;
+}
+
+/*color of dropdown user menu*/
+.topbar__dropmenu .dropdown>li>a {
+    color: $secondary;
+}
+
+/*color of triangle toggle that displays dropdown menu on mouse hover*/
+.topbar__dropmenu>ul>li>a:after {
+    border-top-color: $secondary !important;
+}
+/*------END OF PRIMARY NAV BAR------*/
+.topbar__admin__link{
+  a{
+    color: $secondary;
+
+    &:hover{
+      color: $secondary;
+    }
+  }
+}
+
+.topbar__search input, .topbar__search input:focus {
+  background-color: $medium-gray;
+}
+
+.topbar__search:not(:focus-within) button {
+  background: $primary;
+}
+
+.logotype {
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: auto;
+  display: flex;
+}
