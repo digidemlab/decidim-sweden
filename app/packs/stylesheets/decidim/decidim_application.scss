@@ -6,7 +6,7 @@
 //
 // By default this is empty.
 
-// @import "fonts";
+@import "fontface";
 @import "modules/mini_footer";
 @import "modules/white_theme";
 
@@ -105,9 +105,9 @@
 }
 
 .section-heading::before {
-//  @include font-awesome("\f0a4");
+  @include font-awesome("\f0a4");
   display: inline-block;
-//  width: auto;
+  width: auto;
   height: auto;
   background-color: transparent;
   margin-right: inherit;
