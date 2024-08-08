@@ -27,6 +27,10 @@
 /public/assets
 .byebug_history
 
+# Service workers
+public/sw.js
+public/sw.js.map
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
@@ -43,6 +47,7 @@ create-decidim-admin.done
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+/packages/*/node_modules
 
 # Ignore application configuration
 /config/application.yml
