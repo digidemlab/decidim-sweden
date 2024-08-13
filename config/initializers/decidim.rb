@@ -85,6 +85,8 @@ Decidim.configure do |config|
   # }
 
   config.expire_session_after = ENV.fetch("DECIDIM_SESSION_TIMEOUT", 1440).to_i.minutes
+
+  config.social_share_services = Rails.application.secrets.decidim[:social_share_services]
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
