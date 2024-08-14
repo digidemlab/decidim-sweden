@@ -4,6 +4,12 @@ Free Open-Source participatory democracy, citizen participation and open governm
 
 This is the open-source repository for decidim-sweden, based on [Decidim](https://github.com/decidim/decidim).
 
+## Versions
+
+* `d4c07ecb`: `release/0.28-stable`
+* `b6d06fee`: `release/0.27-stable`
+* `704f9f8d`: `release/0.26-stable`
+
 ## Setting up the application
 
 You will need to do some steps before having the app working properly once you've deployed it:
