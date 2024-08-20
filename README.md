@@ -6,7 +6,7 @@ This is the open-source repository for decidim-sweden, based on [Decidim](https:
 
 ## Versions
 
-* `d4c07ecb`: `release/0.28-stable`
+* `c0e30a56`: `release/0.28-stable`
 * `b6d06fee`: `release/0.27-stable`
 * `704f9f8d`: `release/0.26-stable`
 
