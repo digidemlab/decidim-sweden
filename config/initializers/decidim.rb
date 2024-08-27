@@ -91,6 +91,13 @@ Decidim.configure do |config|
   # Custom setting to avoid Retry later error
   config.throttling_max_requests = 1000
 
+  # Content policy for here maps etc
+  config.content_security_policies_extra = {
+    "connect-src" => %w(https://*.hereapi.com),
+    "img-src" => %w(https://*.hereapi.com),
+    "frame-src" => %w(https://www.youtube-nocookie.com/)
+  }
+
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
