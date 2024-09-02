@@ -53,3 +53,18 @@ irb(main):016:1*             subject: "debuggin' smtp",
 irb(main):017:0>             body: "does it work?\n\n")
 mailer.message.deliver
 ```
+
+## Generate VAPID keys
+
+For enabling push notifactions in mobile clients.
+
+```
+RAILS_ENV=production bundle exec rails decidim:pwa:generate_vapid_keys
+```
+
+Add these values to the `config/application.yml` then like so:
+
+```yml
+VAPID_PUBLIC_KEY: "..."
+VAPID_PRIVATE_KEY: "..."
+```
