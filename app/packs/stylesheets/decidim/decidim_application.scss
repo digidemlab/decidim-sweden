@@ -2,9 +2,233 @@
 // Notice that this file is included at the very end of the stylesheets packs to have
 // more priority
 //
-// To override CSS variables or Foundation settings use _decidim-settings.scss
+// Please note this file is only targeting the end user interface and not the admin interface.
+// To change the Tailwind CSS configuration, or to override the admin, system or design interface
+// styles follow the instructions in https://docs.decidim.org/en/customize/styles/
 //
 // By default this is empty.
 
-@import "modules/mini_footer";
+@import "fontface";
+// @import "modules/mini_footer";
 //@import "modules/white_theme";
+
+
+/**
+  Local mixins for @apply
+*/
+.link-hover {
+  -webkit-text-decoration-line: underline;
+  -moz-text-decoration-line: underline;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+/** ------------------- **/
+
+
+/**
+  Menu bar
+*/
+
+#menu-bar {
+  @apply border-t border-solid text-gray-3;
+}
+header .menu-bar__container {
+  @apply bg-white;
+}
+
+.menu-bar__breadcrumb-desktop__dropdown-content-secondary,
+header .menu-bar__main-dropdown {
+  @apply ring-1;
+  --tw-ring-color: #ccc;
+}
+
+header .menu-bar__breadcrumb-desktop > * {
+  @apply text-black;
+}
+
+
+/**
+  Footer
+*/
+
+footer {
+  .main-footer {
+    @apply bg-black;
+
+    .font-semibold {
+      @apply font-normal;
+
+      &:hover {
+        @apply link-hover;
+      }
+    }
+  }
+
+  .mini-footer {
+    background-color: #262626;
+  }
+
+  h2 {
+    @apply text-white;
+    font-weight: bold !important;
+  }
+}
+
+
+/**
+  Hero, start
+*/
+
+#hero-cta.button__secondary {
+  @apply bg-white text-primary;
+
+  &:hover {
+    @apply link-hover;
+    background: #fff;
+  }
+}
+
+
+/**
+  Hero, participation space
+*/
+
+.participatory-space__hero-slogan {
+  @apply text-white;
+}
+
+.participatory-space__hero {
+  @apply backdrop-filter-none bg-background;
+
+}
+.participatory-space__hero-text {
+  @apply text-black;
+}
+
+/**
+  Backgrounds, sections
+*/
+
+#how_to_participate {
+  @apply bg-background;
+}
+
+
+/**
+  Cards
+*/
+
+.card__highlight {
+  @apply bg-white shadow-none ring-transparent;
+
+  &:hover {
+    @apply ring-transparent;
+  }
+
+  &:nth-child(1) {
+    background-color: #e3e8e9;
+  }
+  &:nth-child(2) {
+    background-color: #dbeff8;
+  }
+  &:nth-child(3) {
+    background-color: #dbede2;
+  }
+  &:nth-child(4) {
+    background-color: #fbe1ec;
+  }
+  &:nth-child(5) {
+    background-color: #ece2f1;
+  }
+  &:nth-child(6) {
+    background-color: #fde3d6;
+  }
+  &:nth-child(7) {
+    background-color: #d6ebed;
+  }
+  &:nth-child(8) {
+    background-color: #fff2b0;
+  }
+}
+
+/*
+--color-dark-blue-light#e3e8e9
+--color-blue-light#dbeff8
+--color-green-light#dbede2
+--color-pink-light#fbe1ec
+--color-purple-light#ece2f1
+--color-red-light#fde3d6
+--color-turquoise-light#d6ebed
+--color-yellow-light#fff2b0
+
+--color-dark-blue-lightest#f5f7f8
+--color-blue-lightest#f2fafc
+--color-green-lightest#f0f9f3
+--color-pink-lightest#fdf4f8
+--color-purple-lightest#f6f1f9
+--color-red-lightest#fef5f1
+--color-turquoise-lightest#f2f9fa
+--color-yellow-lightest#fffcef
+*/
+
+.card__grid {
+  @apply bg-white shadow-none ring-1;
+  --tw-ring-color: #e5e5e5;
+
+  &:hover {
+    @apply bg-background;
+    --tw-ring-color: #e5e5e5;
+  }
+}
+
+
+/**
+  Headlines
+*/
+
+h1, h2, h3, h4, h5 {
+  @apply font-bold text-black;
+}
+
+
+/**
+  Links & Buttons
+*/
+
+.button__transparent {
+  @apply text-black border-black;
+}
+
+a .text-secondary {
+  @apply text-black underline font-bold;
+
+  &:hover {
+    @apply link-hover;
+  }
+}
+
+
+/**
+  Reset colors & decorations
+*/
+
+header .menu-bar__breadcrumb-desktop [data-target*="dropdown"] > svg,
+.border-secondary,
+.filter-container input[type="checkbox"]:checked, .filter-container input[type="checkbox"]:indeterminate, .filter-container input[type="radio"]:checked, .filter-container input[type="radio"]:indeterminate,
+.card__list-title,
+.activity__content > span:first-child a,
+.home__section-participate-grid__icon,
+.button__text-secondary,
+header .main-bar__links-mobile,
+[data-target*="dropdown"] > svg,
+header .main-bar__links-mobile__trigger,
+header .main-bar__links-desktop__item {
+  @apply text-black;
+}
+
+.home__section-title::after,
+.decorator::after,
+.title-decorator::after {
+  display: none;
+}
