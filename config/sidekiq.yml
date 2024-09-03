@@ -13,6 +13,8 @@
   - [block_user, 2]
   - [metrics, 1]
   - [exports, 1]
+  - [cleanups, 1]
+  - [participatory_processes, 1]
 
 :scheduler:
   :schedule:
@@ -24,3 +26,27 @@
       cron: '0 0 1 * * *' # Run at 01:00
       class: PreloadOpenDataJob
       queue: exports
+    ExpireDownloadDataFiles:
+      cron: '0 0 2 * * *' # Run at 02:00
+      class: ExpireDownloadDataFilesJob
+      queue: cleanups
+    DeleteRegistrationForms:
+      cron: '0 0 3 * * *' # Run at 03:00
+      class: DeleteRegistrationFormsJob
+      queue: cleanups
+    GenerateReminders:
+      cron: '0 0 4 * * *' # Run at 04:00
+      class: GenerateRemindersJob
+      queue: reminders
+    DigestDailyReminders:
+      cron: '0 0 5 * * *' # Run at 05:00
+      class: DigestDailyRemindersJob
+      queue: reminders
+    DigestWeeklyReminders:
+      cron: '0 0 6 * * *' # Run at 06:00
+      class: DigestWeeklyRemindersJob
+      queue: reminders
+    ChangeActiveStep:
+      cron: '*/15 * * * *' # Run every 15 minutes
+      class: ChangeActiveStepJob
+      queue: participatory_processes
