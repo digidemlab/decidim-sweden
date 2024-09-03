@@ -88,8 +88,7 @@ footer {
   @apply bg-white text-primary;
 
   &:hover {
-    @apply link-hover;
-    background: #fff;
+    @apply bg-white link-hover text-primary !important;
   }
 }
 
