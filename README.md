@@ -68,3 +68,7 @@ Add these values to the `config/application.yml` then like so:
 VAPID_PUBLIC_KEY: "..."
 VAPID_PRIVATE_KEY: "..."
 ```
+
+## Crontab scheduled tasks
+
+[Scheduled tasks](https://docs.decidim.org/en/v0.28/install/#_scheduled_tasks) are configured via the `config/sidekiq.yml`.
