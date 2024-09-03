@@ -83,6 +83,7 @@ footer {
   Hero, start
 */
 
+.hero-alt__text .button__secondary,
 #hero-cta.button__secondary {
   @apply bg-white text-primary;
 
@@ -98,7 +99,7 @@ footer {
 */
 
 .participatory-space__hero-slogan {
-  @apply text-white;
+  @apply text-white mb-4;
 }
 
 .participatory-space__hero {
@@ -185,6 +186,10 @@ footer {
   }
 }
 
+.card__highlight-metadata > *,
+.card__grid-metadata > * {
+  @apply max-w-full;
+}
 
 /**
   Headlines
@@ -205,17 +210,27 @@ h1, h2, h3, h4, h5 {
 
 a .text-secondary {
   @apply text-black underline font-bold;
-
   &:hover {
     @apply link-hover;
   }
 }
 
+.activity__content > span:first-child a  {
+  text-decoration: underline;
+  &:hover {
+    @apply link-hover;
+  }
+}
+
+header .menu-bar__main-dropdown__menu a:hover {
+  @apply link-hover;
+}
 
 /**
   Reset colors & decorations
 */
 
+header .menu-bar__main-dropdown__menu a,
 header .menu-bar__breadcrumb-desktop [data-target*="dropdown"] > svg,
 .border-secondary,
 .filter-container input[type="checkbox"]:checked, .filter-container input[type="checkbox"]:indeterminate, .filter-container input[type="radio"]:checked, .filter-container input[type="radio"]:indeterminate,

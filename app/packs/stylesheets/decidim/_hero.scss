@@ -8,7 +8,7 @@
   }
 
   &__columns {
-    @apply flex flex-col md:flex-row-reverse items-center justify-start md:justify-between h-[50vh] md:h-[55vh];
+    @apply flex flex-col md:flex-row-reverse items-center justify-start md:justify-between md:h-[55vh];
   }
 
   &__text {
@@ -16,7 +16,7 @@
   }
 
   &__image {
-    @apply w-full md:w-1/2 overflow-hidden mt-0 max-h-60 md:max-h-full;
+    @apply w-full md:w-1/2 overflow-hidden mt-0 md:max-h-full;
     height: inherit;
 
     img {
@@ -30,5 +30,5 @@
 }
 
 .hero-alt-process {
-  @apply h-[40vh] md:h-[45vh];
+  @apply md:h-[45vh];
 }
