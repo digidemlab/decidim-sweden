@@ -98,6 +98,7 @@ Decidim.configure do |config|
     "frame-src" => %w(https://www.youtube-nocookie.com/)
   }
 
+  config.hosts = Rails.application.secrets.domain
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
