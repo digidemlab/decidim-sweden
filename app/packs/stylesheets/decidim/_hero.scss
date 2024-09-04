@@ -12,7 +12,7 @@
   }
 
   &__text {
-    @apply md:w-1/2 m-4 text-center md:text-left;
+    @apply md:w-1/2 p-8 md:p-4 mb-4 text-center md:text-left;
   }
 
   &__image {

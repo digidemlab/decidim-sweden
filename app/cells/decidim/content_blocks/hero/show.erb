@@ -2,7 +2,9 @@
   <div class="hero-alt__container">
     <div class="hero-alt__columns">
       <div class="hero-alt__image">
-        <img src="<%= background_image %>" alt="" data-process-hero>
+        <% if background_image.present? %>
+          <img src="<%= background_image %>" alt="" data-process-hero>
+        <% end %>
       </div>
       <div class="hero-alt__text">
         <h1 class="hero-alt__title">

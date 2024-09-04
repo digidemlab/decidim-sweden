@@ -46,6 +46,10 @@ header .menu-bar__main-dropdown {
   --tw-ring-color: #ccc;
 }
 
+header .menu-bar__breadcrumb-mobile {
+  @apply text-xs !important;
+}
+
 header .menu-bar__breadcrumb-desktop > * {
   @apply text-black;
 }
@@ -229,6 +233,8 @@ header .menu-bar__main-dropdown__menu a:hover {
   Reset colors & decorations
 */
 
+header .menu-bar__breadcrumb-mobile__dropdown-trigger span,
+header .menu-bar__breadcrumb-mobile__dropdown-trigger,
 header .menu-bar__main-dropdown__menu a,
 header .menu-bar__breadcrumb-desktop [data-target*="dropdown"] > svg,
 .border-secondary,
