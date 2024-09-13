@@ -85,6 +85,11 @@ export default function createEditorToolbar(editor) {
           label: i18n["control.heading"],
           options: [
             { value: "normal", label: i18n["textStyle.normal"] },
+            { value: 2, label: "Heading 2" },
+            { value: 3, label: "Heading 3" },
+            { value: 4, label: "Heading 4" },
+            { value: 5, label: "Heading 5" },
+            { value: 6, label: "Heading 6" }
           //  { value: 2, label: i18n["textStyle.heading"].replace("%level%", 2) },
           //  { value: 3, label: i18n["textStyle.heading"].replace("%level%", 3) },
           //  { value: 4, label: i18n["textStyle.heading"].replace("%level%", 4) },
