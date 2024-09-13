@@ -4,10 +4,13 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.28-stable" }
+# Temporary setting to get latest translations
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "chore/l10n/release/0.28-stable" }
+# DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.28-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
+# gem "decidim-initiatives", DECIDIM_VERSION
 
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
 gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "just-age-and-gender"
