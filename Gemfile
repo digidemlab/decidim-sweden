@@ -12,22 +12,31 @@ gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
 
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
-gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "just-age-and-gender"
+
+### Awaiting upgrade to version 0.28 ###
 
 # NOTE(d1): https://github.com/decidim-ice/decidim-module-decidim_awesome/issues/324
 # gem "decidim-decidim_awesome", "0.11.1"
-
-# gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
-
-gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: "main"
-gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
 
 # NOTE(d1): required 0.28 upgrade work (?)
 # gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.26-stable"
 
 # NOTE(d1): https://github.com/digidemlab/decidim-module-budgets_paper_ballots/issues/10
 # gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "release/0.26-stable"
+
+
+### Additional Decidim Modules ###
+
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
+
+# gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
+
+# gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "just-age-and-gender"
+
+# gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: "main"
+
+# gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
+
 
 gem "bootsnap", "~> 1.3"
 
