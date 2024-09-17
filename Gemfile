@@ -35,7 +35,7 @@ gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-te
 
 # gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: "main"
 
-# gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
+gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
 
 
 gem "bootsnap", "~> 1.3"
