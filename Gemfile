@@ -10,7 +10,7 @@ DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "chore/l1
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
-# gem "decidim-initiatives", DECIDIM_VERSION
+gem "decidim-initiatives", DECIDIM_VERSION
 
 
 ### Awaiting upgrade to version 0.28 ###
