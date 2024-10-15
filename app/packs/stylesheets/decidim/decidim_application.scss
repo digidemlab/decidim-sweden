@@ -194,6 +194,9 @@ footer {
   @apply max-w-full;
 }
 
+#floating-helper-tip {
+  display: none;
+}
 
 /**
   Budgets
@@ -202,6 +205,10 @@ footer {
 .progressbox-fixed-wrapper,
 .budget-summary {
 //  @apply bg-background-4;
+}
+
+.budget-summary__progressbar-legend-strong {
+  white-space: nowrap;
 }
 
 /**
