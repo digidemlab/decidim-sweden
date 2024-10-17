@@ -2,16 +2,10 @@
 
 require "rake"
 
+Rails.application.load_tasks
+
 class GenerateRemindersJob < ApplicationJob
-  queue_as :scheduled
-
   def perform
-    Rails.application.load_tasks
-    task.reenable
-    task.invoke
-  end
-
-  def task
-    Rake::Task["decidim:reminders:all"]
+    Rake::Task["decidim:reminders:all"].execute
   end
 end

@@ -2,16 +2,10 @@
 
 require "rake"
 
+Rails.application.load_tasks
+
 class ChangeActiveStepJob < ApplicationJob
-  queue_as :scheduled
-
   def perform
-    Rails.application.load_tasks
-    task.reenable
-    task.invoke
-  end
-
-  def task
-    Rake::Task["decidim_participatory_processes:change_active_step"]
+    Rake::Task["decidim_participatory_processes:change_active_step"].execute
   end
 end
