@@ -5,8 +5,9 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 # Temporary setting to get latest translations
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "chore/l10n/release/0.28-stable" }
-# DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.28-stable" }
+# DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "chore/l10n/release/0.28-stable" }
+
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.28-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
@@ -35,7 +36,7 @@ gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-te
 
 # gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: "main"
 
-# gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
+gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
 
 
 gem "bootsnap", "~> 1.3"
