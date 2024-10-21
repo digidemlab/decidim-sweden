@@ -132,52 +132,7 @@ footer {
   &:hover {
     @apply ring-transparent;
   }
-
-  &:nth-child(1) {
-    background-color: #e3e8e9;
-  }
-  &:nth-child(2) {
-    background-color: #dbeff8;
-  }
-  &:nth-child(3) {
-    background-color: #dbede2;
-  }
-  &:nth-child(4) {
-    background-color: #fbe1ec;
-  }
-  &:nth-child(5) {
-    background-color: #ece2f1;
-  }
-  &:nth-child(6) {
-    background-color: #fde3d6;
-  }
-  &:nth-child(7) {
-    background-color: #d6ebed;
-  }
-  &:nth-child(8) {
-    background-color: #fff2b0;
-  }
 }
-
-/*
---color-dark-blue-light#e3e8e9
---color-blue-light#dbeff8
---color-green-light#dbede2
---color-pink-light#fbe1ec
---color-purple-light#ece2f1
---color-red-light#fde3d6
---color-turquoise-light#d6ebed
---color-yellow-light#fff2b0
-
---color-dark-blue-lightest#f5f7f8
---color-blue-lightest#f2fafc
---color-green-lightest#f0f9f3
---color-pink-lightest#fdf4f8
---color-purple-lightest#f6f1f9
---color-red-lightest#fef5f1
---color-turquoise-lightest#f2f9fa
---color-yellow-lightest#fffcef
-*/
 
 .card__grid {
   @apply bg-white shadow-none ring-1;
@@ -195,7 +150,7 @@ footer {
 }
 
 #floating-helper-tip {
-  display: none;
+//  display: none;
 }
 
 /**
