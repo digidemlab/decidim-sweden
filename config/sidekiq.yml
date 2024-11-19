@@ -35,15 +35,15 @@
       class: DeleteRegistrationFormsJob
       queue: cleanups
     GenerateReminders:
-      cron: '0 0 4 * * *' # Run at 04:00
+      cron: '0 0 8 * * *' # Run at 08:00
       class: GenerateRemindersJob
       queue: reminders
     DigestDailyReminders:
-      cron: '0 0 5 * * *' # Run at 05:00
+      cron: '0 0 9 * * *' # Run at 09:00
       class: DigestDailyRemindersJob
       queue: reminders
     DigestWeeklyReminders:
-      cron: '0 0 6 * * *' # Run at 06:00
+      cron: '0 0 10 * * *' # Run at 10:00
       class: DigestWeeklyRemindersJob
       queue: reminders
     ChangeActiveStep:
