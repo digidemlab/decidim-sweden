@@ -8,7 +8,7 @@
   }
 
   &__columns {
-    @apply flex flex-col md:flex-row-reverse items-center justify-start md:justify-between md:h-[55vh];
+    @apply flex flex-col md:flex-row-reverse items-center justify-start md:justify-between md:h-[22rem] lg:h-[28rem];
   }
 
   &__text {
@@ -25,10 +25,14 @@
   }
 
   &__title {
-    @apply text-white text-3xl lg:text-5xl font-bold mb-4 md:mb-8;
+    @apply text-white text-3xl lg:text-5xl font-bold mb-4 md:mb-8 hyphens-auto;
+  }
+
+  .button__secondary {
+    @apply focus:outline-white;
   }
 }
 
 .hero-alt-process {
-  @apply md:h-[45vh];
+  @apply md:h-[20rem] lg:h-[24rem];
 }

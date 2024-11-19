@@ -3,7 +3,7 @@
     <div class="hero-alt__columns">
       <div class="hero-alt__image">
         <% if background_image.present? %>
-          <img src="<%= background_image %>" alt="Välkomstbild" data-process-hero>
+          <img src="<%= background_image %>" alt="<%=[t("decidim.application.photo.alt"), decidim_escape_translated(model.settings.welcome_text)].join(": ") %>" data-process-hero>
         <% end %>
       </div>
       <div class="hero-alt__text">
