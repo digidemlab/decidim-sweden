@@ -37,9 +37,11 @@ default: &default
 
 development:
   <<: *default
-  compile: true
+  compile: false
   compiler_strategy: mtime
   # Compile test packs to decidim decidim-packs folder
+  useContentHash: false
+
 
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
@@ -61,7 +63,7 @@ development:
       #  pathname: "/ws"
       #  port: 8080
     # Should we use gzip compression?
-    compress: true
+    compress: false
     # Note that apps that do not check the host are vulnerable to DNS rebinding attacks
     allowed_hosts: "all"
     pretty: true
