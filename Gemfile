@@ -18,14 +18,16 @@ gem "decidim-initiatives", DECIDIM_VERSION
 # NOTE(d1): https://github.com/decidim-ice/decidim-module-decidim_awesome/issues/324
 # gem "decidim-decidim_awesome", "0.11.1"
 
-# NOTE(d1): required 0.28 upgrade work (?)
-# gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.26-stable"
+# NOTE(pj): needs some improvements
+gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.28-beta"
 
 # NOTE(d1): https://github.com/digidemlab/decidim-module-budgets_paper_ballots/issues/10
 # gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "release/0.26-stable"
 
 
 ### Additional Decidim Modules ###
+
+gem "decidim-goteborg_login", git: "https://github.com/digidemlab/decidim-module-goteborg_login.git", branch: "V5"
 
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
 
@@ -35,7 +37,6 @@ gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-te
 
 # gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: "main"
 
-# gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
 
 
 gem "bootsnap", "~> 1.3"
