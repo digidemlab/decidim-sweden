@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_10_14_130793) do
+ActiveRecord::Schema.define(version: 2024_11_18_073512) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -327,8 +327,10 @@ ActiveRecord::Schema.define(version: 2024_10_14_130793) do
     t.datetime "granted_at"
     t.jsonb "verification_metadata", default: {}
     t.string "verification_attachment"
+    t.string "pseudonymized_pin"
     t.index ["decidim_user_id", "name"], name: "index_decidim_authorizations_on_decidim_user_id_and_name", unique: true
     t.index ["decidim_user_id"], name: "index_decidim_authorizations_on_decidim_user_id"
+    t.index ["pseudonymized_pin"], name: "index_decidim_authorizations_on_pseudonymized_pin"
     t.index ["unique_id"], name: "index_decidim_authorizations_on_unique_id"
   end
 
@@ -826,6 +828,15 @@ ActiveRecord::Schema.define(version: 2024_10_14_130793) do
     t.string "badge_name", null: false
     t.integer "value", default: 0, null: false
     t.index ["user_id"], name: "index_decidim_gamification_badge_scores_on_user_id"
+  end
+
+  create_table "decidim_goteborg_login_sessions", force: :cascade do |t|
+    t.bigint "decidim_user_id", null: false
+    t.string "saml_uid", limit: 1024, null: false
+    t.string "saml_session_index", limit: 128, null: false
+    t.datetime "ended_at"
+    t.index ["decidim_user_id"], name: "index_decidim_goteborg_login_sessions_on_decidim_user_id"
+    t.index ["saml_uid"], name: "index_decidim_goteborg_login_sessions_on_saml_uid"
   end
 
   create_table "decidim_hashtags", force: :cascade do |t|
@@ -1929,6 +1940,21 @@ ActiveRecord::Schema.define(version: 2024_10_14_130793) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["decidim_organization_id"], name: "index_verifications_csv_census_to_organization"
+  end
+
+  create_table "delayed_jobs", force: :cascade do |t|
+    t.integer "priority", default: 0, null: false
+    t.integer "attempts", default: 0, null: false
+    t.text "handler", null: false
+    t.text "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string "locked_by"
+    t.string "queue"
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
+    t.index ["priority", "run_at"], name: "delayed_jobs_priority"
   end
 
   create_table "oauth_access_grants", force: :cascade do |t|
