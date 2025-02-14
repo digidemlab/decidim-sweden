@@ -35,4 +35,8 @@
 
 .hero-alt-process {
   @apply md:h-[20rem] lg:h-[24rem];
+
+  .hero-alt__image img {
+    object-fit: contain !important;
+  }
 }
