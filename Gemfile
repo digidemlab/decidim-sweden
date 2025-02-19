@@ -27,8 +27,6 @@ gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-facel
 
 ### Additional Decidim Modules ###
 
-gem "decidim-goteborg_login", git: "https://github.com/digidemlab/decidim-module-goteborg_login.git", branch: "V5"
-
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
 
 # gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
@@ -37,6 +35,7 @@ gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-te
 
 # gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: "main"
 
+# gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
 
 
 gem "bootsnap", "~> 1.3"

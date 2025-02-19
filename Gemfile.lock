@@ -189,17 +189,6 @@ GIT
       decidim-core (~> 0.28)
 
 GIT
-  remote: https://github.com/digidemlab/decidim-module-goteborg_login.git
-  revision: 835718cd5e1fdcbb4012a9f6d8d494ea09cf714d
-  branch: V5
-  specs:
-    decidim-goteborg_login (0.28.4)
-      decidim-core (= 0.28.4)
-      omniauth-saml (~> 2.1)
-      personnummer (~> 0.1.0)
-      ruby-saml (~> 1.17)
-
-GIT
   remote: https://github.com/mainio/decidim-module-antivirus
   revision: cc5cafde5f7f6855eab197bc3ac2edf0c387732e
   branch: main
@@ -608,7 +597,6 @@ GEM
       rack (>= 1.6.13)
       rackup
       rake (>= 12.3.3)
-    personnummer (0.1.0)
     pg (1.4.6)
     pg_search (2.3.7)
       activerecord (>= 6.1)
@@ -766,9 +754,6 @@ GEM
     rubocop-rspec_rails (2.29.0)
       rubocop (~> 1.40)
     ruby-progressbar (1.13.0)
-    ruby-saml (1.17.0)
-      nokogiri (>= 1.13.10)
-      rexml
     ruby-vips (2.2.2)
       ffi (~> 1.12)
       logger
@@ -903,7 +888,6 @@ DEPENDENCIES
   decidim-antivirus!
   decidim-dev!
   decidim-faceless!
-  decidim-goteborg_login!
   decidim-initiatives!
   decidim-templates!
   decidim-term_customizer!
