@@ -28,8 +28,8 @@
 .byebug_history
 
 # Service workers
-public/sw.js
-public/sw.js.map
+public/sw.js*
+public/sw.js.map*
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
@@ -52,3 +52,7 @@ yarn-debug.log*
 # Ignore application configuration
 /config/application.yml
 tailwind.config.js
+
+# Data for saml login
+config/saml
+config/cert

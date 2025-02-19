@@ -16,6 +16,11 @@ html {
   font-family: "Open Sans", "Arial", "sans-serif";
 }
 
+body {
+// In case of overflowing content
+//  @apply overflow-x-hidden;
+}
+
 /**
   Local mixins for @apply
 */
@@ -30,6 +35,49 @@ html {
 
 
 /**
+ Design bug fixes
+ */
+
+// Dropdown menu too wide for screen
+
+header .menu-bar__secondary-dropdown,
+header .menu-bar__main-dropdown {
+  @apply w-full xl:w-[1214px];
+}
+
+header .menu-bar__breadcrumb-desktop > .relative {
+  position: inherit;
+}
+
+header .menu-bar__breadcrumb-desktop__dropdown-content-secondary {
+  top: 100%;
+  left: 2rem;
+}
+
+// WCAG click area for search button
+
+header .main-bar__search form {
+  line-height: 1.5555;
+
+  button {
+    padding: 0 3px;
+  }
+}
+
+// WCAG contrast for search field
+
+#input-search {
+  @apply border border-gray outline outline-1 outline-transparent rounded bg-background-2 text-black font-normal placeholder:text-gray focus:outline-2 focus:outline-secondary disabled:bg-background-3 disabled:text-gray-2 disabled:cursor-not-allowed;
+}
+
+// Tabs too wide on mobile
+
+.tab-x-container {
+  @apply block md:flex md:gap-1 [&>*]:grow;
+}
+
+
+/**
   Menu bar
 */
 
@@ -39,6 +87,8 @@ html {
 header .menu-bar__container {
   @apply bg-white;
 }
+
+
 
 .menu-bar__breadcrumb-desktop__dropdown-content-secondary,
 header .menu-bar__main-dropdown {
@@ -52,6 +102,10 @@ header .menu-bar__breadcrumb-mobile {
 
 header .menu-bar__breadcrumb-desktop > * {
   @apply text-black;
+}
+
+header .menu-bar__main-dropdown__menu a:hover {
+  @apply link-hover;
 }
 
 
@@ -91,6 +145,7 @@ footer {
 #hero-cta.button__secondary {
   @apply bg-white text-primary;
 
+  &:focus,
   &:hover {
     @apply bg-white link-hover text-primary !important;
   }
@@ -149,9 +204,12 @@ footer {
   @apply max-w-full;
 }
 
+// Hide stuff
+
 #floating-helper-tip {
-//  display: none;
+  display: none;
 }
+
 
 /**
   Budgets
@@ -183,6 +241,8 @@ h1, h2, h3, h4, h5 {
   @apply text-black border-black;
 }
 
+a .card__list-title,
+.button__text-secondary,
 a .text-secondary {
   @apply text-black underline font-bold;
   &:hover {
@@ -197,9 +257,20 @@ a .text-secondary {
   }
 }
 
-header .menu-bar__main-dropdown__menu a:hover {
-  @apply link-hover;
+
+/**
+  WCAG Contrasts
+*/
+
+.wizard-steps > * {
+  &[aria-current] ~ * {
+    &:before,
+    &:after {
+      background: #595959;
+    }
+  }
 }
+
 
 /**
   Reset colors & decorations
