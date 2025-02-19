@@ -16,6 +16,9 @@
   - [cleanups, 1]
   - [participatory_processes, 1]
 
+# NOTE(d1): cron strings use 6 elements
+# https://github.com/floraison/fugit?tab=readme-ov-file#the-second-extension
+
 :scheduler:
   :schedule:
     CalculateAllMetrics:
@@ -35,15 +38,15 @@
       class: DeleteRegistrationFormsJob
       queue: cleanups
     GenerateReminders:
-      cron: '0 0 8 * * *' # Run at 08:00
+      cron: '0 0 9 * * *' # Run at 09:00
       class: GenerateRemindersJob
       queue: reminders
     DigestDailyReminders:
-      cron: '0 0 9 * * *' # Run at 09:00
+      cron: '0 15 9 * * *' # Run at 09:15
       class: DigestDailyRemindersJob
       queue: reminders
     DigestWeeklyReminders:
-      cron: '0 0 10 * * *' # Run at 10:00
+      cron: '0 30 9 * * *' # Run at 09:30
       class: DigestWeeklyRemindersJob
       queue: reminders
     ChangeActiveStep:
