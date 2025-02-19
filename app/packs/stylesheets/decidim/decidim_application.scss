@@ -16,6 +16,11 @@ html {
   font-family: "Open Sans", "Arial", "sans-serif";
 }
 
+body {
+// In case of overflowing content
+//  @apply overflow-x-hidden;
+}
+
 /**
   Local mixins for @apply
 */
@@ -30,6 +35,49 @@ html {
 
 
 /**
+ Design bug fixes
+ */
+
+// Dropdown menu too wide for screen
+
+header .menu-bar__secondary-dropdown,
+header .menu-bar__main-dropdown {
+  @apply w-full xl:w-[1214px];
+}
+
+header .menu-bar__breadcrumb-desktop > .relative {
+  position: inherit;
+}
+
+header .menu-bar__breadcrumb-desktop__dropdown-content-secondary {
+  top: 100%;
+  left: 2rem;
+}
+
+// WCAG click area for search button
+
+header .main-bar__search form {
+  line-height: 1.5555;
+
+  button {
+    padding: 0 3px;
+  }
+}
+
+// WCAG contrast for search field
+
+#input-search {
+  @apply border border-gray outline outline-1 outline-transparent rounded bg-background-2 text-black font-normal placeholder:text-gray focus:outline-2 focus:outline-secondary disabled:bg-background-3 disabled:text-gray-2 disabled:cursor-not-allowed;
+}
+
+// Tabs too wide on mobile
+
+.tab-x-container {
+  @apply block md:flex md:gap-1 [&>*]:grow;
+}
+
+
+/**
   Menu bar
 */
 
@@ -39,6 +87,8 @@ html {
 header .menu-bar__container {
   @apply bg-white;
 }
+
+
 
 .menu-bar__breadcrumb-desktop__dropdown-content-secondary,
 header .menu-bar__main-dropdown {
@@ -52,6 +102,10 @@ header .menu-bar__breadcrumb-mobile {
 
 header .menu-bar__breadcrumb-desktop > * {
   @apply text-black;
+}
+
+header .menu-bar__main-dropdown__menu a:hover {
+  @apply link-hover;
 }
 
 
@@ -91,6 +145,7 @@ footer {
 #hero-cta.button__secondary {
   @apply bg-white text-primary;
 
+  &:focus,
   &:hover {
     @apply bg-white link-hover text-primary !important;
   }
@@ -132,7 +187,52 @@ footer {
   &:hover {
     @apply ring-transparent;
   }
+
+  &:nth-child(1) {
+    background-color: #e3e8e9;
+  }
+  &:nth-child(2) {
+    background-color: #dbeff8;
+  }
+  &:nth-child(3) {
+    background-color: #dbede2;
+  }
+  &:nth-child(4) {
+    background-color: #fbe1ec;
+  }
+  &:nth-child(5) {
+    background-color: #ece2f1;
+  }
+  &:nth-child(6) {
+    background-color: #fde3d6;
+  }
+  &:nth-child(7) {
+    background-color: #d6ebed;
+  }
+  &:nth-child(8) {
+    background-color: #fff2b0;
+  }
 }
+
+/*
+--color-dark-blue-light#e3e8e9
+--color-blue-light#dbeff8
+--color-green-light#dbede2
+--color-pink-light#fbe1ec
+--color-purple-light#ece2f1
+--color-red-light#fde3d6
+--color-turquoise-light#d6ebed
+--color-yellow-light#fff2b0
+
+--color-dark-blue-lightest#f5f7f8
+--color-blue-lightest#f2fafc
+--color-green-lightest#f0f9f3
+--color-pink-lightest#fdf4f8
+--color-purple-lightest#f6f1f9
+--color-red-lightest#fef5f1
+--color-turquoise-lightest#f2f9fa
+--color-yellow-lightest#fffcef
+*/
 
 .card__grid {
   @apply bg-white shadow-none ring-1;
@@ -149,9 +249,13 @@ footer {
   @apply max-w-full;
 }
 
+// Hide stuff
+
+#sub_hero .button,
 #floating-helper-tip {
-//  display: none;
+  display: none;
 }
+
 
 /**
   Budgets
@@ -183,6 +287,8 @@ h1, h2, h3, h4, h5 {
   @apply text-black border-black;
 }
 
+a .card__list-title,
+.button__text-secondary,
 a .text-secondary {
   @apply text-black underline font-bold;
   &:hover {
@@ -197,9 +303,20 @@ a .text-secondary {
   }
 }
 
-header .menu-bar__main-dropdown__menu a:hover {
-  @apply link-hover;
+
+/**
+  WCAG Contrasts
+*/
+
+.wizard-steps > * {
+  &[aria-current] ~ * {
+    &:before,
+    &:after {
+      background: #595959;
+    }
+  }
 }
+
 
 /**
   Reset colors & decorations
