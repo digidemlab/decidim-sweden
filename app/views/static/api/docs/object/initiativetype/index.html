@@ -1,93 +1,90 @@
 <div class="content"><h1>
-<a id="commentable" class="anchor" href="#commentable" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commentable</h1>
-<p>A commentable object</p>
-<h2>
-<a id="implements" class="anchor" href="#implements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implements</h2>
-<ul>
-   <li><code><a href="/api/docs/interface/commentableinterface">CommentableInterface</a></code></li>
-</ul>
+<a id="initiativetype" class="anchor" href="#initiativetype" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>InitiativeType</h1>
+<p>An initiative type</p>
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
   <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
   <div class="description-wrapper">
-   <p>The commentable's ID</p>
+   <p>The internal ID for this initiative type</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
+  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
-   <p>The commentable's class name. i.e. <code>Decidim::ParticipatoryProcess</code></p>
+   <p>Initiative type name</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="acceptsnewcomments" class="field-name anchored">acceptsNewComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <span id="description" class="field-name anchored">description (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
   <div class="description-wrapper">
-   <p>Whether the object can have new comments or not</p>
+   <p>This is the initiative type description</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="commentshavealignment" class="field-name anchored">commentsHaveAlignment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
   <div class="description-wrapper">
-   <p>Whether the object comments have alignment or not</p>
+   <p>The date this initiative type was created</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="commentshavevotes" class="field-name anchored">commentsHaveVotes (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/datetime">DateTime</a></code>)</span>
   <div class="description-wrapper">
-   <p>Whether the object comments have votes or not</p>
+   <p>The date this initiative type was updated</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="comments" class="field-name anchored">comments (<code><a href="/api/docs/object/comment">[Comment!]!</a></code>)</span>
+  <span id="bannerimage" class="field-name anchored">bannerImage (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-     <table class="arguments">
-  <thead>
-  <tr>
-    <th>Argument</th>
-    <th>Type</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td><code class="anchored">orderBy</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/string">String</a></code>
-  </td>
-  <td>
-    <p>Order the comments</p>
-   </td>
-  </tr>
-  <tr>
-  <td><code class="anchored">singleCommentId</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/string">String</a></code>
-  </td>
-  <td>
-    <p>ID of the single comment to look at</p>
-   </td>
-  </tr>
-  </tbody>
-</table>
+   <p>Banner image</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="totalcommentscount" class="field-name anchored">totalCommentsCount (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
+  <span id="collectuserextrafields" class="field-name anchored">collectUserExtraFields (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
   <div class="description-wrapper">
-   <p>The number of comments in all levels this resource holds</p>
+   <p>Collect participant personal data on signature</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="hascomments" class="field-name anchored">hasComments (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <span id="extrafieldslegalinformation" class="field-name anchored">extraFieldsLegalInformation (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>Check if the commentable has comments</p>
+   <p>Legal information about the collection of personal data</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="userallowedtocomment" class="field-name anchored">userAllowedToComment (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
+  <span id="minimumcommitteemembers" class="field-name anchored">minimumCommitteeMembers (<code><a href="/api/docs/scalar/int">Int</a></code>)</span>
   <div class="description-wrapper">
-   <p>Check if the current user can comment</p>
+   <p>Minimum of committee members</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="validatesmscodeonvotes" class="field-name anchored">validateSmsCodeOnVotes (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Add SMS code validation step to signature process</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="undoonlinesignaturesenabled" class="field-name anchored">undoOnlineSignaturesEnabled (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Enable participants to undo their online signatures</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="promotingcomitteeenabled" class="field-name anchored">promotingComitteeEnabled (<code><a href="/api/docs/scalar/boolean">Boolean</a></code>)</span>
+  <div class="description-wrapper">
+   <p>If promoting committee is enabled</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="signaturetype" class="field-name anchored">signatureType (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
+  <div class="description-wrapper">
+   <p>Signature type of the initiative</p>
+  </div>
+</div>
+<div class="field-entry ">
+  <span id="initiatives" class="field-name anchored">initiatives (<code><a href="/api/docs/object/initiative">[Initiative]!</a></code>)</span>
+  <div class="description-wrapper">
+   <p>The initiatives that have this type</p>
   </div>
 </div></div>
 <div id="sidebar"><ul class="categories">
@@ -239,13 +236,6 @@
       
         
       <li>
-        <a href="/api/docs/object/commentable/" class="sidebar-link">
-          Commentable
-        </a>
-      </li>
-      
-        
-      <li>
         <a href="/api/docs/object/commentablemutation/" class="sidebar-link">
           CommentableMutation
         </a>
@@ -304,6 +294,27 @@
       <li>
         <a href="/api/docs/object/hashtagtype/" class="sidebar-link">
           HashtagType
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/initiative/" class="sidebar-link">
+          Initiative
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/initiativecommitteemembertype/" class="sidebar-link">
+          InitiativeCommitteeMemberType
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/initiativetype/" class="sidebar-link">
+          InitiativeType
         </a>
       </li>
       
@@ -836,6 +847,13 @@
         <li>
           <a href="/api/docs/interface/fingerprintinterface/" class="sidebar-link">
             FingerprintInterface
+          </a>
+        </li>
+      
+        
+        <li>
+          <a href="/api/docs/interface/initiativetypeinterface/" class="sidebar-link">
+            InitiativeTypeInterface
           </a>
         </li>
       
