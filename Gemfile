@@ -5,8 +5,8 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 # Temporary setting to get latest translations
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "chore/l10n/release/0.28-stable" }
-# DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.28-stable" }
+# DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "chore/l10n/release/0.28-stable" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.28-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
