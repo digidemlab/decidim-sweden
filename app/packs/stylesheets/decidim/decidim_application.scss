@@ -119,7 +119,7 @@ footer {
     @apply bg-background-5;
 
     .font-semibold {
-      @apply font-normal;
+      text-decoration: none;
 
       &:hover {
         @apply link-hover;
