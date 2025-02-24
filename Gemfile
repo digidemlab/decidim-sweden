@@ -4,9 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-# Temporary setting to get latest translations
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "chore/l10n/release/0.28-stable" }
-# DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.28-stable" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.29-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
@@ -27,7 +25,8 @@ gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-facel
 
 ### Additional Decidim Modules ###
 
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
+# NOTE(d1): disabled, does not support v0.29.x
+# gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
 
 # gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
 
@@ -57,8 +56,6 @@ end
 group :development do
   gem "letter_opener_web", "~> 2.0"
   gem "listen", "~> 3.1"
-  gem "spring", "~> 2.0"
-  gem "spring-watcher-listen", "~> 2.0.1"
   gem "web-console", "~> 3.5"
 end
 
@@ -68,7 +65,8 @@ group :production do
   gem "sidekiq-scheduler"
   gem "sidekiq-failures"
   gem "sinatra"
-  gem "decidim-antivirus", git: "https://github.com/mainio/decidim-module-antivirus", branch: "main"
+  # NOTE(d1): disabled, does not support v0.29.x
+  # gem "decidim-antivirus", git: "https://github.com/mainio/decidim-module-antivirus", branch: "main"
 end
 
 gem "nokogiri", "~> 1.16"
