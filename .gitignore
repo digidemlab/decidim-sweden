@@ -43,6 +43,7 @@ create-decidim-admin.done
 /public/packs
 /public/decidim-packs
 /public/packs-test
+/public/sw.js.*
 /node_modules
 /yarn-error.log
 yarn-debug.log*
