@@ -200,6 +200,14 @@ GIT
       ruby-saml (~> 1.17)
 
 GIT
+  remote: https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler
+  revision: b979e07bc6d8432a040b7419db00c92d9cc8cc24
+  branch: goteborg
+  specs:
+    decidim-socio_demographic_authorization_handler (0.28)
+      decidim-core (>= 0.28.0, < 0.29)
+
+GIT
   remote: https://github.com/mainio/decidim-module-antivirus
   revision: cc5cafde5f7f6855eab197bc3ac2edf0c387732e
   branch: main
@@ -905,6 +913,7 @@ DEPENDENCIES
   decidim-faceless!
   decidim-goteborg_login!
   decidim-initiatives!
+  decidim-socio_demographic_authorization_handler!
   decidim-templates!
   decidim-term_customizer!
   faker (~> 3.2)
