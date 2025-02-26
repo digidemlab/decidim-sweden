@@ -1,9 +1,32 @@
 sv:
+  device:
+    omniauth_callbacks:
+      success: Du är inloggad.
   layouts:
     decidim:
       footer:
+        decidim_title: 'Plattform för medborgar- inflytande'
         made_with_open_source: Webbplats gjord av <a target="_blank" href="https://digidemlab.org">Digidem Lab</a> med den fria mjukvaran <a target="_blank" href="https://github.com/decidim/decidim">Decidim</a>.
   decidim:
+    menu:
+      help: 'Om'
+    pages:
+      index:
+        title: 'Om'
+        subheading: 'Navigera bland informationssidorna för %{name}'
+      home:
+        footer_sub_hero:
+          footer_sub_hero_headline: 'Välkommen till %{organization}.'
     participatory_processes:
       last_activity:
         new_participatory_process: 'Ny process:'
+    authorization_modals:
+      content:
+        missing:
+          authorize: 'Komplettera din profil'
+          explanation: 'För att fortsätta behöver du fylla i uppgifter för statistik.'
+          title: 'Komplettera din profil'
+    verifications:
+      authorizations:
+        new:
+          authorize_with: 'Komplettera din profil'

@@ -43,6 +43,7 @@ create-decidim-admin.done
 /public/packs
 /public/decidim-packs
 /public/packs-test
+/public/sw.js.*
 /node_modules
 /yarn-error.log
 yarn-debug.log*
@@ -56,4 +57,10 @@ tailwind.config.js
 # Data for saml login
 config/saml
 config/cert
-config/initializers/goteborg_login.rb
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity

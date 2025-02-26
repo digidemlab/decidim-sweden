@@ -4,14 +4,13 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-# Temporary setting to get latest translations
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "chore/l10n/release/0.28-stable" }
-# DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.28-stable" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.29-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 
+gem "decidim-goteborg_login", git: "https://github.com/decentral1se/decidim-module-goteborg_login.git", branch: "v29-changes"
 
 ### Awaiting upgrade to version 0.28 ###
 
@@ -27,16 +26,16 @@ gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-facel
 
 ### Additional Decidim Modules ###
 
-gem "decidim-goteborg_login", git: "https://github.com/digidemlab/decidim-module-goteborg_login.git", branch: "V5"
-
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
+# NOTE(d1): disabled, does not support v0.29.x
+# gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
 
 # gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
 
-gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "goteborg"
+gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "goteborg-0.29"
 
 # gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: "main"
 
+# gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
 
 
 gem "bootsnap", "~> 1.3"
@@ -58,8 +57,6 @@ end
 group :development do
   gem "letter_opener_web", "~> 2.0"
   gem "listen", "~> 3.1"
-  gem "spring", "~> 2.0"
-  gem "spring-watcher-listen", "~> 2.0.1"
   gem "web-console", "~> 3.5"
 end
 
@@ -69,7 +66,8 @@ group :production do
   gem "sidekiq-scheduler"
   gem "sidekiq-failures"
   gem "sinatra"
-  gem "decidim-antivirus", git: "https://github.com/mainio/decidim-module-antivirus", branch: "main"
+  # NOTE(d1): disabled, does not support v0.29.x
+  # gem "decidim-antivirus", git: "https://github.com/mainio/decidim-module-antivirus", branch: "main"
 end
 
 gem "nokogiri", "~> 1.16"
