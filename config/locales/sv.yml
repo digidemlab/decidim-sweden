@@ -1,13 +1,17 @@
 sv:
   device:
     omniauth_callbacks:
-      success: Du är inloggad.
+      success: 'Du är inloggad.'
   layouts:
     decidim:
       footer:
         decidim_title: 'Plattform för medborgar- inflytande'
         made_with_open_source: Webbplats gjord av <a target="_blank" href="https://digidemlab.org">Digidem Lab</a> med den fria mjukvaran <a target="_blank" href="https://github.com/decidim/decidim">Decidim</a>.
   decidim:
+    admin:
+      impersonations:
+        form:
+          reason: 'Kontaktuppgifter till den du gör kontot för (telefonnummer eller e-postadress)'
     menu:
       help: 'Om'
     pages:
