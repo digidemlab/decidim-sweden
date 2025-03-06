@@ -5,8 +5,8 @@ Decidim.configure do |config|
   config.mailer_sender = Rails.application.secrets.mailer_sender
 
   # Change these lines to set your preferred locales
-  config.default_locale = :sv
-  config.available_locales = %i[sv]
+  config.default_locale = :en
+  config.available_locales = [:en, :fr, :es]
 
   # Geocoder configuration
   config.maps = {
