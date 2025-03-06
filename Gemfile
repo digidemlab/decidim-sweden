@@ -16,7 +16,7 @@ gem "decidim-initiatives", DECIDIM_VERSION
 # gem "decidim-decidim_awesome", "0.11.1"
 
 # NOTE(pj): needs some improvements
-gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.28-beta"
+# gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.28-beta"
 
 # NOTE(d1): https://github.com/digidemlab/decidim-module-budgets_paper_ballots/issues/10
 # gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "release/0.26-stable"
