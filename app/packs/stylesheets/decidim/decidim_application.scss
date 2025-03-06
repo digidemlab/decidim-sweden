@@ -95,7 +95,6 @@ header .menu-bar__container {
 }
 
 
-
 .menu-bar__breadcrumb-desktop__dropdown-content-secondary,
 header .menu-bar__main-dropdown {
   @apply ring-1;
@@ -106,14 +105,15 @@ header .menu-bar__breadcrumb-mobile {
   @apply text-xs !important;
 }
 
-header .menu-bar__breadcrumb-desktop > * {
+
+header .menu-bar__breadcrumb-desktop > *,
+header .menu-bar__breadcrumb-desktop [data-target*="dropdown"] > svg {
   @apply text-black;
 }
 
 header .menu-bar__main-dropdown__menu a:hover {
   @apply link-hover;
 }
-
 
 /**
   Footer
@@ -147,6 +147,18 @@ footer {
   Hero, start
 */
 
+.hero__container {
+  /* stylelint-disable-next-line number-leading-zero */
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7) 21.88%,
+      rgba(0, 0, 0, 0.46421) 60.94%,
+      rgba(0, 0, 0, 0.105) 100%
+    ),
+    var(--hero-image);
+}
+
+/*
 .hero-alt__text .button__secondary,
 #hero-cta.button__secondary {
   @apply bg-white text-primary;
@@ -156,12 +168,12 @@ footer {
     @apply bg-white link-hover text-primary !important;
   }
 }
-
+*/
 
 /**
   Hero, participation space
 */
-
+/*
 .participatory-space__hero-slogan {
   @apply text-white mb-4;
 }
@@ -173,20 +185,20 @@ footer {
 .participatory-space__hero-text {
   @apply text-black;
 }
-
+*/
 /**
   Backgrounds, sections
 */
-
+/*
 #how_to_participate {
   @apply bg-background;
 }
-
+*/
 
 /**
   Cards
 */
-
+/*
 .card__highlight {
   @apply bg-white shadow-none ring-transparent;
 
@@ -204,7 +216,7 @@ footer {
     --tw-ring-color: #e5e5e5;
   }
 }
-
+*/
 .card__highlight-metadata > *,
 .card__grid-metadata > * {
   @apply max-w-full;
@@ -233,16 +245,16 @@ footer {
 /**
   Headlines
 */
-
+/*
 h1, h2, h3, h4, h5 {
   @apply font-bold text-black;
 }
-
+*/
 
 /**
   Links & Buttons
 */
-
+/*
 .button__transparent {
   @apply text-black border-black;
 }
@@ -262,7 +274,7 @@ a .text-secondary {
     @apply link-hover;
   }
 }
-
+*/
 
 /**
   WCAG Contrasts
@@ -281,7 +293,7 @@ a .text-secondary {
 /**
   Reset colors & decorations
 */
-
+/*
 header .menu-bar__breadcrumb-mobile__dropdown-trigger span,
 header .menu-bar__breadcrumb-mobile__dropdown-trigger,
 header .menu-bar__main-dropdown__menu a,
@@ -298,6 +310,7 @@ header .main-bar__links-mobile__trigger,
 header .main-bar__links-desktop__item {
   @apply text-black;
 }
+*/
 
 .home__section-title::after,
 .decorator::after,
