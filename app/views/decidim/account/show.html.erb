@@ -24,16 +24,12 @@
 
   <%= decidim_form_for(@account, url: account_path, method: :put, html: { autocomplete: "on", class: "form-defaults edit_user" }) do |f| %>
     <div class="form__wrapper pt-0">
-      <%= f.upload :avatar, button_class: "button button__lg button__transparent-secondary w-full" %>
-
       <%= form_required_explanation %>
 
       <%= f.text_field :name, autocomplete: "name" %>
       <%= f.text_field :nickname, autocomplete: "nickname" %>
       <%= f.email_field :email, disabled: current_user.unconfirmed_email.present?, autocomplete: "email", data: { original: current_user.email },
         value: current_user.email.starts_with?("gbglogin-") ? "" : current_user.email %>
-      <%= f.url_field :personal_url, autocomplete: "url" %>
-      <%= f.text_area :about, rows: 5 %>
 
       <%= f.collection_select(
             :locale,
