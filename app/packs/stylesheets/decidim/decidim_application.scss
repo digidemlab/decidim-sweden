@@ -38,6 +38,13 @@ body {
  Design bug fixes
  */
 
+
+// Dropdown hidden in Ipad size
+#dropdown-trigger-links-mobile[data-target*="dropdown"] {
+  @apply lg:hidden md:flex !important;
+}
+
+
 // Dropdown menu too wide for screen
 
 header .menu-bar__secondary-dropdown,
