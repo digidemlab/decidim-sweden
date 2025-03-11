@@ -28,8 +28,7 @@
 
       <%= f.text_field :name, autocomplete: "name" %>
       <%= f.text_field :nickname, autocomplete: "nickname" %>
-      <%= f.email_field :email, disabled: current_user.unconfirmed_email.present?, autocomplete: "email", data: { original: current_user.email },
-        value: current_user.email.starts_with?("gbglogin-") ? "" : current_user.email %>
+      <%= f.email_field :email, disabled: current_user.unconfirmed_email.present?, autocomplete: "email", data: { original: current_user.email }, value: current_user.email %>
 
       <%= f.collection_select(
             :locale,
