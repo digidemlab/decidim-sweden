@@ -1,6 +1,9 @@
 <% is_horizontal = false unless local_assigns.has_key?(:is_horizontal) %>
 <% if Devise.mappings[:user].omniauthable? && current_organization.enabled_omniauth_providers.any? %>
-  <div class="login__omniauth<%= " login__omniauth__horizontal" if is_horizontal %>">
+  <%- if current_organization.sign_in_enabled? %>
+    <span class="login__omniauth-separator"><%= t(".or") %></span>
+  <%- end %>
+  <div style="margin-top: 0" class="login__omniauth<%= " login__omniauth__horizontal" if is_horizontal %>">
     <%- current_organization.enabled_omniauth_providers.keys.each do |provider| %>
       <% if normalize_provider_name(provider) == "gbgpub" %>
         <% provider_title = "Logga in med BankID" %>
@@ -18,7 +21,4 @@
       <% end %>
     <% end %>
   </div>
-  <%- if current_organization.sign_in_enabled? %>
-    <span class="login__omniauth-separator"><%= t(".or") %></span>
-  <%- end %>
 <% end %>
