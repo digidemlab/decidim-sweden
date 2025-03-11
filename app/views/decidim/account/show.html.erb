@@ -35,13 +35,6 @@
         help_text: t("decidim.account.email.please_change")
       %>
 
-      <%= f.collection_select(
-            :locale,
-            @account.organization.available_locales,
-            :to_s,
-            ->(locale) { locale_name(locale) },
-            help_text: t("available_locales_helper", scope:"decidim.account.show")
-          ) %>
       <% if @account.password.present? %>
         <%= render partial: "password_fields", locals: { form: f, user: current_user } %>
         <% if false %>
