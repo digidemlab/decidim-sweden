@@ -41,4 +41,9 @@ sv:
       registrations:
         new:
           choose_method: 'Välj att skapa konto med BankID eller e-post och lösenord (nedan)'
+    account:
+      name:
+        visibility_warning: 'Ditt namn och användarnamn syns tillsammans med ditt lämnade förslag. Ändra båda fälten för namn och användarnamn om du vill vara anonym.'
+      email:
+        please_change: 'Lämna gärna din e-post adress så att vi kan kontakta dig för återkoppling kring ditt förslag.'
 

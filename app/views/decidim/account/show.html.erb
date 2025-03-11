@@ -26,9 +26,14 @@
     <div class="form__wrapper pt-0">
       <%= form_required_explanation %>
 
-      <%= f.text_field :name, autocomplete: "name" %>
+      <%= f.text_field :name, autocomplete: "name", help_text: t("decidim.account.name.visibility_warning") %>
       <%= f.text_field :nickname, autocomplete: "nickname" %>
-      <%= f.email_field :email, disabled: current_user.unconfirmed_email.present?, autocomplete: "email", data: { original: current_user.email }, value: current_user.email %>
+      <%= f.email_field :email,
+        disabled: current_user.unconfirmed_email.present?,
+        autocomplete: "email", data: { original: current_user.email },
+        value: current_user.email,
+        help_text: t("decidim.account.email.please_change")
+      %>
 
       <%= f.collection_select(
             :locale,
