@@ -57,6 +57,7 @@ tailwind.config.js
 # Data for saml login
 config/saml
 config/cert
+config/initializers/goteborg_login.rb
 
 /public/packs
 /public/packs-test
