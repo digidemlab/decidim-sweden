@@ -12,8 +12,10 @@
 // @import "modules/mini_footer";
 //@import "modules/white_theme";
 
+.test {}
+
 html {
-  font-family: "Open Sans", "Arial", "sans-serif";
+  font-family: "Source Sans Pro", "Arial", "sans-serif";
 }
 
 body {
@@ -38,12 +40,6 @@ body {
  Design bug fixes
  */
 
-// Dropdown hidden in Ipad size
-#dropdown-trigger-links-mobile[data-target*="dropdown"] {
-  @apply lg:hidden md:flex !important;
-}
-
-
 // Dropdown menu too wide for screen
 
 header .menu-bar__secondary-dropdown,
@@ -64,6 +60,7 @@ header .menu-bar__breadcrumb-desktop__dropdown-content-secondary {
 
 header .main-bar__search form {
   line-height: 1.5555;
+  @apply bg-white;
 
   button {
     padding: 0 3px;
@@ -73,7 +70,7 @@ header .main-bar__search form {
 // WCAG contrast for search field
 
 #input-search {
-  @apply border border-gray outline outline-1 outline-transparent rounded bg-background-2 text-black font-normal placeholder:text-gray focus:outline-2 focus:outline-secondary disabled:bg-background-3 disabled:text-gray-2 disabled:cursor-not-allowed;
+  @apply border border-primary outline outline-1 outline-transparent rounded-md bg-white text-black font-normal placeholder:text-primary focus:outline-2 focus:outline-secondary disabled:bg-background-3 disabled:text-gray-2 disabled:cursor-not-allowed;
 }
 
 // Tabs too wide on mobile
@@ -107,7 +104,7 @@ header .menu-bar__breadcrumb-mobile {
 }
 
 header .menu-bar__breadcrumb-desktop > * {
-  @apply text-black;
+  @apply text-primary;
 }
 
 header .menu-bar__main-dropdown__menu a:hover {
@@ -121,10 +118,10 @@ header .menu-bar__main-dropdown__menu a:hover {
 
 footer {
   .main-footer {
-    @apply bg-black;
+    @apply bg-background-5;
 
     .font-semibold {
-      @apply font-normal;
+      text-decoration: none;
 
       &:hover {
         @apply link-hover;
@@ -133,12 +130,16 @@ footer {
   }
 
   .mini-footer {
-    background-color: #262626;
+    @apply bg-background-5 !important;
   }
 
   h2 {
     @apply text-white;
     font-weight: bold !important;
+  }
+
+  a {
+    @apply text-tertiary;
   }
 }
 
@@ -149,11 +150,11 @@ footer {
 
 .hero-alt__text .button__secondary,
 #hero-cta.button__secondary {
-  @apply bg-white text-primary;
+  @apply mt-5 py-3 px-12 border-primary bg-white text-primary rounded-lg text-lg font-normal;
 
   &:focus,
   &:hover {
-    @apply bg-white link-hover text-primary !important;
+    @apply bg-primary text-white !important;
   }
 }
 
@@ -171,7 +172,7 @@ footer {
 
 }
 .participatory-space__hero-text {
-  @apply text-black;
+  @apply text-primary;
 }
 
 /**
@@ -186,22 +187,40 @@ footer {
 /**
   Cards
 */
-
+.card__grid,
 .card__highlight {
-  @apply bg-white shadow-none ring-transparent;
+  @apply bg-background rounded-sm shadow-none ring-transparent;
+
+  .text-secondary,
+  .card__highlight-text,
+  .card__highlight-metadata {
+    @apply text-primary;
+  }
 
   &:hover {
-    @apply ring-transparent;
+    @apply bg-background-5 ring-transparent;
+
+    .card__highlight-text,
+    .card__highlight-metadata,
+    .text-secondary,
+    .card__grid-metadata {
+      @apply text-white;
+    }
+    svg {
+      fill: #fff;
+    }
   }
 }
 
 .card__grid {
-  @apply bg-white shadow-none ring-1;
-  --tw-ring-color: #e5e5e5;
+  @apply bg-background-3;
+
+  .text-secondary {
+    @apply text-black;
+  }
 
   &:hover {
-    @apply bg-background;
-    --tw-ring-color: #e5e5e5;
+    @apply bg-background-6;
   }
 }
 
@@ -212,6 +231,7 @@ footer {
 
 // Hide stuff
 
+#sub_hero .button,
 #floating-helper-tip {
   display: none;
 }
@@ -235,7 +255,7 @@ footer {
 */
 
 h1, h2, h3, h4, h5 {
-  @apply font-bold text-black;
+  @apply font-bold text-primary;
 }
 
 
@@ -243,14 +263,21 @@ h1, h2, h3, h4, h5 {
   Links & Buttons
 */
 
-.button__transparent {
-  @apply text-black border-black;
+.button {
+  @apply rounded-md;
+}
+.button__xl:not([class*="button__text"]) {
+  @apply py-3;
 }
 
-a .card__list-title,
-.button__text-secondary,
-a .text-secondary {
-  @apply text-black underline font-bold;
+.button__transparent {
+  @apply text-primary border-primary;
+}
+
+//a .card__list-title,
+//a .text-secondary,
+.button__text-secondary {
+  @apply text-primary font-bold border-primary rounded-md;
   &:hover {
     @apply link-hover;
   }
@@ -296,7 +323,7 @@ header .main-bar__links-mobile,
 [data-target*="dropdown"] > svg,
 header .main-bar__links-mobile__trigger,
 header .main-bar__links-desktop__item {
-  @apply text-black;
+  @apply text-primary;
 }
 
 .home__section-title::after,
