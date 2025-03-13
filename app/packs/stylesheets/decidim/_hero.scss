@@ -1,9 +1,11 @@
 .hero {
-  @apply h-[60vh] md:h-[65vh] min-h-[15rem] md:min-h-[18rem] container px-4 md:px-24 flex flex-col justify-center items-center gap-8 md:gap-16;
+//  @apply h-[60vh] md:h-[65vh] min-h-[15rem] md:min-h-[18rem] container px-4 md:px-24 flex flex-col justify-center items-center gap-8 md:gap-16;
+
+  @apply h-[60vh] md:h-[65vh] min-h-[15rem] md:min-h-[18rem] container px-4 md:px-24 flex flex-col justify-end items-start gap-2 md:gap-4 pb-8 md:pb-12;
 
   &__container {
     /* stylelint-disable-next-line number-leading-zero */
-    background: linear-gradient(to top,#202e45 0%,rgba(38,34,98,.96) 20%,rgba(38,34,98,.68) 40%,rgba(38,34,98,0) 60%),
+    background: linear-gradient(to top,#262262 0%,rgba(38,34,98,.96) 20%,rgba(38,34,98,.68) 40%,rgba(38,34,98,0) 60%),
 //    background-image: linear-gradient(to left,transparent 20%,#000 100%),
       var(--hero-image);
 
@@ -11,7 +13,7 @@
   }
 
   &__title {
-    @apply text-primary text-3xl md:text-5xl font-bold;
+    @apply text-white text-3xl md:text-6xl font-bold;
   }
 }
 
