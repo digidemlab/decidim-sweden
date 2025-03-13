@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "decidim/dev/dummy_translator"
+
 Decidim.configure do |config|
   config.application_name = Rails.application.secrets.application_name
   config.mailer_sender = Rails.application.secrets.mailer_sender
@@ -19,6 +21,11 @@ Decidim.configure do |config|
       address_format: ["name", %w(street houseNumber), "city"]
     }
   }
+
+  # Enable machine translations with DeepL
+  config.enable_machine_translations = Rails.application.secrets.translator[:enabled]
+  config.machine_translation_service = "DeeplTranslator"
+  config.machine_translation_delay = Rails.application.secrets.translator[:delay]
 
   # Custom resource reference generator method
   # config.reference_generator = lambda do |resource, component|
