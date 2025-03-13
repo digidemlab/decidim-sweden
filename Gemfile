@@ -71,3 +71,5 @@ end
 gem "nokogiri", "~> 1.16"
 
 gem "mini_portile2", "~> 2.8"
+
+gem "deepl-rb", require: "deepl"
