@@ -18,7 +18,7 @@ html {
 
 body {
 // In case of overflowing content
-//  @apply overflow-x-hidden;
+  @apply overflow-x-hidden;
 }
 
 /**
@@ -148,7 +148,18 @@ header .main-bar__container::before {
   min-width: 200px;
   height: 100%;
   z-index: 0; /* Place it behind the content */
-  @apply bg-primary  w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 sm:min-w-[22rem];
+  @apply bg-primary  w-1/2 md:w-1/6 lg:w-1/6 xl:w-1/6 sm:min-w-[22rem];
+}
+
+header .main-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%; /* Left 20% of the header */
+  height: 100%;
+  z-index: -1; /* Place it behind the content */
+  @apply bg-primary sm:w-[18rem];
 }
 
 header .main-bar__links-mobile__dropdown-before::before {
@@ -200,7 +211,7 @@ footer {
   }
 
   .mini-footer {
-    @apply bg-background-5 !important;
+    @apply bg-background-6 !important;
   }
 
   h2 {
@@ -238,11 +249,11 @@ footer {
   position: relative;
 
   .editor-content {
-    @apply text-white text-lg;
+    @apply text-white text-xl;
   }
 
   &::before {
-    @apply bg-primary;
+    @apply bg-secondary;
     content: "";
     position: absolute;
     left: 50%;
