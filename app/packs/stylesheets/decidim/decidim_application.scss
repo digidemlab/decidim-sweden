@@ -131,6 +131,14 @@ header .main-bar__search form {
 // #menu-bar {
 //   @apply border-t border-solid text-gray-3;
 // }
+
+header .main-bar__links-mobile__dropdown {
+  z-index: 20;
+}
+#main-dropdown-summary-mobile {
+  z-index: 25;
+}
+
 header .menu-bar__container {
   @apply bg-background;
 }
