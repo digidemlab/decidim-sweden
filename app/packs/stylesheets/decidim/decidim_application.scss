@@ -156,7 +156,7 @@ header .main-bar__container::before {
   min-width: 200px;
   height: 100%;
   z-index: 0; /* Place it behind the content */
-  @apply bg-primary  w-1/2 md:w-1/6 lg:w-1/6 xl:w-1/6 sm:min-w-[22rem];
+  @apply bg-primary  w-1/2 md:w-1/6 lg:w-1/6 xl:w-1/6 sm:min-w-[10rem];
 }
 
 header .main-bar::before {
