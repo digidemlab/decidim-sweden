@@ -1,15 +1,4 @@
 GIT
-  remote: https://github.com/decentral1se/decidim-module-goteborg_login.git
-  revision: de518fa6604bffa423f8b69b65247ce285a34683
-  branch: v29-changes
-  specs:
-    decidim-goteborg_login (0.29.2)
-      decidim-core (= 0.29.2)
-      omniauth-saml (~> 2.1)
-      personnummer (~> 0.1.0)
-      ruby-saml (~> 1.17)
-
-GIT
   remote: https://github.com/decidim/decidim
   revision: b6eed66951b141bf14de4ae8179e663803887d67
   ref: b6eed66
@@ -202,6 +191,17 @@ GIT
   specs:
     decidim-faceless (0.28.0)
       decidim-core (~> 0.28)
+
+GIT
+  remote: https://github.com/digidemlab/decidim-module-goteborg_login.git
+  revision: 1cb75c6ae2b1bdb2711fcee110346be2929f1c9f
+  branch: fix-logins
+  specs:
+    decidim-goteborg_login (0.29.2)
+      decidim-core (= 0.29.2)
+      omniauth-saml (~> 2.1)
+      personnummer (~> 0.1.0)
+      ruby-saml (~> 1.17)
 
 GIT
   remote: https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler
@@ -576,7 +576,7 @@ GEM
     omniauth-rails_csrf_protection (1.0.2)
       actionpack (>= 4.2)
       omniauth (~> 2.0)
-    omniauth-saml (2.2.1)
+    omniauth-saml (2.2.2)
       omniauth (~> 2.1)
       ruby-saml (~> 1.17)
     omniauth-twitter (1.4.0)

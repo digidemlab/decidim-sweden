@@ -11,7 +11,7 @@ gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 
-gem "decidim-goteborg_login", git: "https://github.com/decentral1se/decidim-module-goteborg_login.git", branch: "v29-changes"
+gem "decidim-goteborg_login", git: "https://github.com/digidemlab/decidim-module-goteborg_login.git", branch: "fix-logins"
 
 ### Awaiting upgrade to version 0.28 ###
 
