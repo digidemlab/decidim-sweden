@@ -21,6 +21,9 @@ sv:
       home:
         footer_sub_hero:
           footer_sub_hero_headline: 'Välkommen till %{organization}.'
+    participatory_spaces:
+      highlighted_results:
+        see_all: 'Visa alla resultat'
     participatory_processes:
       last_activity:
         new_participatory_process: 'Ny process:'
