@@ -11,6 +11,7 @@ sv:
     admin:
       impersonations:
         form:
+          name: 'Namn som visas vid förslaget'
           reason: 'Kontaktuppgifter till den du gör kontot för (telefonnummer eller e-postadress)'
     menu:
       help: 'Om'
@@ -49,4 +50,3 @@ sv:
         visibility_warning: 'Ditt namn och användarnamn syns tillsammans med ditt lämnade förslag. Ändra båda fälten för namn och användarnamn om du vill vara anonym.'
       email:
         please_change: 'Lämna gärna din e-post adress så att vi kan kontakta dig för återkoppling kring ditt förslag.'
-
