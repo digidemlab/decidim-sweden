@@ -9,3 +9,13 @@ sv:
       home:
         footer_sub_hero:
           footer_sub_hero_headline: '%{organization}'
+    meetings:
+      meetings:
+        show:
+          join: 'Anmäl dig'
+    devise:
+      registrations:
+        new:
+          subtitle: "Registrera dig för att delta i processen för Medborgarbudget Sävja."
+          tos_title: 'Uppsala kommuns användarvillkor'
+          email_help: 'Din e-postadress är inte synlig på hemsidan utan används enbart för Uppsala kommun att kontakta dig om du  har lämnat ett förslag. Du kommer få ett bekräftelsemail med en länk som du behöver klicka på för att slutföra registreringen.'

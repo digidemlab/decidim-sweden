@@ -307,6 +307,21 @@ main.home {
   @apply bg-background;
 }
 
+/**
+  Process page
+*/
+
+#dropdown-trigger-participatory-space {
+  @apply bg-secondary;
+}
+
+.participatory-space__nav-container {
+  @apply p-0;
+
+  > * {
+    @apply p-3 !important;
+  }
+}
 
 /**
   Cards
