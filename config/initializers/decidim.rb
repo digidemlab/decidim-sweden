@@ -7,8 +7,8 @@ Decidim.configure do |config|
   config.mailer_sender = Rails.application.secrets.mailer_sender
 
   # Change these lines to set your preferred locales
-  config.default_locale = :en
-  config.available_locales = [:en, :fr, :es]
+  config.default_locale = :ar
+  config.available_locales = [:ar, :en, :fr]
 
   # Geocoder configuration
   config.maps = {
@@ -34,7 +34,7 @@ Decidim.configure do |config|
   # end
 
   # Currency unit
-  config.currency_unit = 'kr'
+  config.currency_unit = 'DZD'
 
   # Allow participants to use the platform for 2 days before confirming their e-mail address
   config.unconfirmed_access_for = 2.days
