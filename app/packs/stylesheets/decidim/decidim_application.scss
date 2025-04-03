@@ -256,6 +256,7 @@ header .menu-bar__main-dropdown__menu a:hover {
   @apply link-hover;
 }
 
+
 /**
   Reset colors & decorations
 */
@@ -284,10 +285,33 @@ header .main-bar__links-desktop__item {
 }
 
 
+
+
+/**
+ ALGERIA
+ */
+
+/*
+  Hide stuff
+ */
+footer .main-footer__language-container,
+#content > div > div.bg-background {
+  display: none;
+}
+
+.participatory-space__content-block > .space-y-8 > h2.h2.decorator {
+  @apply sr-only;
+}
+
+
+
 /**
  * Language selector
  */
 
+.main-bar__links-desktop__item-wrapper div:nth-child(2) {
+  display: none;
+}
 
  .main-header__language-container > #trigger-dropdown-language-chooser {
    gap: 0.1rem !important;
@@ -297,17 +321,18 @@ header .main-bar__links-desktop__item {
    span {
      display: block;
      font-weight: 400;
-     color: rgb(var(--secondary-rgb) / 1);
+    // color: rgb(var(--secondary-rgb) / 1);
      font-size: 14px;
    }
 
    svg {
-     fill: rgb(var(--secondary-rgb) / 1);
+    // fill: rgb(var(--secondary-rgb) / 1);
    }
  }
 
  .main-footer__language {
    z-index: 1000;
+   background: #fff;
  }
 
  .main-header__language-container > #trigger-dropdown-language-chooser:hover {
@@ -341,7 +366,8 @@ header .main-bar__links-desktop__item {
 
  @media (max-width: 1023px) {
    .main-header__language-container > #trigger-dropdown-language-chooser {
-     flex-direction: row !important;
+     // flex-direction: row !important;
+     @apply mt-8 rounded-lg py-0 bg-gray-5 h-10 border border-gray outline outline-1 outline-transparent;
    }
 
    #trigger-dropdown-language-chooser > svg {
