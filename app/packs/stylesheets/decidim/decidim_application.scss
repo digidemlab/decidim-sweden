@@ -366,8 +366,9 @@ footer .main-footer__language-container,
 
  @media (max-width: 1023px) {
    .main-header__language-container > #trigger-dropdown-language-chooser {
-     // flex-direction: row !important;
-     @apply mt-8 rounded-lg py-0 bg-gray-5 h-10 border border-gray outline outline-1 outline-transparent;
+     flex-direction: row !important;
+     text-decoration: underline;
+     // @apply mt-8 rounded-lg py-0 bg-gray-5 h-10 border border-gray outline outline-1 outline-transparent;
    }
 
    #trigger-dropdown-language-chooser > svg {
@@ -385,6 +386,16 @@ footer .main-footer__language-container,
      margin: auto;
      color: rgb(168 44 44) !important;
      font-weight: 600 !important;
+   }
+
+   #trigger-dropdown-language-chooser {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+   }
+
+   #trigger-dropdown-language-chooser > ul > li {
+     display: inline-block;
    }
 
    #dropdown-menu-language-chooser > ul > li > a,
