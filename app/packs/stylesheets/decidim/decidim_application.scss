@@ -368,6 +368,8 @@ footer .main-footer__language-container,
    .main-header__language-container > #trigger-dropdown-language-chooser {
      flex-direction: row !important;
      text-decoration: underline;
+     padding: inherit;
+     width: 20%;
      // @apply mt-8 rounded-lg py-0 bg-gray-5 h-10 border border-gray outline outline-1 outline-transparent;
    }
 
@@ -382,7 +384,7 @@ footer .main-footer__language-container,
    #dropdown-menu-main-mobile > div.main-header__language-container {
      display: flex;
      flex-direction: row;
-     width: 10rem;
+     width: 90%;
      margin: auto;
      color: rgb(168 44 44) !important;
      font-weight: 600 !important;
@@ -402,8 +404,9 @@ footer .main-footer__language-container,
    #dropdown-menu-language-chooser > ul > li,
    #trigger-dropdown-language-chooser > div > span,
    #trigger-dropdown-language-chooser {
-     padding: 0 !important;
-     font-size: 1rem !important;
-     font-weight: 600 !important;
+  //   padding: 0 !important;
+  //   font-size: 1rem !important;
+     font-weight: normal !important;
+     display: inline-block;
    }
  }
