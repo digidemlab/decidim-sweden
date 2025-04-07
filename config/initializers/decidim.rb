@@ -85,6 +85,19 @@ Decidim.configure do |config|
   # }
 
   config.expire_session_after = ENV.fetch("DECIDIM_SESSION_TIMEOUT", 1440).to_i.minutes
+
+  config.social_share_services = Rails.application.secrets.decidim[:social_share_services]
+
+  # Custom setting to avoid Retry later error
+  config.throttling_max_requests = 1000
+
+  # Content policy for here maps etc
+  config.content_security_policies_extra = {
+    "connect-src" => %w(https://*.hereapi.com),
+    "img-src" => %w(https://*.hereapi.com),
+    "frame-src" => %w(https://www.youtube-nocookie.com/)
+  }
+
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
@@ -92,3 +105,9 @@ Rails.application.config.i18n.default_locale = Decidim.default_locale
 
 # Inform Decidim about the assets folder
 Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
+
+if Decidim.module_installed? :verifications
+  Decidim::Verifications.configure do |config|
+    config.document_types = Rails.application.secrets.dig(:verifications, :document_types).presence || %w(identification_number passport)
+  end
+end
