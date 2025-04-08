@@ -149,11 +149,11 @@ footer {
 
 .hero-alt__text .button__secondary,
 #hero-cta.button__secondary {
-  @apply bg-white text-primary;
+  @apply bg-primary text-white;
 
   &:focus,
   &:hover {
-    @apply bg-white link-hover text-primary !important;
+    @apply bg-primary link-hover text-white !important;
   }
 }
 
@@ -211,7 +211,11 @@ footer {
 }
 
 // Hide stuff
+.participatory-space__content-block > .space-y-8 > h2.h2.decorator {
+  @apply sr-only;
+}
 
+#sub_hero .button,
 #floating-helper-tip {
   display: none;
 }
