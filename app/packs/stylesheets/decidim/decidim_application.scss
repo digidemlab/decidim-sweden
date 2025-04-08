@@ -12,6 +12,8 @@
 // @import "modules/mini_footer";
 //@import "modules/white_theme";
 
+.test {}
+
 html {
   font-family: "Open Sans", "Arial", "sans-serif";
 }
@@ -32,6 +34,53 @@ body {
   text-underline-offset: 5px;
 }
 /** ------------------- **/
+
+
+/**
+ Meny changes
+ */
+
+header .main-bar__links-mobile__trigger {
+  @apply flex-row md:flex-col md:gap-0 md:pl-1 border-0;
+
+  span {
+    @apply not-sr-only font-normal md:text-xs;
+  }
+
+  &[aria-expanded="true"] > span {
+    display: none;
+  }
+}
+
+// Cover for additional links on mobile dropdown doesnt work well
+header .main-bar__links-mobile__dropdown-before::before {
+  width: 8rem;
+  @apply hidden;
+}
+
+// Hide Activity in main menu
+.main-bar__links-desktop__item-wrapper div:nth-child(2) {
+  display: none;
+}
+
+// Hide public profile link
+#dropdown-menu-account-mobile ul li:nth-child(2),
+#dropdown-menu-account > ul li:nth-child(2) {
+  display: none;
+}
+
+// Hide About process
+.participatory-space__content-block > .space-y-8 > h2.h2.decorator {
+  @apply sr-only;
+}
+
+// Always show mobile submenu
+.participatory-space__nav-container [data-target*="dropdown"] {
+  display: none;
+}
+.participatory-space__nav-container [id*="dropdown-menu"] {
+  @apply py-1 md:p-0 block;
+}
 
 
 /**
