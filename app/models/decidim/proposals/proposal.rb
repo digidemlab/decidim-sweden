@@ -1,4 +1,3 @@
-decidim@decidim-goteborg-stage:~/decidim$ cat app/models/decidim/proposals/proposal.rb 
 # frozen_string_literal: true
 
 module Decidim
