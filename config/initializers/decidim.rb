@@ -27,7 +27,7 @@ Decidim.configure do |config|
   # end
 
   # Currency unit
-  config.currency_unit = 'kr'
+  config.currency_unit = 'USD'
 
   # Allow participants to use the platform for 2 days before confirming their e-mail address
   config.unconfirmed_access_for = 2.days
