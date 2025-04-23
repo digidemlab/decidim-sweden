@@ -89,7 +89,10 @@ Decidim.configure do |config|
   config.social_share_services = Rails.application.secrets.decidim[:social_share_services]
 
   # Custom setting to avoid Retry later error
-  config.throttling_max_requests = 1000
+  config.throttling_max_requests = 5000
+
+  # Disable password expiration for admins
+  config.admin_password_expiration_days = 0;
 
   # Content policy for here maps etc
   config.content_security_policies_extra = {
