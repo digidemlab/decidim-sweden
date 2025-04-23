@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim
-  revision: 50cf3c7ed1d1f116370363ef5cf343e3d95f389e
-  branch: release/0.29-stable
+  revision: b6eed66951b141bf14de4ae8179e663803887d67
+  ref: b6eed66
   specs:
     decidim (0.29.2)
       decidim-accountability (= 0.29.2)
@@ -312,9 +312,9 @@ GEM
       bigdecimal
       rexml
     crass (1.0.6)
-    css_parser (1.21.0)
+    css_parser (1.21.1)
       addressable
-    csv (3.3.2)
+    csv (3.3.4)
     dartsass (1.49.8)
     date (3.4.1)
     date_validator (0.12.0)
@@ -332,7 +332,7 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.11.0)
       devise (>= 4.9.0)
-    devise_invitable (2.0.9)
+    devise_invitable (2.0.10)
       actionmailer (>= 5.0)
       devise (>= 4.6)
     diff-lcs (1.6.0)
@@ -341,7 +341,7 @@ GEM
       nokogiri (>= 1.18.2)
       rubyzip (~> 2.3.0)
     docile (1.4.1)
-    doorkeeper (5.8.1)
+    doorkeeper (5.8.2)
       railties (>= 5)
     doorkeeper-i18n (4.0.1)
     erb_lint (0.4.0)
@@ -357,7 +357,8 @@ GEM
     escape_utils (1.3.0)
     et-orbi (1.2.11)
       tzinfo
-    excon (1.2.4)
+    excon (1.2.5)
+      logger
     extended-markdown-filter (0.7.0)
       html-pipeline (~> 2.9)
     factory_bot (6.5.1)
@@ -367,13 +368,13 @@ GEM
       railties (>= 5.0.0)
     faker (3.5.1)
       i18n (>= 1.8.11, < 2)
-    faraday (2.12.2)
+    faraday (2.13.0)
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
     faraday-net_http (3.4.0)
       net-http (>= 0.5.0)
-    ffi (1.17.1-x86_64-linux-gnu)
+    ffi (1.17.2-x86_64-linux-gnu)
     figaro (1.2.0)
       thor (>= 0.14.0, < 2)
     file_validators (3.0.0)
@@ -384,7 +385,7 @@ GEM
       excon (~> 1.0)
       formatador (>= 0.2, < 2.0)
       mime-types
-    fog-local (0.8.0)
+    fog-local (0.9.0)
       fog-core (>= 1.27, < 3.0)
     formatador (1.1.0)
     foundation_rails_helper (4.0.1)
@@ -402,7 +403,7 @@ GEM
     geom2d (0.4.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    graphql (2.2.16)
+    graphql (2.2.17)
       base64
     graphql-docs (4.0.0)
       commonmarker (~> 0.23, >= 0.23.6)
@@ -436,8 +437,10 @@ GEM
       rails-i18n
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
-    icalendar (2.10.3)
+    icalendar (2.11.0)
+      base64
       ice_cube (~> 0.16)
+      logger
       ostruct
     ice_cube (0.17.0)
     image_processing (1.14.0)
@@ -446,7 +449,7 @@ GEM
     invisible_captcha (0.13.0)
       rails (>= 3.2.0)
     io-console (0.8.0)
-    json (2.10.1)
+    json (2.10.2)
     jwt (2.10.1)
       base64
     kaminari (1.2.2)
@@ -476,7 +479,7 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    logger (1.6.6)
+    logger (1.7.0)
     loofah (2.24.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -488,14 +491,14 @@ GEM
     marcel (1.0.4)
     matrix (0.4.2)
     method_source (1.1.0)
-    mime-types (3.6.0)
+    mime-types (3.6.2)
       logger
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2025.0220)
+    mime-types-data (3.2025.0422)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
     mini_portile2 (2.8.8)
-    minitest (5.25.4)
+    minitest (5.25.5)
     msgpack (1.8.0)
     multi_xml (0.7.1)
       bigdecimal (~> 3.1)
@@ -503,7 +506,7 @@ GEM
       ruby2_keywords (~> 0.0.1)
     net-http (0.6.0)
       uri
-    net-imap (0.5.6)
+    net-imap (0.5.7)
       date
       net-protocol
     net-pop (0.1.2)
@@ -513,7 +516,7 @@ GEM
     net-smtp (0.3.4)
       net-protocol
     nio4r (2.7.4)
-    nokogiri (1.18.3-x86_64-linux-gnu)
+    nokogiri (1.18.8-x86_64-linux-gnu)
       racc (~> 1.4)
     oauth (1.1.0)
       oauth-tty (~> 1.0, >= 1.0.1)
@@ -528,7 +531,7 @@ GEM
       rack (>= 1.2, < 4)
       snaky_hash (~> 2.0)
       version_gem (~> 1.1)
-    omniauth (2.1.2)
+    omniauth (2.1.3)
       hashie (>= 3.4.6)
       rack (>= 2.2.3)
       rack-protection
@@ -587,7 +590,7 @@ GEM
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
-    rack (2.2.11)
+    rack (2.2.13)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
     rack-cors (1.1.1)
@@ -778,7 +781,7 @@ GEM
     spring-watcher-listen (2.1.0)
       listen (>= 2.7, < 4.0)
       spring (>= 4)
-    stringio (3.1.5)
+    stringio (3.1.7)
     temple (0.10.3)
     terminal-table (4.0.0)
       unicode-display_width (>= 1.1.1, < 4)
@@ -795,7 +798,7 @@ GEM
     valid_email2 (4.0.6)
       activemodel (>= 3.2)
       mail (~> 2.5)
-    version_gem (1.1.6)
+    version_gem (1.1.7)
     w3c_rspec_validators (0.3.0)
       rails
       rspec
