@@ -13,7 +13,7 @@ sv:
     admin:
       impersonations:
         form:
-          name: 'Namn som visas vid förslaget'
+          name: 'Namn som visas vid förslaget. Observera att namn inte syns vid röstning.'
           reason: 'Kontaktuppgifter till den du gör kontot för (telefonnummer eller e-postadress)'
     menu:
       help: 'Om'
