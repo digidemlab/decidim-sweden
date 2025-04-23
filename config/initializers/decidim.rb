@@ -92,7 +92,7 @@ Decidim.configure do |config|
   config.throttling_max_requests = 5000
 
   # Disable password expiration for admins
-  config.admin_password_expiration_days = 0;
+  config.admin_password_expiration_days = 0
 
   # Content policy for here maps etc
   config.content_security_policies_extra = {
