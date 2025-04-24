@@ -15,6 +15,7 @@ sv:
         form:
           name: 'Namn som visas vid förslaget. Observera att namn inte syns vid röstning.'
           reason: 'Kontaktuppgifter till den du gör kontot för (telefonnummer eller e-postadress)'
+          authorization_method: 'Välj aktivitet: förslagsinlämning eller röstning'
     menu:
       help: 'Om'
     pages:
