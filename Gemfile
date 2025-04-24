@@ -32,7 +32,7 @@ gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-facel
 
 # gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
 
-gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", ref: "639f2f1"
+gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", ref: "ecd2f0e"
 # branch: "goteborg-0.29"
 
 # gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: "main"
