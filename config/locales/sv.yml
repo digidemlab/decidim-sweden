@@ -53,3 +53,7 @@ sv:
         visibility_warning: 'Ditt namn och användarnamn syns tillsammans med ditt lämnade förslag. Ändra båda fälten för namn och användarnamn om du vill vara anonym.'
       email:
         please_change: 'Lämna gärna din e-post adress så att vi kan kontakta dig för återkoppling kring ditt förslag.'
+    meetings:
+      meetings:
+        show:
+          join: 'Anmäl dig'
