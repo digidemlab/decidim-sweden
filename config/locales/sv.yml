@@ -57,3 +57,12 @@ sv:
       meetings:
         show:
           join: 'Anmäl dig'
+    budgets:
+      projects:
+        project_budget_button:
+          add: 'Välj'
+          added: 'Vald'
+        project_filter:
+          added: 'Valda'
+        budget_summary:
+          vote: 'Rösta'
