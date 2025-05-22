@@ -327,6 +327,8 @@ footer {
 }
 
 // Hide disabled button on mobile
+.budget-summary__progressbox-buttons:has(> .button.disabled),
+.budget-summary__progressbox-buttons:has(> .button[disabled]),
 .budget-summary__progressbox-buttons .button.disabled,
 .budget-summary__progressbox-buttons .button[disabled] {
   @apply hidden md:inline-flex;
