@@ -1,0 +1,119 @@
+// Custom style overrides
+//
+// https://docs.decidim.org/en/develop/customize/styles
+//
+// Full list of variables:
+// https://github.com/tailwindlabs/tailwindcss/blob/main/stubs/config.full.js
+//
+
+const { inherit, current, transparent, white } = require("tailwindcss/colors")
+
+const withOpacity =
+  (variable) =>
+  ({ opacityValue }) =>
+    opacityValue === undefined
+      ? `rgb(var(${variable}))`
+      : `rgb(var(${variable}) / ${opacityValue})`;
+
+module.exports = {
+  // This content is generated automatically by decidim:webpacker:install task, it
+  // should not be updated manually.
+  // The array must contain all the decidim modules active in the application
+  content: [<%= tailwind_content_directories %>].flatMap(directory => [
+    `${directory}/app/views/**/*.html.erb`,
+    `${directory}/app/cells/**/*.{rb,erb}`,
+    `${directory}/app/helpers/**/*.rb`,
+    `${directory}/app/packs/**/*.js`,
+    `${directory}/lib/**/*.rb`,
+    `${directory}/config/**/*.js.erb`
+  ]),
+  // Comment out the next line to disable purging the tailwind styles
+  // safelist: [{ pattern: /.*/ }],
+  theme: {
+    colors: {
+      inherit,
+      current,
+      transparent,
+      white,
+      primary: withOpacity("--primary-rgb"),
+      secondary: withOpacity("--secondary-rgb"),
+      tertiary: withOpacity("--tertiary-rgb"),
+      success: withOpacity("--success-rgb"),
+      alert: withOpacity("--alert-rgb"),
+      warning: withOpacity("--warning-rgb"),
+      black: "#000",
+      gray: {
+        DEFAULT: "#333", // "#6B7280CC",  80% opacity
+        2: "#333", // Ljus text
+        3: "#ccc",
+        4: "#595959",
+        5: "#fafafa"
+      },
+      background: {
+        DEFAULT: withOpacity("--primary-rgb"), // Purple
+        2:  withOpacity("--tertiary-rgb"), // Almost White
+        3: withOpacity("--secondary-rgb"), //
+        4: withOpacity("--primary-rgb"),//
+      }
+    },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        lg: "4rem"
+      }
+    },
+    fontFamily: {
+      sans: ["Open Sans", "Arial", "sans-serif"]
+    },
+    fontSize: {
+      xs: ['0.875rem', { lineHeight: '1.5' }],
+      sm: ['1rem', { lineHeight: '1.5' }],
+      md: ['1rem', { lineHeight: '1.5' }],
+      lg: ['1.125rem', { lineHeight: '1.5' }],
+      xl: ['1.25rem', { lineHeight: '1.5' }],
+      '2xl': ['1.375rem', { lineHeight: '1.3' }],
+      '3xl': ['1.875rem', { lineHeight: '1.3' }],
+      '4xl': ['2.25rem', { lineHeight: '1.2' }],
+      '5xl': ['2.8125rem', { lineHeight: '1.2' }]
+    },
+    fontWeight: {
+      thin: 'normal',
+      extralight: 'normal',
+      light: 'normal',
+      normal: 'normal',
+      medium: 'normal',
+      semibold: '600',
+      bold: 'bold',
+      extrabold: 'bold',
+      black: 'bold',
+    },
+    boxShadow: { // Reset
+      sm: 'none',
+      DEFAULT: 'none',
+      md: 'none',
+      lg: 'none',
+      xl: 'none',
+      '2xl': 'none',
+      inner: 'none', // 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
+      none: 'none',
+    },
+    borderRadius: { // Reset
+      none: '0px',
+      sm: '4px',
+      DEFAULT: '4px',
+      md: '11px',
+      lg: '11px',
+      xl: '25px',
+      '2xl': '25px',
+      '3xl': '25px',
+      full: '9999px',
+    },
+    extend: {
+      transitionProperty: {
+        'top': 'top',
+      }
+    }
+  },
+  plugins: [require("@tailwindcss/typography")]
+}
