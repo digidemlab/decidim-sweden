@@ -13,7 +13,7 @@ gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-te
 gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "just-age-and-gender"
 
 # NOTE(d1): https://github.com/decidim-ice/decidim-module-decidim_awesome/issues/324
-# gem "decidim-decidim_awesome", "0.11.1"
+gem "decidim-decidim_awesome", "0.11.4"
 
 # gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
 
