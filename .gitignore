@@ -28,8 +28,8 @@
 .byebug_history
 
 # Service workers
-public/sw.js
-public/sw.js.map
+public/sw.js*
+public/sw.js.map*
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
@@ -43,6 +43,7 @@ create-decidim-admin.done
 /public/packs
 /public/decidim-packs
 /public/packs-test
+/public/sw.js.*
 /node_modules
 /yarn-error.log
 yarn-debug.log*
@@ -52,3 +53,14 @@ yarn-debug.log*
 # Ignore application configuration
 /config/application.yml
 tailwind.config.js
+
+# Data for saml login
+config/saml
+config/cert
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity

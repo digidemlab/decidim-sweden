@@ -2,30 +2,314 @@
 // Notice that this file is included at the very end of the stylesheets packs to have
 // more priority
 //
-// To override CSS variables or Foundation settings use _decidim-settings.scss
+// Please note this file is only targeting the end user interface and not the admin interface.
+// To change the Tailwind CSS configuration, or to override the admin, system or design interface
+// styles follow the instructions in https://docs.decidim.org/en/customize/styles/
 //
 // By default this is empty.
 
 @import "modules/mini_footer";
 @import "modules/white_theme";
 @import "modules/fonts_botkyrka";
+@import "fontface";
+// @import "modules/mini_footer";
+//@import "modules/white_theme";
 
-$open-sans: "Open Sans", Arial, sans-serif;
+html {
+  font-family: "Open Sans", "Arial", "sans-serif";
+}
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6,
 body {
-    font-family: $open-sans;
+// In case of overflowing content
+//  @apply overflow-x-hidden;
+}
+
+/**
+  Local mixins for @apply
+*/
+.link-hover {
+  -webkit-text-decoration-line: underline;
+  -moz-text-decoration-line: underline;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+/** ------------------- **/
+
+
+/**
+ Design bug fixes
+ */
+
+// Dropdown hidden in Ipad size
+#dropdown-trigger-links-mobile[data-target*="dropdown"] {
+  @apply lg:hidden md:flex !important;
+}
+
+
+// Dropdown menu too wide for screen
+
+header .menu-bar__secondary-dropdown,
+header .menu-bar__main-dropdown {
+  @apply w-full xl:w-[1214px];
+}
+
+header .menu-bar__breadcrumb-desktop > .relative {
+  position: inherit;
+}
+
+header .menu-bar__breadcrumb-desktop__dropdown-content-secondary {
+  top: 100%;
+  left: 2rem;
+}
+
+// WCAG click area for search button
+
+header .main-bar__search form {
+  line-height: 1.5555;
+
+  button {
+    padding: 0 3px;
+  }
+}
+
+// WCAG contrast for search field
+
+#input-search {
+  @apply border border-gray outline outline-1 outline-transparent rounded bg-background-2 text-black font-normal placeholder:text-gray focus:outline-2 focus:outline-secondary disabled:bg-background-3 disabled:text-gray-2 disabled:cursor-not-allowed;
+}
+
+// Tabs too wide on mobile
+
+.tab-x-container {
+  @apply block md:flex md:gap-1 [&>*]:grow;
+}
+
+
+/**
+  Menu bar
+*/
+
+#menu-bar {
+  @apply border-t border-solid text-gray-3;
+}
+header .menu-bar__container {
+  @apply bg-white;
+}
+
+
+
+.menu-bar__breadcrumb-desktop__dropdown-content-secondary,
+header .menu-bar__main-dropdown {
+  @apply ring-1;
+  --tw-ring-color: #ccc;
+}
+
+header .menu-bar__breadcrumb-mobile {
+  @apply text-xs !important;
+}
+
+header .menu-bar__breadcrumb-desktop > * {
+  @apply text-black;
+}
+
+header .menu-bar__main-dropdown__menu a:hover {
+  @apply link-hover;
+}
+
+
+/**
+  Footer
+*/
+
+footer {
+  .main-footer {
+    @apply bg-black;
+
+    .font-semibold {
+      @apply font-normal;
+
+      &:hover {
+        @apply link-hover;
+      }
+    }
+  }
+
+  .mini-footer {
+    background-color: #262626;
+  }
+
+  h2 {
+    @apply text-white;
+    font-weight: bold !important;
+  }
+}
+
+
+/**
+  Hero, start
+*/
+
+.hero-alt__text .button__secondary,
+#hero-cta.button__secondary {
+  @apply bg-white text-primary;
+
+  &:focus,
+  &:hover {
+    @apply bg-white link-hover text-primary !important;
+  }
+}
+
+
+/**
+  Hero, participation space
+*/
+
+.participatory-space__hero-slogan {
+  @apply text-white mb-4;
+}
+
+.participatory-space__hero {
+  @apply backdrop-filter-none bg-background;
+
+}
+.participatory-space__hero-text {
+  @apply text-black;
+}
+
+/**
+  Backgrounds, sections
+*/
+
+#how_to_participate {
+  @apply bg-background;
+}
+
+
+/**
+  Cards
+*/
+
+.card__highlight {
+  @apply bg-white shadow-none ring-transparent;
+
+  &:hover {
+    @apply ring-transparent;
+  }
+}
+
+.card__grid {
+  @apply bg-white shadow-none ring-1;
+  --tw-ring-color: #e5e5e5;
+
+  &:hover {
+    @apply bg-background;
+    --tw-ring-color: #e5e5e5;
+  }
+}
+
+.card__highlight-metadata > *,
+.card__grid-metadata > * {
+  @apply max-w-full;
+}
+
+// Hide stuff
+
+#floating-helper-tip {
+  display: none;
+}
+
+
+/**
+  Budgets
+*/
+
+.budget-summary__progressbar--meter {
+  background-color: #28A745;
+}
+
+.progressbox-fixed-wrapper,
+.budget-summary {
+//  @apply bg-background-4;
+}
+
+.budget-summary__progressbar-legend-strong {
+  white-space: nowrap;
+}
+
+/**
+  Headlines
+*/
+
+h1, h2, h3, h4, h5 {
+  @apply font-bold text-black;
+}
+
+
+/**
+  Links & Buttons
+*/
+
+.button__transparent {
+  @apply text-black border-black;
+}
+
+a .card__list-title,
+.button__text-secondary,
+a .text-secondary {
+  @apply text-black underline font-bold;
+  &:hover {
+    @apply link-hover;
+  }
+}
+
+.activity__content > span:first-child a  {
+  text-decoration: underline;
+  &:hover {
+    @apply link-hover;
+  }
+}
+
+
+/**
+  WCAG Contrasts
+*/
+
+.wizard-steps > * {
+  &[aria-current] ~ * {
+    &:before,
+    &:after {
+      background: #595959;
+    }
+  }
+}
+
+
+/**
+  Reset colors & decorations
+*/
+
+header .menu-bar__breadcrumb-mobile__dropdown-trigger span,
+header .menu-bar__breadcrumb-mobile__dropdown-trigger,
+header .menu-bar__main-dropdown__menu a,
+header .menu-bar__breadcrumb-desktop [data-target*="dropdown"] > svg,
+.border-secondary,
+.filter-container input[type="checkbox"]:checked, .filter-container input[type="checkbox"]:indeterminate, .filter-container input[type="radio"]:checked, .filter-container input[type="radio"]:indeterminate,
+.card__list-title,
+.activity__content > span:first-child a,
+.home__section-participate-grid__icon,
+.button__text-secondary,
+header .main-bar__links-mobile,
+[data-target*="dropdown"] > svg,
+header .main-bar__links-mobile__trigger,
+header .main-bar__links-desktop__item {
+  @apply text-black;
+}
+
+.home__section-title::after,
+.decorator::after,
+.title-decorator::after {
+  display: none;
 }
 
 .main-nav__link a {

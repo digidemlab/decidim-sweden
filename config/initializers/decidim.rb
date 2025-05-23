@@ -5,8 +5,8 @@ Decidim.configure do |config|
   config.mailer_sender = Rails.application.secrets.mailer_sender
 
   # Change these lines to set your preferred locales
-  config.default_locale = :en
-  config.available_locales = %i[sv en]
+  config.default_locale = :sv
+  config.available_locales = %i[sv]
 
   # Geocoder configuration
   config.maps = {
@@ -98,6 +98,7 @@ Decidim.configure do |config|
     "frame-src" => %w(https://www.youtube-nocookie.com/)
   }
 
+  config.hosts = Rails.application.secrets.domain
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales

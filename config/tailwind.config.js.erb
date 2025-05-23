@@ -1,0 +1,119 @@
+// Custom style overrides
+//
+// https://docs.decidim.org/en/develop/customize/styles
+//
+// Full list of variables:
+// https://github.com/tailwindlabs/tailwindcss/blob/main/stubs/config.full.js
+//
+
+const { inherit, current, transparent, white } = require("tailwindcss/colors")
+
+const withOpacity =
+  (variable) =>
+  ({ opacityValue }) =>
+    opacityValue === undefined
+      ? `rgb(var(${variable}))`
+      : `rgb(var(${variable}) / ${opacityValue})`;
+
+module.exports = {
+  // This content is generated automatically by decidim:webpacker:install task, it
+  // should not be updated manually.
+  // The array must contain all the decidim modules active in the application
+  content: [<%= tailwind_content_directories %>].flatMap(directory => [
+    `${directory}/app/views/**/*.html.erb`,
+    `${directory}/app/cells/**/*.{rb,erb}`,
+    `${directory}/app/helpers/**/*.rb`,
+    `${directory}/app/packs/**/*.js`,
+    `${directory}/lib/**/*.rb`,
+    `${directory}/config/**/*.js.erb`
+  ]),
+  // Comment out the next line to disable purging the tailwind styles
+  // safelist: [{ pattern: /.*/ }],
+  theme: {
+    colors: {
+      inherit,
+      current,
+      transparent,
+      white,
+      primary: withOpacity("--primary-rgb"),
+      secondary: withOpacity("--secondary-rgb"),
+      tertiary: withOpacity("--tertiary-rgb"),
+      success: "#28A745",
+      alert: "#ED1C24",
+      warning: "#FFB703",
+      black: "#333",
+      gray: {
+        DEFAULT: "#333", // "#6B7280CC",  80% opacity
+        2: "#333", // Ljus text
+        3: "#ccc",
+        4: "#595959",
+        5: "#fafafa"
+      },
+      background: {
+        DEFAULT: "#f5f5f5",
+        2: "#fafafa",
+        3: "#f5f5f5",
+        4: "#ccc"
+      }
+    },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        lg: "4rem"
+      }
+    },
+    fontFamily: {
+      sans: ["Open Sans", "Arial", "sans-serif"]
+    },
+    fontSize: {
+      xs: ['0.875rem', { lineHeight: '1.5' }],
+      sm: ['1rem', { lineHeight: '1.5' }],
+      md: ['1.125rem', { lineHeight: '1.5' }],
+      lg: ['1.125rem', { lineHeight: '1.5' }],
+      xl: ['1.125rem', { lineHeight: '1.5' }],
+      '2xl': ['1.375rem', { lineHeight: '1.5' }],
+      '3xl': ['1.875rem', { lineHeight: '1.5' }],
+      '4xl': ['2.25rem', { lineHeight: '1.5' }],
+      '5xl': ['2.8125rem', { lineHeight: '1.5' }]
+    },
+    fontWeight: {
+      thin: '100',
+      extralight: '100',
+      light: '100',
+      normal: 'normal',
+      medium: 'normal',
+      semibold: '600',
+      bold: 'bold',
+      extrabold: 'bold',
+      black: 'bold',
+    },
+    boxShadow: { // Reset
+      sm: 'none',
+      DEFAULT: 'none',
+      md: 'none',
+      lg: 'none',
+      xl: 'none',
+      '2xl': 'none',
+      inner: 'none', // 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
+      none: 'none',
+    },
+    borderRadius: { // Reset
+      none: '0px',
+      sm: '0px',
+      DEFAULT: '1px',
+      md: '0px',
+      lg: '0px',
+      xl: '0px',
+      '2xl': '0px',
+      '3xl': '0px',
+      full: '9999px',
+    },
+    extend: {
+      transitionProperty: {
+        'top': 'top',
+      }
+    }
+  },
+  plugins: [require("@tailwindcss/typography")]
+}

@@ -2,16 +2,10 @@
 
 require "rake"
 
+Rails.application.load_tasks
+
 class PreloadOpenDataJob < ApplicationJob
-  queue_as :scheduled
-
   def perform
-    Rails.application.load_tasks
-    task.reenable
-    task.invoke
-  end
-
-  def task
-    Rake::Task["decidim:open_data:export"]
+    Rake::Task["decidim:open_data:export"].execute
   end
 end

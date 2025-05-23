@@ -13,6 +13,11 @@
   - [block_user, 2]
   - [metrics, 1]
   - [exports, 1]
+  - [cleanups, 1]
+  - [participatory_processes, 1]
+
+# NOTE(d1): cron strings use 6 elements
+# https://github.com/floraison/fugit?tab=readme-ov-file#the-second-extension
 
 :scheduler:
   :schedule:
@@ -24,3 +29,27 @@
       cron: '0 0 1 * * *' # Run at 01:00
       class: PreloadOpenDataJob
       queue: exports
+    ExpireDownloadDataFiles:
+      cron: '0 0 2 * * *' # Run at 02:00
+      class: ExpireDownloadDataFilesJob
+      queue: cleanups
+    DeleteRegistrationForms:
+      cron: '0 0 3 * * *' # Run at 03:00
+      class: DeleteRegistrationFormsJob
+      queue: cleanups
+    GenerateReminders:
+      cron: '0 0 9 * * *' # Run at 09:00
+      class: GenerateRemindersJob
+      queue: reminders
+    DigestDailyReminders:
+      cron: '0 15 9 * * *' # Run at 09:15
+      class: DigestDailyRemindersJob
+      queue: reminders
+    DigestWeeklyReminders:
+      cron: '0 30 9 * * *' # Run at 09:30
+      class: DigestWeeklyRemindersJob
+      queue: reminders
+    ChangeActiveStep:
+      cron: '*/15 * * * *' # Run every 15 minutes
+      class: ChangeActiveStepJob
+      queue: participatory_processes

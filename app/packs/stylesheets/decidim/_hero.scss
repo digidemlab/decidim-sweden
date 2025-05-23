@@ -1,0 +1,42 @@
+.hero-alt {
+  @apply bg-primary;
+
+  &__container {
+    /* stylelint-disable-next-line number-leading-zero */
+    @apply  container mx-auto px-0 md:px-10;
+    // @apply columns-2 container px-4 md:px-24 flex flex-col mx-auto;
+  }
+
+  &__columns {
+    @apply flex flex-col md:flex-row-reverse items-center justify-start md:justify-between md:h-[22rem] lg:h-[28rem];
+  }
+
+  &__text {
+    @apply md:w-1/2 p-8 md:p-4 mb-4 text-center md:text-left;
+  }
+
+  &__image {
+    @apply w-full md:w-1/2 overflow-hidden mt-0 md:max-h-full;
+    height: inherit;
+
+    img {
+      @apply h-full w-full max-w-none object-cover;
+    }
+  }
+
+  &__title {
+    @apply text-white text-3xl lg:text-5xl font-bold mb-4 md:mb-8;
+  }
+
+  .button__secondary {
+    @apply focus:outline-white;
+  }
+}
+
+.hero-alt-process {
+  @apply md:h-[20rem] lg:h-[24rem];
+
+  .hero-alt__image img {
+    object-fit: contain !important;
+  }
+}
