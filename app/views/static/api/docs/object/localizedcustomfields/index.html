@@ -1,113 +1,24 @@
 <div class="content"><h1>
-<a id="sortitions" class="anchor" href="#sortitions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sortitions</h1>
-<p>A sortition component of a participatory space.</p>
-<h2>
-<a id="implements" class="anchor" href="#implements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implements</h2>
-<ul>
-   <li><code><a href="/api/docs/interface/componentinterface">ComponentInterface</a></code></li>
-</ul>
-<h2>
-<a id="connections" class="anchor" href="#connections" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Connections</h2>
-<div class="field-entry ">
-  <span id="sortitions" class="field-name connection-name anchored">sortitions (<code><a href="/api/docs/object/sortitionconnection">SortitionConnection</a></code>)</span>
-  <div class="description-wrapper">
-     <table class="arguments">
-  <thead>
-  <tr>
-    <th>Argument</th>
-    <th>Type</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td><code class="anchored">after</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/string">String</a></code>
-  </td>
-  <td>
-    <p>Returns the elements in the list that come after the specified cursor.</p>
-   </td>
-  </tr>
-  <tr>
-  <td><code class="anchored">before</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/string">String</a></code>
-  </td>
-  <td>
-    <p>Returns the elements in the list that come before the specified cursor.</p>
-   </td>
-  </tr>
-  <tr>
-  <td><code class="anchored">first</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/int">Int</a></code>
-  </td>
-  <td>
-    <p>Returns the first <em>n</em> elements from the list.</p>
-   </td>
-  </tr>
-  <tr>
-  <td><code class="anchored">last</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/int">Int</a></code>
-  </td>
-  <td>
-    <p>Returns the last <em>n</em> elements from the list.</p>
-   </td>
-  </tr>
-  </tbody>
-</table>
-  </div>
-</div>
+<a id="localizedcustomfields" class="anchor" href="#localizedcustomfields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LocalizedCustomFields</h1>
+<p>Represents a particular translation of a LocalizedCustomFieldsType</p>
 <h2>
 <a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
 <div class="field-entry ">
-  <span id="sortition" class="field-name anchored">sortition (<code><a href="/api/docs/object/sortition">Sortition</a></code>)</span>
+  <span id="locale" class="field-name anchored">locale (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
   <div class="description-wrapper">
-     <table class="arguments">
-  <thead>
-  <tr>
-    <th>Argument</th>
-    <th>Type</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td><code class="anchored">id</code></td>
-  <td>
-    <code><a href="/api/docs/scalar/id">ID!</a></code>
-  </td>
-  <td>
-   </td>
-  </tr>
-  </tbody>
-</table>
+   <p>The standard locale of this translation.</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
+  <span id="fields" class="field-name anchored">fields (<code><a href="/api/docs/scalar/json">JSON</a></code>)</span>
   <div class="description-wrapper">
-   <p>The Component's unique ID</p>
+   <p>The fields of this translation.</p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="name" class="field-name anchored">name (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
+  <span id="machinetranslated" class="field-name anchored">machineTranslated (<code><a href="/api/docs/scalar/boolean">Boolean!</a></code>)</span>
   <div class="description-wrapper">
-   <p>The name of this component.</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="weight" class="field-name anchored">weight (<code><a href="/api/docs/scalar/int">Int!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The weight of the component</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="participatoryspace" class="field-name anchored">participatorySpace (<code><a href="/api/docs/object/participatoryspace">ParticipatorySpace!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The participatory space in which this component belongs to.</p>
+   <p>Whether this string is machine translated or not.</p>
   </div>
 </div></div>
 <div id="sidebar"><ul class="categories">

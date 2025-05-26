@@ -13,7 +13,7 @@ gem "decidim-initiatives", DECIDIM_VERSION
 ### Awaiting upgrade to version 0.28 ###
 
 # NOTE(d1): https://github.com/decidim-ice/decidim-module-decidim_awesome/issues/324
-gem "decidim-decidim_awesome", "0.11.4"
+gem "decidim-decidim_awesome", "0.12.0"
 
 # NOTE(pj): needs some improvements
 gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.28-beta"
