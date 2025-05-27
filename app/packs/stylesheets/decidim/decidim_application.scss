@@ -318,9 +318,7 @@ footer {
   Budgets
 */
 
-// Hide summary and buttons for finished budget
-.budget-summary__button-modal,
-.budget-summary__button-dropdown,
+// Hide buttons for finished budget
 .budget__projects__finished .button {
   display: none;
 }

@@ -64,19 +64,9 @@
           <%= t("select_projects", scope: "decidim.budgets.projects") %>
         </span>
       </section>
-
     <% end %>
 
-    <% budget_message = cell("decidim/budgets/budget_information_modal", @budget).call(:more_information) %>
-    <% if budget_message.present? %>
-      <section class="layout-main__section">
-        <div class="flash flex-col editor-content" data-announcement="">
-          <div class="flash__message">
-            <p><%= budget_message %></p>
-          </div>
-        </div>
-      </section>
-    <% end %>
+    <%= render partial: "decidim/shared/component_announcement" %>
 
     <section id="projects" class="layout-main__section layout-main__heading budget__projects__container budget__projects__<% if voting_finished? %>finished<% end %><% unless voting_finished? %>ongoing<% end %>">
       <%= render partial: "projects" %>
