@@ -56,6 +56,8 @@
       </div>
     <% end %>
 
+    <%= render partial: "decidim/shared/component_announcement" %>
+
     <%= cell("decidim/budgets/limit_announcement", budget) %>
 
     <% unless voting_finished? %>
@@ -65,8 +67,6 @@
         </span>
       </section>
     <% end %>
-
-    <%= render partial: "decidim/shared/component_announcement" %>
 
     <section id="projects" class="layout-main__section layout-main__heading budget__projects__container budget__projects__<% if voting_finished? %>finished<% end %><% unless voting_finished? %>ongoing<% end %>">
       <%= render partial: "projects" %>
