@@ -38,12 +38,12 @@
   span {
     display: block;
     font-weight: 400;
-    color: rgb(var(--secondary-rgb) / 1);
+    color: $black;
     font-size: 14px;
   }
 
   svg {
-    fill: rgb(var(--secondary-rgb) / 1);
+    fill: $black;
   }
 }
 
@@ -57,7 +57,7 @@
   background-color: #f3f4f7 !important;
   border-radius: 0.25rem;
   text-decoration: underline;
-  text-decoration-color: rgb(var(--secondary-rgb) / 1);
+  text-decoration-color: $black;
 }
 
 #dropdown-menu-header-language-chooser {

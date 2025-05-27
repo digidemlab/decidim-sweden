@@ -8,6 +8,7 @@
 //
 // By default this is empty.
 
+$black: #333;
 @import "fontface";
 // @import "modules/mini_footer";
 //@import "modules/white_theme";
@@ -342,4 +343,18 @@ header .main-bar__links-desktop__item {
     &::after {
         background-color: rgba(black, .2);
     }
+}
+
+.hero {
+  &__container {
+    /* stylelint-disable-next-line number-leading-zero */
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      var(--hero-image);
+  }
+  &__title {
+    @apply text-center text-white text-4xl md:text-6xl;
+  }
 }
