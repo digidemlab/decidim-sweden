@@ -1,0 +1,88 @@
+<% add_decidim_meta_tags(
+  description: translated_attribute(budget.description),
+  title: t("decidim.components.pagination.page_title",
+           component_name: t("decidim.budgets.projects.projects_for", name: translated_attribute(budget.title)),
+           current_page: projects.current_page,
+           total_pages: projects.total_pages ),
+  url: budget_url(budget),
+  resource: budget) %>
+
+<%= append_javascript_pack_tag "decidim_budgets" %>
+<%= append_stylesheet_pack_tag "decidim_budgets" %>
+
+<% unless voting_finished? %>
+  <%= render partial: "budget_summary", locals: { include_heading: true, project_item: false, responsive: true } %>
+<% end %>
+<%= cell("decidim/budgets/budget_information_modal", budget) %>
+
+<% content_for :aside do %>
+  <h1 class="h3 decorator"><%= t("decidim.budgets.projects.projects_for", name: translated_attribute(budget.title)) %></h1>
+
+  <%= render layout: "decidim/shared/filters", locals: { filter_sections: , search_variable: :search_text_cont, skip_to_id: "projects" } do %>
+    <%= hidden_field_tag :order, order, id: nil, class: "order_filter" %>
+  <% end %>
+<% end %>
+
+<%= render layout: "layouts/decidim/shared/layout_two_col" do %>
+  <% if projects.any? %>
+    <%= render partial: "exit_modal" %>
+    <%= render partial: "budget_excess" %>
+    <%= render partial: "budget_confirm" %>
+
+    <% unless voting_finished? %>
+      <div class="budget-summary__container">
+        <%= render partial: "budget_summary", locals: { include_heading: true, project_item: false, responsive: false } %>
+      </div>
+    <% end %>
+
+    <% if Decidim::Map.available?(:geocoding, :dynamic) && component_settings.geocoding_enabled? %>
+      <div class="budget-list__map">
+        <%= dynamic_map_for projects_data_for_map(all_geocoded_projects) do %>
+          <template id="marker-popup">
+            <div class="space-y-6">
+              <a href="${link}" class="card__list">
+                <div class="card__list-content">
+                  <h3 class="h4 card__list-title">${title}</h3>
+                  <div class="card__list-metadata">
+                    {{each JSON.parse(items)}}
+                      <span>{{html icon}}{{html text}}</span>
+                    {{/each}}
+                  </div>
+                </div>
+              </a>
+            </div>
+          </template>
+        <% end %>
+      </div>
+    <% end %>
+
+    <%= cell("decidim/budgets/limit_announcement", budget) %>
+
+    <% unless voting_finished? %>
+      <section class="layout-main__section">
+        <span class="text-xl font-semibold">
+          <%= t("select_projects", scope: "decidim.budgets.projects") %>
+        </span>
+      </section>
+
+    <% end %>
+
+    <% budget_message = cell("decidim/budgets/budget_information_modal", @budget).call(:more_information) %>
+    <% if budget_message.present? %>
+      <section class="layout-main__section">
+        <div class="flash flex-col editor-content" data-announcement="">
+          <div class="flash__message">
+            <p><%= budget_message %></p>
+          </div>
+        </div>
+      </section>
+    <% end %>
+
+    <section id="projects" class="layout-main__section layout-main__heading budget__projects__container budget__projects__<% if voting_finished? %>finished<% end %><% unless voting_finished? %>ongoing<% end %>">
+      <%= render partial: "projects" %>
+    </section>
+  <% else %>
+    <%= cell("decidim/announcement", t("empty", scope: "decidim.budgets.projects")) %>
+  <% end %>
+
+<% end %>

@@ -318,6 +318,13 @@ footer {
   Budgets
 */
 
+// Hide summary and buttons for finished budget
+.budget-summary__button-modal,
+.budget-summary__button-dropdown,
+.budget__projects__finished .budget-list__action {
+  display: none;
+}
+
 // Show info in mobile version too
 .budget-summary__progressbox--checked_out {
   @apply block;
