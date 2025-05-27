@@ -1,35 +1,11 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
+  layouts:
+    decidim:
+      footer:
+        made_with_open_source: Website made by <a target="_blank" href="https://digidemlab.org">Digidem Lab</a> with the free software <a target="_blank" href="https://github.com/decidim/decidim">Decidim</a>.
+      participatory_process_widgets:
+        show:
+          active_step: 'Active phase'
   decidim:
     authorization_handlers:
       your_requests:
@@ -47,7 +23,43 @@ en:
         dni: DNI
         nie: NIE
         passport: Passport
-  layouts:
-    decidim:
-      footer:
-        made_with_open_source: Website made by <a target="_blank" href="https://digidemlab.org">Digidem Lab</a> with the free software <a target="_blank" href="https://github.com/decidim/decidim">Decidim</a>.
+    forms:
+      questionnaires:
+        show:
+          questionnaire_answered:
+            title: 'You have already submitted an idea!'
+            body: 'You can only submit one idea without creating an account. To submit more, sign up and click on "New proposal" on the page "See all the ideas".'
+    pages:
+      home:
+        footer_sub_hero:
+          footer_sub_hero_headline: 'Welcome to Botkyrkadialogen!'
+          footer_sub_hero_body: 'Help us to build a better Botkyrka!'
+      index:
+        subheading: 'Help pages for Botkyrkadialogen'
+    proposals:
+      proposals:
+        edit:
+          gallery_legend: '(Optional) Add an image to the proposal card'
+    devise:
+      registrations:
+        new:
+          nickname_help: 'Your alias can contain letters, numbers or "_". Characters such as "å", "ä", "ö" or "é" are not supported'
+    menu:
+      processes: '💬 All dialogues'
+    # admin:
+    #   menu:
+    #     dashboard: Dashboard
+    participatory_processes:
+      pages:
+        home:
+          highlighted_processes:
+            active_step: 'Active phase'
+    endorsement_buttons_cell:
+      endorse: 'Endorse'
+    components:
+      proposals:
+        actions:
+          endorse: 'Endorse'
+      debates:
+        actions:
+          endorse: 'Endorse'

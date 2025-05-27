@@ -8,12 +8,11 @@
 //
 // By default this is empty.
 
-@import "modules/mini_footer";
-@import "modules/white_theme";
-@import "modules/fonts_botkyrka";
+$black: #333;
 @import "fontface";
 // @import "modules/mini_footer";
 //@import "modules/white_theme";
+@import "modules/language_dropdown";
 
 html {
   font-family: "Open Sans", "Arial", "sans-serif";
@@ -219,6 +218,15 @@ footer {
   display: none;
 }
 
+// Hide filters
+.filter-container:has(> #trigger-menu-origin),
+.filter-container:has(> #trigger-menu-related_to),
+#trigger-menu-origin,
+#panel-dropdown-menu-origin,
+#trigger-menu-related_to,
+#panel-dropdown-menu-related_to {
+  display: none;
+}
 
 /**
   Budgets
@@ -333,6 +341,20 @@ header .main-bar__links-desktop__item {
 .highligted-content-banner,
 .process-header__main {
     &::after {
-        background-color: rgba($black, .2);
+        background-color: rgba(black, .2);
     }
+}
+
+.hero {
+  &__container {
+    /* stylelint-disable-next-line number-leading-zero */
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      var(--hero-image);
+  }
+  &__title {
+    @apply text-center text-white text-4xl md:text-6xl;
+  }
 }

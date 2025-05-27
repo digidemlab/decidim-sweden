@@ -2,8 +2,55 @@ sv:
   layouts:
     decidim:
       footer:
-        made_with_open_source: Webbplats gjord av <a target="_blank" href="https://digidemlab.org">Digidem Lab</a> med den fria mjukvaran <a target="_blank" href="https://github.com/decidim/decidim">Decidim</a>.
+        made_with_open_source: Webbplats gjord av <a target="_blank" href="https://digidemlab.org">Digidem Lab</a> med den fria programvaran <a target="_blank" href="https://github.com/decidim/decidim">Decidim</a>.
+      # participatory_process_widgets:
+      #   show:
+      #     active_step: ' - '
   decidim:
+    proposals:
+      proposals:
+        dynamic_map_instructions:
+          instructions: Stämmer markören på kartan? Du kan dra och flytta den exakt var du vill.
+          description: ""
+        preview:
+          update_position: Uppdatera position
+    forms:
+      questionnaires:
+        show:
+          questionnaire_answered:
+            title: 'Du har redan lämnat in en idé!'
+            body: 'Du kan bara lämna in en idé utan att registrera dig. För att lämna fler kan du skapa ett konto och tryck på "Nytt förslag" på sidan "Se inlämnade idéer".'
+    pages:
+      index:
+        subheading: 'Hjälpsidor för Botkyrkadialogen'
+      home:
+        footer_sub_hero:
+          footer_sub_hero_headline: 'Välkommen till Botkyrkadialogen!'
+          footer_sub_hero_body: 'Delta med dina goda idéer, du är vår expert!'
+    devise:
+      registrations:
+        new:
+          nickname_help: ' Ditt alias kan innehålla bokstäver, siffror och "_". Man kan inte använda accenttecken som "å", "ä", "ö" eller "é".'
+    proposals:
+      proposals:
+        edit:
+          gallery_legend: '(Valfritt) Lägg till en bild'
+    menu:
+      processes: '💬 Alla dialoger'
+    # admin:
+    #   menu:
+    #     dashboard: Panel för kontroll
     participatory_processes:
-      last_activity:
-        new_participatory_process: 'Ny process:'
+      pages:
+        home:
+          highlighted_processes:
+            active_step: ' - '
+    endorsement_buttons_cell:
+      endorse: 'Gilla'
+    components:
+      proposals:
+        actions:
+          endorse: 'Gilla'
+      debates:
+        actions:
+          endorse: 'Gilla'
