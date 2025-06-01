@@ -4,14 +4,13 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-# DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.29-stable" }
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", ref: "b6eed66" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "v0.29.3" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 
-gem "decidim-goteborg_login", git: "https://github.com/digidemlab/decidim-module-goteborg_login.git", branch: "fix-logins"
+gem "decidim-goteborg_login", git: "git@github.com:/digidemlab/decidim-module-goteborg_login.git", branch: "main"
 
 ### Awaiting upgrade to version 0.28 ###
 
@@ -19,7 +18,7 @@ gem "decidim-goteborg_login", git: "https://github.com/digidemlab/decidim-module
 # gem "decidim-decidim_awesome", "0.11.1"
 
 # NOTE(pj): needs some improvements
-gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.28-beta"
+#gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.28-beta"
 
 # NOTE(d1): https://github.com/digidemlab/decidim-module-budgets_paper_ballots/issues/10
 # gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "release/0.26-stable"

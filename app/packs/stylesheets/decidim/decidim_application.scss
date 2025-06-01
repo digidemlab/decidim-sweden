@@ -87,7 +87,6 @@ header .main-bar__links-mobile__dropdown-before::before {
  Design bug fixes
  */
 
-
 // Dropdown hidden in Ipad size
 #dropdown-trigger-links-mobile[data-target*="dropdown"] {
   @apply lg:hidden md:flex !important;
