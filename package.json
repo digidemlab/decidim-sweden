@@ -25,7 +25,7 @@
     "graphql": "^16.10.0",
     "graphql-ws": "^5.16.0",
     "highlight.js": "^11.5.1",
-    "inline-attachment": "^2.0.3",
+    "inline-attacher": "^0.0.8",
     "inscrybmde": "^1.11.6",
     "jquery-ui": "^1.13.1",
     "jsrender": "^1.0.11",
