@@ -10,6 +10,8 @@ sv:
         decidim_title: 'Plattform för medborgar- inflytande'
         made_with_open_source: Webbplats gjord av <a target="_blank" href="https://digidemlab.org">Digidem Lab</a> med den fria mjukvaran <a target="_blank" href="https://github.com/decidim/decidim">Decidim</a>.
   decidim:
+    accessibility:
+      secondary_menu: 'Sekundär meny'
     admin:
       impersonations:
         form:
@@ -66,3 +68,13 @@ sv:
           added: 'Valda'
         budget_summary:
           vote: 'Rösta'
+    forms:
+      step_navigation:
+        show:
+          are_you_sure: 'Den här åtgärden kan inte ångras och du kommer inte att kunna redigera dina svar. Vill du fortsätta?'
+      admin:
+        questionnaires:
+          question:
+            statement: 'Titel'
+          form:
+            already_answered_warning: 'Frågeformuläret har redan besvarats av användare och du kan inte längre ändra frågorna.'
