@@ -313,6 +313,13 @@ footer {
   display: none;
 }
 
+/**
+  Meetings
+*/
+
+.static-map {
+  @apply md:max-w-[10rem] xl:max-w-[12rem];
+}
 
 /**
   Budgets

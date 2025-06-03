@@ -159,6 +159,8 @@ sv:
             preview: Förhandsgranska
             title: Redigera formulär för %{questionnaire_for}
             already_answered_warning: Frågeformuläret har redan besvarats av användare och du kan inte längre ändra frågorna.
+            add_separator: Lägg till avgränsare
+            add_title_and_description: Lägg till titel och beskrivning
           matrix_row:
             matrix_row: Rad
             remove: Ta bort
