@@ -13,7 +13,7 @@ Decidim.configure do |config|
     provider: :here,
     api_key: Rails.application.secrets.geocoder[:here_api_key],
     static: {
-      url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview"
+      url: "https://image.maps.hereapi.com/mia/v3/base/mc/overlay"
     },
     autocomplete: {
       address_format: ["name", %w(street houseNumber), "city"]

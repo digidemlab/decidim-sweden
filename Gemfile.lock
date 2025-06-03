@@ -11,8 +11,8 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim
-  revision: 8f4f1c213c3e141b1d33f41ce2ee9e1f95f0048b
-  tag: v0.29.3
+  revision: e8ffbe2323f7dc65c421895f9245e2d9148490ed
+  branch: chore/l10n/release/0.29-stable
   specs:
     decidim (0.29.3)
       decidim-accountability (= 0.29.3)
@@ -379,7 +379,7 @@ GEM
       logger
     extended-markdown-filter (0.7.0)
       html-pipeline (~> 2.9)
-    factory_bot (6.5.2)
+    factory_bot (6.5.3)
       activesupport (>= 6.1.0)
     factory_bot_rails (6.4.4)
       factory_bot (~> 6.5)
@@ -642,7 +642,7 @@ GEM
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
-    rack (2.2.16)
+    rack (2.2.17)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
     rack-cors (1.1.1)

@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "v0.29.3" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "chore/l10n/release/0.29-stable" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
