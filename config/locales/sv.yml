@@ -158,6 +158,7 @@ sv:
             expand: Visa alla frågor
             preview: Förhandsgranska
             title: Redigera formulär för %{questionnaire_for}
+            already_answered_warning: Frågeformuläret har redan besvarats av användare och du kan inte längre ändra frågorna.
           matrix_row:
             matrix_row: Rad
             remove: Ta bort
@@ -287,6 +288,7 @@ sv:
         show:
           are_you_sure_edit_guest: Om du vill kunna redigera dina svar efteråt måste du logga in eller skapa ett konto.
           are_you_sure_no_edit: Det går inte att ångra denna åtgärd och du kommer inte att kunna redigera dina svar. Vill du fortsätta?
+          are_you_sure: Den här åtgärden kan inte ångras och du kommer inte att kunna redigera dina svar. Vill du fortsätta?
           back: Tillbaka
           continue: Fortsätt
           disallowed: Du har inte behörighet att redigera dina svar.
