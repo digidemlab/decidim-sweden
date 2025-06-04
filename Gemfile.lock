@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/decidim/decidim
-  revision: e8ffbe2323f7dc65c421895f9245e2d9148490ed
-  branch: chore/l10n/release/0.29-stable
+  revision: 64da35661edcc073d9eb503ccbdecea6df84dfc5
+  ref: 64da356
   specs:
     decidim (0.29.3)
       decidim-accountability (= 0.29.3)
@@ -494,7 +494,7 @@ GEM
     mime-types (3.7.0)
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2025.0527)
+    mime-types-data (3.2025.0603)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
@@ -704,7 +704,7 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.44.1)
+    rubocop-ast (1.45.0)
       parser (>= 3.3.7.2)
       prism (~> 1.4)
     rubocop-capybara (2.21.0)
