@@ -15,7 +15,7 @@ $black: #333;
 @import "modules/language_dropdown";
 
 html {
-  font-family: "Open Sans", "Arial", "sans-serif";
+  font-family: "Open Sans", "Arial", "sans-serif", "sans";
 }
 
 body {
@@ -164,16 +164,12 @@ footer {
   Hero, participation space
 */
 
-.participatory-space__hero-slogan {
-  @apply text-white mb-4;
-}
-
 .participatory-space__hero {
-  @apply backdrop-filter-none bg-background;
+    @apply backdrop-brightness-[50%];
 
-}
-.participatory-space__hero-text {
-  @apply text-black;
+  h1 {
+    @apply text-white;
+  }
 }
 
 /**
@@ -335,14 +331,6 @@ header .main-bar__links-desktop__item {
 .main-nav__link--active a {
     background-color: white;
     color: var(--primary);
-}
-
-.hero,
-.highligted-content-banner,
-.process-header__main {
-    &::after {
-        background-color: rgba(black, .2);
-    }
 }
 
 .hero {
