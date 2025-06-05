@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.29-stable" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", ref: "64da356" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
@@ -16,7 +16,7 @@ gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-decidim_awesome", "0.12.0"
 
 # NOTE(pj): needs some improvements
-gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.28-beta"
+#gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.28-beta"
 
 # NOTE(d1): https://github.com/digidemlab/decidim-module-budgets_paper_ballots/issues/10
 # gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "release/0.26-stable"
