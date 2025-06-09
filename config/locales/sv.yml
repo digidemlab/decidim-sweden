@@ -56,6 +56,11 @@ sv:
       highlighted_results:
         see_all: 'Visa alla resultat'
     participatory_processes:
+      pages:
+        home:
+          highlighted_processes:
+            active_spaces: Det här pågår just nu
+            active_processes: Det här pågår just nu
       last_activity:
         new_participatory_process: 'Ny process:'
     authorization_modals:
@@ -285,7 +290,7 @@ sv:
             sign_in_description: Logga in för att göra enkäten
             sign_up_description: Skapa ett konto för att göra enkäten
             title: Svara på formuläret
-          tos_agreement: Genom att fortsätta godkänner du användarvillkoren
+          tos_agreement: Genom att fortsätta godkänner du villkoren för anmälan
       step_navigation:
         show:
           are_you_sure_edit_guest: Om du vill kunna redigera dina svar efteråt måste du logga in eller skapa ett konto.
