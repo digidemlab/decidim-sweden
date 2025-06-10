@@ -40,6 +40,18 @@ body {
  Design bug fixes
  */
 
+// Hide About process
+.participatory-space__content-block > .space-y-8 > h2.h2.decorator {
+  @apply sr-only;
+}
+
+
+// Phase icon width
+.card__highlight-metadata > :first-child,
+.card__grid-metadata > :first-child {
+  width: unset;
+}
+
 // Dropdown hidden in Ipad size
 #dropdown-trigger-links-mobile[data-target*="dropdown"] {
   @apply lg:hidden md:flex !important;

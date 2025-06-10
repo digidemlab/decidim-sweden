@@ -33,7 +33,7 @@ en:
       home:
         footer_sub_hero:
           footer_sub_hero_headline: 'Welcome to Botkyrkadialogen!'
-          footer_sub_hero_body: 'Help us to build a better Botkyrka!'
+          footer_sub_hero_body_html: 'Help us to build a better Botkyrka!'
       index:
         subheading: 'Help pages for Botkyrkadialogen'
     proposals:

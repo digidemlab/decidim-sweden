@@ -26,7 +26,7 @@ sv:
       home:
         footer_sub_hero:
           footer_sub_hero_headline: 'Välkommen till Botkyrkadialogen!'
-          footer_sub_hero_body: 'Delta med dina goda idéer, du är vår expert!'
+          footer_sub_hero_body_html: 'Delta med dina goda idéer, du är vår expert!'
     devise:
       registrations:
         new:
