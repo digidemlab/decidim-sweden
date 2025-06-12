@@ -37,6 +37,10 @@
       cron: '0 0 3 * * *' # Run at 03:00
       class: DeleteRegistrationFormsJob
       queue: cleanups
+    DeleteWithdrawnProposals:
+      cron: '0 0 4 * * *' # Run at 04:00
+      class: DeleteWithdrawnProposalsJob
+      queue: cleanups
     GenerateReminders:
       cron: '0 0 9 * * *' # Run at 09:00
       class: GenerateRemindersJob
