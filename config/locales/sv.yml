@@ -56,6 +56,11 @@ sv:
       highlighted_results:
         see_all: 'Visa alla resultat'
     participatory_processes:
+      pages:
+        home:
+          highlighted_processes:
+            active_spaces: Det här pågår just nu
+            active_processes: Det här pågår just nu
       last_activity:
         new_participatory_process: 'Ny process:'
     authorization_modals:
@@ -84,6 +89,18 @@ sv:
       meetings:
         show:
           join: 'Anmäl dig'
+          leave_confirmation: Är du säker på att du vill dra tillbaka din anmälan?
+      mailer:
+        registration_mailer:
+          confirmation:
+            subject: Din anmälan har bekräftats
+            confirmed_html: 'Din anmälan till <a href="%{url}">%{title}</a> har bekräftats.'
+            details: Kalenderinformation finns i bilagan.
+      registrations:
+        destroy:
+          success: Du har dragit tillbaka din anmälan.
+        create:
+          success: Du är nu anmäld.
     budgets:
       projects:
         project_budget_button:
@@ -285,12 +302,12 @@ sv:
             sign_in_description: Logga in för att göra enkäten
             sign_up_description: Skapa ett konto för att göra enkäten
             title: Svara på formuläret
-          tos_agreement: Genom att fortsätta godkänner du användarvillkoren
+          tos_agreement: Genom att fortsätta godkänner du villkoren för anmälan
       step_navigation:
         show:
           are_you_sure_edit_guest: Om du vill kunna redigera dina svar efteråt måste du logga in eller skapa ett konto.
-          are_you_sure_no_edit: Det går inte att ångra denna åtgärd och du kommer inte att kunna redigera dina svar. Vill du fortsätta?
-          are_you_sure: Den här åtgärden kan inte ångras och du kommer inte att kunna redigera dina svar. Vill du fortsätta?
+          are_you_sure_no_edit: Efter att du har skickat in anmälan kan du inte ändra i den. Vill du fortsätta?
+          are_you_sure: Efter att du har skickat in anmälan kan du inte ändra i den. Vill du fortsätta?
           back: Tillbaka
           continue: Fortsätt
           disallowed: Du har inte behörighet att redigera dina svar.
