@@ -234,7 +234,9 @@ footer {
 */
 
 #how_to_participate {
-  @apply bg-background;
+  background-color: #dbeff8;
+  @apply mt-8 md:mt-12;
+  // @apply bg-background;
 }
 
 
