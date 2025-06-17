@@ -237,6 +237,10 @@ footer {
   background-color: #dbeff8;
   @apply mt-8 md:mt-12;
   // @apply bg-background;
+
+  .editor-content {
+    max-width: 900px;
+  }
 }
 
 
