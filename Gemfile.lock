@@ -184,6 +184,12 @@ GIT
     decidim-verifications (0.29.3)
       decidim-core (= 0.29.3)
 
+PATH
+  remote: ../decidim-module-cleaner
+  specs:
+    decidim-cleaner (5.0.0)
+      decidim-core (~> 0.29.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -752,6 +758,8 @@ GEM
     rubyzip (2.3.2)
     rufus-scheduler (3.9.2)
       fugit (~> 1.1, >= 1.11.1)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     selenium-webdriver (4.33.0)
       base64 (~> 0.2)
       logger (~> 1.4)
@@ -858,6 +866,7 @@ DEPENDENCIES
   bootsnap (~> 1.3)
   byebug (~> 11.0)
   decidim!
+  decidim-cleaner!
   decidim-decidim_awesome (= 0.12.0)
   decidim-dev!
   decidim-initiatives!
