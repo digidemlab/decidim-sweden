@@ -90,6 +90,9 @@ sv:
         show:
           join: 'Anmäl dig'
           leave_confirmation: Är du säker på att du vill dra tillbaka din anmälan?
+          remaining_slots:
+            one: "%{count} anmälan kvar"
+            other: "%{count} anmälningar kvar"
       mailer:
         registration_mailer:
           confirmation:
