@@ -234,7 +234,13 @@ footer {
 */
 
 #how_to_participate {
-  @apply bg-background;
+  background-color: #dbeff8;
+  @apply mt-8 md:mt-12;
+  // @apply bg-background;
+
+  .editor-content {
+    max-width: 900px;
+  }
 }
 
 
@@ -311,6 +317,7 @@ footer {
 }
 
 // Hide stuff
+.participatory-space__block-reference.alert,
 .meeting__calendar-container + .layout-author,
 .meeting__registration-modal .form__wrapper-checkbox-label,
 .answer-questionnaire__footer > .form__wrapper-checkbox-label,

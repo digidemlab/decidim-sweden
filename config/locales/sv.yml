@@ -90,12 +90,18 @@ sv:
         show:
           join: 'Anmäl dig'
           leave_confirmation: Är du säker på att du vill dra tillbaka din anmälan?
+          remaining_slots:
+            one: "%{count} anmälan kvar"
+            other: "%{count} anmälningar kvar"
       mailer:
         registration_mailer:
           confirmation:
             subject: Din anmälan har bekräftats
-            confirmed_html: 'Din anmälan till <a href="%{url}">%{title}</a> har bekräftats.'
-            details: Kalenderinformation finns i bilagan.
+      registration_mailer:
+        confirmation:
+          subject: Din anmälan har bekräftats
+          confirmed_html: 'Din anmälan till <a href="%{url}">%{title}</a> har bekräftats.'
+          details: Kalenderinformation finns i bilagan.
       registrations:
         destroy:
           success: Du har dragit tillbaka din anmälan.
