@@ -206,8 +206,8 @@ GIT
 
 GIT
   remote: https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler
-  revision: 2eaef1f91a6b541aee52895b1db1fa3767d55fd9
-  ref: 2eaef1f
+  revision: c1fe441b41956cea125cdc1ce31c6f10fa2b45fe
+  branch: goteborg-0.29
   specs:
     decidim-socio_demographic_authorization_handler (0.29)
       decidim-core (>= 0.29.0, < 0.30)
