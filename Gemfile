@@ -11,6 +11,8 @@ gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 
 gem "decidim-goteborg_login", git: "git@github.com:/digidemlab/decidim-module-goteborg_login.git", branch: "main"
+gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "master"
+gem "decidim-term_customizer", git: "https://github.com/digidemlab/decidim-module-term_customizer.git", branch: "master"
 
 ### Awaiting upgrade to version 0.28 ###
 
@@ -19,9 +21,6 @@ gem "decidim-goteborg_login", git: "git@github.com:/digidemlab/decidim-module-go
 
 # NOTE(pj): needs some improvements
 #gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.28-beta"
-
-# NOTE(d1): https://github.com/digidemlab/decidim-module-budgets_paper_ballots/issues/10
-# gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "release/0.26-stable"
 
 
 ### Additional Decidim Modules ###
