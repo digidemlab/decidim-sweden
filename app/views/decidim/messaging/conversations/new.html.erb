@@ -1,0 +1,25 @@
+<% add_decidim_page_title(t("conversations", scope: "layouts.decidim.user_menu")) %>
+
+<% content_for :aside do %>
+  <div class="conversation__aside">
+    <h1 class="title-decorator">
+      <%= t("decidim.messaging.conversations.index.title") %>
+    </h1>
+  </div>
+<% end %>
+
+<%= render layout:"layouts/decidim/shared/layout_two_col" do %>
+  <% if validation_messages.present? %>
+    <% validation_messages.each do |message| %>
+      <%= cell("decidim/announcement", message) %>
+    <% end %>
+  <% else %>
+    <section class="layout-main__section">
+      <div class="flash flex-col editor-content" data-announcement="">
+        <div class="flash__message">
+          <p>Konversationer är inte aktiverade.</p>
+        </div>
+      </div>
+    </section>
+  <% end %>
+<% end %>

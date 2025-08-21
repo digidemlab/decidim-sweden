@@ -69,6 +69,13 @@ header .main-bar__links-mobile__dropdown-before::before {
   display: none;
 }
 
+// Hide conversation links
+#dropdown-menu-account-mobile ul li:nth-child(4),
+#dropdown-menu-account > ul li:nth-child(4),
+.profile__scaffold__top .profile__actions-main {
+  display: none;
+}
+
 // Hide About process
 .participatory-space__content-block > .space-y-8 > h2.h2.decorator {
   @apply sr-only;
