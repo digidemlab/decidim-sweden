@@ -334,6 +334,21 @@ footer {
   display: none;
 }
 
+
+/**
+  Start page
+ */
+
+
+#highlighted-processes,
+#highlighted-assemblies {
+  @apply pt-2 md:pt-4;
+}
+
+#html-block-html {
+  @apply pb-4;
+}
+
 /**
   Meetings
 */
