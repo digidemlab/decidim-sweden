@@ -9,6 +9,26 @@ sv:
       footer:
         decidim_title: 'Plattform för medborgar- inflytande'
         made_with_open_source: Webbplats gjord av <a target="_blank" href="https://digidemlab.org">Digidem Lab</a> med den fria programvaran <a target="_blank" href="https://github.com/decidim/decidim">Decidim</a>.
+      decidim_awesome:
+        admin:
+          maintenance:
+            title: 'Underhållsverktyg: %{title}'
+            titles:
+              checks: Systemkompatibilitetskontroller
+              hashcash: Hashcash-stämplar
+              private_data: Rengöring av privat data
+        awesome_config:
+          amendments: Ändringsförslag
+          autosaved_error: localStorage stöds inte i din webbläsare, formuläret kan inte sparas automatiskt.
+          autosaved_retrieved: Data för detta formulär har återställts från en tidigare session
+          autosaved_success: Data sparad i localStorage
+          categories: Kategorier
+          drag_and_drop_image: Lägg till bilder genom att dra och släppa eller klistra in dem.
+          hashtags: Hashtags
+          items: poster
+          meetings: Möten
+          proposals: Förslag
+          select_deselect_all: Markera/avmarkera alla
   activemodel:
     attributes:
       question:
@@ -21,6 +41,64 @@ sv:
         body: Svar
         choices: Alternativ
         selected_choices: Valda alternativ
+      config:
+        additional_proposal_sortings: Ytterligare sorteringsalternativ aktiverade
+        allow_images_in_editors: Tillåt bilder i HTML-redigeraren
+        allow_images_in_proposals: Tillåt bilder i förslagsredigeraren
+        allow_videos_in_editors: Tillåt videor i HTML-redigeraren
+        auto_save_forms: Spara formulär automatiskt i localStorage
+        force_authorization_after_login: Tvinga verifiering efter inloggning/registrering
+        force_authorization_help_text: Hjälptext för verifieringssidan
+        force_authorization_with_any_method: Tillåt åtkomst om någon av verifieringarna är beviljad (som standard krävs alla)
+        hashcash_login: Aktivera Hashcash bot-skydd för befintliga användare (inloggning)
+        hashcash_login_bits: Antal bitar för Hashcash-algoritmen (inloggning)
+        hashcash_signup: Aktivera Hashcash bot-skydd för nya användare (registrering)
+        hashcash_signup_bits: Antal bitar för Hashcash-algoritmen (registrering)
+        intergram_auto_no_response: Ett meddelande som skickas en minut efter att användaren skickat sitt första meddelande utan att ha fått svar
+        intergram_auto_response: Ett meddelande som skickas direkt efter att användaren skickat sitt första meddelande
+        intergram_chat_id: Chatt-ID
+        intergram_color: Färg på widgeten
+        intergram_for_admins: Aktivera Intergram Chatt i admin-gränssnittet
+        intergram_intro_message: Första meddelandet när användaren öppnar chatten första gången
+        intergram_require_login: Endast för inloggade användare
+        intergram_title_closed: Titel för stängd chatt
+        intergram_title_open: Titel för öppen chatt
+        intergram_use_floating_button: Om markerat, visas stängd chatt alltid som en knapp istället för text
+        proposal_custom_fields: Anpassade fält %{id}
+        proposal_private_custom_fields: Privata anpassade fält %{id}
+        scoped_admin_styles: Anpassade stilar %{id}
+        scoped_admins: Scoped admins-grupp %{id}
+        scoped_styles: Anpassade stilar %{id}
+        user_timezone: Tillåt användare att ange sin tidszon i profilen
+        validate_body_max_caps_percent: Maximalt tillåtet procentuell andel versaler i brödtexten
+        validate_body_max_marks_together: Maximalt antal upprepade skiljetecken tillåtna i brödtexten
+        validate_body_min_length: Minsta antal tecken krävs för brödtexten
+        validate_body_start_with_caps: Tvinga brödtexten att börja med versal
+        validate_title_max_caps_percent: Maximalt tillåtet procentuell andel versaler i titeln
+        validate_title_max_marks_together: Maximalt antal upprepade skiljetecken tillåtna i titeln
+        validate_title_min_length: Minsta antal tecken krävs för titeln
+        validate_title_start_with_caps: Tvinga titeln att börja med versal
+      constraint:
+        component_id: eller specifikt i
+        component_manifest: Endast i komponenter av typ
+        participatory_space_manifest: Gäller för deltagarutrymmen av typ
+        participatory_space_slug: Endast i
+      custom_redirect:
+        active: Aktiv
+        destination: Destination
+        origin: Ursprung
+        pass_query: Skicka frågesträng till destinationen
+        status: Status
+      menu:
+        position: Position
+        raw_label: Etikett
+        target: Öppnas i
+        url: URL
+        visibility: Synlighet
+      organization:
+        awesome_admins_available_authorizations: Tillåt administratörer att manuellt verifiera användare med dessa auktorisationer
+      user:
+        user_time_zone: Personlig tidszon
     errors:
       models:
         questionnaire:
@@ -43,6 +121,26 @@ sv:
           name: 'Namn som visas vid förslaget. Observera att namn inte syns vid röstning.'
           reason: 'Kontaktuppgifter till den du gör kontot för (telefonnummer eller e-postadress)'
           authorization_method: 'Välj aktivitet: förslagsinlämning eller röstning'
+      actions:
+        manage: Hantera
+      filters:
+        admin_accountability:
+          admin_role_type:
+            label: Rolltyp
+          participatory_space_type_eq:
+            label: Deltagarutrymmes typ
+          role:
+            label: Roll
+          role_type_eq:
+            label: Rolltyp
+        label:
+          search_field_end_date: 'Till datum:'
+          search_field_start_date: 'Från datum:'
+        search_placeholder:
+          user_name_or_user_email_cont: Sök efter användarnamn, e-post
+      menu:
+        admin_accountability: Administratörsansvar
+        decidim_awesome: Decidim awesome
     menu:
       help: 'Om'
     pages:
@@ -85,7 +183,7 @@ sv:
         visibility_warning: 'Ditt namn och användarnamn syns tillsammans med ditt lämnade förslag. Ändra båda fälten för namn och användarnamn om du vill vara anonym.'
       email:
         please_change: 'Lämna gärna din e-post adress så att vi kan kontakta dig för återkoppling kring ditt förslag.'
-    meetings:  # Härifrån och ner är tillfälligt tills översättning synkar
+    meetings: # Härifrån och ner är tillfälligt tills översättning synkar
       meetings:
         show:
           join: 'Anmäl dig'
@@ -107,6 +205,8 @@ sv:
           success: Du har dragit tillbaka din anmälan.
         create:
           success: Du är nu anmäld.
+      meetings_map:
+        view_meeting: Visa möte
     budgets:
       projects:
         project_budget_button:
@@ -329,93 +429,6 @@ sv:
         session_token: Identifierare för användare
         unregistered: Ej registrerad
         user_status: Användarstatus
-
-  # decidim-awesome, AI-translated (Qwen3-235B, reasoning)
-  active_hashcash:
-    submit_filter: Filtrera
-    waiting_label: Väntar på verifiering ...
-  activemodel:
-    attributes:
-      config:
-        additional_proposal_sortings: Ytterligare sorteringsalternativ aktiverade
-        allow_images_in_editors: Tillåt bilder i HTML-redigeraren
-        allow_images_in_proposals: Tillåt bilder i förslagsredigeraren
-        allow_videos_in_editors: Tillåt videor i HTML-redigeraren
-        auto_save_forms: Spara formulär automatiskt i localStorage
-        force_authorization_after_login: Tvinga verifiering efter inloggning/registrering
-        force_authorization_help_text: Hjälptext för verifieringssidan
-        force_authorization_with_any_method: Tillåt åtkomst om någon av verifieringarna är beviljad (som standard krävs alla)
-        hashcash_login: Aktivera Hashcash bot-skydd för befintliga användare (inloggning)
-        hashcash_login_bits: Antal bitar för Hashcash-algoritmen (inloggning)
-        hashcash_signup: Aktivera Hashcash bot-skydd för nya användare (registrering)
-        hashcash_signup_bits: Antal bitar för Hashcash-algoritmen (registrering)
-        intergram_auto_no_response: Ett meddelande som skickas en minut efter att användaren skickat sitt första meddelande utan att ha fått svar
-        intergram_auto_response: Ett meddelande som skickas direkt efter att användaren skickat sitt första meddelande
-        intergram_chat_id: Chatt-ID
-        intergram_color: Färg på widgeten
-        intergram_for_admins: Aktivera Intergram Chatt i admin-gränssnittet
-        intergram_intro_message: Första meddelandet när användaren öppnar chatten första gången
-        intergram_require_login: Endast för inloggade användare
-        intergram_title_closed: Titel för stängd chatt
-        intergram_title_open: Titel för öppen chatt
-        intergram_use_floating_button: Om markerat, visas stängd chatt alltid som en knapp istället för text
-        proposal_custom_fields: Anpassade fält %{id}
-        proposal_private_custom_fields: Privata anpassade fält %{id}
-        scoped_admin_styles: Anpassade stilar %{id}
-        scoped_admins: Scoped admins-grupp %{id}
-        scoped_styles: Anpassade stilar %{id}
-        user_timezone: Tillåt användare att ange sin tidszon i profilen
-        validate_body_max_caps_percent: Maximalt tillåtet procentuell andel versaler i brödtexten
-        validate_body_max_marks_together: Maximalt antal upprepade skiljetecken tillåtna i brödtexten
-        validate_body_min_length: Minsta antal tecken krävs för brödtexten
-        validate_body_start_with_caps: Tvinga brödtexten att börja med versal
-        validate_title_max_caps_percent: Maximalt tillåtet procentuell andel versaler i titeln
-        validate_title_max_marks_together: Maximalt antal upprepade skiljetecken tillåtna i titeln
-        validate_title_min_length: Minsta antal tecken krävs för titeln
-        validate_title_start_with_caps: Tvinga titeln att börja med versal
-      constraint:
-        component_id: eller specifikt i
-        component_manifest: Endast i komponenter av typ
-        participatory_space_manifest: Gäller för deltagarutrymmen av typ
-        participatory_space_slug: Endast i
-      custom_redirect:
-        active: Aktiv
-        destination: Destination
-        origin: Ursprung
-        pass_query: Skicka frågesträng till destinationen
-        status: Status
-      menu:
-        position: Position
-        raw_label: Etikett
-        target: Öppnas i
-        url: URL
-        visibility: Synlighet
-      organization:
-        awesome_admins_available_authorizations: Tillåt administratörer att manuellt verifiera användare med dessa auktorisationer
-      user:
-        user_time_zone: Personlig tidszon
-  decidim:
-    admin:
-      actions:
-        manage: Hantera
-      filters:
-        admin_accountability:
-          admin_role_type:
-            label: Rolltyp
-          participatory_space_type_eq:
-            label: Deltagarutrymmes typ
-          role:
-            label: Roll
-          role_type_eq:
-            label: Rolltyp
-        label:
-          search_field_end_date: 'Till datum:'
-          search_field_start_date: 'Från datum:'
-        search_placeholder:
-          user_name_or_user_email_cont: Sök efter användarnamn, e-post
-      menu:
-        admin_accountability: Administratörsansvar
-        decidim_awesome: Decidim awesome
     components:
       awesome_iframe:
         name: Fullskärms-Iframe
@@ -558,7 +571,7 @@ sv:
               Sedan version 0.25 använder Decidim en ny teknik för att ladda upp filer.<br>
               Det verkar som att denna installation behöver migrera <strong>%{total}</strong> gamla bilder till det nya systemet.<br>
               Du kan starta processen nu och den kommer att köras i bakgrunden.
-            start_image_migrations: "👉 Starta migreringsprocessen nu"
+            start_image_migrations: "\U0001F449 Starta migreringsprocessen nu"
         config:
           caution: 'OBS: Denna funktion ändrar flera standardbeteenden som kan leda till oväntade resultat. Använd med försiktighet!'
           constraints:
@@ -761,9 +774,7 @@ sv:
             no_data: Inga Hashcash-stämplar hittades
             request_path: Begär sökväg
           ip_addresses:
-            help_html: Denna sida listar alla IP-adresser som har upptäckts i systemet sorterade efter antalet Hashcash-stämplar de har genererat.
-              <br><br> Varje stämpel är antingen en inloggning eller en registrering av en användare.
-              Du kan använda denna information för att upptäcka misstänksam aktivitet.
+            help_html: Denna sida listar alla IP-adresser som har upptäckts i systemet sorterade efter antalet Hashcash-stämplar de har genererat. <br><br> Varje stämpel är antingen en inloggning eller en registrering av en användare. Du kan använda denna information för att upptäcka misstänksam aktivitet.
             ip_address: IP-adress
             no_data: Inga IP-adresser hittades
             stamps: Hashcash-stämplar
@@ -866,7 +877,7 @@ sv:
           private_data_last_remove: Dessa data togs bort %{time_ago} sedan.
           private_data_last_update: Dessa data uppdaterades senast %{time_ago} sedan.
           proposal_private_custom_fields: Privata fält
-          remove_private_data: "👉 Du kanske vill ta bort den"
+          remove_private_data: "\U0001F449 Du kanske vill ta bort den"
         scoped_admin_styles:
           menu:
             title: Admin-panel
@@ -989,9 +1000,6 @@ sv:
             weight_2_short: 'G:'
             weight_3: Grön
             weight_3_short: 'G:'
-    meetings:
-      meetings_map:
-        view_meeting: Visa möte
     proposals:
       admin:
         exports:
@@ -1004,25 +1012,6 @@ sv:
           za: Ö-A (Omvänd alfabetisk)
         proposal:
           view_proposal: Visa förslag
-  layouts:
-    decidim:
-      decidim_awesome:
-        admin:
-          maintenance:
-            title: 'Underhållsverktyg: %{title}'
-            titles:
-              checks: Systemkompatibilitetskontroller
-              hashcash: Hashcash-stämplar
-              private_data: Rengöring av privat data
-        awesome_config:
-          amendments: Ändringsförslag
-          autosaved_error: localStorage stöds inte i din webbläsare, formuläret kan inte sparas automatiskt.
-          autosaved_retrieved: Data för detta formulär har återställts från en tidigare session
-          autosaved_success: Data sparad i localStorage
-          categories: Kategorier
-          drag_and_drop_image: Lägg till bilder genom att dra och släppa eller klistra in dem.
-          hashtags: Hashtags
-          items: poster
-          meetings: Möten
-          proposals: Förslag
-          select_deselect_all: Markera/avmarkera alla
+  active_hashcash:
+    submit_filter: Filtrera
+    waiting_label: Väntar på verifiering ...
