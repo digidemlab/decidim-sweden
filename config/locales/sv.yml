@@ -329,3 +329,700 @@ sv:
         session_token: Identifierare för användare
         unregistered: Ej registrerad
         user_status: Användarstatus
+
+  # decidim-awesome, AI-translated (Qwen3-235B, reasoning)
+  active_hashcash:
+    submit_filter: Filtrera
+    waiting_label: Väntar på verifiering ...
+  activemodel:
+    attributes:
+      config:
+        additional_proposal_sortings: Ytterligare sorteringsalternativ aktiverade
+        allow_images_in_editors: Tillåt bilder i HTML-redigeraren
+        allow_images_in_proposals: Tillåt bilder i förslagsredigeraren
+        allow_videos_in_editors: Tillåt videor i HTML-redigeraren
+        auto_save_forms: Spara formulär automatiskt i localStorage
+        force_authorization_after_login: Tvinga verifiering efter inloggning/registrering
+        force_authorization_help_text: Hjälptext för verifieringssidan
+        force_authorization_with_any_method: Tillåt åtkomst om någon av verifieringarna är beviljad (som standard krävs alla)
+        hashcash_login: Aktivera Hashcash bot-skydd för befintliga användare (inloggning)
+        hashcash_login_bits: Antal bitar för Hashcash-algoritmen (inloggning)
+        hashcash_signup: Aktivera Hashcash bot-skydd för nya användare (registrering)
+        hashcash_signup_bits: Antal bitar för Hashcash-algoritmen (registrering)
+        intergram_auto_no_response: Ett meddelande som skickas en minut efter att användaren skickat sitt första meddelande utan att ha fått svar
+        intergram_auto_response: Ett meddelande som skickas direkt efter att användaren skickat sitt första meddelande
+        intergram_chat_id: Chatt-ID
+        intergram_color: Färg på widgeten
+        intergram_for_admins: Aktivera Intergram Chatt i admin-gränssnittet
+        intergram_intro_message: Första meddelandet när användaren öppnar chatten första gången
+        intergram_require_login: Endast för inloggade användare
+        intergram_title_closed: Titel för stängd chatt
+        intergram_title_open: Titel för öppen chatt
+        intergram_use_floating_button: Om markerat, visas stängd chatt alltid som en knapp istället för text
+        proposal_custom_fields: Anpassade fält %{id}
+        proposal_private_custom_fields: Privata anpassade fält %{id}
+        scoped_admin_styles: Anpassade stilar %{id}
+        scoped_admins: Scoped admins-grupp %{id}
+        scoped_styles: Anpassade stilar %{id}
+        user_timezone: Tillåt användare att ange sin tidszon i profilen
+        validate_body_max_caps_percent: Maximalt tillåtet procentuell andel versaler i brödtexten
+        validate_body_max_marks_together: Maximalt antal upprepade skiljetecken tillåtna i brödtexten
+        validate_body_min_length: Minsta antal tecken krävs för brödtexten
+        validate_body_start_with_caps: Tvinga brödtexten att börja med versal
+        validate_title_max_caps_percent: Maximalt tillåtet procentuell andel versaler i titeln
+        validate_title_max_marks_together: Maximalt antal upprepade skiljetecken tillåtna i titeln
+        validate_title_min_length: Minsta antal tecken krävs för titeln
+        validate_title_start_with_caps: Tvinga titeln att börja med versal
+      constraint:
+        component_id: eller specifikt i
+        component_manifest: Endast i komponenter av typ
+        participatory_space_manifest: Gäller för deltagarutrymmen av typ
+        participatory_space_slug: Endast i
+      custom_redirect:
+        active: Aktiv
+        destination: Destination
+        origin: Ursprung
+        pass_query: Skicka frågesträng till destinationen
+        status: Status
+      menu:
+        position: Position
+        raw_label: Etikett
+        target: Öppnas i
+        url: URL
+        visibility: Synlighet
+      organization:
+        awesome_admins_available_authorizations: Tillåt administratörer att manuellt verifiera användare med dessa auktorisationer
+      user:
+        user_time_zone: Personlig tidszon
+  decidim:
+    admin:
+      actions:
+        manage: Hantera
+      filters:
+        admin_accountability:
+          admin_role_type:
+            label: Rolltyp
+          participatory_space_type_eq:
+            label: Deltagarutrymmes typ
+          role:
+            label: Roll
+          role_type_eq:
+            label: Rolltyp
+        label:
+          search_field_end_date: 'Till datum:'
+          search_field_start_date: 'Från datum:'
+        search_placeholder:
+          user_name_or_user_email_cont: Sök efter användarnamn, e-post
+      menu:
+        admin_accountability: Administratörsansvar
+        decidim_awesome: Decidim awesome
+    components:
+      awesome_iframe:
+        name: Fullskärms-Iframe
+        settings:
+          global:
+            announcement: Meddelande
+            iframe: Iframe-kod
+            iframe_help: 'Ange din kod som html: <iframe width="100%" height="700" frameBorder="0" allowFullscreen src="..."></iframe>. Innehållet kommer att saneras från andra HTML-taggar. Se till att använda 100% som bredd för att fylla skärmen.'
+            viewport_width: Begränsa maximal bredd till applikationens viewport
+          step:
+            announcement: Meddelande
+            iframe: Iframe-kod
+      awesome_map:
+        name: Awesome-karta
+        settings:
+          global:
+            announcement: Meddelande
+            collapse: Börja med komprimerad meny
+            map_center: Kartcentrum (Latitud, Longitud)
+            map_center_help: 'Använd decimalpunkter (t.ex.: 41.38879, 2.15899). Lämna tomt för att automatiskt anpassa alla markörer'
+            map_height: Korthöjd (px)
+            map_zoom: Zoom (valfritt nummer mellan 0 och 18)
+            map_zoom_help: Gäller endast om ett kartcentrum är definierat
+            menu_amendments: Visa ändringsförslag
+            menu_categories: Visa kategorisökningsmeny
+            menu_hashtags: Visa hashtagsökningsmeny
+            menu_meetings: Visa möten
+            menu_merge_components: Slå samman alla komponenter av samma typ i menyn
+            truncate: Maximalt antal tecken för popup-beskrivningar
+          step:
+            announcement: Meddelande
+            show_accepted: Visa accepterade förslag
+            show_evaluating: Visa utvärderade förslag
+            show_not_answered: Visa obesvarade förslag
+            show_rejected: Visa avvisade förslag
+            show_withdrawn: Visa återdragna förslag
+      proposals:
+        settings:
+          global:
+            awesome_voting_manifest: Stödtyp
+            awesome_voting_manifest_help_html: <span class="text-alert">Observera att att ändra denna inställning mitt under en röstningsperiod kan leda till felaktiga eller oväntade resultat.</span><br>Observera också att denna inställning endast kan ändras om komponenten inte har några stöd än.
+            awesome_voting_manifest_options:
+              default: Enkel röstning (standard)
+              voting_cards: Röstning med färgkort
+            default_sort_order_options:
+              az: A-Ö (Alfabetisk)
+              supported_first: Stödda först
+              supported_last: Stödda sist
+              za: Ö-A (Omvänd alfabetisk)
+            limit_pending_amendments: Tillåt endast ett väntande ändringsförslag per förslag.
+            sort_orders_enabled: Aktiverade sorteringsmetoder
+            voting_cards_box_title: Titel för röstningsrutan
+            voting_cards_box_title_help: Standard är "Rösta på detta förslag". Använd "-" för att dölja den.
+            voting_cards_instructions: Stödhjälp/instruktioner (stängbart modal fönster)
+            voting_cards_instructions_help: Standard är "Läs noga igenom valreglerna för att förstå hur din röst kommer att användas av %{organization}"
+            voting_cards_show_abstain: Lägg till alternativet att avstå
+            voting_cards_show_modal_help: Visa hjälp/instruktionsfönster när stöd klickas
+          step:
+            default_sort_order_options:
+              az: A-Ö (Alfabetisk)
+              supported_first: Stödda först
+              supported_last: Stödda sist
+              za: Ö-A (Omvänd alfabetisk)
+    decidim_awesome:
+      account:
+        timezone_select:
+          time_zone_helper: Använd din personliga tidszon för att visa datum i din lokala tid när du är inloggad.
+      admin:
+        actions: Åtgärder
+        admin_accountability:
+          admin_roles:
+            admin: Superadmin
+            user_manager: Användarhanterare
+          created_at: Roll skapad den
+          currently_active: För närvarande aktiv
+          deleted_user: Borttagen användare
+          email: E-post
+          exports:
+            button: Exportera denna sökning
+            export_as: Exportera som %{export_format}
+            export_format:
+              csv: CSV
+              json: JSON
+              xlsx: XLSX
+            notice: Exportjobbet har köats. Du kommer att få ett e-postmeddelande när det är klart.
+          index:
+            description: Här listas alla användare som har haft någon roll i administrationen av ett deltagarutrymme. Normala administratörer listas inte.
+            global_description: Här listas alla användare som har haft någon global roll i administrationen av denna organisation. Deltagarutrymmesadministratörer listas inte.
+            missing_users: 'OBS: Denna lista kan sakna användare som skapats/borttagna före %{date}. Detta beror på att "användarspårning" infördes i Decidim v0.24 och denna installation är troligen äldre.'
+            see_global: Lista globala administratörer
+            see_spaces: Lista deltagarutrymmesadministratörer
+            title: Administratörsansvar
+          last_login: Senaste inloggning
+          missing_info: "(saknad information)"
+          missing_user: Användare ej i databasen
+          name: Namn
+          never_logged: Aldrig inloggad
+          participatory_space: Deltagarutrymme
+          removal_date: Roll borttagen den
+          role: Roll
+          roles:
+            admin: Administratör
+            collaborator: Samarbetare
+            moderator: Moderator
+            valuator: Värderare
+        admin_authorizations:
+          authorization:
+            confirm_destroy: Är du säker på att du vill ta bort denna auktorisation? Detta kan påverka användarens åtkomst till plattformen.
+            destroy: Ta bort
+            granted_at: Beviljad den %{date}
+            metadata: Innehåller metadata? %{metadata}
+          authorization_destroyed: Auktorisationen togs bort.
+          authorization_not_destroyed: Auktorisationen kunde inte tas bort!
+          authorization_transferred: 'Varning: Det fanns en konflikt med en befintlig auktorisation och verifieringen har överförts till %{user}'
+          conflict: Det finns en konflikt med en befintlig auktorisation
+          conflict_help_html: "Du måste lösa konflikten med användaren %{user} innan du kan auktorisera användaren med denna auktorisation.\n<br><br>\nEn verifieringskonflikt uppstår när en annan användare har samma data som användaren du försöker auktorisera. \nDu kan lösa denna konflikt genom att ta bort den konflikterande auktorisationen från den andra användaren eller använda annan data för denna användare.\n"
+          edit:
+            authorize: Auktorisera %{user} med %{name}
+            do_it_if_sure: Gör detta endast om du är säker på att användaren har denna auktorisation.
+            force_verification: Tvinga verifiering med aktuella data
+            force_verification_help: Verifiering misslyckades, men du kan tvinga den om du är säker på att användaren har denna auktorisation.
+            force_verification_reason: 'Ange en anledning till att tvinga verifieringen:'
+            warning: 'Varning: Genom att tvinga denna auktorisation åsidosätter du användarens nuvarande auktorisationsstatus.'
+          user_authorized: "%{user} auktoriserades framgångsrikt med %{name}"
+          user_not_authorized: "%{user} kunde inte auktoriseras med %{name}"
+        checks:
+          index:
+            admin_head_tags: Awesome-taggar inkluderade i admin-applikationens header
+            decidim-admin: Från Admin-modul
+            decidim-core: Från Core-modul
+            decidim-proposals: Från Förslagsmodul
+            decidim_version: Decidim version %{version}
+            errors:
+              CSS: Head innehåller inte de krävda <link> stylesheet-posterna. För att lösa det kan du manuellt lägga till den i din anpassade _head.html.erb
+              JavaScript: Head innehåller inte de krävda <script> Javascript-posterna. För att lösa det kan du manuellt lägga till den i din anpassade admin/_header.html.erb
+            head_tags: Awesome-taggar inkluderade i applikationens header
+            image_migrations_started: Bildmigreringsprocessen har startats
+            images_migrated: Bilder migrerade till ActiveStorage
+            pending_image_migrations: |
+              Sedan version 0.25 använder Decidim en ny teknik för att ladda upp filer.<br>
+              Det verkar som att denna installation behöver migrera <strong>%{total}</strong> gamla bilder till det nya systemet.<br>
+              Du kan starta processen nu och den kommer att köras i bakgrunden.
+            start_image_migrations: "👉 Starta migreringsprocessen nu"
+        config:
+          caution: 'OBS: Denna funktion ändrar flera standardbeteenden som kan leda till oväntade resultat. Använd med försiktighet!'
+          constraints:
+            add_condition: Lägg till fall
+            always: Alltid
+            cannot_be_destroyed: Tyvärr kan detta inte tas bort. Denna konfiguration kräver minst en begränsning.
+            delete: Ta bort
+            edit: Redigera
+            title: 'Gäller endast i dessa fall:'
+          create_proposal_custom_field:
+            error: Fel vid skapande av ny "anpassad fält"-ruta! %{error}
+            success: '"Anpassad fält"-ruta %{key} skapades'
+          create_scoped_admin:
+            error: Fel vid skapande av ny administratörsgrupp! %{error}
+            success: Administratörsgrupp %{key} skapades
+          create_scoped_style:
+            error: Fel vid skapande av ny CSS-ruta! %{error}
+            success: CSS-ruta %{key} skapades
+          destroy_proposal_custom_field:
+            error: Fel vid borttagning av "anpassad fält"-ruta! %{error}
+            success: '"Anpassad fält"-ruta %{key} togs bort'
+          destroy_scoped_admin:
+            error: Fel vid borttagning av administratörsgrupp! %{error}
+            success: Administratörsgrupp %{key} togs bort
+          destroy_scoped_style:
+            error: Fel vid borttagning av CSS-ruta! %{error}
+            success: CSS-ruta %{key} togs bort
+          form:
+            additional_proposal_sortings:
+              enable_all: Aktivera alla ytterligare sorteringsalternativ
+              help: Dessa sorteringsalternativ är ytterligare till de standardalternativen. Kom ihåg att du kan välja standardordning i förslagskomponentens inställningar.
+              title: Anpassa sorteringsalternativ för förslagslistan
+            edit_label: Byt namn på etikett
+            errors:
+              incorrect_css: 'Ogiltig CSS i ruta #%{key}'
+              incorrect_json: 'Ogiltig JSON-definition i ruta #%{key}'
+            help:
+              allow_images_in_editors: Detta lägger till en bilduppladdningsikon i alla WYSIWYG-redigerare
+              allow_images_in_proposals: Detta tillåter uppladdning av bilder i förslagsredigeraren, tillgängligt för alla användare. Bilder kommer att visas som länkar i den publika förslagsvyn.
+              allow_videos_in_editors: Detta lägger till en videolänkikon i alla WYSIWYG-redigerare
+              auto_save_forms: Detta använder localStorage för att automatiskt spara data som användare anger i undersökningar och andra formulär medan de fyller i dem. Data kommer att återställas vid ett framtida besök med samma webbläsare om formuläret inte skickas. Om formuläret skickas kommer data att tas bort. Om användare tar bort sina localStorage-data kommer data inte att återställas.
+              drag_and_drop_supported: När bilder laddas upp stöds dra och släpp. Bilder kommer att laddas upp till servern och infogas som externa resurser (använder inte base64 inline-kodning).
+              force_authorization_after_login: 'Om aktiverat kommer användare att omdirigeras till auktorisationssidan efter inloggning eller registrering om någon av de angivna auktorisationerna inte är beviljad. Detta är användbart om du vill tvinga användare att vara verifierade med en specifik auktorisation innan de kan logga in alls (t.ex. för att förhindra spam).'
+              force_authorization_help_text: Lägg till en anpassad text för att förklara varför auktorisation krävs. Se också till att lägga till en kontaktmetod om användare behöver hjälp.
+              hashcash_i18n_key: 'Du kan anpassa den text som visas för användare i inloggnings/registreringsknapparna med i18n-nyckeln: %{key}'
+              hashcash_login: |
+                Skydda Rails-applikationer mot botar och brute force-attacker utan att irritera människor.
+                Hashcash är ett bevis-av-arbete-system som kräver att användare löser ett beräkningsproblem (utförs automatiskt av webbläsaren) innan de kan registrera sig.
+              hashcash_login_bits: Denna parameter definierar antalet bitar som Hashcash-algoritmen kommer att använda för att generera bevis-av-arbete. Det rekommenderas att använda ett värde mellan 16 (lätt) och 30 (extremt svårt) bitar. Standardvärdet för inloggningsformulär är %{bits} bitar.
+              hashcash_signup: |
+                Skydda Rails-applikationer mot botar och brute force-attacker utan att irritera människor.
+                Hashcash är ett bevis-av-arbete-system som kräver att användare löser ett beräkningsproblem (utförs automatiskt av webbläsaren) innan de kan registrera sig.
+              hashcash_signup_bits: Denna parameter definierar antalet bitar som Hashcash-algoritmen kommer att använda för att generera bevis-av-arbete. Det rekommenderas att använda ett värde mellan 16 (lätt) och 30 (extremt svårt) bitar. Standardvärdet för registreringsformulär är %{bits} bitar.
+              intergram_about: Intergram använder Telegram-messenger för att hantera en live-support chatt-widget inbäddad längst ner på sidan.
+              intergram_config: Bjud in <a href="https://web.telegram.org/#/im?p=@IntergramBot">@Intergram bot</a> till din grupp eller starta en chatt med den direkt. <a href="https://github.com/idoco/intergram#embed-intergram-in-your-website-with-these-2-simple-steps">+ info</a>
+              original_editor_override: Sedan version 0.26 är det möjligt (endast för administratörer) att ladda upp bilder i redigerarna. Därför påverkar bildinställningarna här endast de publika redigerarna (administratörer kommer alltid att ha den tillgänglig).
+              proposal_custom_fields: Skapa anpassade förslagsfält som endast gäller i vissa delar av den publika webben (använd begränsningsredigeraren för detta)
+              proposal_custom_fields_example: Data lagras i ett XML-objekt med kompatibla HTML-attribut (dl,dt,dd-element) som ersätter "brödtexten" i ett normalt förslag.
+              proposal_custom_fields_translations: "Etiketter, hjälptext, platshållare och standardvärden kan använda dina anpassade applikationsöversättningar. \nFör detta, istället för att använda en strängliteral, använd i18n-nyckeln (den måste innehålla minst en punkt).\nTill exempel:\n- \"activemodel.attributes.proposal.title\" istället för \"Titel\"\n- \"activemodel.attributes.proposal.address\" istället för \"Adress\"\nEller använd dina egna nycklar i kombination med andra verktyg för att definiera översättningar (t.ex.: med modulen Term Customizer):\n- \"myapp.custom_fields.bio\" istället för \"Biografi\""
+              proposal_private_custom_fields: Liknande som publika fält, men denna information kommer inte att offentliggöras (endast administratörer kommer att ha åtkomst till den).
+              proposal_private_custom_fields_translations: |
+                Privata anpassade fält visas i en separat ruta med denna informationstext:
+                %{warning}
+                Denna text kan anpassas med en anpassad översättning genom att använda nyckeln:
+                %{key}
+              scoped_admin_styles: Var medveten om att att dölja saker här kan göra admin-gränssnittet obrukbart. Var försiktig.
+              scoped_admin_styles_variables: 'Du kan använda följande CSS-variabler för organisationens anpassade färg:'
+              scoped_admin_styles_warning: "<strong>Varning</strong>: Lägg här till anpassad CSS som endast gäller i denna admin."
+              scoped_admins: Befordra vanliga användare till administratörer som endast kan administrera vissa delar av den publika webben (använd begränsningsredigeraren för detta). Observera att användare som redan har vanliga administratörsbehörigheter kommer att ignoreras.
+              scoped_styles: Skapa anpassad CSS som endast gäller i vissa delar av den publika webben (använd begränsningsredigeraren för detta)
+              scoped_styles_variables: 'Du kan använda följande CSS-variabler för organisationens anpassade färger:'
+              user_timezone: Detta kommer att lägga till en rullgardinsmeny i användarens profil för att ställa in tidszonen. Detta kommer att användas för att visa datum och klockslag i användarens lokala tid.
+              validate_body_max_caps_percent: Noll tillåter inga versaler, 100 tvingar att skriva allt med versaler
+              validate_body_max_marks_together: 'Begränsa antalet frågetecken och utropstecken som kan skrivas ihop. T.ex.: om det är 2, tillåts inte ''!!!'' i texten'
+              validate_body_min_length: Detta nummer kan vara noll, vilket effektivt gör detta fält obligatoriskt
+              validate_title_max_caps_percent: Noll tillåter inga versaler, 100 tvingar att skriva allt med versaler
+              validate_title_max_marks_together: 'Begränsa antalet frågetecken och utropstecken som kan skrivas ihop. T.ex.: om det är 2, tillåts inte ''!!!'' i texten'
+              validate_title_min_length: Titel är alltid obligatorisk och detta nummer kan inte vara noll
+              verifications_html: |
+                Här kan du göra vissa justeringar av verifieringsprocessen.<br>
+                <b>OBS:</b> Var medveten om att att ändra dessa inställningar kan förhindra att vissa användare får åtkomst till plattformen. Använd med försiktighet!<br><br>
+                Observera också att dessa inställningar tillämpas på alla användare. Administratörer kommer alltid att ha åtkomst till admin-gränssnittet.
+            validators:
+              body: Användarinmatningsvalideringar för "brödtext"-fältet
+              title: Användarinmatningsvalideringar för "titel"-fältet
+          form_proposal_custom_fields:
+            delete: Ta bort
+            new: Lägg till en ny "anpassad fält"-ruta
+            remove: Ta bort denna "anpassad fält"-ruta
+            sure_to_remove: Är du säker på att du vill ta bort detta fält?
+          form_proposal_private_custom_fields:
+            delete: Ta bort
+            new: Lägg till en ny "privata anpassade fält"-ruta
+            remove: Ta bort denna "privata anpassade fält"-ruta
+            sure_to_remove: Är du säker på att du vill ta bort dessa privata fält?
+          form_scoped_admin_styles:
+            delete: Ta bort
+            new: Lägg till en ny CSS-ruta för "admin-panel"
+            remove: Ta bort denna CSS-ruta
+            sure_to_remove: Är du säker på att du vill ta bort denna CSS-ruta?
+          form_scoped_admins:
+            delete: Ta bort
+            new: Lägg till en ny "Scoped Admins"-grupp
+            remove: Ta bort denna "Scoped Admins"-grupp
+            sure_to_remove: Är du säker på att du vill ta bort denna "Scoped Admins"-grupp?
+          form_scoped_styles:
+            delete: Ta bort
+            new: Lägg till en ny CSS-ruta för "publikt gränssnitt"
+            remove: Ta bort denna CSS-ruta
+            sure_to_remove: Är du säker på att du vill ta bort denna CSS-ruta?
+          none: "⛔ Aldrig! - Avaktivera alla andra begränsningar"
+          process_groups: Processgrupper
+          show:
+            title: Justeringar för %{setting}
+            update: Uppdatera konfiguration
+          system: Överallt utom i deltagarutrymmen
+          title:
+            admins: Scoped Admins
+            editors: Redigerarhack
+            livechat: Livechatt
+            proposal_custom_fields: 'Förslags anpassade fält: Publika fält'
+            proposal_private_custom_fields: 'Förslags anpassade fält: Privata fält'
+            proposals: Förslagshack
+            scoped_admin_styles: 'Anpassade stilar: Admin-panel'
+            scoped_styles: 'Anpassade stilar: Publikt gränssnitt'
+            styles: Anpassade stilar
+            surveys: Enkäter & Formulär
+            verifications: Verifiering / Auktorisationshack
+          update:
+            error: Fel vid uppdatering av konfiguration! %{error}
+            success: Konfigurationen uppdaterades
+        constraints:
+          create:
+            error: Fel vid skapande av villkorsfall
+            success: Villkorsfall skapades
+          destroy:
+            error: Fel vid borttagning av villkorsfall
+            success: Villkorsfall togs bort
+          errors:
+            not_unique: Samma villkor finns redan
+          new:
+            cancel: Avbryt
+            constraint: Nytt villkorsfall
+            save: Spara
+          show:
+            cancel: Avbryt
+            constraint: Redigera villkorsfall
+            save: Spara
+          update:
+            error: Fel vid uppdatering av villkorsfall
+            success: Villkorsfall uppdaterades
+        custom_redirects:
+          create:
+            error: Fel vid skapande av omdirigering! %{error}
+            success: Omdirigering skapades
+          destroy:
+            error: Fel vid borttagning av omdirigering! %{error}
+            success: Omdirigering togs bort
+          edit:
+            save: Spara
+            title: Redigera omdirigering
+          form:
+            destination_help: Absoluta rutter (börjar med "/") eller externa URL:er (http://..)
+            origin_help: Endast absoluta rutter, börjar med "/"
+            pass_query_help: |
+              Aktivera detta alternativ om du vill att frågesträngen ska kopieras till destinationen.<br>
+              Till exempel, om /my-origin => /my-destination är konfigurerat, kommer en begäran till /my-origin?locale=ca att omdirigeras till "/my-destination?locale=ca".
+          index:
+            check_redirections: "✔ Kontrollera omdirigeringar"
+            confirm_destroy: Är du säker på att du vill ta bort denna omdirigering?
+            description: |
+              Du kan definiera vilken rutt som helst (som börjar med <code>/</code>) för att omdirigera besökare till en destinations-URL.<br>
+              Destinationen kan vara en absolut sökväg (t.ex.: <code>/processes/some-process</code>) eller börja med <code>https://</code> (t.ex.: <code>http://decidim.org</code>)<br><br>
+              Kom ihåg att en omdirigering endast fungerar om ingen annan rutt matchar. Det är inte möjligt att åsidosätta ursprungliga rutter (detta är avsiktligt).<br>
+              Om du är osäker, använd knappen för att kontrollera omdirigeringar för att testa för inkompatibiliteter.
+            edit: Redigera omdirigering
+            new: Ny omdirigering
+            remove: Ta bort omdirigering
+            title: Anpassade omdirigeringar
+          new:
+            save: Spara
+            title: Ny omdirigering
+          origin_exists: Samma ursprung är redan konfigurerat, redigera istället det
+          origin_missing: Detta ursprung hittades inte i listan
+          update:
+            error: Fel vid uppdatering av omdirigering! %{error}
+            success: Omdirigering uppdaterades
+        hashcash:
+          filters:
+            ip_addresses: Visa IP-adresser
+            stamps: Visa Hashcash-stämplar
+          index:
+            bits: Bitar
+            created_at: Skapad den
+            help_html: |
+              Denna sida visar Hashcash-stämplar som har upptäckts i systemet. Hashcash är ett bevis-av-arbete-system som kräver att användare löser ett beräkningsproblem (utförs automatiskt av webbläsaren) innan de kan registrera sig.
+              <br><br>
+              Varje post i denna lista representerar en Hashcash-stämpel som har genererats av en användare varje gång de har registrerat sig eller loggat in.
+            ip_address: IP-adress
+            no_data: Inga Hashcash-stämplar hittades
+            request_path: Begär sökväg
+          ip_addresses:
+            help_html: Denna sida listar alla IP-adresser som har upptäckts i systemet sorterade efter antalet Hashcash-stämplar de har genererat.
+              <br><br> Varje stämpel är antingen en inloggning eller en registrering av en användare.
+              Du kan använda denna information för att upptäcka misstänksam aktivitet.
+            ip_address: IP-adress
+            no_data: Inga IP-adresser hittades
+            stamps: Hashcash-stämplar
+        menu:
+          admins: Scoped Admins
+          custom_redirects: Anpassade omdirigeringar
+          editors: Redigerarhack
+          livechat: Livechatt
+          maintenance:
+            checks: Systemkompatibilitet
+            hashcash: Hashcash-stämplar
+            maintenance: Underhåll
+            private_data: Privat data
+          menu_hacks: Menyjusteringar
+          proposal_custom_fields: Förslags anpassade fält
+          proposals: Förslagshack
+          styles: Anpassade stilar
+          surveys: Enkäter & Formulär
+          verifications: Verifiering
+        menu_hacks:
+          create:
+            error: Fel vid skapande av menypost! %{error}
+            success: Menypost skapades
+          destroy:
+            error: Fel vid borttagning av menypost! %{error}
+            success: Menypost togs bort
+          edit:
+            save: Spara
+            title: Redigera menypost
+          form:
+            label_help: Översättningar upptäcks inte automatiskt, se till att fylla i alla fält!
+            target:
+              blank: Nytt fönster
+              self: Samma fönster
+            visibility:
+              default: Synlig
+              hidden: Alltid dold
+              logged: Endast synlig för inloggade användare
+              non_logged: Endast synlig för icke-inloggade användare
+              verified_user: Endast synlig för användare med giltig auktorisation
+          index:
+            confirm_destroy: Är du säker på att du vill ta bort denna anpassning?
+            edit: Redigera
+            home_content_block_menu:
+              title: Global meny hemblock
+            menu:
+              title: Huvudmeny
+            mobile_menu:
+              title: Mobilmeny
+            new: Ny post
+            remove: Ta bort tillägg
+            remove_hack: Ta bort anpassning
+          new:
+            save: Spara
+            title: Ny menypost
+          update:
+            error: Fel vid uppdatering av menypost! %{error}
+            success: Menypost uppdaterades
+          url_exists: Samma URL är redan konfigurerad, redigera istället den
+        officializations:
+          authorizations: Auktorisationer
+          verification_modal:
+            authorizations_for: Auktorisationer för %{user}
+            close: Stäng
+        private_data:
+          private_data:
+            component: Uttrymme / Komponent
+            confirm_delete: Är du säker på att du vill ta bort all privat data för denna resurs? Detta kan inte ångras.
+            delete: Ta bort allt
+            destroying: Privat data för %{title} är inställd att tas bort. Kontrollera igen om några minuter.
+            done: Klart
+            help_html: |
+              Detta verktyg låter dig ta bort all privat data för ett specifikt deltagaruttrymme eller komponent. Denna åtgärd är oåterkallelig och kommer att ta bort all privat data från databasen.
+              <br><br>
+              <strong>Vad anses vara privat data?</strong>
+              <br>
+              Privat data är all information som inte är allmänt tillgänglig och endast är tillgänglig för administratörer. Detta inkluderar för närvarande information om privata anpassade fält.
+              <br><br>
+              <strong>Vad händer när jag tar bort privat data?</strong>
+              <br>
+              När du tar bort privat data kommer all privat information för det valda deltagaruttrymmet eller komponenten permanent att tas bort från databasen. En logg av denna åtgärd kommer att lagras i systemet för granskningsändamål.
+              <br><br>
+              <strong>Vad händer med publika data?</strong>
+              <br>
+              Publika data kommer inte att påverkas av denna åtgärd. Endast privat data kommer att tas bort.
+              <br><br>
+              <strong>Finns det en minimi tid att vänta innan privat data kan tas bort?</strong>
+              <br>
+              Ja, du kan inte ta bort privat data om den senaste uppdateringen var mindre än %{time_ago} sedan. Du kan ändra denna konfiguration i initializer-filen.
+            items_count: Totalt antal berörda
+            last_date: Senaste uppdatering
+            no_data: Inga privata data hittades äldre än %{time_ago} sedan
+            not_destroyable: Denna resurs kan inte tas bort ännu
+            removing: Tar bort...
+            time_ago: "%{time} sedan"
+        proposal_custom_fields:
+          menu:
+            title: Publika fält
+          private_body: Privat brödtext
+          private_data_last_remove: Dessa data togs bort %{time_ago} sedan.
+          private_data_last_update: Dessa data uppdaterades senast %{time_ago} sedan.
+          proposal_private_custom_fields: Privata fält
+          remove_private_data: "👉 Du kanske vill ta bort den"
+        scoped_admin_styles:
+          menu:
+            title: Admin-panel
+        scoped_styles:
+          menu:
+            title: Publikt gränssnitt
+      admin_log:
+        component:
+          destroy_private_data: "%{user_name} tog bort %{count} poster av privat data för %{resource_name} i %{space_name}"
+        user:
+          admin_creates_authorization: "%{user_name} verifierade %{resource_name} med %{handler_name}"
+          admin_destroys_authorization: "%{user_name} tog bort verifieringen %{handler_name} på %{resource_name}"
+          admin_forces_authorization: "%{user_name} tvingade verifieringen %{handler_name} på %{resource_name}. Anledning: %{reason}"
+      amendments:
+        modal:
+          amendment_exists: Ett ändringsförslag finns redan
+          current_amendment_html: <p>Du kan <a href="%{amendment_link}">komma åt det aktuella ändringsförslaget här</a>.</p>
+          dismiss: Ok, förstått
+          explanation_html: |
+            <p>För närvarande finns det ett annat ändringsförslag som utvärderas för detta förslag. För att skapa ett nytt måste du vänta tills det aktuella antingen accepteras eller avvisas.</p>
+            <p>Du kan också nå författaren av detta förslag genom att <a href="%{proposal_link}">lämna en kommentar</a> och försöka påskynda lösningen av det aktuella ändringsförslaget.</p>
+        pending_limit_reached: Tyvärr kan det endast finnas ett väntande ändringsförslag åt gången. Vänta tills "%{emendation}" accepteras eller avvisas.
+      config:
+        intergram:
+          auto_no_response: Det verkar som att ingen är tillgänglig att svara just nu. Berätta hur vi kan kontakta dig, så återkommer vi så snart vi kan.
+          auto_response: Letar efter den första tillgängliga administratören (kan ta en minut)
+          intro_message: Hej! Hur kan vi hjälpa dig?
+          title_closed: Klicka för att chatta!
+          title_open: Låt oss chatta!
+      content_blocks:
+        map:
+          collapse: Börja med komprimerad meny
+          map_center: Kartcentrum (Latitud, Longitud)
+          map_center_help: 'Använd decimalpunkter (t.ex.: 41.38879, 2.15899). Lämna tomt för att automatiskt anpassa alla markörer'
+          map_height: Korthöjd (px)
+          map_settings: Kartinställningar
+          map_zoom: Zoom (valfritt nummer mellan 0 och 18)
+          map_zoom_help: Gäller endast om ett kartcentrum är definierat
+          menu_amendments: Visa ändringsförslag
+          menu_meetings: Visa möten
+          menu_merge_components: Slå samman alla komponenter av samma typ i menyn
+          name: Awesome-karta
+          show_accepted: Visa accepterade förslag
+          show_evaluating: Visa utvärderade förslag
+          show_not_answered: Visa obesvarade förslag
+          show_rejected: Visa avvisade förslag
+          show_withdrawn: Visa återdragna förslag
+          text_settings: Textinställningar
+          title: Titel
+          truncate: Maximalt antal tecken för popup-beskrivningar
+      credits: Decidim Awesome %{version} · Underhålls med ♥ av %{company}
+      custom_fields:
+        errors:
+          invalid_fields: Innehållet kunde inte parsas men har tilldelats fältet '%{field}'
+          invalid_xml: 'Innehållet kunde inte parsas: DL/DD-element hittades inte i XML'
+      editor_images:
+        create:
+          error: Fel vid uppladdning av bild!
+          success: Bilden laddades upp
+      map_component:
+        map:
+          api_not_ready: |
+            <b>Varning:</b> Denna Decidim-installation har API konfigurerat för maximal komplexitet på <b>%{current_complexity}</b>.
+            Denna komponent kommer troligen inte att fungera under denna konfiguration. Vi rekommenderar att du ställer in i en initializer
+            (t.ex. i slutet av <code>config/initializers/decidim.rb</code>) följande rader:<br>
+            <br>
+            <pre># Api configuration
+            Rails.application.config.to_prepare do
+              Decidim::Api::Schema.max_complexity = 5000
+              Decidim::Api::Schema.max_depth = 50
+            end</pre>
+          error:
+            unavailable: Kartan är inte tillgänglig. Konfigurera geokodning för att aktivera denna komponent.
+          show:
+            view_meeting: Visa möte
+            view_proposal: Visa förslag
+      proposal_private_custom_fields_disclosure: Denna information kommer inte att publiceras
+      required_authorizations:
+        index:
+          cancel: Jag gör detta en annan gång, %{link}.
+          granted_title: Beviljade verifieringar
+          logout: låt mig logga ut
+          missing_title: Inte verifierad ännu
+          resume_title: Pågående verifieringar
+          resume_with_method: Återuppta verifiering med %{name}
+          title: Verifiera din identitet
+          verify_with_all_these_options: 'Verifiera dig med alla dessa metoder innan du kan komma åt plattformen:'
+          verify_with_any_of_these_options: 'Verifiera dig med minst en av dessa alternativ innan du kan komma åt plattformen:'
+          verify_with_method: Verifiera med %{name}
+      session:
+        authorization_is_required: För att delta i denna plattform måste du auktorisera ditt konto med en giltig auktorisation (%{authorizations}).
+      system:
+        organizations:
+          admin_allowed_authoritzations_help_html: |
+            Administratörer kommer att kunna manuellt verifiera användare med dessa auktorisationer.
+            <br>Använd denna funktion med försiktighet, eftersom den kan leda till säkerhetsproblem.
+          awesome_tweaks: Decidim Awesome Justeringar
+      validators:
+        too_much_caps: Använder för många versaler (över %{percent}% av texten)
+      voting:
+        voting_cards:
+          abstained: "✔ Avstod"
+          change_vote: Ändra min röst
+          default_box_title: Rösta på detta förslag
+          default_instructions_html: "<p>Läs noga igenom valreglerna för att förstå hur din röst kommer att användas av %{organization}</p>"
+          modal:
+            cancel: Avbryt
+            message: Din röst kommer att betraktas som slutgiltig den %{date}. Du kan ändra den fram till dess
+            proceed: Fortsätt
+            skip: Markera här för att hoppa över detta fönster i framtiden
+          vote_button: Klicka för att rösta
+          voted: Röstat
+          voting_for: Min röst på "%{proposal}" är "%{type}"
+          weights:
+            weight_0: Avstå
+            weight_0_short: 'A:'
+            weight_1: Röd
+            weight_1_short: 'R:'
+            weight_2: Gul
+            weight_2_short: 'G:'
+            weight_3: Grön
+            weight_3_short: 'G:'
+    meetings:
+      meetings_map:
+        view_meeting: Visa möte
+    proposals:
+      admin:
+        exports:
+          awesome_private_proposals: Förslag med privat data
+      proposals:
+        orders:
+          az: A-Ö (Alfabetisk)
+          supported_first: Stödda först
+          supported_last: Stödda sist
+          za: Ö-A (Omvänd alfabetisk)
+        proposal:
+          view_proposal: Visa förslag
+  layouts:
+    decidim:
+      decidim_awesome:
+        admin:
+          maintenance:
+            title: 'Underhållsverktyg: %{title}'
+            titles:
+              checks: Systemkompatibilitetskontroller
+              hashcash: Hashcash-stämplar
+              private_data: Rengöring av privat data
+        awesome_config:
+          amendments: Ändringsförslag
+          autosaved_error: localStorage stöds inte i din webbläsare, formuläret kan inte sparas automatiskt.
+          autosaved_retrieved: Data för detta formulär har återställts från en tidigare session
+          autosaved_success: Data sparad i localStorage
+          categories: Kategorier
+          drag_and_drop_image: Lägg till bilder genom att dra och släppa eller klistra in dem.
+          hashtags: Hashtags
+          items: poster
+          meetings: Möten
+          proposals: Förslag
+          select_deselect_all: Markera/avmarkera alla

@@ -11,17 +11,16 @@ gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 
 gem "decidim-goteborg_login", git: "git@github.com:/digidemlab/decidim-module-goteborg_login.git", branch: "main"
+gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "master"
+gem "decidim-term_customizer", git: "https://github.com/digidemlab/decidim-module-term_customizer.git", branch: "master"
+gem "decidim-decidim_awesome", "0.12.3"
 
 ### Awaiting upgrade to version 0.28 ###
 
 # NOTE(d1): https://github.com/decidim-ice/decidim-module-decidim_awesome/issues/324
-# gem "decidim-decidim_awesome", "0.11.1"
 
 # NOTE(pj): needs some improvements
 #gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.28-beta"
-
-# NOTE(d1): https://github.com/digidemlab/decidim-module-budgets_paper_ballots/issues/10
-# gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "release/0.26-stable"
 
 
 ### Additional Decidim Modules ###
@@ -31,8 +30,7 @@ gem "decidim-goteborg_login", git: "git@github.com:/digidemlab/decidim-module-go
 
 # gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
 
-gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", ref: "2eaef1f"
-# branch: "goteborg-0.29"
+gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "goteborg-0.29"
 
 # gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: "main"
 
