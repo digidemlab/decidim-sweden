@@ -161,10 +161,11 @@ sv:
       created_by:
         public: Medborgare
         city_council: Staden
-      description:
-        creation_date: Startdatum
-        included_at: Publicerad
-        meta_scope: Frågeställning
+      assemblies:
+        description:
+          creation_date: Startdatum
+          included_at: Publicerad
+          meta_scope: Frågeställning
     participatory_processes:
       pages:
         home:
