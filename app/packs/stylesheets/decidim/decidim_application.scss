@@ -324,6 +324,10 @@ footer {
 }
 
 // Hide stuff
+.filter-container #trigger-menu-scope,
+.filter-container #panel-dropdown-menu-scope,
+.filter-container #trigger-menu-area,
+.filter-container #panel-dropdown-menu-area,
 .participatory-space__block-reference.alert,
 .meeting__calendar-container + .layout-author,
 .meeting__registration-modal .form__wrapper-checkbox-label,
@@ -348,6 +352,16 @@ footer {
 #html-block-html {
   @apply pb-4;
 }
+
+
+/**
+  Process overview pages
+*/
+
+.layout-2col__aside h1.title-decorator {
+  font-size: 1.625rem;
+}
+
 
 /**
   Meetings

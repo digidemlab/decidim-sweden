@@ -7,7 +7,7 @@
 <% end %>
 
 <% if description_text.present? %>
-  <% should_truncate = strip_tags(description_text).length > 2000 %>
+  <% should_truncate = strip_tags(description_text).length > 5000 %>
   <div class="content-block__description editor-content" <%= "data-component='accordion'" if should_truncate %>>
     <% if should_truncate %>
       <% seed = SecureRandom.hex(4) %>
