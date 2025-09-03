@@ -442,6 +442,38 @@ a .text-secondary {
   }
 }
 
+.button__graded-voting::before {
+  content: "✓";
+}
+
+.button__graded-voting {
+  margin-top: 15px;
+  justify-content: start;
+}
+
+.card__list-metadata {
+  --voting-cards-weight-1: #891A1C;
+  --voting-cards-weight-2: #866F09;
+  --voting-cards-weight-3: #222222;
+  --voting-cards-weight-4: #238075;
+  --voting-cards-weight-5: #064D05;
+  /* css for weight 1-3 is also defined by decidim-awesome */
+  .voting-weight_1 {
+    color: var(--voting-cards-weight-1);
+  }
+  .voting-weight_2 {
+    color: var(--voting-cards-weight-2);
+  }
+  .voting-weight_3 {
+    color: var(--voting-cards-weight-3);
+  }
+  .voting-weight_4 {
+    color: var(--voting-cards-weight-4);
+  }
+  .voting-weight_5 {
+    color: var(--voting-cards-weight-5);
+  }
+}
 
 /**
   WCAG Contrasts
