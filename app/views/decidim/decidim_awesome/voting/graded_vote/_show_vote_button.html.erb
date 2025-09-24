@@ -44,25 +44,11 @@
             <% elsif current_settings.votes_blocked? || !current_component.participatory_space.can_participate?(current_user) %>
               <%= content_tag :button, t("decidim.proposals.proposals.vote_button.votes_blocked"), class: button_classes, disabled: true %>
             <% else %>
-              <%= action_authorized_button_to :vote, proposal_proposal_vote_path(proposal_id: proposal, from_proposals_list:, weight: 1), resource: proposal, remote: true, data: { disable: true, "redirect-url": proposal_path(proposal) }, class: button_classes do %>
-                <%= t("decidim.proposals.proposals.vote_button.weight_1") %>
-                <span class="sr-only"><%= decidim_html_escape(present(proposal).title) %></span>
-              <% end %>
-              <%= action_authorized_button_to :vote, proposal_proposal_vote_path(proposal_id: proposal, from_proposals_list:, weight: 2), resource: proposal, remote: true, data: { disable: true, "redirect-url": proposal_path(proposal) }, class: button_classes do %>
-                <%= t("decidim.proposals.proposals.vote_button.weight_2") %>
-                <span class="sr-only"><%= decidim_html_escape(present(proposal).title) %></span>
-              <% end %>
-              <%= action_authorized_button_to :vote, proposal_proposal_vote_path(proposal_id: proposal, from_proposals_list:, weight: 3), resource: proposal, remote: true, data: { disable: true, "redirect-url": proposal_path(proposal) }, class: button_classes do %>
-                <%= t("decidim.proposals.proposals.vote_button.weight_3") %>
-                <span class="sr-only"><%= decidim_html_escape(present(proposal).title) %></span>
-              <% end %>
-              <%= action_authorized_button_to :vote, proposal_proposal_vote_path(proposal_id: proposal, from_proposals_list:, weight: 4), resource: proposal, remote: true, data: { disable: true, "redirect-url": proposal_path(proposal) }, class: button_classes do %>
-                <%= t("decidim.proposals.proposals.vote_button.weight_4") %>
-                <span class="sr-only"><%= decidim_html_escape(present(proposal).title) %></span>
-              <% end %>
-              <%= action_authorized_button_to :vote, proposal_proposal_vote_path(proposal_id: proposal, from_proposals_list:, weight: 5), resource: proposal, remote: true, data: { disable: true, "redirect-url": proposal_path(proposal) }, class: button_classes do %>
-                <%= t("decidim.proposals.proposals.vote_button.weight_5") %>
-                <span class="sr-only"><%= decidim_html_escape(present(proposal).title) %></span>
+              <% (1..5).each do |weight| %>
+                <%= action_authorized_button_to :vote, proposal_proposal_vote_path(proposal_id: proposal, from_proposals_list:, weight: weight), resource: proposal, remote: true, data: { disable: true, "redirect-url": proposal_path(proposal) }, class: button_classes do %>
+                  <%= t("decidim.proposals.proposals.vote_button.weight_#{weight}") %>
+                  <span class="sr-only"><%= decidim_html_escape(present(proposal).title) %></span>
+                <% end %>
               <% end %>
             <% end %>
           <% end %>
