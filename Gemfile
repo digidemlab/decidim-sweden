@@ -4,15 +4,15 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", ref: "64da356" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "v0.29.3" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 
-gem "decidim-goteborg_login", git: "git@github.com:/digidemlab/decidim-module-goteborg_login.git", branch: "main"
+gem "decidim-goteborg_login", path: "./decidim-module-goteborg_login"
 gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "master"
-gem "decidim-term_customizer", git: "https://github.com/digidemlab/decidim-module-term_customizer.git", branch: "master"
+#gem "decidim-term_customizer", git: "https://github.com/digidemlab/decidim-module-term_customizer.git", branch: "master"
 gem "decidim-decidim_awesome", "0.12.3"
 
 ### Awaiting upgrade to version 0.28 ###

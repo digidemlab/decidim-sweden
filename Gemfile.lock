@@ -1,18 +1,7 @@
 GIT
-  remote: git@github.com:/digidemlab/decidim-module-goteborg_login.git
-  revision: 34e697f1b1712a886122a1b54b358a49d43b615a
-  branch: main
-  specs:
-    decidim-goteborg_login (0.29.3)
-      decidim-core (= 0.29.3)
-      omniauth-saml (~> 2.1)
-      personnummer (~> 0.1.0)
-      ruby-saml (~> 1.17)
-
-GIT
   remote: https://github.com/decidim/decidim
-  revision: 64da35661edcc073d9eb503ccbdecea6df84dfc5
-  ref: 64da356
+  revision: 8f4f1c213c3e141b1d33f41ce2ee9e1f95f0048b
+  tag: v0.29.3
   specs:
     decidim (0.29.3)
       decidim-accountability (= 0.29.3)
@@ -212,14 +201,14 @@ GIT
     decidim-socio_demographic_authorization_handler (0.29)
       decidim-core (>= 0.29.0, < 0.30)
 
-GIT
-  remote: https://github.com/digidemlab/decidim-module-term_customizer.git
-  revision: 3d7946d2b203dbc111a76b176204ea8bebaa11a5
-  branch: master
+PATH
+  remote: decidim-module-goteborg_login
   specs:
-    decidim-term_customizer (0.28.0)
-      decidim-admin (>= 0.28.0)
-      decidim-core (>= 0.28.0)
+    decidim-goteborg_login (0.29.3)
+      decidim-core (= 0.29.3)
+      omniauth-saml (~> 2.1)
+      personnummer (~> 0.1.0)
+      ruby-saml (~> 1.17)
 
 GEM
   remote: https://rubygems.org/
@@ -813,7 +802,7 @@ GEM
     rubocop-rubycw (0.1.6)
       rubocop (~> 1.0)
     ruby-progressbar (1.13.0)
-    ruby-saml (1.18.0)
+    ruby-saml (1.18.1)
       nokogiri (>= 1.13.10)
       rexml
     ruby-vips (2.2.3)
@@ -951,7 +940,6 @@ DEPENDENCIES
   decidim-initiatives!
   decidim-socio_demographic_authorization_handler!
   decidim-templates!
-  decidim-term_customizer!
   faker (~> 3.2)
   figaro
   letter_opener_web (~> 2.0)
@@ -971,4 +959,4 @@ RUBY VERSION
    ruby 3.2.6p234
 
 BUNDLED WITH
-   2.5.17
+   2.4.19
