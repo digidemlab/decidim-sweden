@@ -1,7 +1,8 @@
 services:
   app:
-    image: localhost/decidim-sweden:0.29.3
+    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.29.3
     command: bundle exec passenger start
+    user: "1002790000"
     ports:
       - 3000:3000
     volumes:
@@ -12,40 +13,46 @@ services:
       - "DATABASE_URL=postgres://decidim:$DATABASE_PASSWORD@pg:5432/decidim"
       - DATABASE_HOST=pg
       - DATABASE_USERNAME=decidim
-      - DATABASE_PASSWORD="$DATABASE_PASSWORD"
+      - "DATABASE_PASSWORD=$DATABASE_PASSWORD"
       - DECIDIM_FORCE_SSL=true
       - DOMAIN=decidim.localdomain
-      - GEOCODER_LOOKUP_API_KEY="$HERE_API_KEY"
+      - "GEOCODER_LOOKUP_API_KEY=$HERE_API_KEY"
       - RAILS_LOG_TO_STDOUT=1
       - "REDIS_URL=redis://redis:6379/1"
-      - SECRET_KEY_BASE="$SECRET_KEY_BASE"
+      - "SECRET_KEY_BASE=$SECRET_KEY_BASE"
     depends_on:
       - pg
-  app-worker:
-    image: localhost/decidim-sweden:0.29.3
+      - sidekiq
+  sidekiq:
+    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.29.3
     command: bundle exec sidekiq -C config/sidekiq.yml
+    user: "1002790000"
     environment:
       - RAILS_ENV=production
       - "DATABASE_URL=postgres://decidim:$DATABASE_PASSWORD@pg:5432/decidim"
       - DATABASE_HOST=pg
       - DATABASE_USERNAME=decidim
-      - DATABASE_PASSWORD="$DATABASE_PASSWORD"
+      - "DATABASE_PASSWORD=$DATABASE_PASSWORD"
       - DECIDIM_FORCE_SSL=true
       - DOMAIN=decidim.localdomain
       - RAILS_LOG_TO_STDOUT=1
       - "REDIS_URL=redis://redis:6379/1"
-      - SECRET_KEY_BASE="$SECRET_KEY_BASE"
+      - "SECRET_KEY_BASE=$SECRET_KEY_BASE"
     depends_on:
       - pg
       - redis
   pg:
     image: postgres
+    ports:
+      - 5432:5432
     volumes:
       - pg-data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD="$DATABASE_PASSWORD"
+      - "POSTGRES_PASSWORD=$DATABASE_PASSWORD"
   redis:
     image: "redis:latest"
+    ports:
+      - 6379:6379
     volumes:
       - redis-data:/data
 volumes:
