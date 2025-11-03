@@ -42,7 +42,7 @@ services:
       - pg
       - redis
   pg:
-    image: postgres
+    image: quay.io/repository/enterprisedb/postgresql
     ports:
       - 5432:5432
     volumes:
