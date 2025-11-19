@@ -184,13 +184,6 @@ sv:
       authorizations:
         new:
           authorize_with: 'Komplettera din profil'
-    devise:
-      sessions:
-        new:
-          choose_method: 'Välj att logga in med BankID eller e-post och lösenord (nedan)'
-      registrations:
-        new:
-          choose_method: 'Välj att skapa konto med BankID eller e-post och lösenord (nedan)'
     account:
       name:
         visibility_warning: 'Ditt namn och användarnamn syns tillsammans med ditt lämnade förslag. Ändra båda fälten för namn och användarnamn om du vill vara anonym.'
