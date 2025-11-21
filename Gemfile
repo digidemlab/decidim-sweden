@@ -16,6 +16,8 @@ gem "decidim-decidim_awesome", "0.12.3"
 gem "decidim-goteborg_login", path: "../decidim-module-goteborg_login"
 gem "decidim-smsauth", git: "https://github.com/digidemlab/decidim-module-smsauth", branch: "main"
 gem "decidim-sms-infobip", git: "https://github.com/digidemlab/decidim-sms-infobip", branch: "main"
+#gem "decidim-smsauth", path: "../decidim-module-smsauth"
+#gem "decidim-sms-infobip", path: "../decidim-sms-infobip"
 
 ### Awaiting upgrade to version 0.28 ###
 
