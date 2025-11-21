@@ -195,7 +195,7 @@ GIT
 
 GIT
   remote: https://github.com/digidemlab/decidim-module-smsauth
-  revision: 685a03e4848c57c36b999768346e6c5ed6faa77b
+  revision: d73ded35238d74590cf8b2eb94658ed471984af0
   branch: main
   specs:
     decidim-smsauth (0.29.0)
