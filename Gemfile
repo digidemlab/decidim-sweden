@@ -10,10 +10,14 @@ gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 
-gem "decidim-goteborg_login", path: "./decidim-module-goteborg_login"
 gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "master"
 #gem "decidim-term_customizer", git: "https://github.com/digidemlab/decidim-module-term_customizer.git", branch: "master"
 gem "decidim-decidim_awesome", "0.12.3"
+gem "decidim-goteborg_login", path: "./decidim-module-goteborg_login"
+gem "decidim-smsauth", git: "https://github.com/digidemlab/decidim-module-smsauth", branch: "main"
+gem "decidim-sms-infobip", git: "https://github.com/digidemlab/decidim-sms-infobip", branch: "main"
+#gem "decidim-smsauth", path: "../decidim-module-smsauth"
+#gem "decidim-sms-infobip", path: "../decidim-sms-infobip"
 
 ### Awaiting upgrade to version 0.28 ###
 
