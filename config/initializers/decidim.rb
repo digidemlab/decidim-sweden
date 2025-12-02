@@ -6,7 +6,7 @@ Decidim.configure do |config|
 
   # Change these lines to set your preferred locales
   config.default_locale = :sv
-  config.available_locales = %i[sv]
+  config.available_locales = [:sv, :en]
 
   # Geocoder configuration
   config.maps = {
@@ -101,11 +101,15 @@ Decidim.configure do |config|
     "frame-src" => %w(https://www.youtube-nocookie.com/)
   }
 
+  config.force_ssl = ENV.fetch('DECIDIM_FORCE_SSL', 'true') == 'true'
+  config.assume_ssl = config.force_ssl
+
   config.hosts = Rails.application.secrets.domain
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
 Rails.application.config.i18n.default_locale = Decidim.default_locale
+Rails.application.config.hosts << Decidim.config.hosts
 
 # Inform Decidim about the assets folder
 Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)

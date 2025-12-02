@@ -38,7 +38,8 @@ Rails.application.configure do
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
+  config.force_ssl = ENV.fetch('DECIDIM_FORCE_SSL', 'true') == 'true'
+  config.assume_ssl = config.force_ssl
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
@@ -63,6 +64,10 @@ Rails.application.configure do
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = { sv: :en }
+  # term_customizer (accidentally?) requires database during assets:precompile, which does not work.
+  # This is a workaround: https://github.com/mainio/decidim-module-term_customizer/issues/65
+  # Doesn't seem to work...
+  #config.i18n.enforce_available_locales = false
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
