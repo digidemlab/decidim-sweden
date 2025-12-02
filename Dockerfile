@@ -9,6 +9,10 @@ ENV RAILS_ENV=production
 # secret key won't be used during init/build but has to be set.
 # will be overriden.
 ENV SECRET_KEY_BASE=dummy
+ENV INFOBIP_APP_IDENTIFIER=dummy
+ENV INFOBIP_BASEURL=dummy
+ENV INFOBIP_APIKEY=dummy
+ENV INFOBIP_SENDERID=dummy
 
 WORKDIR /code
 

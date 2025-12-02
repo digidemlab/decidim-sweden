@@ -8,6 +8,7 @@ services:
     volumes:
       - .:/app
       - app-storage:/code/storage
+      - app-saml:/code/config/saml
     environment:
       - RAILS_ENV=production
       - "DATABASE_URL=postgres://decidim:$DATABASE_PASSWORD@pg:5432/decidim"
@@ -59,3 +60,4 @@ volumes:
   pg-data: {}
   redis-data: {}
   app-storage: {}
+  app-saml: {}
