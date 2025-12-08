@@ -1,7 +1,7 @@
 services:
   app:
-    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.29.3
-    user: "1002790000"
+    image: localhost/decidim-sweden-gbg:0.29.3
+    user: "1001"
     ports:
       - 3000:3000
     volumes:
@@ -27,8 +27,8 @@ services:
     command: bundle exec passenger start
     restart: always
   sidekiq:
-    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.29.3
-    user: "1002790000"
+    image: localhost/decidim-sweden-gbg:0.29.3
+    user: "1001"
     environment:
       - "RAILS_ENV=$RAILS_ENV"
       - "DATABASE_URL=postgres://decidim:$DATABASE_PASSWORD@pg:5432/decidim"
@@ -48,7 +48,7 @@ services:
     command: bundle exec sidekiq -C config/sidekiq.yml
     restart: always
   pg:
-    image: quay.io/repository/enterprisedb/postgresql
+    image: postgres:15
     ports:
       - 5432:5432
     volumes:
