@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20180726112510)
 
+# This migration comes from decidim (originally 20180726112510)
+# This file has been modified by `decidim upgrade:migrations` task on 2026-01-08 10:04:13 UTC
 class CreateDecidimHashtags < ActiveRecord::Migration[5.2]
   def self.up
     create_table :decidim_hashtags do |t|

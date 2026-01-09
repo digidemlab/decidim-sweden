@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim_initiatives (originally 20191002082220)
 
+# This migration comes from decidim_initiatives (originally 20191002082220)
+# This file has been modified by `decidim upgrade:migrations` task on 2026-01-08 10:04:14 UTC
 class MoveSignatureTypeToInitativeType < ActiveRecord::Migration[5.2]
   class InitiativesType < ApplicationRecord
     self.table_name = :decidim_initiatives_types

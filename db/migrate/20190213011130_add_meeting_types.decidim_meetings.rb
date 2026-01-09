@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim_meetings (originally 20180403145218)
 
+# This migration comes from decidim_meetings (originally 20180403145218)
+# This file has been modified by `decidim upgrade:migrations` task on 2026-01-08 10:04:14 UTC
 class AddMeetingTypes < ActiveRecord::Migration[5.1]
   def change
     add_column :decidim_meetings_meetings, :private_meeting, :boolean, default: false
