@@ -1,10 +1,12 @@
 # frozen_string_literal: true
-# This migration comes from decidim_comments (originally 20181016142511)
 
+# This migration comes from decidim_comments (originally 20181016142511)
+# This file has been modified by `decidim upgrade:migrations` task on 2026-01-08 10:04:13 UTC
 class MakeAuthorsPolymorphicForComments < ActiveRecord::Migration[5.2]
   class Comment < ApplicationRecord
     self.table_name = :decidim_comments_comments
   end
+
   def change
     add_column :decidim_comments_comments, :decidim_author_type, :string
 

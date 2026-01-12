@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim (originally 20170605162500)
 
+# This migration comes from decidim (originally 20170605162500)
+# This file has been modified by `decidim upgrade:migrations` task on 2026-01-08 10:04:13 UTC
 class AddHierarchyToScopes < ActiveRecord::Migration[5.0]
   class Scope < ApplicationRecord
     self.table_name = :decidim_scopes
@@ -37,7 +38,7 @@ class AddHierarchyToScopes < ActiveRecord::Migration[5.0]
       name = s["name"].gsub(/'/, "''")
       execute("
         UPDATE decidim_scopes
-        SET name = '#{locales.index_with { |_locale| name }.to_json}',
+        SET name = '#{locales.index_with { name }.to_json}',
             code = #{quote(s["id"])}
         WHERE id = #{s["id"]}
       ")

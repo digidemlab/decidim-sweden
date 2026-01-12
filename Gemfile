@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "v0.29.3" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "v0.30.4" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
@@ -12,12 +12,11 @@ gem "decidim-initiatives", DECIDIM_VERSION
 
 gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "master"
 #gem "decidim-term_customizer", git: "https://github.com/digidemlab/decidim-module-term_customizer.git", branch: "master"
-gem "decidim-decidim_awesome", "0.12.3"
+gem "decidim-decidim_awesome", "0.13.2"
 gem "decidim-goteborg_login", path: "./decidim-module-goteborg_login"
 gem "decidim-smsauth", git: "https://github.com/digidemlab/decidim-module-smsauth", branch: "main"
 gem "decidim-sms-infobip", git: "https://github.com/digidemlab/decidim-sms-infobip", branch: "main"
-#gem "decidim-smsauth", path: "../decidim-module-smsauth"
-#gem "decidim-sms-infobip", path: "../decidim-sms-infobip"
+gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "goteborg"
 
 ### Awaiting upgrade to version 0.28 ###
 
@@ -33,8 +32,6 @@ gem "decidim-sms-infobip", git: "https://github.com/digidemlab/decidim-sms-infob
 # gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
 
 # gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
-
-gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "goteborg-0.29"
 
 # gem "decidim-simple_proposal", git: "https://github.com/mainio/decidim-module-simple_proposal", branch: "main"
 
