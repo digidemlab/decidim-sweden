@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.29.3
+    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.30.4
     user: "1002790000"
     ports:
       - 3000:3000
@@ -27,7 +27,7 @@ services:
     command: bundle exec passenger start
     restart: always
   sidekiq:
-    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.29.3
+    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.30.4
     user: "1002790000"
     environment:
       - "RAILS_ENV=$RAILS_ENV"

@@ -1,6 +1,6 @@
 services:
   app:
-    image: localhost/decidim-sweden-gbg:0.29.3
+    image: localhost/decidim-sweden-gbg:0.30.4
     user: "1001"
     ports:
       - 3000:3000
@@ -27,7 +27,7 @@ services:
     command: bundle exec passenger start
     restart: always
   sidekiq:
-    image: localhost/decidim-sweden-gbg:0.29.3
+    image: localhost/decidim-sweden-gbg:0.30.4
     user: "1001"
     environment:
       - "RAILS_ENV=$RAILS_ENV"

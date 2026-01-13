@@ -20,16 +20,10 @@ gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/
 
 ### Awaiting upgrade to version 0.28 ###
 
-# NOTE(d1): https://github.com/decidim-ice/decidim-module-decidim_awesome/issues/324
-
 # NOTE(pj): needs some improvements
 #gem "decidim-faceless", git: "https://github.com/digidemlab/decidim-module-faceless", branch: "release/0.28-beta"
 
-
 ### Additional Decidim Modules ###
-
-# NOTE(d1): disabled, does not support v0.29.x
-# gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
 
 # gem "decidim-accountability_simple", git: "https://github.com/mainio/decidim-module-accountability_simple", branch: "develop"
 
