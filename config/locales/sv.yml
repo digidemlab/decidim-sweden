@@ -117,6 +117,10 @@ sv:
               missing: är inte fullständiga
               too_many: Du kan välja maximalt %{count}.
   decidim:
+    resource:
+      controls_label: 'Åtgärder'
+    taxonomies:
+      prompt: 'Välj ett alternativ'
     accessibility:
       secondary_menu: 'Sekundär meny'
     admin:
