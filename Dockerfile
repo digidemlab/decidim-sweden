@@ -1,4 +1,4 @@
-ARG ruby_version=3.2.6
+ARG ruby_version=3.3.4
 
 FROM ruby:${ruby_version}
 LABEL maintainer="support@digidemlab.org"

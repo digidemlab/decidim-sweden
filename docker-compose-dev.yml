@@ -1,0 +1,68 @@
+services:
+  app:
+    image: localhost/decidim-sweden-gbg:0.30.4
+    user: "1001"
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+      - app-storage:/code/storage
+      - app-saml:/code/config/saml
+    environment:
+      - "RAILS_ENV=$RAILS_ENV"
+      - "DATABASE_URL=postgres://decidim:$DATABASE_PASSWORD@pg:5432/decidim"
+      - DATABASE_HOST=pg
+      - DATABASE_USERNAME=decidim
+      - "DATABASE_PASSWORD=$DATABASE_PASSWORD"
+      - DECIDIM_FORCE_SSL=true
+      - "DOMAIN=$DOMAIN"
+      - "GEOCODER_LOOKUP_API_KEY=$HERE_API_KEY"
+      - "MAILER_SENDER=$MAILER_SENDER"
+      - RAILS_LOG_TO_STDOUT=1
+      - "REDIS_URL=redis://redis:6379/1"
+      - "SECRET_KEY_BASE=$SECRET_KEY_BASE"
+    depends_on:
+      - pg
+      - sidekiq
+    command: bundle exec passenger start
+    restart: always
+  sidekiq:
+    image: localhost/decidim-sweden-gbg:0.30.4
+    user: "1001"
+    environment:
+      - "RAILS_ENV=$RAILS_ENV"
+      - "DATABASE_URL=postgres://decidim:$DATABASE_PASSWORD@pg:5432/decidim"
+      - DATABASE_HOST=pg
+      - DATABASE_USERNAME=decidim
+      - "DATABASE_PASSWORD=$DATABASE_PASSWORD"
+      - DECIDIM_FORCE_SSL=true
+      - "DOMAIN=$DOMAIN"
+      - "GEOCODER_LOOKUP_API_KEY=$HERE_API_KEY"
+      - "MAILER_SENDER=$MAILER_SENDER"
+      - RAILS_LOG_TO_STDOUT=1
+      - "REDIS_URL=redis://redis:6379/1"
+      - "SECRET_KEY_BASE=$SECRET_KEY_BASE"
+    depends_on:
+      - pg
+      - redis
+    command: bundle exec sidekiq -C config/sidekiq.yml
+    restart: always
+  pg:
+    image: postgres:15
+    ports:
+      - 5432:5432
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    environment:
+      - "POSTGRES_PASSWORD=$DATABASE_PASSWORD"
+  redis:
+    image: "redis:latest"
+    ports:
+      - 6379:6379
+    volumes:
+      - redis-data:/data
+volumes:
+  pg-data: {}
+  redis-data: {}
+  app-storage: {}
+  app-saml: {}

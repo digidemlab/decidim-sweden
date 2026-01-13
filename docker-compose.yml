@@ -1,7 +1,6 @@
 services:
   app:
-    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.29.3
-    command: bundle exec passenger start
+    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.30.4
     user: "1002790000"
     ports:
       - 3000:3000
@@ -10,38 +9,44 @@ services:
       - app-storage:/code/storage
       - app-saml:/code/config/saml
     environment:
-      - RAILS_ENV=production
+      - "RAILS_ENV=$RAILS_ENV"
       - "DATABASE_URL=postgres://decidim:$DATABASE_PASSWORD@pg:5432/decidim"
       - DATABASE_HOST=pg
       - DATABASE_USERNAME=decidim
       - "DATABASE_PASSWORD=$DATABASE_PASSWORD"
       - DECIDIM_FORCE_SSL=true
-      - DOMAIN=decidim.localdomain
+      - "DOMAIN=$DOMAIN"
       - "GEOCODER_LOOKUP_API_KEY=$HERE_API_KEY"
+      - "MAILER_SENDER=$MAILER_SENDER"
       - RAILS_LOG_TO_STDOUT=1
       - "REDIS_URL=redis://redis:6379/1"
       - "SECRET_KEY_BASE=$SECRET_KEY_BASE"
     depends_on:
       - pg
       - sidekiq
+    command: bundle exec passenger start
+    restart: always
   sidekiq:
-    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.29.3
-    command: bundle exec sidekiq -C config/sidekiq.yml
+    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.30.4
     user: "1002790000"
     environment:
-      - RAILS_ENV=production
+      - "RAILS_ENV=$RAILS_ENV"
       - "DATABASE_URL=postgres://decidim:$DATABASE_PASSWORD@pg:5432/decidim"
       - DATABASE_HOST=pg
       - DATABASE_USERNAME=decidim
       - "DATABASE_PASSWORD=$DATABASE_PASSWORD"
       - DECIDIM_FORCE_SSL=true
-      - DOMAIN=decidim.localdomain
+      - "DOMAIN=$DOMAIN"
+      - "GEOCODER_LOOKUP_API_KEY=$HERE_API_KEY"
+      - "MAILER_SENDER=$MAILER_SENDER"
       - RAILS_LOG_TO_STDOUT=1
       - "REDIS_URL=redis://redis:6379/1"
       - "SECRET_KEY_BASE=$SECRET_KEY_BASE"
     depends_on:
       - pg
       - redis
+    command: bundle exec sidekiq -C config/sidekiq.yml
+    restart: always
   pg:
     image: quay.io/repository/enterprisedb/postgresql
     ports:

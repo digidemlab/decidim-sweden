@@ -144,6 +144,18 @@ header .main-bar__search form {
   @apply block md:flex md:gap-1 [&>*]:grow;
 }
 
+/**
+ Login button
+ */
+
+.login__omniauth-button span {
+  display: inline;
+}
+
+.login__omniauth-button svg {
+  fill: #000;
+  display: inline;
+}
 
 /**
   Menu bar

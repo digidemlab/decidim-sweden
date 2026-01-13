@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim_debates (originally 20200708072042)
 
+# This migration comes from decidim_debates (originally 20200708072042)
+# This file has been modified by `decidim upgrade:migrations` task on 2026-01-08 10:04:14 UTC
 class FixDebatesI18nFields < ActiveRecord::Migration[5.2]
   class User < ApplicationRecord
     self.table_name = :decidim_users

@@ -9,6 +9,7 @@ sv:
       footer:
         decidim_title: 'Plattform för medborgar- inflytande'
         made_with_open_source: Webbplats gjord av <a target="_blank" href="https://digidemlab.org">Digidem Lab</a> med den fria programvaran <a target="_blank" href="https://github.com/decidim/decidim">Decidim</a>.
+        download_open_data: Hämta öppna datafiler
       decidim_awesome:
         admin:
           maintenance:
@@ -29,6 +30,7 @@ sv:
           meetings: Möten
           proposals: Förslag
           select_deselect_all: Markera/avmarkera alla
+          taxonomies: Taxonomier
   activemodel:
     attributes:
       assembly:
@@ -117,6 +119,14 @@ sv:
               missing: är inte fullständiga
               too_many: Du kan välja maximalt %{count}.
   decidim:
+    shared:
+      flag_user_modal:
+        title: Rapportera olämplig deltagare
+        description: Vad är olämpligt med denna användare?
+    resource:
+      controls_label: 'Åtgärder'
+    taxonomies:
+      prompt: 'Välj ett alternativ'
     accessibility:
       secondary_menu: 'Sekundär meny'
     admin:
@@ -1029,6 +1039,12 @@ sv:
           weight_3: Vet inte
           weight_4: Delvis för
           weight_5: Helt för
+        voting_rules:
+          already_vote:
+            description: Kom ihåg att du har %{number} stöd kvar att ge till olika förslag så att dina stöd räknas med.
+            see_other_proposals: Visa andra förslag
+            title: Du har %{number} stöd kvar att ge
+          title: Regler för deltagande
   active_hashcash:
     submit_filter: Filtrera
     waiting_label: Väntar på verifiering ...

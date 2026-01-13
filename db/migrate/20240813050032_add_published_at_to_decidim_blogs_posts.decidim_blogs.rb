@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim_blogs (originally 20220812122940)
 
+# This migration comes from decidim_blogs (originally 20220812122940)
+# This file has been modified by `decidim upgrade:migrations` task on 2026-01-08 10:04:13 UTC
 class AddPublishedAtToDecidimBlogsPosts < ActiveRecord::Migration[6.1]
   class Post < ApplicationRecord
     self.table_name = :decidim_blogs_posts
