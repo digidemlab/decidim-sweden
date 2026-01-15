@@ -167,6 +167,21 @@ header .main-bar__search form {
   display: inline;
 }
 
+
+/**
+ Login button
+ */
+
+.login__omniauth-button span {
+  display: inline;
+}
+
+.login__omniauth-button svg {
+  fill: #000;
+  display: inline;
+}
+
+
 /**
   Menu bar
 */
