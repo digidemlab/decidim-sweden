@@ -199,7 +199,7 @@ GIT
 
 GIT
   remote: https://github.com/digidemlab/decidim-module-smsauth
-  revision: 25ea30013ae4c2dfef765cdf67459295bd1f1bd6
+  revision: f09eae183f9de486c79b62a27667876b12a35210
   branch: main
   specs:
     decidim-smsauth (0.30.0)
@@ -611,7 +611,7 @@ GEM
     mime-types (3.7.0)
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2025.0924)
+    mime-types-data (3.2026.0113)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
