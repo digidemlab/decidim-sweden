@@ -17,9 +17,7 @@ gem "decidim-goteborg_login", path: "./decidim-module-goteborg_login"
 gem "decidim-smsauth", git: "https://github.com/digidemlab/decidim-module-smsauth", branch: "main"
 gem "decidim-sms-infobip", git: "https://github.com/digidemlab/decidim-sms-infobip", branch: "main"
 gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "goteborg"
-# gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
-gem "decidim-analytics", git: "https://github.com/Platoniq/decidim-module-analytics.git", branch: "deps/decidim-0.30"
-
+gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
 
 ### Awaiting upgrade to version 0.28 ###
 
