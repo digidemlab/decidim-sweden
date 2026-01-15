@@ -94,6 +94,16 @@ header .main-bar__links-mobile__dropdown-before::before {
  Design bug fixes
  */
 
+// Dropdown sort proposals
+[data-target*="dropdown"].order-by__button {
+  display: flex;
+}
+
+[id*="dropdown-menu"].order-by {
+  flex-direction: column;
+}
+
+
 // Phase icon width
 .card__highlight-metadata > :first-child,
 .card__grid-metadata > :first-child {

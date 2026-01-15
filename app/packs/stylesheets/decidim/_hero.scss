@@ -3,7 +3,7 @@
 
   &__container {
     /* stylelint-disable-next-line number-leading-zero */
-    @apply  container mx-auto px-0 md:px-10;
+    @apply  container mx-auto px-0 md:px-10 overflow-hidden;
     // @apply columns-2 container px-4 md:px-24 flex flex-col mx-auto;
   }
 
