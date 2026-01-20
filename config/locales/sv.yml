@@ -122,6 +122,8 @@ sv:
               missing: är inte fullständiga
               too_many: Du kan välja maximalt %{count}.
   decidim:
+    tags:
+      filter_results_for_taxonomy: 'Filtrera resultat: %{resource}'
     shared:
       flag_user_modal:
         title: Rapportera olämplig deltagare
@@ -275,11 +277,19 @@ sv:
       waiting_label: Väntar på verifiering ...
     proposals:
       admin:
+        actions:
+          confirm_delete_proposal: Är du säker på att du vill ta bort förslaget?
+          view_deleted_proposals: Visa borttagna förslag
+          deleted_proposals_info: Borttagna förslag kan återställas från papperskorgen.
         exports:
           awesome_private_proposals: Förslag med privat data
         proposals:
           index:
             change_taxonomies: Ändra kategorier
+      models:
+        proposal:
+          fields:
+            taxonomies: Kategorier
       proposals:
         orders:
           az: A-Ö (Alfabetisk)
