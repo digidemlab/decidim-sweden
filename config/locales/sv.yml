@@ -506,6 +506,8 @@ sv:
         unregistered: Ej registrerad
         user_status: Användarstatus
     components:
+      goteborg_login:
+        name: GoteborgLogin
       awesome_iframe:
         name: Fullskärms-Iframe
         settings:
