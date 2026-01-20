@@ -277,6 +277,9 @@ sv:
       admin:
         exports:
           awesome_private_proposals: Förslag med privat data
+        proposals:
+          index:
+            change_taxonomies: Ändra kategorier
       proposals:
         orders:
           az: A-Ö (Alfabetisk)
