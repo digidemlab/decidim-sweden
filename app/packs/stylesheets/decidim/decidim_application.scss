@@ -94,13 +94,21 @@ header .main-bar__links-mobile__dropdown-before::before {
  Design bug fixes
  */
 
-// Dropdown sort proposals
-[data-target*="dropdown"].order-by__button {
-  display: flex;
+.card__proposals-item:nth-child(2) {
+    @apply md:mt-0;
 }
 
-[id*="dropdown-menu"].order-by {
-  flex-direction: column;
+// Dropdown sort proposals
+[data-target*="dropdown"].order-by__button {
+  @apply flex 2xl:hidden !important;
+}
+
+#dropdown-menu-order.order-by {
+  @apply flex-col 2xl:flex-row !important;
+}
+
+#dropdown-menu-order[aria-hidden="true"] {
+  display: none;
 }
 
 
