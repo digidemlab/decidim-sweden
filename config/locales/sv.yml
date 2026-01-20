@@ -301,6 +301,9 @@ sv:
         show:
           withdraw_proposal: Dra tillbaka förslaget
     forms:
+      upload:
+        labels:
+          validation_error: Valideringsfel! Kontrollera att filen har en tillåten filtyp eller storlek.
       admin:
         models:
           components:
