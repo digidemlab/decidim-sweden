@@ -87,6 +87,7 @@ sv:
         validate_title_min_length: Minsta antal tecken krävs för titeln
         validate_title_start_with_caps: Tvinga titeln att börja med versal
       constraint:
+        application_context: Endast för
         component_id: eller specifikt i
         component_manifest: Endast i komponenter av typ
         participatory_space_manifest: Gäller för deltagarutrymmen av typ
@@ -267,6 +268,8 @@ sv:
       show:
         responses: Exportera svar
         survey_user_responses: Svar på enkät
+        admin_actions: Adminåtgärder
+        awesome_private_proposals: Förslagsexport med privata fält        
     active_hashcash:
       submit_filter: Filtrera
       waiting_label: Väntar på verifiering ...
@@ -537,6 +540,9 @@ sv:
             menu_hashtags: Visa hashtagsökningsmeny
             menu_meetings: Visa möten
             menu_merge_components: Slå samman alla komponenter av samma typ i menyn
+            menu_taxonomies: Visa kategorisökningsmeny
+            taxonomy_filters: Välj filter för komponenten
+            taxonomy_filters_add: Lägg till filter
             truncate: Maximalt antal tecken för popup-beskrivningar
           step:
             announcement: Meddelande
@@ -623,6 +629,7 @@ sv:
             admin: Administratör
             collaborator: Samarbetare
             moderator: Moderator
+            evaluator: Utvärderare
             valuator: Värderare
         admin_authorizations:
           authorization:
@@ -648,6 +655,9 @@ sv:
           index:
             admin_head_tags: Awesome-taggar inkluderade i admin-applikationens header
             decidim-admin: Från Admin-modul
+            decidim-assemblies: Från Rådsmodulen
+            decidim-conferences: Från Konferensmodulen
+            decidim-participatory_processes: Från Deltagarprocessmodulen
             decidim-core: Från Core-modul
             decidim-proposals: Från Förslagsmodul
             decidim_version: Decidim version %{version}
@@ -929,6 +939,9 @@ sv:
           verification_modal:
             authorizations_for: Auktorisationer för %{user}
             close: Stäng
+        visibility:
+          info_html: Du kan hantera ytterligare åtkomstbegränsningar med verifieringar via %{awesome_link}.
+          restricted_html: Detta utrymme använder ytterligare åtkomstbegränsningar via %{awesome_link}.
         private_data:
           private_data:
             component: Uttrymme / Komponent
@@ -1015,6 +1028,7 @@ sv:
           show_not_answered: Visa obesvarade förslag
           show_rejected: Visa avvisade förslag
           show_withdrawn: Visa återdragna förslag
+          taxonomies: Kategorier
           text_settings: Textinställningar
           title: Titel
           truncate: Maximalt antal tecken för popup-beskrivningar
@@ -1047,6 +1061,7 @@ sv:
       proposal_private_custom_fields_disclosure: Denna information kommer inte att publiceras
       required_authorizations:
         index:
+          authorization_options_invalid: Tyvärr, även om du har denna auktorisation är de data som användes för att verifiera dig inte giltiga i detta sammanhang.
           cancel: Jag gör detta en annan gång, %{link}.
           granted_title: Beviljade verifieringar
           logout: låt mig logga ut
@@ -1059,6 +1074,7 @@ sv:
           verify_with_method: Verifiera med %{name}
       session:
         authorization_is_required: För att delta i denna plattform måste du auktorisera ditt konto med en giltig auktorisation (%{authorizations}).
+        login_and_authorization_is_required: För att komma åt denna del av plattformen måste du logga in och auktorisera ditt konto.
       system:
         organizations:
           admin_allowed_authoritzations_help_html: |
