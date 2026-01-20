@@ -47,6 +47,8 @@ sv:
         body: Svar
         choices: Alternativ
         selected_choices: Valda alternativ
+      close_meeting:
+        contributions_count: Antal inlägg
       config:
         additional_proposal_sortings: Ytterligare sorteringsalternativ aktiverade
         allow_images_in_editors: Tillåt bilder i HTML-redigeraren
@@ -155,6 +157,20 @@ sv:
       menu:
         admin_accountability: Administratörsansvar
         decidim_awesome: Decidim awesome
+      taxonomy_filters:
+        space_filter_for:
+          initiatives: Alla initiativ
+    comments:
+      comments_title: Kommentera
+    events:
+      proposals:
+        collaborative_draft_access_accepted:
+          email_intro: '%{requester_name} har blivit godkänd som medförfattare till det gemensamma utkastet <a href="%{resource_url}">%{resource_title}</a>.'
+          email_outro: 'Du har fått det här meddelandet eftersom du är författare till <a href="%{resource_url}">%{resource_title}</a>'
+        collaborative_draft_access_rejected:
+          email_intro: '%{requester_name} har avvisats som medförfattare till <a href="%{resource_url}">%{resource_title}</a>.'
+        collaborative_draft_access_requested:
+          email_intro: '%{requester_name} har begärt att bli medförfattare. Du kan <strong>acceptera eller avvisa begäran</strong> från sidan för det gemensamma utkastet, <a href="%{resource_url}">%{resource_title}</a>.'
     menu:
       help: 'Om'
     pages:
@@ -212,6 +228,9 @@ sv:
           remaining_slots:
             one: "%{count} anmälan kvar"
             other: "%{count} anmälningar kvar"
+          contributions: Antal inlägg
+          organizations: Kunskapsförmedlare
+          meeting_minutes: Sammanfattning av mötet
       mailer:
         registration_mailer:
           confirmation:
@@ -248,7 +267,43 @@ sv:
       show:
         responses: Exportera svar
         survey_user_responses: Svar på enkät
+    active_hashcash:
+      submit_filter: Filtrera
+      waiting_label: Väntar på verifiering ...
+    proposals:
+      admin:
+        exports:
+          awesome_private_proposals: Förslag med privat data
+      proposals:
+        orders:
+          az: A-Ö (Alfabetisk)
+          supported_first: Tidigast röstade på
+          supported_last: Senast röstade på
+          za: Ö-A (Omvänd alfabetisk)
+          most_voted: Flest röster
+          most_commented: Flest kommentarer
+          most_followed: Flest följare
+        proposal:
+          view_proposal: Visa förslag
+        voting_rules:
+          already_vote:
+            description: Kom ihåg att du har %{number} stöd kvar att ge till olika förslag så att dina stöd räknas med.
+            see_other_proposals: Visa andra förslag
+            title: Du har %{number} stöd kvar att ge
+          title: Regler för deltagande
+        edit:
+          add_attachments: Lägg till bilagor
+          attachment_legend: Lägg till ett dokument eller en bild
+        filters:
+          voted: Röstat på
+        vote_button:
+          already_voted: Röstat
+        show:
+          withdraw_proposal: Dra tillbaka förslaget
     forms:
+      upload:
+        labels:
+          validation_error: Valideringsfel! Kontrollera att filen har en tillåten filtyp eller storlek.
       admin:
         models:
           components:
@@ -485,19 +540,27 @@ sv:
             show_evaluating: Visa utvärderade förslag
             show_not_answered: Visa obesvarade förslag
             show_rejected: Visa avvisade förslag
-            show_withdrawn: Visa återdragna förslag
+            show_withdrawn: Visa återdragna förslag      
+      add_comment_form:
+        form:
+          body:
+            placeholder: Vad tycker du?
+      edit_comment_modal_form:
+        form:
+          body:
+            placeholder: Vad tycker du?
       proposals:
         settings:
           global:
-            awesome_voting_manifest: Stödtyp
+            awesome_voting_manifest: Röstning
             awesome_voting_manifest_help_html: <span class="text-alert">Observera att att ändra denna inställning mitt under en röstningsperiod kan leda till felaktiga eller oväntade resultat.</span><br>Observera också att denna inställning endast kan ändras om komponenten inte har några stöd än.
             awesome_voting_manifest_options:
               default: Enkel röstning (standard)
               voting_cards: Röstning med färgkort
             default_sort_order_options:
               az: A-Ö (Alfabetisk)
-              supported_first: Stödda först
-              supported_last: Stödda sist
+              supported_first: Tidigast röstade på
+              supported_last: Senast röstade på
               za: Ö-A (Omvänd alfabetisk)
             limit_pending_amendments: Tillåt endast ett väntande ändringsförslag per förslag.
             sort_orders_enabled: Aktiverade sorteringsmetoder
@@ -508,6 +571,8 @@ sv:
             voting_cards_show_abstain: Lägg till alternativet att avstå
             voting_cards_show_modal_help: Visa hjälp/instruktionsfönster när stöd klickas
           step:
+            votes_enabled: Aktivera röstning
+            votes_blocked: Stäng av röstning
             default_sort_order_options:
               az: A-Ö (Alfabetisk)
               supported_first: Stödda först
@@ -1021,24 +1086,3 @@ sv:
             weight_2_short: 'G:'
             weight_3: Grön
             weight_3_short: 'G:'
-    proposals:
-      admin:
-        exports:
-          awesome_private_proposals: Förslag med privat data
-      proposals:
-        orders:
-          az: A-Ö (Alfabetisk)
-          supported_first: Stödda först
-          supported_last: Stödda sist
-          za: Ö-A (Omvänd alfabetisk)
-        proposal:
-          view_proposal: Visa förslag
-        voting_rules:
-          already_vote:
-            description: Kom ihåg att du har %{number} stöd kvar att ge till olika förslag så att dina stöd räknas med.
-            see_other_proposals: Visa andra förslag
-            title: Du har %{number} stöd kvar att ge
-          title: Regler för deltagande
-  active_hashcash:
-    submit_filter: Filtrera
-    waiting_label: Väntar på verifiering ...
