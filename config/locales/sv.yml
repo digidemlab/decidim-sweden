@@ -207,6 +207,9 @@ sv:
           authorize: 'Komplettera din profil'
           explanation: 'För att fortsätta behöver du fylla i uppgifter för statistik.'
           title: 'Komplettera din profil'
+    onboarding_action_message:
+      pending_authorization_active_title: 'Komplettera din profil'
+      pending_authorization_active_message: 'För att fortsätta behöver du fylla i uppgifter för statistik.'
     verifications:
       authorizations:
         new:
@@ -216,6 +219,8 @@ sv:
           verify_with_these_options: 'Komplettera din profil med uppgifter för statistik.'
           actions:
             socio_demographic_no_phone_authorization_handler: 'Uppgifter för statistik'
+        onboarding_pending:
+          completed_verifications: 'Din profil är klar och du kan %{action} i %{resource_name}'
     account:
       name:
         visibility_warning: 'Ditt namn och användarnamn syns tillsammans med ditt lämnade förslag. Ändra båda fälten för namn och användarnamn om du vill vara anonym.'
