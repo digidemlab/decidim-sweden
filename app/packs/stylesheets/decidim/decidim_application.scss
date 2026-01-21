@@ -111,6 +111,9 @@ header .main-bar__links-mobile__dropdown-before::before {
   display: none;
 }
 
+#dropdown-menu-order .button__sm {
+  @apply 2xl:text-xs;
+}
 
 // Phase icon width
 .card__highlight-metadata > :first-child,
