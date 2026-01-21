@@ -2,6 +2,9 @@ sv:
   device:
     omniauth_callbacks:
       success: 'Du är inloggad.'
+    invitations:
+      edit:
+        nickname_help: "Ditt användarnamn i %{organization}. Kan bara innehålla små bokstäver a-z, siffror, '-' och '_'."
   layouts:
     decidim:
       header:
@@ -122,6 +125,10 @@ sv:
               missing: är inte fullständiga
               too_many: Du kan välja maximalt %{count}.
   decidim:
+    device:
+      omniauth_registrations:
+        new:
+          nickname_help: "Ditt användarnamn i %{organization}. Kan bara innehålla små bokstäver a-z, siffror, '-' och '_'."
     tags:
       filter_results_for_taxonomy: 'Filtrera resultat: %{resource}'
     shared:
@@ -227,7 +234,7 @@ sv:
       name:
         visibility_warning: 'Ditt namn och användarnamn syns tillsammans med ditt lämnade förslag. Ändra båda fälten för namn och användarnamn om du vill vara anonym.'
       email:
-        please_change: 'Lämna gärna din e-post adress så att vi kan kontakta dig för återkoppling kring ditt förslag.'
+        please_change: 'Loggar du in med telefonnummer behöver du inte ändra i detta e-post-fält.'
     meetings: # Härifrån och ner är tillfälligt tills översättning synkar
       meetings:
         show:
