@@ -47,6 +47,8 @@ sv:
         body: Svar
         choices: Alternativ
         selected_choices: Valda alternativ
+      close_meeting:
+        contributions_count: Antal inlägg
       config:
         additional_proposal_sortings: Ytterligare sorteringsalternativ aktiverade
         allow_images_in_editors: Tillåt bilder i HTML-redigeraren
@@ -85,6 +87,7 @@ sv:
         validate_title_min_length: Minsta antal tecken krävs för titeln
         validate_title_start_with_caps: Tvinga titeln att börja med versal
       constraint:
+        application_context: Endast för
         component_id: eller specifikt i
         component_manifest: Endast i komponenter av typ
         participatory_space_manifest: Gäller för deltagarutrymmen av typ
@@ -119,6 +122,8 @@ sv:
               missing: är inte fullständiga
               too_many: Du kan välja maximalt %{count}.
   decidim:
+    tags:
+      filter_results_for_taxonomy: 'Filtrera resultat: %{resource}'
     shared:
       flag_user_modal:
         title: Rapportera olämplig deltagare
@@ -155,6 +160,20 @@ sv:
       menu:
         admin_accountability: Administratörsansvar
         decidim_awesome: Decidim awesome
+      taxonomy_filters:
+        space_filter_for:
+          initiatives: Alla initiativ
+    comments:
+      comments_title: Kommentera
+    events:
+      proposals:
+        collaborative_draft_access_accepted:
+          email_intro: '%{requester_name} har blivit godkänd som medförfattare till det gemensamma utkastet <a href="%{resource_url}">%{resource_title}</a>.'
+          email_outro: 'Du har fått det här meddelandet eftersom du är författare till <a href="%{resource_url}">%{resource_title}</a>'
+        collaborative_draft_access_rejected:
+          email_intro: '%{requester_name} har avvisats som medförfattare till <a href="%{resource_url}">%{resource_title}</a>.'
+        collaborative_draft_access_requested:
+          email_intro: '%{requester_name} har begärt att bli medförfattare. Du kan <strong>acceptera eller avvisa begäran</strong> från sidan för det gemensamma utkastet, <a href="%{resource_url}">%{resource_title}</a>.'
     menu:
       help: 'Om'
     pages:
@@ -190,6 +209,9 @@ sv:
           authorize: 'Komplettera din profil'
           explanation: 'För att fortsätta behöver du fylla i uppgifter för statistik.'
           title: 'Komplettera din profil'
+    onboarding_action_message:
+      pending_authorization_active_title: 'Komplettera din profil'
+      pending_authorization_active_message: 'För att fortsätta behöver du fylla i uppgifter för statistik.'
     verifications:
       authorizations:
         new:
@@ -199,6 +221,8 @@ sv:
           verify_with_these_options: 'Komplettera din profil med uppgifter för statistik.'
           actions:
             socio_demographic_no_phone_authorization_handler: 'Uppgifter för statistik'
+        onboarding_pending:
+          completed_verifications: 'Din profil är klar och du kan %{action} i %{resource_name}'
     account:
       name:
         visibility_warning: 'Ditt namn och användarnamn syns tillsammans med ditt lämnade förslag. Ändra båda fälten för namn och användarnamn om du vill vara anonym.'
@@ -212,6 +236,9 @@ sv:
           remaining_slots:
             one: "%{count} anmälan kvar"
             other: "%{count} anmälningar kvar"
+          contributions: Antal inlägg
+          organizations: Kunskapsförmedlare
+          meeting_minutes: Sammanfattning av mötet
       mailer:
         registration_mailer:
           confirmation:
@@ -248,7 +275,61 @@ sv:
       show:
         responses: Exportera svar
         survey_user_responses: Svar på enkät
+        admin_actions: Adminåtgärder
+        awesome_private_proposals: Förslagsexport med privata fält        
+    active_hashcash:
+      submit_filter: Filtrera
+      waiting_label: Väntar på verifiering ...
+    proposals:
+      admin:
+        actions:
+          confirm_delete_proposal: Är du säker på att du vill ta bort förslaget?
+          view_deleted_proposals: Visa borttagna förslag
+          deleted_proposals_info: Borttagna förslag kan återställas från papperskorgen.
+        exports:
+          awesome_private_proposals: Förslag med privat data
+        proposals:
+          index:
+            change_taxonomies: Ändra kategorier
+      models:
+        proposal:
+          fields:
+            taxonomies: Kategorier
+      proposals:
+        orders:
+          az: A-Ö (Alfabetisk)
+          supported_first: Tidigast röstade på
+          supported_last: Senast röstade på
+          za: Ö-A (Omvänd alfabetisk)
+          most_voted: Flest röster
+          most_commented: Flest kommentarer
+          most_followed: Flest följare
+        proposal:
+          view_proposal: Visa förslag
+        voting_rules:
+          already_vote:
+            description: Kom ihåg att du har %{number} stöd kvar att ge till olika förslag så att dina stöd räknas med.
+            see_other_proposals: Visa andra förslag
+            title: Du har %{number} stöd kvar att ge
+          title: Regler för deltagande
+        edit:
+          add_attachments: Lägg till bilagor
+          attachment_legend: Lägg till ett dokument eller en bild
+        filters:
+          voted: Röstat på
+        vote_button:
+          already_voted: Röstat
+          weight_1: Helt emot
+          weight_2: Delvis emot
+          weight_3: Vet inte
+          weight_4: Delvis för
+          weight_5: Helt för
+        show:
+          withdraw_proposal: Dra tillbaka förslaget
     forms:
+      upload:
+        labels:
+          validation_error: Valideringsfel! Kontrollera att filen har en tillåten filtyp eller storlek.
       admin:
         models:
           components:
@@ -451,6 +532,10 @@ sv:
         unregistered: Ej registrerad
         user_status: Användarstatus
     components:
+      surveys:
+        name: Enkäter
+      goteborg_login:
+        name: GoteborgLogin
       awesome_iframe:
         name: Fullskärms-Iframe
         settings:
@@ -478,6 +563,9 @@ sv:
             menu_hashtags: Visa hashtagsökningsmeny
             menu_meetings: Visa möten
             menu_merge_components: Slå samman alla komponenter av samma typ i menyn
+            menu_taxonomies: Visa kategorisökningsmeny
+            taxonomy_filters: Välj filter för komponenten
+            taxonomy_filters_add: Lägg till filter
             truncate: Maximalt antal tecken för popup-beskrivningar
           step:
             announcement: Meddelande
@@ -485,19 +573,27 @@ sv:
             show_evaluating: Visa utvärderade förslag
             show_not_answered: Visa obesvarade förslag
             show_rejected: Visa avvisade förslag
-            show_withdrawn: Visa återdragna förslag
+            show_withdrawn: Visa återdragna förslag      
+      add_comment_form:
+        form:
+          body:
+            placeholder: Vad tycker du?
+      edit_comment_modal_form:
+        form:
+          body:
+            placeholder: Vad tycker du?
       proposals:
         settings:
           global:
-            awesome_voting_manifest: Stödtyp
+            awesome_voting_manifest: Röstning
             awesome_voting_manifest_help_html: <span class="text-alert">Observera att att ändra denna inställning mitt under en röstningsperiod kan leda till felaktiga eller oväntade resultat.</span><br>Observera också att denna inställning endast kan ändras om komponenten inte har några stöd än.
             awesome_voting_manifest_options:
               default: Enkel röstning (standard)
               voting_cards: Röstning med färgkort
             default_sort_order_options:
               az: A-Ö (Alfabetisk)
-              supported_first: Stödda först
-              supported_last: Stödda sist
+              supported_first: Tidigast röstade på
+              supported_last: Senast röstade på
               za: Ö-A (Omvänd alfabetisk)
             limit_pending_amendments: Tillåt endast ett väntande ändringsförslag per förslag.
             sort_orders_enabled: Aktiverade sorteringsmetoder
@@ -508,6 +604,8 @@ sv:
             voting_cards_show_abstain: Lägg till alternativet att avstå
             voting_cards_show_modal_help: Visa hjälp/instruktionsfönster när stöd klickas
           step:
+            votes_enabled: Aktivera röstning
+            votes_blocked: Stäng av röstning
             default_sort_order_options:
               az: A-Ö (Alfabetisk)
               supported_first: Stödda först
@@ -554,6 +652,7 @@ sv:
             admin: Administratör
             collaborator: Samarbetare
             moderator: Moderator
+            evaluator: Utvärderare
             valuator: Värderare
         admin_authorizations:
           authorization:
@@ -579,6 +678,9 @@ sv:
           index:
             admin_head_tags: Awesome-taggar inkluderade i admin-applikationens header
             decidim-admin: Från Admin-modul
+            decidim-assemblies: Från Rådsmodulen
+            decidim-conferences: Från Konferensmodulen
+            decidim-participatory_processes: Från Deltagarprocessmodulen
             decidim-core: Från Core-modul
             decidim-proposals: Från Förslagsmodul
             decidim_version: Decidim version %{version}
@@ -860,6 +962,9 @@ sv:
           verification_modal:
             authorizations_for: Auktorisationer för %{user}
             close: Stäng
+        visibility:
+          info_html: Du kan hantera ytterligare åtkomstbegränsningar med verifieringar via %{awesome_link}.
+          restricted_html: Detta utrymme använder ytterligare åtkomstbegränsningar via %{awesome_link}.
         private_data:
           private_data:
             component: Uttrymme / Komponent
@@ -946,6 +1051,7 @@ sv:
           show_not_answered: Visa obesvarade förslag
           show_rejected: Visa avvisade förslag
           show_withdrawn: Visa återdragna förslag
+          taxonomies: Kategorier
           text_settings: Textinställningar
           title: Titel
           truncate: Maximalt antal tecken för popup-beskrivningar
@@ -978,6 +1084,7 @@ sv:
       proposal_private_custom_fields_disclosure: Denna information kommer inte att publiceras
       required_authorizations:
         index:
+          authorization_options_invalid: Tyvärr, även om du har denna auktorisation är de data som användes för att verifiera dig inte giltiga i detta sammanhang.
           cancel: Jag gör detta en annan gång, %{link}.
           granted_title: Beviljade verifieringar
           logout: låt mig logga ut
@@ -990,6 +1097,7 @@ sv:
           verify_with_method: Verifiera med %{name}
       session:
         authorization_is_required: För att delta i denna plattform måste du auktorisera ditt konto med en giltig auktorisation (%{authorizations}).
+        login_and_authorization_is_required: För att komma åt denna del av plattformen måste du logga in och auktorisera ditt konto.
       system:
         organizations:
           admin_allowed_authoritzations_help_html: |
@@ -1021,30 +1129,6 @@ sv:
             weight_2_short: 'G:'
             weight_3: Grön
             weight_3_short: 'G:'
-    proposals:
-      admin:
-        exports:
-          awesome_private_proposals: Förslag med privat data
-      proposals:
-        orders:
-          az: A-Ö (Alfabetisk)
-          supported_first: Stödda först
-          supported_last: Stödda sist
-          za: Ö-A (Omvänd alfabetisk)
-        proposal:
-          view_proposal: Visa förslag
-        vote_button:
-          weight_1: Helt emot
-          weight_2: Delvis emot
-          weight_3: Vet inte
-          weight_4: Delvis för
-          weight_5: Helt för
-        voting_rules:
-          already_vote:
-            description: Kom ihåg att du har %{number} stöd kvar att ge till olika förslag så att dina stöd räknas med.
-            see_other_proposals: Visa andra förslag
-            title: Du har %{number} stöd kvar att ge
-          title: Regler för deltagande
   active_hashcash:
     submit_filter: Filtrera
     waiting_label: Väntar på verifiering ...

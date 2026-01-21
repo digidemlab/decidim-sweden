@@ -94,6 +94,27 @@ header .main-bar__links-mobile__dropdown-before::before {
  Design bug fixes
  */
 
+.card__proposals-item:nth-child(2) {
+    @apply md:mt-0;
+}
+
+// Dropdown sort proposals
+[data-target*="dropdown"].order-by__button {
+  @apply flex 2xl:hidden !important;
+}
+
+#dropdown-menu-order.order-by {
+  @apply flex-col 2xl:flex-row !important;
+}
+
+#dropdown-menu-order[aria-hidden="true"] {
+  display: none;
+}
+
+#dropdown-menu-order .button__sm {
+  @apply 2xl:text-xs;
+}
+
 // Phase icon width
 .card__highlight-metadata > :first-child,
 .card__grid-metadata > :first-child {
@@ -156,6 +177,21 @@ header .main-bar__search form {
   fill: #000;
   display: inline;
 }
+
+
+/**
+ Login button
+ */
+
+.login__omniauth-button span {
+  display: inline;
+}
+
+.login__omniauth-button svg {
+  fill: #000;
+  display: inline;
+}
+
 
 /**
   Menu bar
