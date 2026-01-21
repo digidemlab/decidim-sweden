@@ -1,5 +1,5 @@
 sv:
-  device:
+  devise:
     omniauth_callbacks:
       success: 'Du är inloggad.'
     invitations:
@@ -125,7 +125,7 @@ sv:
               missing: är inte fullständiga
               too_many: Du kan välja maximalt %{count}.
   decidim:
-    device:
+    devise:
       omniauth_registrations:
         new:
           nickname_help: "Ditt användarnamn i %{organization}. Kan bara innehålla små bokstäver a-z, siffror, '-' och '_'."
