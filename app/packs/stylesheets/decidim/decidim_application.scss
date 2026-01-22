@@ -523,6 +523,34 @@ a .text-secondary {
   }
 }
 
+.graded-vote-button {
+  margin-top: 15px;
+  display: flex;
+  align-items: end;
+
+  .button_to {
+    flex: 4;
+  }
+
+  .graded-vote-count {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+  }
+
+  .graded-vote-count-number {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .button__graded-voting {
+    margin-top: 0;
+  }
+}
+
+
 /**
   WCAG Contrasts
 */
