@@ -1,11 +1,11 @@
-<% button_classes = "button button__sm button__transparent-secondary w-full button__graded-voting" %>
+<% button_classes = "button button__sm button__secondary w-full button__graded-voting" %>
 
 <% unless proposal.rejected? || proposal.withdrawn? %>
   <% if component_settings.participatory_texts_enabled? && from_proposals_list %>
     <%= render partial: "decidim/proposals/proposals/participatory_texts/proposal_vote_button", locals: { proposal:, from_proposals_list: true } %>
   <% else %>
     <div id="proposal-<%= proposal.id %>-vote-button">
-      <h2>Rösta på rekommendation</h2>
+
       <% if !current_user %>
         <% if current_settings.votes_blocked? %>
           <%= action_authorized_button_to :vote, t("decidim.proposals.proposals.vote_button.votes_blocked"), proposal_proposal_vote_path(proposal_id: proposal, from_proposals_list:), resource: proposal, class: button_classes, disabled: true %>
@@ -24,26 +24,39 @@
           <% elsif current_settings.votes_blocked? || !current_component.participatory_space.can_participate?(current_user) %>
             <%= content_tag :button, t("decidim.proposals.proposals.vote_button.votes_blocked"), class: button_classes, disabled: true %>
           <% else %>
-            <% (1..5).each do |weight| %>
-              <div class="graded-vote-button">
-                <% button_disabled = @voted_proposals ? @voted_proposals.include?(proposal.id) : proposal.voted_by?(current_user) %>
-                <%= action_authorized_button_to(
-                  :vote,
-                  proposal_proposal_vote_path(proposal_id: proposal, from_proposals_list:, weight: weight),
-                  resource: proposal,
-                  remote: true,
-                  data: { disable: true, "redirect-url": proposal_path(proposal) },
-                  class: button_classes,
-                  disabled: button_disabled
-                ) do %>
-                  <%= t("decidim.proposals.proposals.vote_button.weight_#{weight}") %>
-                  <span class="sr-only"><%= decidim_html_escape(present(proposal).title) %></span>
-                <% end %>
-                <span class="graded-vote-count"><span class="graded-vote-count-number"><%= proposal.vote_weights["weight_#{weight}"] || 0 %></span><span class="graded-vote-count-text">röster</span></span>
-              </div>
-            <% end %>
+            <div class="graded-vote-buttons">
+
+
+              <% user_vote = current_user ? proposal.votes.find_by(author: current_user) : nil %>
+              <% user_vote_weight = user_vote&.weight %>
+
+              <% (1..5).each do |weight| %>
+                <div class="graded-vote-button <%= 'is-active' if user_vote_weight == weight %>">
+                  <% button_disabled = @voted_proposals ? @voted_proposals.include?(proposal.id) : proposal.voted_by?(current_user) %>
+                  <%= action_authorized_button_to(
+                    :vote,
+                    proposal_proposal_vote_path(proposal_id: proposal, from_proposals_list:, weight: weight),
+                    resource: proposal,
+                    remote: true,
+                    data: { disable: true, "redirect-url": proposal_path(proposal) },
+                    class: button_classes,
+                    disabled: button_disabled,
+                    role: from_proposals_list ? "menuitem" : nil
+                  ) do %>
+                    <%= t("decidim.proposals.proposals.vote_button.weight_#{weight}") %>
+                    <%= icon "check-line", class: "already-voted-icon" if user_vote_weight == weight %>
+                    <span class="sr-only"><%= decidim_html_escape(present(proposal).title) %></span>
+                  <% end %>
+                  <% if !from_proposals_list %>
+                    <span class="graded-vote-count"><span class="graded-vote-count-number"><%= proposal.vote_weights["weight_#{weight}"] || 0 %></span><span class="graded-vote-count-text">röster</span></span>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+            
           <% end %>
         <% end %>
+        
         <% if @voted_proposals ? @voted_proposals.include?(proposal.id) : proposal.voted_by?(current_user) %>
           <%= action_authorized_button_to(
             :vote,
@@ -60,7 +73,6 @@
             class: "#{button_classes} is-hover",
             id: "vote_button-#{proposal.id}"
           ) do %>
-            <%# <%= t("decidim.proposals.proposals.vote_button.already_voted") %>
             Dra tillbaka röst
             <span class="sr-only"><%= decidim_html_escape(present(proposal).title) %></span>
           <% end %>

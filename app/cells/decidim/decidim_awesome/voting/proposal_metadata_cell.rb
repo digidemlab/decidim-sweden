@@ -30,7 +30,7 @@ module Decidim
 
         def weight_tags
           @weight_tags ||= all_weights.map do |num, weight|
-            content_tag "span", title: resource.manifest.label_for(num), class: "voting-weight_#{num}" do
+            content_tag "span", title: resource.manifest.label_for(num), class: "voting-weight voting-weight_#{num}" do
               "#{t("decidim.proposals.proposals.vote_button.weight_#{num}")} #{weight}"
             end.html_safe
           end
@@ -42,7 +42,7 @@ module Decidim
           return if resource&.rejected? || resource&.withdrawn?
 
           {
-            text: weight_tags.join(" | ").html_safe,
+            text: weight_tags.join(" ").html_safe,
             icon: "#{user_voted_weight ? "checkbox" : "close"}-circle-line",
             data_attributes: all_weights.transform_keys { |num| "weight-#{num}" }
           }
