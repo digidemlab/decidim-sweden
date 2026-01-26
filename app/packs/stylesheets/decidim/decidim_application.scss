@@ -491,6 +491,120 @@ a .text-secondary {
 }
 
 
+
+
+
+
+/**
+ * Graded voting
+ */
+
+.card__grid-grid .card__proposals-item .card__proposals-votes,
+.card__list-list .card__proposals-item .card__proposals-votes {
+  height: auto;
+  min-height: 68px;
+}
+
+.graded-vote--dropdown {
+//  position: relative;
+//  display: flex;
+  flex: 1 1;
+  margin: 0.5rem !important;
+  
+  .graded-vote-button {
+    margin-top: 5px;
+
+    .graded-vote-count {
+      display: none;
+    }
+  }
+
+}
+
+.voting-graded_vote 
+.progress-bar__container  {
+  @apply mt-5;
+}
+
+.button__graded-voting {
+  margin-top: 15px;
+  justify-content: start;
+}
+
+div[data-weight-1] {
+  display: inline-block;
+
+  svg {
+    display: inline-block;
+  }
+}
+
+.card__list-metadata {
+  --voting-cards-weight-1: #891A1C;
+  --voting-cards-weight-2: #866F09;
+  --voting-cards-weight-3: #222222;
+  --voting-cards-weight-4: #238075;
+  --voting-cards-weight-5: #064D05;
+  /* css for weight 1-3 is also defined by decidim-awesome */
+  .voting-weight {
+    white-space: nowrap;
+    border-right: 1px solid #ccc;
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .voting-weight_1 {
+    color: var(--voting-cards-weight-1);
+  }
+  .voting-weight_2 {
+    color: var(--voting-cards-weight-2);
+  }
+  .voting-weight_3 {
+    color: var(--voting-cards-weight-3);
+  }
+  .voting-weight_4 {
+    color: var(--voting-cards-weight-4);
+  }
+  .voting-weight_5 {
+    color: var(--voting-cards-weight-5);
+    padding-left: 0.25rem;
+  }
+}
+
+.graded-vote-button {
+  margin-top: 15px;
+  display: flex;
+  align-items: end;
+
+  .button_to {
+    flex: 4;
+  }
+
+  .graded-vote-count {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    font-size: 1rem;
+  }
+
+  .graded-vote-count-number {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .button__graded-voting {
+    margin-top: 0;
+  }
+}
+
+// Mobile view
+.layout-aside__ctas-buttons.voting-graded_vote {
+  @apply relative z-0 flex-col items-stretch bg-transparent gap-0 p-0 shadow-none first:[&>*]:grow-0 last:[&>*]:w-auto h-fit;
+}
+
+
 /**
   WCAG Contrasts
 */

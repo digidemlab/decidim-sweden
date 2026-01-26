@@ -326,6 +326,11 @@ sv:
           voted: Röstat på
         vote_button:
           already_voted: Röstat
+          weight_1: Helt emot
+          weight_2: Delvis emot
+          weight_3: Vet inte
+          weight_4: Delvis för
+          weight_5: Helt för
         show:
           withdraw_proposal: Dra tillbaka förslaget
     forms:
@@ -1131,3 +1136,6 @@ sv:
             weight_2_short: 'G:'
             weight_3: Grön
             weight_3_short: 'G:'
+  active_hashcash:
+    submit_filter: Filtrera
+    waiting_label: Väntar på verifiering ...
