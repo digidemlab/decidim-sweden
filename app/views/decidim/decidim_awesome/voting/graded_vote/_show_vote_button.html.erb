@@ -30,7 +30,7 @@
               <% user_vote = current_user ? proposal.votes.find_by(author: current_user) : nil %>
               <% user_vote_weight = user_vote&.weight %>
 
-              <% (1..5).each do |weight| %>
+              <% (-2..2).each do |weight| %>
                 <div class="graded-vote-button <%= 'is-active' if user_vote_weight == weight %>">
                   <% button_disabled = @voted_proposals ? @voted_proposals.include?(proposal.id) : proposal.voted_by?(current_user) %>
                   <%= action_authorized_button_to(
@@ -53,10 +53,10 @@
                 </div>
               <% end %>
             </div>
-            
+
           <% end %>
         <% end %>
-        
+
         <% if @voted_proposals ? @voted_proposals.include?(proposal.id) : proposal.voted_by?(current_user) %>
           <%= action_authorized_button_to(
             :vote,

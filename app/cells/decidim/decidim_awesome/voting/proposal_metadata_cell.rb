@@ -21,7 +21,7 @@ module Decidim
 
         def all_weights
           @all_weights ||= begin
-            weights = [5, 4, 3, 2, 1]
+            weights = [-2, -1, 0, 1, 2]
             weights.index_with do |weight|
               weight_count_for(weight)
             end
@@ -30,7 +30,7 @@ module Decidim
 
         def weight_tags
           @weight_tags ||= all_weights.map do |num, weight|
-            content_tag "span", title: resource.manifest.label_for(num), class: "voting-weight voting-weight_#{num}" do
+            content_tag "span", title: resource.manifest.label_for(num), class: "voting-weight voting-weight-overridden_#{num}" do
               "#{t("decidim.proposals.proposals.vote_button.weight_#{num}")} #{weight}"
             end.html_safe
           end
