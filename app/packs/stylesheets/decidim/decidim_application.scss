@@ -540,11 +540,11 @@ div[data-weight-1] {
 }
 
 .card__list-metadata {
-  --voting-cards-weight-1: #891A1C;
-  --voting-cards-weight-2: #866F09;
-  --voting-cards-weight-3: #222222;
-  --voting-cards-weight-4: #238075;
-  --voting-cards-weight-5: #064D05;
+  --voting-cards-weight_-2: #891A1C;
+  --voting-cards-weight_-1: #866F09;
+  --voting-cards-weight_0: #222222;
+  --voting-cards-weight_1: #238075;
+  --voting-cards-weight_2: #064D05;
   /* css for weight 1-3 is also defined by decidim-awesome */
   .voting-weight {
     white-space: nowrap;
@@ -553,21 +553,20 @@ div[data-weight-1] {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
-  .voting-weight_1 {
-    color: var(--voting-cards-weight-1);
+  .voting-weight-overridden_-2 {
+    color: var(--voting-cards-weight_-2);
   }
-  .voting-weight_2 {
-    color: var(--voting-cards-weight-2);
+  .voting-weight-overridden_-1 {
+    color: var(--voting-cards-weight_-1);
   }
-  .voting-weight_3 {
-    color: var(--voting-cards-weight-3);
+  .voting-weight-overridden_0 {
+    color: var(--voting-cards-weight_0);
   }
-  .voting-weight_4 {
-    color: var(--voting-cards-weight-4);
+  .voting-weight-overridden_1 {
+    color: var(--voting-cards-weight_1);
   }
-  .voting-weight_5 {
-    color: var(--voting-cards-weight-5);
-    padding-left: 0.25rem;
+  .voting-weight-overridden_2 {
+    color: var(--voting-cards-weight_2);
   }
 }
 

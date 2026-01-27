@@ -319,11 +319,11 @@ sv:
           voted: Röstat på
         vote_button:
           already_voted: Röstat
-          weight_1: Helt emot
-          weight_2: Delvis emot
-          weight_3: Vet inte
-          weight_4: Delvis för
-          weight_5: Helt för
+          weight_-2: Helt emot
+          weight_-1: Delvis emot
+          weight_0: Vet inte
+          weight_1: Delvis för
+          weight_2: Helt för
         show:
           withdraw_proposal: Dra tillbaka förslaget
     forms:
