@@ -338,11 +338,14 @@ sv:
             title: Du har %{number} röster kvar
           title: Regler för omröstning
           success: Din röst har tagits emot
-          vote_limit.description: Du kan rösta på upp till %{limit} förslag
+          vote_limit:
+            description: Du kan rösta på upp till %{limit} förslag.
           can_accumulate_votes_beyond_threshold:
-            description: Förslag kan få fler än gränsen på %{limit} röster
+            description: Förslag kan få fler röster än vad som behövs för att gå vidare.
           minimum_votes_per_user:
             description: Du behöver rösta på %{votes} till förslag för att din röst ska räknas.
+          threshold_per_proposal:
+            description: Förslag behöver få minst %{limit} röster för att gå vidare.
         edit:
           add_attachments: Lägg till bilagor
           attachment_legend: Lägg till ett dokument eller en bild
