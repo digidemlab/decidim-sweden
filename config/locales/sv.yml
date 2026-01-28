@@ -125,6 +125,11 @@ sv:
               missing: är inte fullständiga
               too_many: Du kan välja maximalt %{count}.
   decidim:
+    statistics:
+      surveys_count_tooltip: Antalet enkäter och svar som samlats in.
+    version:
+      show:
+        changes_at_title: 'Ändringar av "%{title}"'
     devise:
       omniauth_registrations:
         new:
@@ -229,7 +234,7 @@ sv:
           actions:
             socio_demographic_no_phone_authorization_handler: 'Uppgifter för statistik'
         onboarding_pending:
-          completed_verifications: 'Din profil är klar och du kan %{action} i %{resource_name}'
+          completed_verifications: 'Din profil är klar och du kan %{action}'
     account:
       name:
         visibility_warning: 'Ditt namn och användarnamn syns tillsammans med ditt lämnade förslag. Ändra båda fälten för namn och användarnamn om du vill vara anonym.'
@@ -298,6 +303,19 @@ sv:
         proposals:
           index:
             change_taxonomies: Ändra kategorier
+      collaborative_drafts:
+        new:
+          send: Spara
+        show:
+          edit: Redigera
+        collaborative_draft:
+          publish:
+            irreversible_action_modal:
+              cancel: Avbryt
+          withdraw:
+            irreversible_action_modal:
+              cancel: Avbryt
+              body: Efter att utkastet dragits tillbaka går det inte längre att redigera.
       models:
         proposal:
           fields:
@@ -315,25 +333,38 @@ sv:
           view_proposal: Visa förslag
         voting_rules:
           already_vote:
-            description: Kom ihåg att du har %{number} stöd kvar att ge till olika förslag så att dina stöd räknas med.
-            see_other_proposals: Visa andra förslag
-            title: Du har %{number} stöd kvar att ge
-          title: Regler för deltagande
+            description: Du behöver rösta på %{number} till förslag för att din röst ska räknas.
+            see_other_proposals: Visa de andra förslagen
+            title: Du har %{number} röster kvar
+          title: Regler för omröstning
+          success: Din röst har tagits emot
+          vote_limit.description: Du kan rösta på upp till %{limit} förslag
+          can_accumulate_votes_beyond_threshold:
+            description: Förslag kan få fler än gränsen på %{limit} röster
+          minimum_votes_per_user:
+            description: Du behöver rösta på %{votes} till förslag för att din röst ska räknas.
         edit:
           add_attachments: Lägg till bilagor
           attachment_legend: Lägg till ett dokument eller en bild
+        new:
+          send: Spara
         filters:
           voted: Röstat på
         vote_button:
+          vote: Rösta JA
           already_voted: Röstat
           weight_-2: Helt emot
           weight_-1: Delvis emot
-          weight_0: Vet inte
+          weight_0: Spelar ingen roll
           weight_1: Delvis för
           weight_2: Helt för
         show:
+          edit_proposal: Redigera          
           withdraw_proposal: Dra tillbaka förslaget
     forms:
+      file_help:
+        file:
+          message_2: Använd helst liggande bilder. Bilden beskärs automatiskt.
       upload:
         labels:
           validation_error: Valideringsfel! Kontrollera att filen har en tillåten filtyp eller storlek.
@@ -517,7 +548,7 @@ sv:
             sign_in_description: Logga in för att göra enkäten
             sign_up_description: Skapa ett konto för att göra enkäten
             title: Svara på formuläret
-          tos_agreement: Genom att fortsätta godkänner du villkoren för anmälan
+          tos_agreement: Genom att fortsätta godkänner du villkoren
       step_navigation:
         show:
           are_you_sure_edit_guest: Om du vill kunna redigera dina svar efteråt måste du logga in eller skapa ett konto.
@@ -610,6 +641,10 @@ sv:
             voting_cards_instructions_help: Standard är "Läs noga igenom valreglerna för att förstå hur din röst kommer att användas av %{organization}"
             voting_cards_show_abstain: Lägg till alternativet att avstå
             voting_cards_show_modal_help: Visa hjälp/instruktionsfönster när stöd klickas
+            vote_limit: Max antal röster per deltagare
+            minimum_votes_per_user: Minsta antal röster per deltagare
+            proposal_limit: Max antal lagda förslag per deltagare
+            threshold_per_proposal: Antal röster ett förslag behöver få för att gå vidare
           step:
             votes_enabled: Aktivera röstning
             votes_blocked: Stäng av röstning
