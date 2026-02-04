@@ -11,7 +11,7 @@ gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 
 gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "master"
-#gem "decidim-term_customizer", git: "https://github.com/digidemlab/decidim-module-term_customizer.git", branch: "master"
+gem "decidim-cleaner", git: "https://github.com/digidemlab/decidim-module-cleaner.git"
 gem "decidim-decidim_awesome", "0.13.2"
 gem "decidim-goteborg_login", path: "./decidim-module-goteborg_login"
 gem "decidim-smsauth", git: "https://github.com/digidemlab/decidim-module-smsauth", branch: "main"

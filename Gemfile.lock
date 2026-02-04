@@ -205,6 +205,13 @@ GIT
       decidim-core (>= 0.27.0)
 
 GIT
+  remote: https://github.com/digidemlab/decidim-module-cleaner.git
+  revision: 7fe66ad5050df985e3e0bccebdec511a51389f77
+  specs:
+    decidim-cleaner (5.1.0)
+      decidim-core (~> 0.30.0)
+
+GIT
   remote: https://github.com/digidemlab/decidim-module-smsauth
   revision: 8d319880fac44d09006c5820977334a01d58e666
   branch: main
@@ -1057,6 +1064,7 @@ DEPENDENCIES
   decidim!
   decidim-analytics!
   decidim-budgets_paper_ballots!
+  decidim-cleaner!
   decidim-decidim_awesome (= 0.13.2)
   decidim-dev!
   decidim-goteborg_login!
