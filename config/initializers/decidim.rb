@@ -20,6 +20,9 @@ Decidim.configure do |config|
     }
   }
 
+  # Max attachment size (MB)
+  config.maximum_attachment_size = 50
+
   # Custom resource reference generator method
   # config.reference_generator = lambda do |resource, component|
   #   # Implement your custom method to generate resources references
