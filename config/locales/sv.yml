@@ -361,6 +361,7 @@ sv:
           weight_0: Spelar ingen roll
           weight_1: Delvis för
           weight_2: Helt för
+          votes_blocked: Omröstning stängd
         show:
           edit_proposal: Redigera          
           withdraw_proposal: Dra tillbaka förslaget
