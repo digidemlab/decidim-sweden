@@ -127,6 +127,22 @@ sv:
   decidim:
     statistics:
       surveys_count_tooltip: Antalet enkäter och svar som samlats in.
+    surveys:
+      surveys:
+        no_surveys_warning: Inga enkäter matchar dina sökkriterier eller så finns det inte några aktiva enkäter.
+        filters:
+          all: Alla
+          state_values:
+            closed: Stängda
+            ongoing: Öppna
+        count:
+          surveys_count:
+            one: '%{count} enkät'
+            other: '%{count} enkäter'
+        show:
+          open: Öppen
+          closed: Stängd
+          questions: frågor
     version:
       show:
         changes_at_title: 'Ändringar av "%{title}"'
