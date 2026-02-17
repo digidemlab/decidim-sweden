@@ -134,7 +134,7 @@ sv:
           all: Alla
           state_values:
             closed: Stängda
-            ongoing: Öppna
+            open: Öppna
         count:
           surveys_count:
             one: '%{count} enkät'
