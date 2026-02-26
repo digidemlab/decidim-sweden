@@ -1,0 +1,27 @@
+<div class="graded-vote-buttons">
+  <% user_vote = current_user ? proposal.votes.find_by(author: current_user) : nil %>
+  <% user_vote_weight = user_vote&.weight %>
+
+  <% (-2..2).each do |weight| %>
+    <div class="graded-vote-button <%= 'is-active' if user_vote_weight == weight %>">
+      <% button_disabled = @voted_proposals ? @voted_proposals.include?(proposal.id) : proposal.voted_by?(current_user) %>
+      <%= action_authorized_button_to(
+        :vote,
+        proposal_proposal_vote_path(proposal_id: proposal, from_proposals_list:, weight: weight),
+        resource: proposal,
+        remote: true,
+        data: { disable: true, "redirect-url": proposal_path(proposal) },
+        class: button_classes,
+        disabled: blocked || button_disabled,
+        role: from_proposals_list ? "menuitem" : nil
+      ) do %>
+        <%= t("decidim.proposals.proposals.vote_button.weight_#{weight}") %>
+        <%= icon "check-line", class: "already-voted-icon" if user_vote_weight == weight %>
+        <span class="sr-only"><%= decidim_html_escape(present(proposal).title) %></span>
+      <% end %>
+      <% if !from_proposals_list %>
+        <span class="graded-vote-count"><span class="graded-vote-count-number"><%= proposal.vote_weights["weight_#{weight}"] || 0 %></span><span class="graded-vote-count-text">röster</span></span>
+      <% end %>
+    </div>
+  <% end %>
+</div>
