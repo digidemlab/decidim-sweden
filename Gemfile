@@ -43,6 +43,8 @@ gem "faker", "~> 3.2"
 
 gem "figaro"
 
+gem "aws-sdk-s3", require: false
+
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
