@@ -184,8 +184,9 @@ GIT
     decidim-verifications (0.29.3)
       decidim-core (= 0.29.3)
 
-PATH
-  remote: ../decidim-module-cleaner
+GIT
+  remote: https://github.com/digidemlab/decidim-module-cleaner
+  revision: bb32268e371470713fb42c07c8a3f761c1960fbc
   specs:
     decidim-cleaner (5.0.0)
       decidim-core (~> 0.29.0)
