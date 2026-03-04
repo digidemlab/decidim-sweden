@@ -19,16 +19,7 @@ Rails.application.configure do
   # config.require_master_key = true
 
   # Where to store uploaded files (see config/storage.yml for options)
-  config.active_storage.service = case ENV.fetch('DECIDIM_STORAGE_SERVICE')
-    when 'test'
-      :test
-    when 'local'
-      :local
-    when 'garage'
-      :garage
-    else
-      raise "DECIDIM_STORAGE_SERVICE not set to a valid value!"
-    end
+  config.active_storage.service = ENV.fetch('DECIDIM_STORAGE_SERVICE', 'local')
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
@@ -50,9 +41,10 @@ Rails.application.configure do
   config.force_ssl = ENV.fetch('DECIDIM_FORCE_SSL', 'true') == 'true'
   config.assume_ssl = config.force_ssl
 
-  # Use the lowest log level to ensure availability of diagnostic information
-  # when problems arise.
-  config.log_level = :error
+  # Info include generic and useful information about system operation, but avoids logging too much
+  # information to avoid inadvertent exposure of personally identifiable information (PII). Use "debug"
+  # for everything.
+  config.log_level = ENV.fetch('RAILS_LOG_LEVEL') { 'info' }
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
