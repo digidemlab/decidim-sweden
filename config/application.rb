@@ -21,7 +21,7 @@ module DecidimSweden
     # the framework and any gems in your application.
 
     config.to_prepare do
-      Decidim::Proposals::ProposalSerializer.include(Decidim::ProposalSerializerExtensions)
+      Decidim::Proposals::ProposalSerializer.include(ProposalSerializerExtensions)
     end
 
     initializer "customizations", after: "decidim_core.action_controller" do
