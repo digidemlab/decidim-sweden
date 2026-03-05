@@ -23,5 +23,13 @@ module DecidimSweden
     config.to_prepare do
       Decidim::Proposals::ProposalSerializer.include(Decidim::ProposalSerializerExtensions)
     end
+
+    initializer "customizations", after: "decidim_core.action_controller" do
+      config.to_prepare do
+        Decidim::Proposals::ApplicationController.include(ProposalsApplicationControllerExtensions)
+        Decidim::Proposals::CollaborativeDraftsController.include(CollaborativeDraftsControllerExtensions)
+      end
+    end
+
   end
 end
