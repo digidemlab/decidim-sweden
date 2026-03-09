@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_02_24_094152) do
+ActiveRecord::Schema[7.0].define(version: 2025_06_17_104321) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -335,7 +335,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_02_24_094152) do
   end
 
   create_table "decidim_awesome_config", force: :cascade do |t|
-    t.jsonb "var"
+    t.string "var"
     t.jsonb "value"
     t.integer "decidim_organization_id"
     t.datetime "created_at", precision: nil, null: false
@@ -362,6 +362,26 @@ ActiveRecord::Schema[7.0].define(version: 2025_02_24_094152) do
     t.datetime "updated_at", precision: nil, null: false
     t.index ["decidim_author_id"], name: "decidim_awesome_editor_images_author"
     t.index ["decidim_organization_id"], name: "decidim_awesome_editor_images_constraint_organization"
+  end
+
+  create_table "decidim_awesome_proposal_extra_fields", force: :cascade do |t|
+    t.bigint "decidim_proposal_id", null: false
+    t.jsonb "vote_weight_totals"
+    t.integer "weight_total", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "private_body"
+    t.string "decidim_proposal_type", null: false
+    t.datetime "private_body_updated_at", precision: nil
+    t.index ["decidim_proposal_id", "decidim_proposal_type"], name: "index_decidim_awesome_proposal_extra_fields_on_decidim_proposal"
+  end
+
+  create_table "decidim_awesome_vote_weights", force: :cascade do |t|
+    t.bigint "proposal_vote_id", null: false
+    t.integer "weight", default: 1, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["proposal_vote_id"], name: "decidim_awesome_proposals_weights_vote"
   end
 
   create_table "decidim_blogs_posts", id: :serial, force: :cascade do |t|
@@ -1314,6 +1334,11 @@ ActiveRecord::Schema[7.0].define(version: 2025_02_24_094152) do
     t.boolean "enable_participatory_space_filters", default: true
     t.jsonb "content_security_policy", default: {}
     t.jsonb "name", default: {}, null: false
+    t.boolean "delete_admin_logs", default: false, null: false
+    t.integer "delete_admin_logs_after"
+    t.boolean "delete_inactive_users", default: false, null: false
+    t.integer "delete_inactive_users_email_after"
+    t.integer "delete_inactive_users_after"
     t.index ["host"], name: "index_decidim_organizations_on_host", unique: true
   end
 
@@ -1923,6 +1948,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_02_24_094152) do
     t.datetime "digest_sent_at", precision: nil
     t.datetime "password_updated_at", precision: nil
     t.string "previous_passwords", default: [], array: true
+    t.datetime "warning_date", precision: nil
     t.index ["confirmation_token"], name: "index_decidim_users_on_confirmation_token", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_users_on_decidim_organization_id"
     t.index ["email", "decidim_organization_id"], name: "index_decidim_users_on_email_and_decidim_organization_id", unique: true, where: "((deleted_at IS NULL) AND (managed = false) AND ((type)::text = 'Decidim::User'::text))"
@@ -2043,7 +2069,6 @@ ActiveRecord::Schema[7.0].define(version: 2025_02_24_094152) do
   add_foreign_key "decidim_consultations_responses", "decidim_consultations_questions", column: "decidim_consultations_questions_id"
   add_foreign_key "decidim_consultations_responses", "decidim_consultations_response_groups"
   add_foreign_key "decidim_consultations_votes", "decidim_consultations_responses"
-  add_foreign_key "decidim_consultations_votes", "decidim_consultations_responses"
   add_foreign_key "decidim_debates_debates", "decidim_scopes"
   add_foreign_key "decidim_editor_images", "decidim_organizations"
   add_foreign_key "decidim_editor_images", "decidim_users", column: "decidim_author_id"
@@ -2069,19 +2094,14 @@ ActiveRecord::Schema[7.0].define(version: 2025_02_24_094152) do
   add_foreign_key "decidim_term_customizer_constraints", "decidim_term_customizer_translation_sets", column: "translation_set_id"
   add_foreign_key "decidim_term_customizer_translations", "decidim_term_customizer_translation_sets", column: "translation_set_id"
   add_foreign_key "decidim_user_blocks", "decidim_users"
-  add_foreign_key "decidim_user_blocks", "decidim_users"
-  add_foreign_key "decidim_user_blocks", "decidim_users", column: "blocking_user_id"
   add_foreign_key "decidim_user_blocks", "decidim_users", column: "blocking_user_id"
   add_foreign_key "decidim_user_moderations", "decidim_users"
   add_foreign_key "decidim_user_reports", "decidim_user_moderations", column: "user_moderation_id"
   add_foreign_key "decidim_user_reports", "decidim_users", column: "user_id"
   add_foreign_key "decidim_users", "decidim_organizations"
   add_foreign_key "decidim_verifications_conflicts", "decidim_users", column: "current_user_id"
-  add_foreign_key "decidim_verifications_conflicts", "decidim_users", column: "managed_user_id"
   add_foreign_key "decidim_verifications_csv_data", "decidim_organizations"
   add_foreign_key "oauth_access_grants", "decidim_users", column: "resource_owner_id"
   add_foreign_key "oauth_access_grants", "oauth_applications", column: "application_id"
-  add_foreign_key "oauth_access_tokens", "decidim_users", column: "resource_owner_id"
-  add_foreign_key "oauth_access_tokens", "oauth_applications", column: "application_id"
   add_foreign_key "oauth_applications", "decidim_organizations"
 end
