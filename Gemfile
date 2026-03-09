@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", ref: "64da356" }
+DECIDIM_VERSION = "0.29.7"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
@@ -12,7 +12,7 @@ gem "decidim-initiatives", DECIDIM_VERSION
 
 gem "decidim-decidim_awesome", "0.12.0"
 
-gem "decidim-cleaner", git: "https://github.com/digidemlab/decidim-module-cleaner"
+gem "decidim-cleaner", "4.1.2"
 
 ### Awaiting upgrade to version 0.28 ###
 
@@ -72,3 +72,5 @@ end
 gem "nokogiri", "~> 1.16"
 
 gem "mini_portile2", "~> 2.8"
+#
+# gem 'commonmarker', "~> 0.23"
