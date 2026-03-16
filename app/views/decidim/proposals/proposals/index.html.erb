@@ -30,16 +30,6 @@
         <% end %>
       <% end %>
     <% end %>
-
-    <%# Better, but not yet working solution %>
-    <% if false %>
-    <% if component_settings.collaborative_drafts_enabled? %>
-      <%= action_authorized_link_to :show, collaborative_drafts_path, permissions_holder: current_component, class: "button button__sm button__transparent-secondary", data: { "redirect_url" => collaborative_drafts_path } do %>
-        <span><%= t("collaborative_drafts_list", scope: "decidim.proposals.proposals.index") %></span>
-        <%= icon "edit-2-line" %>
-      <% end %>
-    <% end %>
-    <% end %>
   </div>
 
   <%= render layout: "decidim/shared/filters", locals: { filter_sections: , search_variable: :search_text_cont, skip_to_id: "proposals" } do %>
