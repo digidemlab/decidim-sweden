@@ -34,6 +34,12 @@ sv:
           proposals: Förslag
           select_deselect_all: Markera/avmarkera alla
           taxonomies: Taxonomier
+  activerecord:
+    models:
+      decidim:
+        proposals:
+          proposal:
+            import_to_proposal_text: Detta förslag <span "resource-link">%{link} skapades.</span>
   activemodel:
     attributes:
       assembly:
@@ -332,6 +338,8 @@ sv:
             irreversible_action_modal:
               cancel: Avbryt
               body: Efter att utkastet dragits tillbaka går det inte längre att redigera.
+      creation:
+        imported_text: Det blev detta förslag
       models:
         proposal:
           fields:
