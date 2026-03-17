@@ -4,13 +4,13 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "0.29.7"
+DECIDIM_VERSION = "0.30.6"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 
-gem "decidim-decidim_awesome", "0.12.0"
+gem "decidim-decidim_awesome", "0.13.2"
 
 gem "decidim-cleaner", "4.1.2"
 
@@ -74,3 +74,5 @@ gem "nokogiri", "~> 1.16"
 gem "mini_portile2", "~> 2.8"
 #
 # gem 'commonmarker', "~> 0.23"
+
+gem "dotenv", "~> 3.2"
