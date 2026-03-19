@@ -39,7 +39,8 @@ sv:
       decidim:
         proposals:
           proposal:
-            import_to_proposal_text: Detta förslag <span "resource-link">%{link} skapades.</span>
+            import_to_proposal_text: Detta förslag <span "resource-link">%{link} skapades</span>
+            budget_text: Förslaget <span class="resource-link">%{link} skapades</span>
   activemodel:
     attributes:
       assembly:
