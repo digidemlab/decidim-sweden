@@ -1,5 +1,6 @@
 /* eslint-disable */
 const { config } = require("shakapacker");
+const { InjectManifest } = require("workbox-webpack-plugin");
 const { EsbuildPlugin } = require("esbuild-loader");
 
 module.exports = {
@@ -85,5 +86,18 @@ module.exports = {
       })
     ]
   },
-  entry: config.entrypoints
+  entry: config.entrypoints,
+  plugins: [
+    new InjectManifest({
+      swSrc: "src/decidim/sw/sw.js",
+
+      /**
+       * NOTE:
+       * @rails/webpacker outputs to '/packs',
+       * in order to make the SW run properly
+       * they must be put at the project's root folder '/'
+       */
+      swDest: "../sw.js"
+    })
+  ]
 };
