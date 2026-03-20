@@ -8,6 +8,12 @@
 //
 // By default this is empty.
 
+/* stylelint-disable at-rule-empty-line-before */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable */
+
 @import "fontface";
 // @import "modules/mini_footer";
 //@import "modules/white_theme";
@@ -330,4 +336,14 @@ header .main-bar__links-desktop__item {
 .decorator::after,
 .title-decorator::after {
   display: none;
+}
+
+/**
+  Fix for Decidim 0.30 upgrade:
+  Registers missing utility class expected by decidim-comments
+*/
+@layer components {
+  .border-background-5 {
+    border-color: var(--background-5, #f1f1f1);
+  }
 }

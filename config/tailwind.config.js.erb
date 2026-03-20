@@ -6,7 +6,7 @@
 // https://github.com/tailwindlabs/tailwindcss/blob/main/stubs/config.full.js
 //
 
-const { inherit, current, transparent, white } = require("tailwindcss/colors")
+const { inherit, current, transparent, white, neutral } = require("tailwindcss/colors")
 
 const withOpacity =
   (variable) =>
@@ -35,6 +35,7 @@ module.exports = {
       current,
       transparent,
       white,
+      neutral,
       primary: withOpacity("--primary-rgb"),
       secondary: withOpacity("--secondary-rgb"),
       tertiary: withOpacity("--tertiary-rgb"),
@@ -46,14 +47,16 @@ module.exports = {
         DEFAULT: "#4c4c4d", // dark grey
         2: "#4c4c4d", // Ljus text
         3: "#ccc",
-        4: "#4c4c4d",
-        5: "#e9e9e9"
+        4: "#aaa",
+        5: "#4c4c4d",
+        6: "#e9e9e9"
       },
       background: {
         DEFAULT: "#e9e9e9", // Light grey
         2: "#fafafa", // Almost white
         3: "#cdc5c5", // Slightly darker grey
-        4: "#cdc5c5"
+        4: "#cdc5c5",
+        5: "f1f1f1" // Slightly lighter grey
       }
     },
     container: {
