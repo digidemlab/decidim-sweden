@@ -19,6 +19,7 @@
     "formBuilder": "^3.22.0",
     "formbuilder-languages": "^1.2.0",
     "graphiql": "^3.9.0",
+    "graphql": "^16.13.1",
     "highlight.js": "^11.5.1",
     "inline-attacher": "^0.0.7",
     "inscrybmde": "^1.11.6",
