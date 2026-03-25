@@ -2,23 +2,16 @@
 // Hide — UI elements removed from this installation
 // ============================================================
 
-
-/**
-// Budget
-
-// Hide the disabled submit button on mobile to save space
-.budget-summary__progressbox-buttons:has(> .button.disabled),
-.budget-summary__progressbox-buttons:has(> .button[disabled]),
-.budget-summary__progressbox-buttons .button.disabled,
-.budget-summary__progressbox-buttons .button[disabled] {
-  @apply hidden md:inline-flex;
-}
-
-// Hide vote/select buttons when budget phase is finished
-.budget__projects__finished .budget__card__list-project .button {
-  display: none;
-}
-*/
+// Budget — from ref, not in original (commented out)
+// .budget-summary__progressbox-buttons:has(> .button.disabled),
+// .budget-summary__progressbox-buttons:has(> .button[disabled]),
+// .budget-summary__progressbox-buttons .button.disabled,
+// .budget-summary__progressbox-buttons .button[disabled] {
+//   @apply hidden md:inline-flex;
+// }
+// .budget__projects__finished .budget__card__list-project .button {
+//   display: none;
+// }
 
 // Floating help/tip widget
 #floating-helper-tip {
@@ -35,49 +28,31 @@
   display: none;
 }
 
-/**
-// Public profile link in account dropdown (2nd item)
-#dropdown-menu-account-mobile ul li:nth-child(2),
-#dropdown-menu-account > ul li:nth-child(2) {
-  display: none;
-}
-
-// Conversation/messaging links in account dropdown (4th item)
-#dropdown-menu-account-mobile ul li:nth-child(4),
-#dropdown-menu-account > ul li:nth-child(4),
-.profile__scaffold__top .profile__actions-main {
-  display: none;
-}
-*/
-
-/**
-// "About this process" heading above the sidebar blocks
-.participatory-space__content-block > .space-y-8 > h2.h2.decorator {
-  @apply sr-only;
-}
-
-// Alert block shown between process reference header and content
-.participatory-space__block-reference.alert {
-  display: none;
-}
-*/
-
-// Author attribution shown after meeting calendar embed
-.meeting__calendar-container + .layout-author {
-  display: none;
-}
-
-// Consent checkbox in meeting registration modal
-.meeting__registration-modal .form__wrapper-checkbox-label {
-  display: none;
-}
-
-// Consent checkbox at bottom of questionnaire
-.answer-questionnaire__footer > .form__wrapper-checkbox-label {
-  display: none;
-}
-
-// CTA button in the sub-hero area below the main hero
-#sub_hero .button {
-  display: none;
-}
+// From ref, not in original (commented out)
+// #dropdown-menu-account-mobile ul li:nth-child(2),
+// #dropdown-menu-account > ul li:nth-child(2) {
+//   display: none;
+// }
+// #dropdown-menu-account-mobile ul li:nth-child(4),
+// #dropdown-menu-account > ul li:nth-child(4),
+// .profile__scaffold__top .profile__actions-main {
+//   display: none;
+// }
+// .participatory-space__content-block > .space-y-8 > h2.h2.decorator {
+//   @apply sr-only;
+// }
+// .participatory-space__block-reference.alert {
+//   display: none;
+// }
+// .meeting__calendar-container + .layout-author {
+//   display: none;
+// }
+// .meeting__registration-modal .form__wrapper-checkbox-label {
+//   display: none;
+// }
+// .answer-questionnaire__footer > .form__wrapper-checkbox-label {
+//   display: none;
+// }
+// #sub_hero .button {
+//   display: none;
+// }
