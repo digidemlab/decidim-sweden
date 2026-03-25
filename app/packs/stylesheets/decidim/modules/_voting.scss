@@ -1,0 +1,103 @@
+// ============================================================
+// Voting — graded/weighted voting (decidim-awesome extension)
+// ============================================================
+
+// Ensure vote area has enough height for the voting controls
+.card__grid-grid .card__proposals-item .card__proposals-votes,
+.card__list-list .card__proposals-item .card__proposals-votes {
+  height: auto;
+  min-height: 68px;
+}
+
+// Dropdown voting wrapper: fill available space with small margin
+.graded-vote--dropdown {
+  flex: 1 1;
+  margin: 0.5rem !important;
+
+  .graded-vote-button {
+    margin-top: 5px;
+
+    // Vote count shown in the full graded-vote-button view, hidden here
+    .graded-vote-count {
+      display: none;
+    }
+  }
+}
+
+// Add spacing above the progress bar on the voting panel
+.voting-graded_vote .progress-bar__container {
+  @apply mt-5;
+}
+
+.button__graded-voting {
+  margin-top: 15px;
+  justify-content: start;
+}
+
+// Inline SVG icon for weight indicators
+div[data-weight-1] {
+  display: inline-block;
+
+  svg {
+    display: inline-block;
+  }
+}
+
+// Weight color tokens and labels in card list view
+.card__list-metadata {
+  --voting-cards-weight_-2: #891a1c;
+  --voting-cards-weight_-1: #866f09;
+  --voting-cards-weight_0: #222222;
+  --voting-cards-weight_1: #238075;
+  --voting-cards-weight_2: #064d05;
+
+  /* css for weight 1–3 is also defined by decidim-awesome */
+  .voting-weight {
+    white-space: nowrap;
+    border-right: 1px solid #ccc;
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .voting-weight-overridden_-2 { color: var(--voting-cards-weight_-2); }
+  .voting-weight-overridden_-1 { color: var(--voting-cards-weight_-1); }
+  .voting-weight-overridden_0  { color: var(--voting-cards-weight_0); }
+  .voting-weight-overridden_1  { color: var(--voting-cards-weight_1); }
+  .voting-weight-overridden_2  { color: var(--voting-cards-weight_2); }
+}
+
+// Full graded vote button row: button + count side by side
+.graded-vote-button {
+  margin-top: 15px;
+  display: flex;
+  align-items: end;
+
+  .button_to {
+    flex: 4;
+  }
+
+  .graded-vote-count {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    font-size: 1rem;
+  }
+
+  .graded-vote-count-number {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .button__graded-voting {
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+// Mobile: stack voting controls vertically in the aside CTA area
+.layout-aside__ctas-buttons.voting-graded_vote {
+  @apply relative z-0 flex-col items-stretch bg-transparent gap-0 p-0 shadow-none first:[&>*]:grow-0 last:[&>*]:w-auto h-fit;
+}

@@ -1,0 +1,26 @@
+// ============================================================
+// Footer — black footer design
+// ============================================================
+
+footer {
+  .main-footer {
+    @apply bg-black;
+
+    .font-semibold {
+      @apply font-normal;
+
+      &:hover {
+        @apply link-hover;
+      }
+    }
+  }
+
+  .mini-footer {
+    background-color: #262626;
+  }
+
+  h2 {
+    @apply text-white;
+    font-weight: bold !important;
+  }
+}

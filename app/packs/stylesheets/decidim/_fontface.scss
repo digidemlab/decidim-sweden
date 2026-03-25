@@ -1,4 +1,25 @@
 @font-face {
+    font-family: 'Avenir';
+    src: url('fonts/Avenir-Regular.woff2') format('woff2'),
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url('fonts/Avenir-Heavy.woff2') format('woff2'),
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url('fonts/Avenir-Light.woff2') format('woff2'),
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+@font-face {
     font-family: 'Open Sans';
     src: url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
     url('fonts/OpenSans-Regular-webfont.ttf') format('truetype');

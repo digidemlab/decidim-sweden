@@ -1,0 +1,54 @@
+// ============================================================
+// Navigation — header, menu bar, and dropdown design overrides
+// ============================================================
+
+// Mobile hamburger trigger: horizontal icon + label layout, no border
+header .main-bar__links-mobile__trigger {
+  @apply flex-row md:flex-col md:gap-0 md:pl-1 border-0;
+
+  span {
+    @apply not-sr-only font-normal md:text-xs;
+  }
+
+  &[aria-expanded="true"] > span {
+    display: none;
+  }
+}
+
+// Cover overlay for mobile dropdown does not work at this width
+header .main-bar__links-mobile__dropdown-before::before {
+  width: 8rem;
+  @apply hidden;
+}
+
+// Menu bar: top border separates it from the main bar
+#menu-bar {
+  @apply border-t border-solid text-gray-3;
+}
+
+header .menu-bar__container {
+  @apply bg-white;
+}
+
+// Dropdown menus: subtle ring border instead of shadow
+.menu-bar__breadcrumb-desktop__dropdown-content-secondary,
+header .menu-bar__main-dropdown {
+  @apply ring-1;
+  --tw-ring-color: #ccc;
+}
+
+// Mobile breadcrumb: smaller text to fit more items
+header .menu-bar__breadcrumb-mobile {
+  @apply text-xs !important;
+}
+
+// Breadcrumb desktop links and chevron icons in black
+header .menu-bar__breadcrumb-desktop > *,
+header .menu-bar__breadcrumb-desktop [data-target*="dropdown"] > svg {
+  @apply text-black;
+}
+
+// Underline on hover for dropdown menu links
+header .menu-bar__main-dropdown__menu a:hover {
+  @apply link-hover;
+}

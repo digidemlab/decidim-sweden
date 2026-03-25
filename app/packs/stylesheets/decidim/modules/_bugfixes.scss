@@ -1,0 +1,54 @@
+// ============================================================
+// Bugfixes — patches for Decidim core layout/render bugs
+// These should ideally be fixed upstream in decidim/decidim
+// ============================================================
+
+// Dropdown trigger hidden at iPad viewport (md/lg breakpoint gap in core)
+#dropdown-trigger-links-mobile[data-target*="dropdown"] {
+  @apply lg:hidden md:flex !important;
+}
+
+// Dropdown menus overflow viewport width on smaller desktop screens
+header .menu-bar__secondary-dropdown,
+header .menu-bar__main-dropdown {
+  @apply w-full xl:w-[1214px];
+}
+
+// Breadcrumb dropdown inherits wrong positioning context
+header .menu-bar__breadcrumb-desktop > .relative {
+  position: inherit;
+}
+
+// Secondary dropdown anchors wrong relative to breadcrumb parent
+header .menu-bar__breadcrumb-desktop__dropdown-content-secondary {
+  top: 100%;
+  left: 2rem;
+}
+
+// Second card in proposals list gets extra top margin on desktop
+.card__proposals-item:nth-child(2) {
+  @apply md:mt-0;
+}
+
+// Sort/order dropdown is rendered as block instead of flex at 2xl
+[data-target*="dropdown"].order-by__button {
+  @apply flex 2xl:hidden !important;
+}
+
+#dropdown-menu-order.order-by {
+  @apply flex-col 2xl:flex-row !important;
+}
+
+#dropdown-menu-order[aria-hidden="true"] {
+  display: none;
+}
+
+#dropdown-menu-order .button__sm {
+  @apply 2xl:text-xs;
+}
+
+// Phase/status icon in card metadata gets fixed width from core, breaking layout
+.card__highlight-metadata > :first-child,
+.card__grid-metadata > :first-child {
+  width: unset;
+}

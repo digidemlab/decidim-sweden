@@ -1,0 +1,95 @@
+// ============================================================
+// Spaces — participatory processes, assemblies, and meetings
+// Also includes start page hero and section backgrounds
+// ============================================================
+
+/**
+  Start page hero
+*/
+
+// Dark gradient overlay over the hero background image
+.hero__container {
+  /* stylelint-disable-next-line number-leading-zero */
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7) 21.88%,
+      rgba(0, 0, 0, 0.46421) 60.94%,
+      rgba(0, 0, 0, 0.105) 100%
+    ),
+    var(--hero-image);
+}
+
+/**
+  Start page sections
+*/
+
+// Reduce top padding on the process/assembly grids
+#highlighted-processes,
+#highlighted-assemblies {
+  @apply pt-2 md:pt-4;
+}
+
+// Reduce bottom padding on the HTML content block
+#html-block-html {
+  @apply pb-4;
+}
+
+/**
+  "How to participate" section
+*/
+
+#how_to_participate {
+  background-color: #dbeff8;
+  @apply mt-8 md:mt-12;
+
+  .editor-content {
+    max-width: 900px;
+  }
+}
+
+/**
+  Participatory space hero
+*/
+
+.participatory-space__hero-slogan {
+  @apply text-white mb-4;
+}
+
+.participatory-space__hero {
+  @apply backdrop-filter-none bg-background;
+}
+
+.participatory-space__hero-text {
+  @apply text-black;
+}
+
+/**
+  Participatory space navigation
+*/
+
+// Always show the sub-navigation menu on mobile (skip the dropdown)
+.participatory-space__nav-container [data-target*="dropdown"] {
+  display: none;
+}
+
+.participatory-space__nav-container [id*="dropdown-menu"] {
+  @apply py-1 md:p-0 block;
+}
+
+/**
+  Process overview page
+*/
+
+// Aside title is too large with the default h1 size
+.layout-2col__aside h1.title-decorator {
+  font-size: 1.625rem;
+}
+
+/**
+  Meetings
+*/
+
+// Constrain the static map image width so it doesn't dominate the layout
+.static-map {
+  @apply md:max-w-[10rem] xl:max-w-[12rem];
+}

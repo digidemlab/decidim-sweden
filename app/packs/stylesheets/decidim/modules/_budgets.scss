@@ -1,0 +1,24 @@
+// ============================================================
+// Budgets — participatory budgeting module styles
+// ============================================================
+
+
+// Show the checkout confirmation box on mobile too (hidden by default)
+.budget-summary__progressbox--checked_out {
+  @apply block;
+}
+
+// Reverse order on mobile: show progress bar above vote button
+.budget-summary__progressbox {
+  @apply flex flex-col-reverse md:flex-col;
+}
+
+// Use green for the filled portion of the progress bar
+.budget-summary__progressbar--meter {
+  background-color: #28a745;
+}
+
+// Prevent the "X kr / Y kr" label from wrapping mid-number
+.budget-summary__progressbar-legend-strong {
+  white-space: nowrap;
+}

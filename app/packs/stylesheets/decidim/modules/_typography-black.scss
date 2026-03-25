@@ -1,0 +1,91 @@
+// ============================================================
+// Typography black — makes text, links, and UI elements black
+// Replaces Decidim's default secondary/primary colored text
+// ============================================================
+
+// Shared underline style used with @apply across modules
+.link-hover {
+  -webkit-text-decoration-line: underline;
+  -moz-text-decoration-line: underline;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+// Headings: black and bold throughout
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply font-bold text-black;
+}
+
+// Transparent button variant: black border and text instead of primary color
+.button__transparent {
+  @apply text-black border-black;
+}
+
+// Card list title and secondary text links: black underlined
+a .card__list-title,
+.button__text-secondary,
+a .text-secondary {
+  @apply text-black underline font-bold;
+
+  &:hover {
+    @apply link-hover;
+  }
+}
+
+// Activity feed links: underlined
+.activity__content > span:first-child a {
+  text-decoration: underline;
+
+  &:hover {
+    @apply link-hover;
+  }
+}
+
+// Login with external provider: show icon and label inline
+.login__omniauth-button span {
+  display: inline;
+}
+
+.login__omniauth-button svg {
+  fill: #000;
+  display: inline;
+}
+
+// Flash/proposal answer messages: paragraph spacing
+.flash__message p {
+  margin-bottom: 0.75rem;
+}
+
+// Broad color reset: override secondary/primary colors with black
+// for navigation elements, icons, filters, and interactive controls
+header .menu-bar__breadcrumb-mobile__dropdown-trigger span,
+header .menu-bar__breadcrumb-mobile__dropdown-trigger,
+header .menu-bar__main-dropdown__menu a,
+header .menu-bar__breadcrumb-desktop [data-target*="dropdown"] > svg,
+.border-secondary,
+.filter-container input[type="checkbox"]:checked,
+.filter-container input[type="checkbox"]:indeterminate,
+.filter-container input[type="radio"]:checked,
+.filter-container input[type="radio"]:indeterminate,
+.card__list-title,
+.activity__content > span:first-child a,
+.home__section-participate-grid__icon,
+.button__text-secondary,
+header .main-bar__links-mobile,
+[data-target*="dropdown"] > svg,
+header .main-bar__links-mobile__trigger,
+header .main-bar__links-desktop__item {
+  @apply text-black;
+}
+
+// Remove decorative underline element from section and page titles
+.home__section-title::after,
+.decorator::after,
+.title-decorator::after {
+  display: none;
+}

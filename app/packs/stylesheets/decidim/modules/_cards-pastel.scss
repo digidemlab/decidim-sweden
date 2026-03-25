@@ -1,0 +1,46 @@
+// ============================================================
+// Cards — pastel background colors and white grid style
+//
+// Palette reference:
+//   1. dark-blue-light  #e3e8e9
+//   2. blue-light       #dbeff8
+//   3. green-light      #dbede2
+//   4. pink-light       #fbe1ec
+//   5. purple-light     #ece2f1
+//   6. red-light        #fde3d6
+//   7. turquoise-light  #d6ebed
+//   8. yellow-light     #fff2b0
+// ============================================================
+
+.card__highlight {
+  @apply bg-white shadow-none ring-transparent;
+
+  &:hover {
+    @apply ring-transparent;
+  }
+
+  &:nth-child(1) { background-color: #e3e8e9; }
+  &:nth-child(2) { background-color: #dbeff8; }
+  &:nth-child(3) { background-color: #dbede2; }
+  &:nth-child(4) { background-color: #fbe1ec; }
+  &:nth-child(5) { background-color: #ece2f1; }
+  &:nth-child(6) { background-color: #fde3d6; }
+  &:nth-child(7) { background-color: #d6ebed; }
+  &:nth-child(8) { background-color: #fff2b0; }
+}
+
+.card__grid {
+  @apply bg-white shadow-none ring-1;
+  --tw-ring-color: #e5e5e5;
+
+  &:hover {
+    @apply bg-background;
+    --tw-ring-color: #e5e5e5;
+  }
+}
+
+// Metadata tags should not overflow their card container
+.card__highlight-metadata > *,
+.card__grid-metadata > * {
+  @apply max-w-full;
+}

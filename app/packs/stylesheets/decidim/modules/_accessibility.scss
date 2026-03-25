@@ -1,0 +1,40 @@
+// ============================================================
+// Accessibility — WCAG fixes and usability improvements
+// ============================================================
+
+// WCAG 2.1 SC 2.5.5: enlarge click area for search button
+header .main-bar__search form {
+  line-height: 1.5555;
+
+  button {
+    padding: 0 3px;
+  }
+}
+
+// WCAG 1.4.3: sufficient contrast for search input and its states
+#input-search {
+  @apply border border-gray outline outline-1 outline-transparent rounded bg-background-2 text-black font-normal placeholder:text-gray focus:outline-2 focus:outline-secondary disabled:bg-background-3 disabled:text-gray-2 disabled:cursor-not-allowed;
+}
+
+// Tabs overflow on mobile causing horizontal scroll
+.tab-x-container {
+  @apply block md:flex md:gap-1 [&>*]:grow;
+}
+
+// WCAG 1.4.3: wizard step indicators after current step use low-contrast grey
+.wizard-steps > * {
+  &[aria-current] ~ * {
+    &:before,
+    &:after {
+      background: #595959;
+    }
+  }
+}
+
+// Fix for Decidim 0.30 upgrade:
+// Registers missing utility class expected by decidim-comments
+@layer components {
+  .border-background-5 {
+    border-color: var(--background-5, #f1f1f1);
+  }
+}
