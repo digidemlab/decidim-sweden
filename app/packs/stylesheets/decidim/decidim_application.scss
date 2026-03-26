@@ -101,6 +101,15 @@ header .main-bar__links-mobile__dropdown-before::before {
   margin-bottom: 0.75rem;
 }
 
+// Warning, less frightening
+.flash.alert {
+  @apply border-secondary bg-secondary/5;
+
+  .flash__icon {
+    display: none;
+  }
+}
+
 
 /**
  Design bug fixes
