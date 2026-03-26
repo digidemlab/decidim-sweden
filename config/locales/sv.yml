@@ -43,6 +43,8 @@ sv:
             budget_text: Förslaget <span class="resource-link">%{link} skapades</span>
   activemodel:
     attributes:
+      editor_image:
+        file: Bild
       assembly:
         participatory_scope: Vad beslutas
         meta_scope: Frågeställning
