@@ -241,9 +241,9 @@ sv:
     authorization_modals:
       content:
         missing:
-          authorize: 'Komplettera din profil'
+          authorize: 'Fyll i uppgifter'
           explanation: 'För att fortsätta behöver du fylla i uppgifter för statistik.'
-          title: 'Komplettera din profil'
+          title: 'Fyll i uppgifter'
     onboarding_action_message:
       pending_authorization_active_title: 'Komplettera din profil'
       pending_authorization_active_message: 'För att fortsätta behöver du fylla i uppgifter för statistik.'
@@ -1159,16 +1159,16 @@ sv:
           cancel: Jag gör detta en annan gång, %{link}.
           granted_title: Beviljade verifieringar
           logout: låt mig logga ut
-          missing_title: Inte verifierad ännu
+          missing_title: Villkor att godkänna
           resume_title: Pågående verifieringar
           resume_with_method: Återuppta verifiering med %{name}
-          title: Verifiera din identitet
-          verify_with_all_these_options: 'Verifiera dig med alla dessa metoder innan du kan komma åt plattformen:'
-          verify_with_any_of_these_options: 'Verifiera dig med minst en av dessa alternativ innan du kan komma åt plattformen:'
-          verify_with_method: Verifiera med %{name}
+          title: Stängt innehåll
+          verify_with_all_these_options: 'För att gå vidare behöver du godkänna särskilda villkor:'
+          verify_with_any_of_these_options: 'För att gå vidare behöver du godkänna särskilda villkor:'
+          verify_with_method: Villkor för %{name}
       session:
-        authorization_is_required: För att delta i denna plattform måste du auktorisera ditt konto med en giltig auktorisation (%{authorizations}).
-        login_and_authorization_is_required: För att komma åt denna del av plattformen måste du logga in och auktorisera ditt konto.
+        authorization_is_required: Det här innehållet är stängt. Du behöver godkänna villkoren för %{authorizations} för att gå vidare.
+        login_and_authorization_is_required: Det här innehållet är stängt. För att komma åt det behöver du logga in och godkänna särskilda villkor.
       system:
         organizations:
           admin_allowed_authoritzations_help_html: |
