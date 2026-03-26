@@ -12,7 +12,7 @@
 @tailwind utilities;
 /* stylelint-enable */
 
-@import "fontface";
+@import "fontface-avenir";
 
 // Typography first — defines .link-hover used by other modules
 @import "modules/typography-black";
@@ -31,10 +31,16 @@
 
 // Components
 // @import "modules/hide";
-@import "modules/cards-pastel";
+// @import "modules/cards-pastel";
 @import "modules/budgets";
 // @import "modules/voting";
 
 html {
   font-family: "Avenir", "Arial", "sans-serif";
+}
+
+
+
+.button {
+  @apply rounded-3xl;
 }
