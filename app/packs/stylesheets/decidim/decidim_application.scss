@@ -94,6 +94,9 @@ header .main-bar__links-mobile__dropdown-before::before {
  Proposal answers
  */
 
+.flash {
+  @apply break-normal;
+}
 .flash__message p {
   margin-bottom: 0.75rem;
 }
