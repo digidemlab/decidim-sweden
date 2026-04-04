@@ -2,7 +2,7 @@
 
 namespace :decidim_proposals do
   desc 'Remove old versions of proposals'
-  task clean: :environment do
+  task clean_old_proposal_versions: :environment do
     logger = Logger.new($stdout)
     keep_ids = Rails.application.config.proposals_keep_revisions
     old_versions = PaperTrail::Version.where(item_type: 'Decidim::Proposals::Proposal')
