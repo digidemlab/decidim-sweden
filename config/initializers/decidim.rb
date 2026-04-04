@@ -20,6 +20,9 @@ Decidim.configure do |config|
     }
   }
 
+  # Max attachment size (MB)
+  config.maximum_attachment_size = 50
+
   # Custom resource reference generator method
   # config.reference_generator = lambda do |resource, component|
   #   # Implement your custom method to generate resources references
@@ -103,13 +106,10 @@ Decidim.configure do |config|
 
   config.force_ssl = ENV.fetch('DECIDIM_FORCE_SSL', 'true') == 'true'
   config.assume_ssl = config.force_ssl
-
-  config.hosts = Rails.application.secrets.domain
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
 Rails.application.config.i18n.default_locale = Decidim.default_locale
-Rails.application.config.hosts << Decidim.config.hosts
 
 # Inform Decidim about the assets folder
 Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)

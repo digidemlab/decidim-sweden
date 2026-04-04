@@ -18,8 +18,8 @@ Rails.application.configure do
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
 
-  # Store uploaded files on the local file system (see config/storage.yml for options)
-  config.active_storage.service = :local
+  # Where to store uploaded files (see config/storage.yml for options)
+  config.active_storage.service = ENV.fetch('DECIDIM_STORAGE_SERVICE', 'local')
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
@@ -41,9 +41,10 @@ Rails.application.configure do
   config.force_ssl = ENV.fetch('DECIDIM_FORCE_SSL', 'true') == 'true'
   config.assume_ssl = config.force_ssl
 
-  # Use the lowest log level to ensure availability of diagnostic information
-  # when problems arise.
-  config.log_level = :error
+  # Info include generic and useful information about system operation, but avoids logging too much
+  # information to avoid inadvertent exposure of personally identifiable information (PII). Use "debug"
+  # for everything.
+  config.log_level = ENV.fetch('RAILS_LOG_LEVEL') { 'info' }
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
@@ -98,5 +99,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_controller.allow_forgery_protection = false
+  config.action_controller.allow_forgery_protection = true
+
+  config.hosts.concat ENV.fetch('DECIDIM_HOSTS', '').split(',')
 end

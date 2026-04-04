@@ -94,8 +94,20 @@ header .main-bar__links-mobile__dropdown-before::before {
  Proposal answers
  */
 
+.flash {
+  @apply break-normal;
+}
 .flash__message p {
   margin-bottom: 0.75rem;
+}
+
+// Warning, less frightening
+.flash.alert {
+  @apply border-secondary bg-secondary/5;
+
+  .flash__icon {
+    display: none;
+  }
 }
 
 
@@ -105,23 +117,6 @@ header .main-bar__links-mobile__dropdown-before::before {
 
 .card__proposals-item:nth-child(2) {
     @apply md:mt-0;
-}
-
-// Dropdown sort proposals
-[data-target*="dropdown"].order-by__button {
-  @apply flex 2xl:hidden !important;
-}
-
-#dropdown-menu-order.order-by {
-  @apply flex-col 2xl:flex-row !important;
-}
-
-#dropdown-menu-order[aria-hidden="true"] {
-  display: none;
-}
-
-#dropdown-menu-order .button__sm {
-  @apply 2xl:text-xs;
 }
 
 // Phase icon width
@@ -389,7 +384,7 @@ footer {
 .meeting__calendar-container + .layout-author,
 .meeting__registration-modal .form__wrapper-checkbox-label,
 .answer-questionnaire__footer > .form__wrapper-checkbox-label,
-#participatory-process-homepage-highlighted-proposals .button,
+// #participatory-process-homepage-highlighted-proposals .button,
 #sub_hero .button,
 #floating-helper-tip {
   display: none;
@@ -606,6 +601,16 @@ div[data-weight-1] {
     margin-top: 0;
     text-align: left;
   }
+}
+
+.proposal-link {
+  display: flex;
+}
+
+.proposal-link:hover {
+  display: flex;
+  text-decoration-thickness: unset;
+  text-underline-offset: unset;
 }
 
 // Mobile view

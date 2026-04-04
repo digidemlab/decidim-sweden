@@ -1,6 +1,6 @@
 services:
   app:
-    image: localhost/decidim-sweden-gbg:0.30.4
+    image: localhost/decidim-sweden-gbg:0.30-3
     user: "1001"
     ports:
       - 3000:3000
@@ -10,33 +10,48 @@ services:
       - app-saml:/code/config/saml
     environment:
       - "RAILS_ENV=$RAILS_ENV"
+      - "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID"
+      - "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY"
+      - "AWS_REGION=$AWS_REGION"
+      - "AWS_BUCKET=$AWS_BUCKET"
+      - "AWS_ENDPOINT=$AWS_ENDPOINT"
       - "DATABASE_URL=postgres://decidim:$DATABASE_PASSWORD@pg:5432/decidim"
       - DATABASE_HOST=pg
       - DATABASE_USERNAME=decidim
       - "DATABASE_PASSWORD=$DATABASE_PASSWORD"
       - DECIDIM_FORCE_SSL=true
-      - "DOMAIN=$DOMAIN"
+      - "DECIDIM_STORAGE_SERVICE=$DECIDIM_STORAGE_SERVICE"
+      - "DECIDIM_HOSTS=$DECIDIM_HOSTS"
       - "GEOCODER_LOOKUP_API_KEY=$HERE_API_KEY"
       - "MAILER_SENDER=$MAILER_SENDER"
       - RAILS_LOG_TO_STDOUT=1
+      - "RAILS_LOG_LEVEL=$RAILS_LOG_LEVEL"
       - "REDIS_URL=redis://redis:6379/1"
       - "SECRET_KEY_BASE=$SECRET_KEY_BASE"
     depends_on:
       - pg
       - sidekiq
+    extra_hosts:
+      - s3.garage.decidim.localdomain:host-gateway
     command: bundle exec passenger start
     restart: always
   sidekiq:
-    image: localhost/decidim-sweden-gbg:0.30.4
+    image: localhost/decidim-sweden-gbg:0.30-3
     user: "1001"
     environment:
       - "RAILS_ENV=$RAILS_ENV"
+      - "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID"
+      - "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY"
+      - "AWS_REGION=$AWS_REGION"
+      - "AWS_BUCKET=$AWS_BUCKET"
+      - "AWS_ENDPOINT=$AWS_ENDPOINT"
       - "DATABASE_URL=postgres://decidim:$DATABASE_PASSWORD@pg:5432/decidim"
       - DATABASE_HOST=pg
       - DATABASE_USERNAME=decidim
       - "DATABASE_PASSWORD=$DATABASE_PASSWORD"
       - DECIDIM_FORCE_SSL=true
-      - "DOMAIN=$DOMAIN"
+      - "DECIDIM_STORAGE_SERVICE=$DECIDIM_STORAGE_SERVICE"
+      - "DECIDIM_HOSTS=$DECIDIM_HOSTS"
       - "GEOCODER_LOOKUP_API_KEY=$HERE_API_KEY"
       - "MAILER_SENDER=$MAILER_SENDER"
       - RAILS_LOG_TO_STDOUT=1
@@ -45,6 +60,8 @@ services:
     depends_on:
       - pg
       - redis
+    extra_hosts:
+      - s3.garage.decidim.localdomain:host-gateway
     command: bundle exec sidekiq -C config/sidekiq.yml
     restart: always
   pg:
@@ -61,8 +78,28 @@ services:
       - 6379:6379
     volumes:
       - redis-data:/data
+  garage:
+    image: dxflrs/garage:v2.2.0
+    restart: unless-stopped
+    ports:
+      - 3900:3900
+      - 3901:3901
+      - 3902:3092
+      - 3903:3903
+    volumes:
+      - ./garage.toml:/etc/garage.toml:ro
+      - garage-meta:/var/lib/garage/meta
+      - garage-data:/var/lib/garage/data
+    healthcheck:
+      test: ["CMD", "/garage", "status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
 volumes:
   pg-data: {}
   redis-data: {}
   app-storage: {}
   app-saml: {}
+  garage-meta: {}
+  garage-data: {}

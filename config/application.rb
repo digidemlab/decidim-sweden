@@ -21,5 +21,17 @@ module DecidimSweden
     # the framework and any gems in your application.
 
     config.proposals_keep_revisions = []
+    
+    config.to_prepare do
+      Decidim::Proposals::ProposalSerializer.include(ProposalSerializerExtensions)
+    end
+
+    initializer "customizations", after: "decidim_core.action_controller" do
+      config.to_prepare do
+        Decidim::Proposals::ApplicationController.include(ProposalsApplicationControllerExtensions)
+        Decidim::Proposals::CollaborativeDraftsController.include(CollaborativeDraftsControllerExtensions)
+      end
+    end
+
   end
 end

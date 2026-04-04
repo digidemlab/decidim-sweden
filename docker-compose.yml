@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.30.4
+    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.30-1
     user: "1002790000"
     ports:
       - 3000:3000
@@ -15,7 +15,6 @@ services:
       - DATABASE_USERNAME=decidim
       - "DATABASE_PASSWORD=$DATABASE_PASSWORD"
       - DECIDIM_FORCE_SSL=true
-      - "DOMAIN=$DOMAIN"
       - "GEOCODER_LOOKUP_API_KEY=$HERE_API_KEY"
       - "MAILER_SENDER=$MAILER_SENDER"
       - RAILS_LOG_TO_STDOUT=1
@@ -27,7 +26,7 @@ services:
     command: bundle exec passenger start
     restart: always
   sidekiq:
-    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.30.4
+    image: ghcr.io/digidemlab/decidim-sweden-gbg:0.30-1
     user: "1002790000"
     environment:
       - "RAILS_ENV=$RAILS_ENV"
@@ -36,7 +35,6 @@ services:
       - DATABASE_USERNAME=decidim
       - "DATABASE_PASSWORD=$DATABASE_PASSWORD"
       - DECIDIM_FORCE_SSL=true
-      - "DOMAIN=$DOMAIN"
       - "GEOCODER_LOOKUP_API_KEY=$HERE_API_KEY"
       - "MAILER_SENDER=$MAILER_SENDER"
       - RAILS_LOG_TO_STDOUT=1

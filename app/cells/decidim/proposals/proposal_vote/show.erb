@@ -20,10 +20,12 @@
 
 <% if voting_manifest.present? %>
   <div id="proposal-<%= resource.id %>-vote-button" class="card__proposals-votes-container">
-
-    <a href="<%= proposal_path(resource) %>" class="button button__sm button__text-secondary">Till graderad omröstning</a>
-
-
+    <% user_vote = current_user ? resource.votes.find_by(author: current_user) : nil %>
+    <% if user_vote %>
+      <a href="<%= proposal_path(resource) %>" class="button button__sm button__text-secondary proposal-link">Röstat <%= icon "check-line", class: "already-voted-icon" %></a>
+    <% else %>
+      <a href="<%= proposal_path(resource) %>" class="button button__sm button__text-secondary proposal-link">Till graderad omröstning</a>
+    <% end %>
   </div>
 <% else %>
   <% button_classes = "button button__lg button__secondary w-full" %>
