@@ -10,6 +10,8 @@ gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 
+gem "decidim-ai", DECIDIM_VERSION
+
 gem "decidim-decidim_awesome", "0.13.2"
 
 gem "decidim-cleaner", "4.1.2"
