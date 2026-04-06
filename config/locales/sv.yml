@@ -43,6 +43,9 @@ sv:
             budget_text: Förslaget <span class="resource-link">%{link} skapades</span>
   activemodel:
     attributes:
+      user:
+        name: Namn
+        email: E-postadress
       editor_image:
         file: Bild
       assembly:
@@ -134,6 +137,10 @@ sv:
               missing: är inte fullständiga
               too_many: Du kan välja maximalt %{count}.
   decidim:
+    debates:
+      debates:
+        orders:
+          label: 'Sortera debatter efter'
     statistics:
       surveys_count_tooltip: Antalet enkäter och svar som samlats in.
     surveys:
@@ -156,6 +163,9 @@ sv:
       show:
         changes_at_title: 'Ändringar av "%{title}"'
     devise:
+      registrations:
+        new:
+          username_help: 'Namnet du skriver här kommer att visas vid dina inlägg. Vissa processer kräver att du är anonym. Använd ett påhittat namn om du vill vara anonym.'
       omniauth_registrations:
         new:
           nickname_help: "Ditt användarnamn i %{organization}. Kan bara innehålla små bokstäver a-z, siffror, '-' och '_'."
@@ -243,19 +253,22 @@ sv:
     authorization_modals:
       content:
         missing:
-          authorize: 'Fyll i uppgifter'
-          explanation: 'För att fortsätta behöver du fylla i uppgifter för statistik.'
-          title: 'Fyll i uppgifter'
+          authorize: 'Svara på frågor'
+          explanation: 'För att fortsätta behöver du svara på några frågor.'
+          title: 'Svara på frågor'
     onboarding_action_message:
-      pending_authorization_active_title: 'Komplettera din profil'
-      pending_authorization_active_message: 'För att fortsätta behöver du fylla i uppgifter för statistik.'
+      pending_authorization_active_title: 'Svara på frågor'
+      pending_authorization_active_message: 'För att fortsätta behöver du svara på några frågor.'
     verifications:
       authorizations:
+        create:
+          error: 'Det finns fel i formuläret.'
+          unconfirmed: 'Du har fått ett mejl från Medborgarinflytande Göteborgs Stad, du behöver klicka på länken i det mejlet för att kunna gå vidare här.'
         new:
-          authorize_with: 'Komplettera din profil'
+          authorize_with: 'Svara på frågor'
         first_login:
-          title: 'Komplettera din profil'
-          verify_with_these_options: 'Komplettera din profil med uppgifter för statistik.'
+          title: 'Svara på frågor'
+          verify_with_these_options: 'För att fortsätta behöver du svara på några frågor.'
           actions:
             socio_demographic_no_phone_authorization_handler: 'Uppgifter för statistik'
         onboarding_pending:
@@ -601,6 +614,10 @@ sv:
         unregistered: Ej registrerad
         user_status: Användarstatus
     components:
+      comment_order_selector:
+        order:
+          older: Äldsta
+          recent: Senaste
       surveys:
         name: Enkäter
       goteborg_login:
