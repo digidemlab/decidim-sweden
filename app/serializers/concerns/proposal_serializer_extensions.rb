@@ -22,6 +22,9 @@ module ProposalSerializerExtensions
         end,
         phone: resource.authors.map do |author|
           author_phone(author)
+        end,
+        reason: resource.authors.map do |author|
+          author_reason(author)
         end
       }
     end
@@ -38,6 +41,14 @@ module ProposalSerializerExtensions
   def author_phone(author)
     if author.respond_to?(:phone_number)
       author.phone_number
+    else
+      ""
+    end
+  end
+
+  def author_reason(author)
+    if author.managed?
+      Decidim::ImpersonationLog.where(decidim_user_id: author.id)&.filter {|l| l.reason != ""}.map(&:reason).join(", ") || ""
     else
       ""
     end
