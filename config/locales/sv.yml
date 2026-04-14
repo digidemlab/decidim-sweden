@@ -49,6 +49,7 @@ sv:
       user:
         name: Namn
         email: E-postadress
+        user_time_zone: Personlig tidszon
       editor_image:
         file: Bild
       assembly:
@@ -124,8 +125,6 @@ sv:
         visibility: Synlighet
       organization:
         awesome_admins_available_authorizations: Tillåt administratörer att manuellt verifiera användare med dessa auktorisationer
-      user:
-        user_time_zone: Personlig tidszon
     errors:
       models:
         questionnaire:
@@ -284,7 +283,7 @@ sv:
         visibility_warning: 'Ditt namn och användarnamn syns tillsammans med ditt lämnade förslag. Ändra båda fälten för namn och användarnamn om du vill vara anonym.'
       email:
         please_change: 'Loggar du in med telefonnummer behöver du inte ändra i detta e-post-fält.'
-    meetings: # Härifrån och ner är tillfälligt tills översättning synkar
+    meetings:  # Härifrån och ner är tillfälligt tills översättning synkar
       meetings:
         show:
           join: 'Anmäl dig'
@@ -332,7 +331,7 @@ sv:
         responses: Exportera svar
         survey_user_responses: Svar på enkät
         admin_actions: Adminåtgärder
-        awesome_private_proposals: Förslagsexport med privata fält        
+        awesome_private_proposals: Förslagsexport med privata fält
     active_hashcash:
       submit_filter: Filtrera
       waiting_label: Väntar på verifiering ...
@@ -409,7 +408,7 @@ sv:
           weight_2: Helt för
           votes_blocked: Omröstning stängd
         show:
-          edit_proposal: Redigera          
+          edit_proposal: Redigera
           withdraw_proposal: Dra tillbaka förslaget
     forms:
       file_help:
@@ -665,7 +664,7 @@ sv:
             show_evaluating: Visa utvärderade förslag
             show_not_answered: Visa obesvarade förslag
             show_rejected: Visa avvisade förslag
-            show_withdrawn: Visa återdragna förslag      
+            show_withdrawn: Visa återdragna förslag
       add_comment_form:
         form:
           body:
