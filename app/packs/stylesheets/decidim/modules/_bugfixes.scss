@@ -52,3 +52,9 @@ header .menu-bar__breadcrumb-desktop__dropdown-content-secondary {
 .card__grid-metadata > :first-child {
   width: unset;
 }
+
+
+// Fix word break for flash messages
+.flash {
+  @apply break-normal;
+}
