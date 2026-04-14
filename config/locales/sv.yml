@@ -37,6 +37,9 @@ sv:
   activerecord:
     models:
       decidim:
+        accountability:
+          result:
+            proposal_ids: 'Förslaget som röstades fram: %{link}'
         proposals:
           proposal:
             import_to_proposal_text: Detta förslag <span "resource-link">%{link} skapades</span>
@@ -137,6 +140,9 @@ sv:
               missing: är inte fullständiga
               too_many: Du kan välja maximalt %{count}.
   decidim:
+    accountability:
+      creation:
+        text: Förslaget ska genomföras
     debates:
       debates:
         orders:
@@ -247,7 +253,7 @@ sv:
         home:
           highlighted_processes:
             active_spaces: Det här pågår just nu
-            active_processes: Det här pågår just nu
+            active_processes: Pågående processer
       last_activity:
         new_participatory_process: 'Ny process:'
     authorization_modals:
