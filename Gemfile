@@ -8,8 +8,11 @@ ruby RUBY_VERSION
 DECIDIM_VERSION = "~>0.30.6"
 
 gem "decidim", DECIDIM_VERSION
+gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
+
+gem "decidim-decidim_awesome", "~>0.13.0"
 
 ### Awaiting upgrade to version 0.28 ###
 
