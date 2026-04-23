@@ -39,7 +39,7 @@
 */
 
 #how_to_participate {
-  background-color: #dbeff8;
+  background-color: rgb(var(--secondary-rgb) / 0.1);
   @apply mt-8 md:mt-12;
 
   .editor-content {
