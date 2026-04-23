@@ -77,11 +77,11 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120542) do
     t.integer "children_count", default: 0
     t.float "weight", default: 1.0
     t.string "external_id"
+    t.integer "comments_count", default: 0, null: false
     t.string "main_image"
     t.string "list_image"
     t.string "theme_color"
     t.boolean "use_default_details", default: true
-    t.integer "comments_count", default: 0, null: false
     t.datetime "deleted_at"
     t.text "address"
     t.float "latitude"
@@ -431,7 +431,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120542) do
     t.jsonb "title"
     t.integer "weight", default: 0, null: false
     t.jsonb "description"
-    t.bigint "total_budget", default: 0
+    t.integer "total_budget", default: 0
     t.integer "decidim_component_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
@@ -476,13 +476,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120542) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.string "reference"
-    t.string "address"
-    t.float "latitude"
-    t.float "longitude"
     t.bigint "decidim_budgets_budget_id"
     t.date "selected_at"
     t.integer "comments_count", default: 0, null: false
     t.integer "follows_count", default: 0, null: false
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "deleted_at"
     t.index ["decidim_budgets_budget_id"], name: "index_decidim_budgets_projects_on_decidim_budgets_budget_id"
     t.index ["decidim_scope_id"], name: "index_decidim_budgets_projects_on_decidim_scope_id"
@@ -881,8 +881,10 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120542) do
     t.bigint "decidim_scope_id"
     t.integer "follows_count", default: 0, null: false
     t.boolean "comments_enabled", default: true
+    t.datetime "archived_at", precision: nil
     t.datetime "deleted_at"
     t.string "comments_layout"
+    t.index ["archived_at"], name: "index_decidim_debates_debates_on_archived_at"
     t.index ["closed_at"], name: "index_decidim_debates_debates_on_closed_at"
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_debates_debates_on_decidim_author"
     t.index ["decidim_component_id"], name: "index_decidim_debates_debates_on_decidim_component_id"
@@ -1049,30 +1051,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120542) do
     t.datetime "updated_at", precision: nil, null: false
     t.index ["decidim_organization_id"], name: "index_decidim_hashtags_on_decidim_organization_id"
     t.index ["name"], name: "index_decidim_hashtags_on_name"
-  end
-
-  create_table "decidim_helsinki_smsauth_signin_code_sessions", force: :cascade do |t|
-    t.bigint "decidim_signin_code_set_id", null: false
-    t.bigint "decidim_user_id", null: false
-    t.datetime "created_at", precision: nil
-    t.index ["decidim_signin_code_set_id"], name: "index_signin_sessioins_on_decidim_signin_code_set"
-    t.index ["decidim_user_id"], name: "index_signin_code_sessions_on_decidim_user"
-  end
-
-  create_table "decidim_helsinki_smsauth_signin_code_sets", force: :cascade do |t|
-    t.jsonb "metadata", default: {}
-    t.integer "generated_code_amount"
-    t.integer "used_code_amount", default: 0
-    t.bigint "decidim_user_id", null: false
-    t.datetime "created_at", precision: nil
-    t.index ["decidim_user_id"], name: "index_signin_code_sets_on_decidim_user"
-  end
-
-  create_table "decidim_helsinki_smsauth_signin_codes", force: :cascade do |t|
-    t.string "code_hash"
-    t.bigint "decidim_signin_code_set_id", null: false
-    t.datetime "created_at", precision: nil
-    t.index ["decidim_signin_code_set_id"], name: "index_signin_codes_on_decidim_signin_code_set_id"
   end
 
   create_table "decidim_identities", id: :serial, force: :cascade do |t|
@@ -1309,9 +1287,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120542) do
     t.string "online_meeting_url"
     t.string "registration_url"
     t.string "salt"
-    t.integer "follows_count", default: 0, null: false
     t.boolean "customize_registration_email", default: false
     t.jsonb "registration_email_custom_content"
+    t.integer "follows_count", default: 0, null: false
     t.datetime "published_at", precision: nil
     t.string "video_url"
     t.string "audio_url"
@@ -1537,8 +1515,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120542) do
     t.string "id_documents_methods", default: ["online"], array: true
     t.jsonb "id_documents_explanation_text", default: {}
     t.boolean "user_groups_enabled", default: false, null: false
-    t.jsonb "colors", default: {}
     t.jsonb "smtp_settings"
+    t.jsonb "colors", default: {}
     t.boolean "force_users_to_authenticate_before_access_organization", default: false
     t.jsonb "omniauth_settings"
     t.boolean "rich_text_editor_in_public_views", default: false
@@ -1550,13 +1528,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120542) do
     t.string "machine_translation_display_priority", default: "original", null: false
     t.string "external_domain_allowlist", default: [], array: true
     t.boolean "enable_participatory_space_filters", default: true
+    t.jsonb "extra_user_fields", default: {"enabled"=>false}
     t.jsonb "content_security_policy", default: {}
     t.jsonb "name", default: {}, null: false
-    t.boolean "delete_admin_logs", default: false, null: false
-    t.integer "delete_admin_logs_after"
-    t.boolean "delete_inactive_users", default: false, null: false
-    t.integer "delete_inactive_users_email_after"
-    t.integer "delete_inactive_users_after"
     t.index ["host"], name: "index_decidim_organizations_on_host", unique: true
   end
 
@@ -1801,14 +1775,14 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120542) do
     t.datetime "published_at", precision: nil
     t.integer "proposal_notes_count", default: 0, null: false
     t.integer "coauthorships_count", default: 0, null: false
-    t.integer "position"
     t.string "participatory_text_level"
+    t.integer "position"
     t.boolean "created_in_meeting", default: false
+    t.integer "endorsements_count", default: 0, null: false
     t.decimal "cost"
     t.jsonb "cost_report"
     t.jsonb "execution_period"
     t.datetime "state_published_at", precision: nil
-    t.integer "endorsements_count", default: 0, null: false
     t.jsonb "title"
     t.jsonb "body"
     t.integer "comments_count", default: 0, null: false
@@ -1972,34 +1946,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120542) do
     t.index ["mounted_engine_name"], name: "index_decidim_short_links_on_mounted_engine_name"
     t.index ["route_name"], name: "index_decidim_short_links_on_route_name"
     t.index ["target_type", "target_id"], name: "index_decidim_short_links_on_target"
-  end
-
-  create_table "decidim_sms_infobip_deliveries", force: :cascade do |t|
-    t.string "from"
-    t.string "to"
-    t.string "status"
-    t.string "resource_url"
-    t.string "callback_data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "decidim_sms_telia_deliveries", force: :cascade do |t|
-    t.string "from"
-    t.string "to"
-    t.string "status"
-    t.string "resource_url"
-    t.string "callback_data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "decidim_sms_telia_tokens", force: :cascade do |t|
-    t.string "access_token"
-    t.datetime "issued_at", precision: nil
-    t.datetime "expires_at", precision: nil
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "decidim_sortitions_sortitions", force: :cascade do |t|
@@ -2257,15 +2203,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120542) do
     t.integer "following_count", default: 0, null: false
     t.integer "followers_count", default: 0, null: false
     t.string "notification_types", default: "all", null: false
-    t.datetime "officialized_at", precision: nil
-    t.jsonb "officialized_as"
-    t.string "encrypted_gender"
-    t.date "encrypted_date_of_birth"
-    t.string "encrypted_region"
     t.integer "failed_attempts", default: 0, null: false
     t.string "unlock_token"
     t.datetime "locked_at", precision: nil
-    t.datetime "admin_terms_accepted_at", precision: nil
     t.string "session_token"
     t.string "direct_message_types", default: "all", null: false
     t.boolean "blocked", default: false, null: false
@@ -2273,13 +2213,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120542) do
     t.integer "block_id"
     t.boolean "email_on_moderations", default: true
     t.integer "follows_count", default: 0, null: false
+    t.datetime "officialized_at", precision: nil
+    t.jsonb "officialized_as"
+    t.datetime "admin_terms_accepted_at", precision: nil
+    t.string "encrypted_gender"
+    t.date "encrypted_date_of_birth"
+    t.string "encrypted_region"
     t.jsonb "notification_settings", default: {}
     t.string "notifications_sending_frequency", default: "daily"
     t.datetime "digest_sent_at", precision: nil
     t.datetime "password_updated_at", precision: nil
     t.string "previous_passwords", default: [], array: true
-    t.datetime "warning_date", precision: nil
-    t.string "phone_number"
     t.boolean "email_on_assigned_proposals", default: true
     t.index ["confirmation_token"], name: "index_decidim_users_on_confirmation_token", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_users_on_decidim_organization_id"
@@ -2314,6 +2258,21 @@ ActiveRecord::Schema[7.0].define(version: 2026_04_14_120542) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.index ["decidim_organization_id"], name: "index_verifications_csv_census_to_organization"
+  end
+
+  create_table "delayed_jobs", force: :cascade do |t|
+    t.integer "priority", default: 0, null: false
+    t.integer "attempts", default: 0, null: false
+    t.text "handler", null: false
+    t.text "last_error"
+    t.datetime "run_at", precision: nil
+    t.datetime "locked_at", precision: nil
+    t.datetime "failed_at", precision: nil
+    t.string "locked_by"
+    t.string "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["priority", "run_at"], name: "delayed_jobs_priority"
   end
 
   create_table "oauth_access_grants", force: :cascade do |t|

@@ -849,9 +849,9 @@
     "@marijn/find-cluster-break" "^1.0.0"
 
 "@codemirror/view@^6.34.1":
-  version "6.41.0"
-  resolved "https://registry.yarnpkg.com/@codemirror/view/-/view-6.41.0.tgz#482cbcb5f8f90131908e5f9c0e2f4681e0684db0"
-  integrity sha512-6H/qadXsVuDY219Yljhohglve8xf4B8xJkVOEWfA5uiYKiTFppjqsvsfR5iPA0RbvRBoOyTZpbLIxe9+0UR8xA==
+  version "6.40.0"
+  resolved "https://registry.npmjs.org/@codemirror/view/-/view-6.40.0.tgz"
+  integrity sha512-WA0zdU7xfF10+5I3HhUUq3kqOx3KjqmtQ9lqZjfK7jtYk4G72YW9rezcSywpaUMCWOMlq+6E0pO1IWg1TNIhtg==
   dependencies:
     "@codemirror/state" "^6.6.0"
     crelt "^1.0.6"
@@ -5899,7 +5899,7 @@ ini@~3.0.0:
 
 inline-attacher@^0.0.8:
   version "0.0.8"
-  resolved "https://registry.yarnpkg.com/inline-attacher/-/inline-attacher-0.0.8.tgz#921f73c387513c217ecdedf03ee6052dc634af4e"
+  resolved "https://registry.npmjs.org/inline-attacher/-/inline-attacher-0.0.8.tgz"
   integrity sha512-ZEy6GIrP/zLjS/7FIrjCmroLVhfUR6WnDOanFXKurPDivjvn9K017M4zJ/xEa3DE3M0ILAbAnIrH85iIcwNYvg==
   dependencies:
     "@codemirror/view" "^6.34.1"
