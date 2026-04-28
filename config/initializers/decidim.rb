@@ -15,12 +15,15 @@ Decidim.configure do |config|
     provider: :here,
     api_key: Rails.application.secrets.geocoder[:here_api_key],
     static: {
-      url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview"
+      url: "https://image.maps.hereapi.com/mia/v3/base/mc/overlay"
     },
     autocomplete: {
       address_format: ["name", %w(street houseNumber), "city"]
     }
   }
+
+  # Max attachment size (MB)
+  config.maximum_attachment_size = 50
 
   # Enable machine translations with DeepL
   config.enable_machine_translations = Rails.application.secrets.translator[:enabled]
@@ -34,7 +37,7 @@ Decidim.configure do |config|
   # end
 
   # Currency unit
-  config.currency_unit = 'SEK'
+  config.currency_unit = 'kr'
 
   # Allow participants to use the platform for 2 days before confirming their e-mail address
   config.unconfirmed_access_for = 2.days
@@ -96,7 +99,10 @@ Decidim.configure do |config|
   config.social_share_services = Rails.application.secrets.decidim[:social_share_services]
 
   # Custom setting to avoid Retry later error
-  config.throttling_max_requests = 1000
+  config.throttling_max_requests = 5000
+
+  # Disable password expiration for admins
+  # config.admin_password_expiration_days = 0
 
   # Content policy for here maps etc
   config.content_security_policies_extra = {
