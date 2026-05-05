@@ -393,7 +393,7 @@ sv:
           can_accumulate_votes_beyond_threshold:
             description: Förslag kan få fler röster än vad som behövs för att gå vidare.
           minimum_votes_per_user:
-            description: Du behöver rösta på %{votes} till förslag för att din röst ska räknas.
+            description: Du behöver rösta på %{votes} förslag för att din röst ska räknas.
           threshold_per_proposal:
             description: Förslag behöver få minst %{limit} röster för att gå vidare.
         edit:
