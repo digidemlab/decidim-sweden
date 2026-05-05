@@ -337,8 +337,8 @@ sv:
       waiting_label: Väntar på verifiering ...
     proposals:
       exit_modal:
-        title: 'Kom ihåg att du har %{number} röster kvar'
-        message: 'Du behöver rösta på ytterligare %{number} förslag för att dina röster ska räknas.'
+        title: 'Kom ihåg att du har %{number} förslag kvar att rösta på'
+        message: 'Du behöver rösta på ytterligare %{number} förslag för att din röst ska räknas.'
         exit: Fortsätt
         cancel: Avbryt
       admin:
@@ -383,9 +383,9 @@ sv:
           view_proposal: Visa förslag
         voting_rules:
           already_vote:
-            description: Du behöver rösta på %{number} till förslag för att din röst ska räknas.
+            description: Du har %{number} förslag kvar att rösta på.
             see_other_proposals: Visa de andra förslagen
-            title: Du har %{number} röster kvar
+            title: Du har %{number} förslag kvar
           title: Rösta så här
           success: Din röst har tagits emot
           vote_limit:
