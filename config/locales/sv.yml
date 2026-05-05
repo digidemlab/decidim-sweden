@@ -170,7 +170,7 @@ sv:
     devise:
       registrations:
         new:
-          username_help: 'Namnet du skriver här kommer att visas vid dina inlägg. Vissa processer kräver att du är anonym. Använd ett påhittat namn om du vill vara anonym.'
+          username_help: 'Namnet du skriver här kommer att visas vid dina inlägg. Använd ett påhittat namn om du vill vara anonym.'
       omniauth_registrations:
         new:
           nickname_help: "Ditt användarnamn i %{organization}. Kan bara innehålla små bokstäver a-z, siffror, '-' och '_'."
@@ -336,6 +336,11 @@ sv:
       submit_filter: Filtrera
       waiting_label: Väntar på verifiering ...
     proposals:
+      exit_modal:
+        title: 'Kom ihåg att du har %{number} röster kvar'
+        message: 'Du behöver rösta på ytterligare %{number} förslag för att dina röster ska räknas.'
+        exit: Fortsätt
+        cancel: Avbryt
       admin:
         actions:
           confirm_delete_proposal: Är du säker på att du vill ta bort förslaget?
@@ -381,7 +386,7 @@ sv:
             description: Du behöver rösta på %{number} till förslag för att din röst ska räknas.
             see_other_proposals: Visa de andra förslagen
             title: Du har %{number} röster kvar
-          title: Regler för omröstning
+          title: Rösta så här
           success: Din röst har tagits emot
           vote_limit:
             description: Du kan rösta på upp till %{limit} förslag.

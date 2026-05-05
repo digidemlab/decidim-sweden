@@ -24,7 +24,7 @@
     <% if user_vote %>
       <a href="<%= proposal_path(resource) %>" class="button button__sm button__text-secondary proposal-link">Röstat <%= icon "check-line", class: "already-voted-icon" %></a>
     <% else %>
-      <a href="<%= proposal_path(resource) %>" class="button button__sm button__text-secondary proposal-link">Till graderad omröstning</a>
+      <a href="<%= proposal_path(resource) %>" class="button button__sm button__text-secondary proposal-link">Rösta här</a>
     <% end %>
   </div>
 <% else %>
