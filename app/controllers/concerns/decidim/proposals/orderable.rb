@@ -43,7 +43,7 @@ module Decidim
 
         def order_by_default
           if graded_vote?
-            "score"
+            "most_popular"
           elsif order_by_votes?
             "most_voted"
           else
@@ -63,7 +63,7 @@ module Decidim
           component_settings.awesome_voting_manifest == "graded_vote"
         end
 
-        def order_by_score
+        def order_by_most_popular
             vote_score_sql = <<~SQL.squish
               (
                 SELECT COALESCE(SUM(decidim_awesome_vote_weights.weight), 0)
@@ -77,8 +77,8 @@ module Decidim
 
         def reorder(proposals)
           case order
-          when "score"
-            proposals.order(order_by_score)
+          when "most_popular"
+            proposals.order(order_by_most_popular)
           when "most_commented"
             proposals.order(comments_count: :desc)
           when "most_endorsed"

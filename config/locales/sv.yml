@@ -373,7 +373,7 @@ sv:
       proposals:
         orders:
           az: A-Ö (Alfabetisk)
-          score: Poäng
+          most_popular: Mest populära
           supported_first: Tidigast röstade på
           supported_last: Senast röstade på
           za: Ö-A (Omvänd alfabetisk)
@@ -689,7 +689,7 @@ sv:
               voting_cards: Röstning med färgkort
             default_sort_order_options:
               az: A-Ö (Alfabetisk)
-              score: Poäng
+              most_popular: Mest populära
               supported_first: Tidigast röstade på
               supported_last: Senast röstade på
               za: Ö-A (Omvänd alfabetisk)
@@ -710,7 +710,7 @@ sv:
             votes_blocked: Stäng av röstning
             default_sort_order_options:
               az: A-Ö (Alfabetisk)
-              score: Poäng
+              most_popular: mest_populära
               supported_first: Stödda först
               supported_last: Stödda sist
               za: Ö-A (Omvänd alfabetisk)
