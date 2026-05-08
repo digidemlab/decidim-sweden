@@ -1,0 +1,16 @@
+<div id="<%= element_id %>" class="progress-bar__container <%= options[:class] %> progress-bar__container-graded" data-progress-bar>
+  <div class="progress-bar__number">
+    <span><%= progress %></span>
+    <%= content_tag :span, total if total != 0 %>
+  </div>
+
+  <div class="proposals__aside-progress">
+    <div class="progress-bar" role="progressbar" aria-label="<%= units_name.present? ? units_name_text : t("decidim.shared.progress") %>" >
+      <% (-2..2).each do |weight| %>
+        <div style="flex: <%= [percentage(weight), 3].max %>; background-color: var(--voting-cards-weight-bar_<%= weight %>)"></div>
+      <% end %>
+    </div>
+  </div>
+  <%= content_tag :div, units_name_text, class: "progress-bar__units" if units_name %>
+
+</div>

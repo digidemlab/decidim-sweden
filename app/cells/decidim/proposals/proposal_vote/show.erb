@@ -1,25 +1,36 @@
-<% if !current_settings.votes_hidden? && (current_component.participatory_space.can_participate?(current_user) || current_user&.admin?) %>
+<% voting_manifest = awesome_voting_manifest_for(current_component) rescue nil %>
+
+<% if voting_manifest.present? %>
+  <% progress ||= resource.proposal_votes_count || 0 %>
+  <% total ||= resource.maximum_votes || 0 %>
+  <%= cell(
+    "decidim/weighted_progress_bar",
+    progress,
+    total:,
+    proposal: resource,
+    units_name: "decidim.proposals.proposals.votes_count.count",
+    element_id: "proposal-#{resource.id}-votes-count",
+    class: total.positive? ? "card__proposals-votes-limited" : "card__proposals-votes-unlimited"
+  ) %>
+<% elsif !current_settings.votes_hidden? && (current_component.participatory_space.can_participate?(current_user) || current_user&.admin?) %>
   <% if component_settings.participatory_texts_enabled? && from_proposals_list %>
     <%= render partial: "decidim/proposals/proposals/participatory_texts/proposal_votes_count", locals: { proposal: resource, from_proposals_list: true } %>
   <% else %>
     <% progress ||= resource.proposal_votes_count || 0 %>
     <% total ||= resource.maximum_votes || 0 %>
     <%= cell(
-          "decidim/progress_bar",
-          progress,
-          total:,
-          units_name: "decidim.proposals.proposals.votes_count.count",
-          element_id: "proposal-#{resource.id}-votes-count",
-          class: total.positive? ? "card__proposals-votes-limited" : "card__proposals-votes-unlimited"
-        ) %>
+      "decidim/progress_bar",
+      progress,
+      total:,
+      units_name: "decidim.proposals.proposals.votes_count.count",
+      element_id: "proposal-#{resource.id}-votes-count",
+      class: total.positive? ? "card__proposals-votes-limited" : "card__proposals-votes-unlimited"
+    ) %>
   <% end %>
 <% end %>
 
-
-<% voting_manifest = awesome_voting_manifest_for(current_component) rescue nil %>
-
 <% if voting_manifest.present? %>
-  <div id="proposal-<%= resource.id %>-vote-button" class="card__proposals-votes-container">
+  <div id="proposal-<%= resource.id %>-vote-button" class="card__proposals-votes-container-graded">
     <% user_vote = current_user ? resource.votes.find_by(author: current_user) : nil %>
     <% if user_vote %>
       <a href="<%= proposal_path(resource) %>" class="button button__sm button__text-secondary proposal-link">Röstat <%= icon "check-line", class: "already-voted-icon" %></a>

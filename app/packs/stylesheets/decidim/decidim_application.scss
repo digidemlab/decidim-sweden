@@ -503,6 +503,30 @@ a .text-secondary {
  * Graded voting
  */
 
+$voting-cards-weight_-2:     #891A1C;
+$voting-cards-weight_-1:     #866F09;
+$voting-cards-weight_0:      #222222;
+$voting-cards-weight_1:      #238075;
+$voting-cards-weight_2:      #064D05;
+$voting-cards-weight-bar_-2: lighten($voting-cards-weight_-2, 20%);
+$voting-cards-weight-bar_-1: lighten($voting-cards-weight_-1, 20%);
+$voting-cards-weight-bar_0:  lighten($voting-cards-weight_0, 20%);
+$voting-cards-weight-bar_1:  lighten($voting-cards-weight_1, 20%);
+$voting-cards-weight-bar_2:  lighten($voting-cards-weight_2, 20%);
+
+:root {
+  --voting-cards-weight_-2:     #{$voting-cards-weight_-2};
+  --voting-cards-weight_-1:     #{$voting-cards-weight_-1};
+  --voting-cards-weight_0:      #{$voting-cards-weight_0};
+  --voting-cards-weight_1:      #{$voting-cards-weight_1};
+  --voting-cards-weight_2:      #{$voting-cards-weight_2};
+  --voting-cards-weight-bar_-2: #{$voting-cards-weight-bar_-2};
+  --voting-cards-weight-bar_-1: #{$voting-cards-weight-bar_-1};
+  --voting-cards-weight-bar_0:  #{$voting-cards-weight-bar_0};
+  --voting-cards-weight-bar_1:  #{$voting-cards-weight-bar_1};
+  --voting-cards-weight-bar_2:  #{$voting-cards-weight-bar_2};
+}
+
 .card__grid-grid .card__proposals-item .card__proposals-votes,
 .card__list-list .card__proposals-item .card__proposals-votes {
   height: auto;
@@ -535,6 +559,24 @@ a .text-secondary {
   justify-content: start;
 }
 
+.progress-bar__container-graded {
+  // do something
+  display: block !important;
+  margin: 0 .75rem;
+  .progress-bar__units {
+    text-align: center;
+  }
+  .progress-bar {
+    display: flex;
+  }
+}
+
+.card__proposals-votes-container-graded {
+  @extend .card__proposals-votes-container-graded;
+  flex: 0.8;
+  margin: .75rem;
+}
+
 div[data-weight-1] {
   display: inline-block;
 
@@ -544,11 +586,6 @@ div[data-weight-1] {
 }
 
 .card__list-metadata {
-  --voting-cards-weight_-2: #891A1C;
-  --voting-cards-weight_-1: #866F09;
-  --voting-cards-weight_0: #222222;
-  --voting-cards-weight_1: #238075;
-  --voting-cards-weight_2: #064D05;
   /* css for weight 1-3 is also defined by decidim-awesome */
   .voting-weight {
     white-space: nowrap;

@@ -1,1 +1,11 @@
-<div id="proposal-<%= proposal.id %>-votes-count"><%= proposal.proposal_votes_count || 0 %></div>
+<% progress ||= proposal.proposal_votes_count || 0 %>
+<% total ||= proposal.maximum_votes || 0 %>
+<%= cell(
+  "decidim/weighted_progress_bar",
+  progress,
+  total:,
+  proposal:,
+  units_name: "decidim.proposals.proposals.votes_count.count",
+  element_id: "proposal-#{proposal.id}-votes-count",
+  class: total.positive? ? "card__proposals-votes-limited" : "card__proposals-votes-unlimited"
+) %>
