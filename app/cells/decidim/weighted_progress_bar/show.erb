@@ -6,8 +6,12 @@
 
   <div class="proposals__aside-progress">
     <div class="progress-bar" role="progressbar" aria-label="<%= units_name.present? ? units_name_text : t("decidim.shared.progress") %>" >
-      <% (-2..2).each do |weight| %>
-        <div style="flex: <%= [percentage(weight), 3].max %>; background-color: var(--voting-cards-weight-bar_<%= weight %>)"></div>
+      <% if progress == 0 %>
+        <div></div>
+      <% else %>
+        <% (-2..2).each do |weight| %>
+          <div style="flex: <%= [percentage(weight), 3].max %>; background-color: var(--voting-cards-weight-bar_<%= weight %>)"></div>
+        <% end %>
       <% end %>
     </div>
   </div>
