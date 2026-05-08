@@ -21,7 +21,7 @@ module Decidim
         def possible_orders
           @possible_orders ||= begin
             possible_orders = %w(random recent)
-            possible_orders << "score" if graded_vote?
+            possible_orders << "most_popular" if graded_vote?
             possible_orders << "most_voted" if most_voted_order_available?
             possible_orders << "most_endorsed" if current_settings.endorsements_enabled?
             possible_orders << "most_commented" if component_settings.comments_enabled?
