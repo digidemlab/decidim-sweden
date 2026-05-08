@@ -1,6 +1,6 @@
 <% voting_manifest = awesome_voting_manifest_for(current_component) rescue nil %>
 
-<% if voting_manifest.present? %>
+<% if !current_settings.votes_hidden? && voting_manifest.present? %>
   <% progress ||= resource.proposal_votes_count || 0 %>
   <% total ||= resource.maximum_votes || 0 %>
   <%= cell(
