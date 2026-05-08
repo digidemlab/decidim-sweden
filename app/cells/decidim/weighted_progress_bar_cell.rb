@@ -58,7 +58,11 @@ module Decidim
     end
 
     def percentage(weight)
-      100 * (proposal.vote_weights["weight_#{weight}"] || 0) / progress || 0
+      if progress == 0
+        0
+      else
+        100 * (proposal.vote_weights["weight_#{weight}"] || 0) / progress || 0
+      end
     end
   end
 end
