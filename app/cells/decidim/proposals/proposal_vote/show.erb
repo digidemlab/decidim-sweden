@@ -29,13 +29,19 @@
   <% end %>
 <% end %>
 
+<% button_classes = "button button__sm button__secondary w-full" %>
+
 <% if voting_manifest.present? %>
   <div id="proposal-<%= resource.id %>-vote-button" class="card__proposals-votes-container-graded">
-    <% user_vote = current_user ? resource.votes.find_by(author: current_user) : nil %>
-    <% if user_vote %>
-      <a href="<%= proposal_path(resource) %>" class="button button__sm button__text-secondary proposal-link">Röstat <%= icon "check-line", class: "already-voted-icon" %></a>
+    <% if current_settings.votes_blocked? %>
+      <%= content_tag :button, t("decidim.proposals.proposals.vote_button.votes_blocked"), class: button_classes, disabled: true, data: { "proposal-vote-button": true } %>
     <% else %>
-      <a href="<%= proposal_path(resource) %>" class="button button__sm button__text-secondary proposal-link">Rösta här</a>
+      <% user_vote = current_user ? resource.votes.find_by(author: current_user) : nil %>
+      <% if user_vote %>
+        <a href="<%= proposal_path(resource) %>" class="button button__sm button__text-secondary proposal-link">Röstat <%= icon "check-line", class: "already-voted-icon" %></a>
+      <% else %>
+        <a href="<%= proposal_path(resource) %>" class="button button__sm button__text-secondary proposal-link">Rösta här</a>
+      <% end %>
     <% end %>
   </div>
 <% else %>
