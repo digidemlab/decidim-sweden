@@ -10,7 +10,7 @@
         <div></div>
       <% else %>
         <% (-2..2).each do |weight| %>
-          <div style="flex: <%= [percentage(weight), 3].max %>; background-color: var(--voting-cards-weight-bar_<%= weight %>)"></div>
+          <div style="flex: <%= percentage(weight) %>; background-color: var(--voting-cards-weight-bar_<%= weight %>)"></div>
         <% end %>
       <% end %>
     </div>
