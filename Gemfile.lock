@@ -221,6 +221,13 @@ GIT
       decidim-core (~> 0.30.0)
 
 GIT
+  remote: https://github.com/digidemlab/decidim-module-goteborg.git
+  revision: 814a4de037af0cbddc66094f66dcc7a2fe4c0f38
+  specs:
+    decidim-goteborg (0.30.6)
+      decidim-core (= 0.30.6)
+
+GIT
   remote: https://github.com/digidemlab/decidim-module-smsauth
   revision: c15cc482f9b2339086b50a107196823295701a60
   branch: main
