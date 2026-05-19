@@ -1,4 +1,11 @@
 GIT
+  remote: git@github.com:digidemlab/decidim-module-goteborg.git
+  revision: 814a4de037af0cbddc66094f66dcc7a2fe4c0f38
+  specs:
+    decidim-goteborg (0.30.6)
+      decidim-core (= 0.30.6)
+
+GIT
   remote: https://github.com/decidim/decidim
   revision: cdca6c700351bb60c9b55f212c8a1ab37f069f7c
   branch: release/0.30-stable
@@ -1093,6 +1100,7 @@ DEPENDENCIES
   decidim-cleaner!
   decidim-decidim_awesome (= 0.13.2)
   decidim-dev!
+  decidim-goteborg!
   decidim-goteborg_login!
   decidim-initiatives!
   decidim-sms-infobip!

@@ -18,6 +18,7 @@ gem "decidim-goteborg_login", path: "./decidim-module-goteborg_login"
 gem "decidim-sms-infobip", git: "https://github.com/digidemlab/decidim-sms-infobip", branch: "main"
 gem "decidim-smsauth", git: "https://github.com/digidemlab/decidim-module-smsauth", branch: "main"
 gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "goteborg"
+gem "decidim-goteborg", git: "git@github.com:digidemlab/decidim-module-goteborg.git"
 
 #gem "decidim-term_customizer", git: "https://github.com/digidemlab/decidim-module-term_customizer.git", branch: "master"
 
