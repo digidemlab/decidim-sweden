@@ -19,6 +19,8 @@ gem "decidim-sms-infobip", git: "https://github.com/digidemlab/decidim-sms-infob
 gem "decidim-smsauth", git: "https://github.com/digidemlab/decidim-module-smsauth", branch: "main"
 gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "goteborg"
 gem "decidim-goteborg", git: "https://github.com/digidemlab/decidim-module-goteborg.git"
+gem "decidim-ui_tweaks", git: "https://github.com/digidemlab/decidim-module-ui_tweaks"
+gem "decidim-accountability_tweaks", git: "https://github.com/digidemlab/decidim-module-accountability_tweaks"
 
 #gem "decidim-term_customizer", git: "https://github.com/digidemlab/decidim-module-term_customizer.git", branch: "master"
 
