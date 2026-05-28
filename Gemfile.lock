@@ -1,11 +1,4 @@
 GIT
-  remote: git@github.com:digidemlab/decidim-module-goteborg.git
-  revision: 814a4de037af0cbddc66094f66dcc7a2fe4c0f38
-  specs:
-    decidim-goteborg (0.30.6)
-      decidim-core (= 0.30.6)
-
-GIT
   remote: https://github.com/decidim/decidim
   revision: cdca6c700351bb60c9b55f212c8a1ab37f069f7c
   branch: release/0.30-stable
@@ -246,7 +239,7 @@ GIT
 
 GIT
   remote: https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler
-  revision: ad4d560c84c01ce7f53757b0dfca686c8f55512f
+  revision: d8bd697e9414b30a5dc6e5528312c9676744f391
   branch: goteborg
   specs:
     decidim-socio_demographic_authorization_handler (0.30)
