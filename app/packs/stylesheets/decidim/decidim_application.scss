@@ -130,6 +130,14 @@ header .main-bar__links-mobile__dropdown-before::before {
   @apply lg:hidden md:flex !important;
 }
 
+// No line-break in budget sums
+.budget__card__list-project__amount {
+  @apply whitespace-nowrap;
+}
+.budget__card__list-project {
+  @apply lg:min-w-[220px];
+}
+
 
 // Dropdown menu too wide for screen
 
