@@ -12,6 +12,7 @@ gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 
 gem "decidim-verifications-simple_impersonation", git: "https://github.com/digidemlab/decidim-verifications-simple_impersonation"
+gem "decidim-accountability_tweaks", git: "https://github.com/digidemlab/decidim-module-accountability_tweaks"
 
 gem "decidim-decidim_awesome", "~>0.13.0"
 
