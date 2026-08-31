@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_01_09_140312) do
+ActiveRecord::Schema[7.0].define(version: 2026_08_31_110348) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -431,7 +431,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_01_09_140312) do
     t.jsonb "title"
     t.integer "weight", default: 0, null: false
     t.jsonb "description"
-    t.integer "total_budget", default: 0
+    t.bigint "total_budget", default: 0
     t.integer "decidim_component_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
@@ -906,30 +906,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_01_09_140312) do
     t.datetime "updated_at", precision: nil, null: false
     t.index ["decidim_organization_id"], name: "index_decidim_hashtags_on_decidim_organization_id"
     t.index ["name"], name: "index_decidim_hashtags_on_name"
-  end
-
-  create_table "decidim_helsinki_smsauth_signin_code_sessions", force: :cascade do |t|
-    t.bigint "decidim_signin_code_set_id", null: false
-    t.bigint "decidim_user_id", null: false
-    t.datetime "created_at", precision: nil
-    t.index ["decidim_signin_code_set_id"], name: "index_signin_sessioins_on_decidim_signin_code_set"
-    t.index ["decidim_user_id"], name: "index_signin_code_sessions_on_decidim_user"
-  end
-
-  create_table "decidim_helsinki_smsauth_signin_code_sets", force: :cascade do |t|
-    t.jsonb "metadata", default: {}
-    t.integer "generated_code_amount"
-    t.integer "used_code_amount", default: 0
-    t.bigint "decidim_user_id", null: false
-    t.datetime "created_at", precision: nil
-    t.index ["decidim_user_id"], name: "index_signin_code_sets_on_decidim_user"
-  end
-
-  create_table "decidim_helsinki_smsauth_signin_codes", force: :cascade do |t|
-    t.string "code_hash"
-    t.bigint "decidim_signin_code_set_id", null: false
-    t.datetime "created_at", precision: nil
-    t.index ["decidim_signin_code_set_id"], name: "index_signin_codes_on_decidim_signin_code_set_id"
   end
 
   create_table "decidim_identities", id: :serial, force: :cascade do |t|
@@ -1841,22 +1817,28 @@ ActiveRecord::Schema[7.0].define(version: 2026_01_09_140312) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "decidim_sms_telia_deliveries", force: :cascade do |t|
-    t.string "from"
-    t.string "to"
-    t.string "status"
-    t.string "resource_url"
-    t.string "callback_data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "decidim_smsauth_signin_code_sessions", force: :cascade do |t|
+    t.bigint "decidim_signin_code_set_id", null: false
+    t.bigint "decidim_user_id", null: false
+    t.datetime "created_at", precision: nil
+    t.index ["decidim_signin_code_set_id"], name: "index_signin_sessioins_on_decidim_signin_code_set"
+    t.index ["decidim_user_id"], name: "index_signin_code_sessions_on_decidim_user"
   end
 
-  create_table "decidim_sms_telia_tokens", force: :cascade do |t|
-    t.string "access_token"
-    t.datetime "issued_at", precision: nil
-    t.datetime "expires_at", precision: nil
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "decidim_smsauth_signin_code_sets", force: :cascade do |t|
+    t.jsonb "metadata", default: {}
+    t.integer "generated_code_amount"
+    t.integer "used_code_amount", default: 0
+    t.bigint "decidim_user_id", null: false
+    t.datetime "created_at", precision: nil
+    t.index ["decidim_user_id"], name: "index_signin_code_sets_on_decidim_user"
+  end
+
+  create_table "decidim_smsauth_signin_codes", force: :cascade do |t|
+    t.string "code_hash"
+    t.bigint "decidim_signin_code_set_id", null: false
+    t.datetime "created_at", precision: nil
+    t.index ["decidim_signin_code_set_id"], name: "index_signin_codes_on_decidim_signin_code_set_id"
   end
 
   create_table "decidim_sortitions_sortitions", force: :cascade do |t|
@@ -2135,9 +2117,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_01_09_140312) do
     t.datetime "digest_sent_at", precision: nil
     t.datetime "password_updated_at", precision: nil
     t.string "previous_passwords", default: [], array: true
-    t.datetime "warning_date", precision: nil
     t.string "phone_number"
     t.boolean "email_on_assigned_proposals", default: true
+    t.datetime "warning_date", precision: nil
     t.index ["confirmation_token"], name: "index_decidim_users_on_confirmation_token", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_users_on_decidim_organization_id"
     t.index ["email", "decidim_organization_id"], name: "index_decidim_users_on_email_and_decidim_organization_id", unique: true, where: "((deleted_at IS NULL) AND (managed = false) AND ((type)::text = 'Decidim::User'::text))"
@@ -2171,21 +2153,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_01_09_140312) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.index ["decidim_organization_id"], name: "index_verifications_csv_census_to_organization"
-  end
-
-  create_table "delayed_jobs", force: :cascade do |t|
-    t.integer "priority", default: 0, null: false
-    t.integer "attempts", default: 0, null: false
-    t.text "handler", null: false
-    t.text "last_error"
-    t.datetime "run_at", precision: nil
-    t.datetime "locked_at", precision: nil
-    t.datetime "failed_at", precision: nil
-    t.string "locked_by"
-    t.string "queue"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["priority", "run_at"], name: "delayed_jobs_priority"
   end
 
   create_table "oauth_access_grants", force: :cascade do |t|
