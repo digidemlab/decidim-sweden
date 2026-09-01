@@ -1,8 +1,8 @@
 require_relative 'boot'
 
-require "decidim/rails"
+require 'decidim/rails'
 # Add the frameworks used by your app that are not loaded by Decidim.
-require "action_cable/engine"
+require 'action_cable/engine'
 # require "action_mailbox/engine"
 # require "action_text/engine"
 
@@ -20,6 +20,8 @@ module DecidimSweden
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    config.proposals_keep_revisions = []
+    
     config.to_prepare do
       Decidim::Proposals::ProposalSerializer.include(ProposalSerializerExtensions)
     end

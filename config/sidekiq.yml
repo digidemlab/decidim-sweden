@@ -57,6 +57,10 @@
       cron: '*/15 * * * *' # Run every 15 minutes
       class: ChangeActiveStepJob
       queue: participatory_processes
+    CleanOldProposalVersions:
+      cron: '0 5 * * *'  # Run at 05:00
+      class: CleanOldProposalVersionsJob
+      queue: cleanups
     CleanAdminLogs:
       cron: "0 0 6 * * *"
       class: Decidim::Cleaner::CleanAdminLogsJob
