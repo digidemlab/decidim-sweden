@@ -297,17 +297,17 @@ sv:
       mailer:
         registration_mailer:
           confirmation:
-            subject: Din anmälan har bekräftats
+            subject: Bekräftelse
       registration_mailer:
         confirmation:
-          subject: Din anmälan har bekräftats
-          confirmed_html: 'Din anmälan till <a href="%{url}">%{title}</a> har bekräftats.'
+          subject: Bekräftelse
+          confirmed_html: 'Bekräftelse till <a href="%{url}">%{title}</a>.'
           details: Kalenderinformation finns i bilagan.
       registrations:
         destroy:
           success: Du har dragit tillbaka din anmälan.
         create:
-          success: Du är nu anmäld.
+          success: Din anmälan har tagits emot.
       meetings_map:
         view_meeting: Visa möte
     budgets:
