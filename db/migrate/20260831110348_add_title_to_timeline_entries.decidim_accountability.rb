@@ -4,6 +4,6 @@
 # This file has been modified by `decidim upgrade:migrations` task on 2026-08-31 11:05:24 UTC
 class AddTitleToTimelineEntries < ActiveRecord::Migration[6.1]
   def change
-    add_column :decidim_accountability_timeline_entries, :title, :jsonb
+    #add_column :decidim_accountability_timeline_entries, :title, :jsonb
   end
 end
