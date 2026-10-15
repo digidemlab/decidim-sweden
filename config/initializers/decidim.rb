@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 Decidim.configure do |config|
-  config.application_name = Rails.application.secrets.application_name
-  config.mailer_sender = Rails.application.secrets.mailer_sender
-
   # Change these lines to set your preferred locales
   config.default_locale = :sv
   config.available_locales = [:sv, :en]
@@ -11,7 +8,7 @@ Decidim.configure do |config|
   # Geocoder configuration
   config.maps = {
     provider: :here,
-    api_key: Rails.application.secrets.geocoder[:here_api_key],
+    api_key: ENV["MAPS_API_KEY"],
     static: {
       url: "https://image.maps.hereapi.com/mia/v3/base/mc/overlay"
     },
@@ -81,15 +78,13 @@ Decidim.configure do |config|
   # Only needed if you want to have Etherpad integration with Decidim. See
   # Decidim docs at docs/services/etherpad.md in order to set it up.
   #
-  config.etherpad = {
-    server: Rails.application.secrets.etherpad[:server],
-    api_key: Rails.application.secrets.etherpad[:api_key],
-    api_version: Rails.application.secrets.etherpad[:api_version]
-  }
+  #config.etherpad = {
+  #  server: Rails.application.secrets.etherpad[:server],
+  #  api_key: Rails.application.secrets.etherpad[:api_key],
+  #  api_version: Rails.application.secrets.etherpad[:api_version]
+  #}
 
   config.expire_session_after = ENV.fetch("DECIDIM_SESSION_TIMEOUT", 1440).to_i.minutes
-
-  config.social_share_services = Rails.application.secrets.decidim[:social_share_services]
 
   # Custom setting to avoid Retry later error
   config.throttling_max_requests = 5000
@@ -114,8 +109,8 @@ Rails.application.config.i18n.default_locale = Decidim.default_locale
 # Inform Decidim about the assets folder
 Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
 
-if Decidim.module_installed? :verifications
-  Decidim::Verifications.configure do |config|
-    config.document_types = Rails.application.secrets.dig(:verifications, :document_types).presence || %w(identification_number passport)
-  end
-end
+#if Decidim.module_installed? :verifications
+#  Decidim::Verifications.configure do |config|
+#    config.document_types = Rails.application.secrets.dig(:verifications, :document_types).presence || %w(identification_number passport)
+#  end
+#end

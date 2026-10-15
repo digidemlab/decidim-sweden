@@ -4,7 +4,7 @@ if Decidim::DecidimAwesome.enabled?(:weighted_proposal_voting)
     voting.show_vote_button_view = "decidim/decidim_awesome/voting/graded_vote/show_vote_button"
     #voting.show_votes_count_view = "decidim/decidim_awesome/voting/graded_vote/show_votes_count"
     # voting.show_votes_count_view = "" # hide votes count if needed
-    voting.proposal_metadata_cell = "decidim/decidim_awesome/voting/proposal_metadata"
+    #voting.proposal_metadata_cell = "decidim/decidim_awesome/voting/proposal_metadata"
     # define a weight validator (optional, by default all weights are valid)
     voting.weight_validator do |weight, context|
       weight.in? [-2, -1, 0, 1, 2]

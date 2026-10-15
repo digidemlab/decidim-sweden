@@ -4,24 +4,24 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.30-stable" }
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "v0.31.7" }
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
 
-gem "decidim-analytics", git: "https://github.com/digidemlab/decidim-module-analytics"
+gem "decidim-analytics", path: "../decidim-module-analytics"
 gem "decidim-budgets_paper_ballots", git: "https://github.com/digidemlab/decidim-module-budgets_paper_ballots", branch: "master"
-gem "decidim-cleaner", git: "https://github.com/digidemlab/decidim-module-cleaner.git"
-gem "decidim-decidim_awesome", "0.13.2"
+gem "decidim-cleaner", path: "../decidim-module-cleaner"
+gem "decidim-decidim_awesome", "0.14.5"
 gem "decidim-goteborg_login", path: "./decidim-module-goteborg_login"
-gem "decidim-sms-infobip", git: "https://github.com/digidemlab/decidim-sms-infobip", branch: "main"
-gem "decidim-smsauth", git: "https://github.com/digidemlab/decidim-module-smsauth", branch: "main"
-gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "goteborg"
-#gem "decidim-socio_demographic_authorization_handler", path: "../decidim-module-socio_demographic_authorization_handler"
-gem "decidim-goteborg", git: "https://github.com/digidemlab/decidim-module-goteborg.git"
-gem "decidim-ui_tweaks", git: "https://github.com/digidemlab/decidim-module-ui_tweaks"
-gem "decidim-accountability_tweaks", git: "https://github.com/digidemlab/decidim-module-accountability_tweaks"
+gem "decidim-sms-infobip", path: "../decidim-sms-infobip"
+gem "decidim-smsauth", path: "../decidim-module-smsauth"
+#gem "decidim-socio_demographic_authorization_handler", git: "https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler", branch: "goteborg"
+gem "decidim-socio_demographic_authorization_handler", path: "../decidim-module-socio_demographic_authorization_handler"
+gem "decidim-goteborg", path: "../decidim-module-goteborg"
+gem "decidim-ui_tweaks", path: "../decidim-module-ui_tweaks"
+gem "decidim-accountability_tweaks", path: "../decidim-module-accountability_tweaks"
 
 #gem "decidim-term_customizer", git: "https://github.com/digidemlab/decidim-module-term_customizer.git", branch: "master"
 

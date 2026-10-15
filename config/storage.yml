@@ -8,11 +8,11 @@ local:
 
 garage:
   service: S3
-  access_key_id: <%= Rails.application.secrets.dig(:aws, :access_key_id) %>
-  secret_access_key: <%= Rails.application.secrets.dig(:aws, :secret_access_key) %>
-  region: <%= Rails.application.secrets.dig(:aws, :region) %>
-  bucket: <%= Rails.application.secrets.dig(:aws, :bucket) %>
-  endpoint: <%= Rails.application.secrets.dig(:aws, :endpoint) %>
+  access_key_id: <%= ENV["AWS_ACCESS_KEY_ID"] %>
+  secret_access_key: <%= ENV["AWS_SECRET_ACCESS_KEY"] %>
+  region: <%= ENV["AWS_REGION"] %>
+  bucket: <%= ENV["AWS_BUCKET"] %>
+  endpoint: <%= ENV["AWS_ENDPOINT"] %>
   force_path_style: true
 
 # Remember not to checkin your GCS keyfile to a repository
