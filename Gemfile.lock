@@ -194,6 +194,21 @@ GIT
       decidim-core (= 0.31.7)
 
 GIT
+  remote: https://github.com/digidemlab/decidim-module-accountability_tweaks
+  revision: 27ccf75f0956bb0b1ffadf754b41de9847e4a1a0
+  specs:
+    decidim-accountability_tweaks (0.1.0)
+      decidim-accountability (>= 0.31.0)
+
+GIT
+  remote: https://github.com/digidemlab/decidim-module-analytics
+  revision: 5fd5507f42f0b7cd84285c12e391964f99c64b2d
+  specs:
+    decidim-analytics (0.31.0)
+      decidim-admin (~> 0.31.0)
+      decidim-core (~> 0.31.0)
+
+GIT
   remote: https://github.com/digidemlab/decidim-module-budgets_paper_ballots
   revision: e0320bc140e18eb485abd358308ae070de0ce61d
   branch: master
@@ -202,52 +217,46 @@ GIT
       decidim-budgets (>= 0.27.0)
       decidim-core (>= 0.27.0)
 
-PATH
-  remote: ../decidim-module-accountability_tweaks
-  specs:
-    decidim-accountability_tweaks (0.1.0)
-      decidim-accountability (>= 0.31.0)
-
-PATH
-  remote: ../decidim-module-analytics
-  specs:
-    decidim-analytics (0.31.0)
-      decidim-admin (~> 0.31.0)
-      decidim-core (~> 0.31.0)
-
-PATH
-  remote: ../decidim-module-cleaner
+GIT
+  remote: https://github.com/digidemlab/decidim-module-cleaner
+  revision: db04c217e76dfb3737f6b84307b7e1d07f6f5704
   specs:
     decidim-cleaner (5.1.0)
       decidim-core (~> 0.31.0)
 
-PATH
-  remote: ../decidim-module-goteborg
+GIT
+  remote: https://github.com/digidemlab/decidim-module-goteborg
+  revision: ea622fe2d35b1db2fc67dd6371e1e37d9a192140
   specs:
     decidim-goteborg (0.31)
       decidim-core (~> 0.31.0)
 
-PATH
-  remote: ../decidim-module-smsauth
+GIT
+  remote: https://github.com/digidemlab/decidim-module-smsauth
+  revision: 2ad6ec75fe07fed27efa86b02e10679a9d59cb3c
   specs:
     decidim-smsauth (0.31.0)
       decidim-core (~> 0.31.0)
       decidim-sms-infobip (~> 0.31.0)
       phonelib (~> 0.10.13)
 
-PATH
-  remote: ../decidim-module-socio_demographic_authorization_handler
+GIT
+  remote: https://github.com/digidemlab/decidim-module-socio_demographic_authorization_handler
+  revision: 50bf4c7c1c8d8a57be5733b106a761b0b5efc8c4
   specs:
     decidim-socio_demographic_authorization_handler (0.31)
       decidim-core (>= 0.31.0, < 0.32)
 
-PATH
-  remote: ../decidim-module-ui_tweaks
+GIT
+  remote: https://github.com/digidemlab/decidim-module-ui_tweaks
+  revision: a80fdeade868e48d75c788952f34f624ed44f0ae
   specs:
     decidim-ui_tweaks (0.0.1)
+      decidim-core (~> 0.31.0)
 
-PATH
-  remote: ../decidim-sms-infobip
+GIT
+  remote: https://github.com/digidemlab/decidim-sms-infobip
+  revision: f2ec694193386f76554f6ae7ad36ff95f74644c7
   specs:
     decidim-sms-infobip (0.31.0)
       decidim-core (~> 0.31.0)
