@@ -3,7 +3,7 @@ ARG ruby_version=3.3.4
 FROM ruby:${ruby_version}
 LABEL maintainer="support@digidemlab.org"
 
-ENV NODE_VERSION 20.20.2
+ENV NODE_VERSION 22.14.0
 
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
