@@ -8,7 +8,13 @@ module Decidim
           private
 
           def proposal_items
+            return super unless graded_vote?
+
             [coauthors_item, comments_count_item, likes_count_item, weight_count_item, state_item, emendation_item]
+          end
+
+          def graded_vote?
+            component_settings.awesome_voting_manifest == "graded_vote"
           end
 
           def current_vote
