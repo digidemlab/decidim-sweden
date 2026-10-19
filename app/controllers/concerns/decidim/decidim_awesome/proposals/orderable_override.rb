@@ -27,7 +27,7 @@ module Decidim
               possible_orders += awesome_additional_sortings
               possible_orders << "most_popular" if graded_vote?
               possible_orders << "most_voted" if most_voted_order_available?
-              possible_orders << "most_endorsed" if current_settings.endorsements_enabled?
+              possible_orders << "most_liked" if current_settings.likes_enabled?
               possible_orders << "most_commented" if component_settings.comments_enabled?
               possible_orders << "most_followed" << "with_more_authors"
               possible_orders

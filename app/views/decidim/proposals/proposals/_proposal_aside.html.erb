@@ -1,4 +1,4 @@
-<% if current_settings.votes_enabled? && (show_endorsements_card? || current_user) %>
+<% if current_settings.votes_enabled? %>
 
   <% voting_manifest = awesome_voting_manifest_for(current_component) rescue nil %>
 
