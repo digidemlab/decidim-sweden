@@ -14,7 +14,7 @@ module Decidim
           end
 
           def graded_vote?
-            component_settings.awesome_voting_manifest == "graded_vote"
+            awesome_voting_manifest_for(resource.component)&.name == "graded_vote"
           end
 
           def current_vote
