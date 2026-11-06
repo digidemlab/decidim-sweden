@@ -226,7 +226,7 @@ GIT
 
 GIT
   remote: https://github.com/digidemlab/decidim-module-goteborg
-  revision: ea622fe2d35b1db2fc67dd6371e1e37d9a192140
+  revision: 0fc983511667cc0de82ff9e6f9ee141785e37c37
   specs:
     decidim-goteborg (0.31)
       decidim-core (~> 0.31.0)

@@ -6,6 +6,7 @@
     "node": ">=22.14.0",
     "npm": ">=9.6.7"
   },
+  "packageManager": "yarn@1.22.22",
   "files": [
     "packages/**/*"
   ],
@@ -57,7 +58,7 @@
     "expose-loader": "^4.1.0",
     "postcss-loader": "^8.2.1",
     "prettier": "^2.3.2",
-    "shakapacker": "^8.3.0",
+    "shakapacker": "~8.3.0",
     "stylelint": "^15.3.0",
     "stylelint-prettier": "^3.0.0",
     "webpack": "~5.105.0",
