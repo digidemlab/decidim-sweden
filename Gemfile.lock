@@ -210,7 +210,7 @@ GIT
 
 GIT
   remote: https://github.com/digidemlab/decidim-module-budgets_paper_ballots
-  revision: e0320bc140e18eb485abd358308ae070de0ce61d
+  revision: 4ddd3b51be5e786a8de40cb10ff1dd6bedb7905c
   branch: master
   specs:
     decidim-budgets_paper_ballots (0.27.0)
