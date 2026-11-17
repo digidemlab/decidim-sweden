@@ -17,6 +17,6 @@ sv:
       registrations:
         new:
         #  sign_up: "Registrera dig för att delta i processen för Medborgarbudget Sävja."
-          subtitle: 'Bor du i stadsdelen Sävja? Då kan du skapa ett konto och delta i medborgarbudget Sävja.'
+        #  subtitle: 'Bor du i stadsdelen Sävja? Då kan du skapa ett konto och delta i medborgarbudget Sävja.'
           tos_title: 'Uppsala kommuns användarvillkor'
           email_help: 'Din e-postadress är inte synlig på hemsidan utan används enbart för Uppsala kommun att kontakta dig om du  har lämnat ett förslag.'
